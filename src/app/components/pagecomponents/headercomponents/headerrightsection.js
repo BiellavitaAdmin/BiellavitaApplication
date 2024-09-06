@@ -1,3 +1,4 @@
+"use client"; // Mark this component as client-side
 import ButtonContainer from "./buttoncontainer";
 
 export default function HeaderRightSection() {

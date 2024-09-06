@@ -11,7 +11,7 @@ export default function Footer() {
         <button className="linkdin-circularbutton">
           {" "}
           <Image
-            src="/images/Linkdin.png" // The path relative to the "public" folder
+            src="/Linkdin.png" // The path relative to the "public" folder
             alt="My Awesome Image"
             width={35} // Width of the image
             height={35} // Height of the image

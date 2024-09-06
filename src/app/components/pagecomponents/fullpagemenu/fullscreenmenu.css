@@ -1,0 +1,55 @@
+/* fullscreenmenu.css */
+.full-screen-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #f3eeed; /* Background color */
+  z-index: 9999; /* Ensure it is on top of all content */
+  display: flex;
+  flex-direction: column;
+}
+
+.full-screen-header {
+  position: fixed; /* Changed to fixed to stay at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: transparent;
+  z-index: 10000; /* Ensure it stays above everything else */
+}
+
+nav {
+  display: flex;
+  flex: 1; /* Allow nav to take up remaining space */
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+nav ul li {
+  margin: 20px 0;
+}
+
+nav ul li a {
+  color: black; /* Changed to black for better visibility on light background */
+  font-size: 2rem;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+}
+
+.circular-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
