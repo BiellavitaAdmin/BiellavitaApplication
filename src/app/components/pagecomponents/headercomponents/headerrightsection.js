@@ -1,10 +1,10 @@
-"use client"; // Mark this component as client-side
+"use client";
 import ButtonContainer from "./buttoncontainer";
 
-export default function HeaderRightSection() {
+export default function HeaderRightSection({ onMenuClick }) {
   return (
     <div className="header-container-right">
-      <ButtonContainer />
+      <ButtonContainer onMenuClick={onMenuClick} />
     </div>
   );
 }

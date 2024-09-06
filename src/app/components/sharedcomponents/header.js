@@ -1,14 +1,13 @@
-"use client"; // Mark this component as client-side
-
+"use client";
 import "./header.css";
 import HeaderLeftSection from "../pagecomponents/headercomponents/headerleftsection";
 import HeaderRightSection from "../pagecomponents/headercomponents/headerrightsection";
 
-export default function Header() {
+export default function Header({ onMenuClick }) {
   return (
     <header className="header">
       <HeaderLeftSection />
-      <HeaderRightSection />
+      <HeaderRightSection onMenuClick={onMenuClick} />
     </header>
   );
 }

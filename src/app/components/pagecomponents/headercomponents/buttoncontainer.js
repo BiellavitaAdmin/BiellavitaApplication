@@ -1,28 +1,28 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import FullScreenMenu from "../fullpagemenu/fullscreenmenu";
+// import "./buttoncontainer.css";
 
-export default function ButtonContainer() {
+export default function ButtonContainer({ onMenuClick }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+    onMenuClick();
   };
 
   return (
     <>
       <div className="button-group-container">
-        <button className="cicular-button">
-          {" "}
+        <button className="circular-button">
           <Image
-            src="/user.png" // The path relative to the "public" folder
+            src="/user.png"
             alt="My Awesome Image"
-            width={28} // Width of the image
-            height={28} // Height of the image
+            width={28}
+            height={28}
           />
         </button>
-        <button className="cicular-button" onClick={toggleMenu}>
+        <button className="circular-button" onClick={toggleMenu}>
           <Image
             src={menuOpen ? "/cross.png" : "/dots.png"}
             alt={menuOpen ? "Close menu" : "Open menu"}
@@ -31,7 +31,6 @@ export default function ButtonContainer() {
           />
         </button>
       </div>
-      {menuOpen && <FullScreenMenu closeMenu={toggleMenu} />}
     </>
   );
 }
