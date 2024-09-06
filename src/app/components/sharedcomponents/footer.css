@@ -1,0 +1,28 @@
+.footer-content-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 1.8rem;
+  z-index: 1; /* Above the overlay */
+}
+
+.linkdin-circularbutton {
+  width: 60px; /* Diameter of the button */
+  height: 60px; /* Diameter of the button */
+  margin: 5px;
+  border-radius: 50%; /* Makes the button circular */
+  background-color: transparent;
+  color: black; /* Text color */
+  border: 1px solid black; /* Removes the default border */
+  font-size: 16px;
+  z-index: 1; /* Above the overlay */
+}
+
+.rights-line-homepage {
+  font-size: var(--font-size-footer-rights-text);
+  font-weight: var(--font-weight-footer-rights-text);
+  color: var(--Website-black-color);
+  z-index: 1; /* Above the overlay */
+}
