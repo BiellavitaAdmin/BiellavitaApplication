@@ -1,0 +1,103 @@
+.getintouch-container {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("/contactus.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.getintouch-heading-container {
+  padding-top: 8rem;
+  margin-left: 8rem;
+  text-align: left;
+  z-index: 1;
+}
+
+.getintouch-main-heading {
+  font-size: var(--font-size-page-heading);
+  font-weight: var(--font-weight-super-heading);
+  color: var(--Website-black-color);
+}
+
+.getintouch-form-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 8rem;
+  margin-top: 60px; /* Adjust this based on the header height */
+}
+
+.form-title {
+  margin: 1rem;
+  font-size: var(--font-size-page-subcontent);
+  font-weight: var(--font-weight-super-heading);
+  color: var(--Website-black-color);
+}
+
+.getintouch-form {
+  background-color: rgba(
+    240,
+    237,
+    237,
+    0.68
+  ); /* Gainsboro color with opacity */
+  backdrop-filter: blur(10px); /* Apply a blur effect to the background */
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
+  padding: 2.2rem;
+  height: 50vh;
+  border: 1px solid var(--Website-black-color);
+}
+
+.inputfield-group {
+  display: flex;
+  flex-direction: row;
+}
+
+.left-input {
+  display: flex;
+  flex-direction: column;
+  /* padding: 1rem; */
+}
+
+.right-input {
+  display: flex;
+  flex-direction: column;
+  /* padding: 1rem; */
+}
+
+.input-fields {
+  margin: 0.5rem;
+  height: 40px;
+}
+
+.form-labels {
+  margin: 0.5rem;
+}
+
+.address-field-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.message-field-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 2rem;
+}
+
+.contact-button {
+  padding: 0.4rem;
+  width: 120px;
+  border-radius: 0.7rem;
+}

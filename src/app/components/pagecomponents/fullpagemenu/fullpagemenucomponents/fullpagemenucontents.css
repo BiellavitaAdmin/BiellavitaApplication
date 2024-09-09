@@ -1,3 +1,7 @@
+.menu-content-container {
+  margin-top: 8rem;
+}
+
 /* Remove default styling of list items and links */
 ul {
   list-style: none; /* Remove bullet points */

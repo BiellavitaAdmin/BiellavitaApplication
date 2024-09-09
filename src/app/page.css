@@ -1,7 +1,7 @@
 .homepage {
   position: relative;
   overflow: hidden; /* Ensure content does not overflow */
-  height: calc(100vh - 120px); /* Full viewport height */
+  height: 100vh; /* Full viewport height */
   margin: 0;
 }
 

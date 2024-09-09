@@ -29,6 +29,11 @@ export default function Content() {
         <ParagraphSeven />
         <h2 className="clubpage-heading">Founders</h2>
         <p className="page-content-text">
+          In the most unexpected of circumstances, two paths from vastly
+          different backgrounds crossed to create a space that celebrates
+          excellence and brings like-minded people together.
+        </p>
+        <p className="page-content-text">
           Alberto and Belqis shared a passion for integrity and quality that led
           them to establish BiellaVita.
         </p>

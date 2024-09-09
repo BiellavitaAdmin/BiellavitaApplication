@@ -21,7 +21,9 @@ export default function RootLayout({ children }) {
     setMenuOpen(!menuOpen);
   };
 
-  const showFooterOn = ["/club"];
+  // , "/getintouch", "/visionandmission"
+
+  const showFooterOn = ["/club", "/getintouch", "/visionandmission"];
 
   return (
     <html lang="en">

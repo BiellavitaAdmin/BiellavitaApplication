@@ -3,6 +3,7 @@
   background-color: var(--Website-Page-Footer-Background);
   display: flex;
   flex-direction: row;
+  z-index: 2;
 }
 
 .pagefooter-left-section {

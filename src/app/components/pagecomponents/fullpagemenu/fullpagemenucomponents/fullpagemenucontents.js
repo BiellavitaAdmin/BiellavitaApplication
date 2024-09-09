@@ -10,12 +10,36 @@ export default function FullPageMenuContainer({ closeMenu }) {
             The Club
           </Link>
         </li>
-        <li>Vision & Mission</li>
-        <li>Private Events</li>
-        <li>Projects</li>
-        <li>Partnerships</li>
-        <li>Membership</li>
-        <li>Get in Touch</li>
+        <li>
+          <Link href="/visionandmission" onClick={closeMenu}>
+            Vision & Mission
+          </Link>
+        </li>
+        <li>
+          <Link href="/privateevents" onClick={closeMenu}>
+            Private Events
+          </Link>
+        </li>
+        <li>
+          <Link href="/Projects" onClick={closeMenu}>
+            Projects
+          </Link>
+        </li>
+        <li>
+          <Link href="/Partnerships" onClick={closeMenu}>
+            Partnerships
+          </Link>
+        </li>
+        <li>
+          <Link href="/Membership" onClick={closeMenu}>
+            Membership
+          </Link>
+        </li>
+        <li>
+          <Link href="/getintouch" onClick={closeMenu}>
+            Get in Touch
+          </Link>
+        </li>
       </ul>
     </div>
   );

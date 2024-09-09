@@ -5,7 +5,8 @@
   align-items: center;
   padding-left: 2rem;
   padding-right: 1.8rem;
-  z-index: 1; /* Above the overlay */
+  z-index: 2; /* Above the overlay */
+  margin-top: 7rem;
 }
 
 .linkdin-circularbutton {
