@@ -1,22 +1,37 @@
+"use client";
+
 import { Playfair_Display } from "next/font/google";
+import Header from "./components/sharedcomponents/header";
+import FullScreenMenu from "./components/pagecomponents/fullpagemenu/fullscreenmenu";
+import { useState } from "react";
 import "./styles/globals.css";
 
-// Import Playfair Display font with italic style
 const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
-  style: ["italic"], // Add italic style
-  weight: ["400", "500", "600", "700", "800", "900"], // You can add regular and bold weights
+  style: ["italic"],
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
-export const metadata = {
-  title: "BiellaVita",
-  description: "Private social club",
-};
-
 export default function RootLayout({ children }) {
+  // State to manage the menu open/close
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <html lang="en">
-      <body className={playfairDisplay.className}>{children}</body>
+      <body className={playfairDisplay.className}>
+        {/* Header will be present on all pages */}
+        <Header onMenuClick={toggleMenu} menuOpen={menuOpen} />
+
+        {/* Full Screen Menu will be present on all pages */}
+        {menuOpen && <FullScreenMenu closeMenu={toggleMenu} />}
+
+        {/* Render the rest of the page content */}
+        {children}
+      </body>
     </html>
   );
 }
