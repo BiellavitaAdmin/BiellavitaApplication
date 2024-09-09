@@ -1,30 +1,3 @@
-/* .homepage {
-  position: relative;
-  overflow: hidden; 
-  height: calc(100vh - 120px);
-  margin: 0;
-}
-
-.hero-section {
-  position: fixed; 
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  object-fit: cover; 
-  z-index: -1; 
-  background-image: url(../../../public/TheClubPageBackground.png);
-  background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat; 
-}
-
-.clubpage-hero-heading {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
 .hero-section {
   position: fixed; /* Keeps the hero section fixed behind the header */
   top: 0;
@@ -53,13 +26,66 @@
   z-index: 1; /* Ensure heading stays above the background image */
 }
 
-.content {
-  margin-top: 100vh; /* Push content below the hero section */
-  padding: 0;
-  position: relative;
+.clubpage-heading {
+  text-align: center;
+  font-size: var(--font-size-page-heading);
+  font-weight: var(--font-weight-super-heading);
+  margin-bottom: 20px;
+  color: var(--Website-black-color);
+  margin-top: 8rem;
 }
 
-.section-content {
+.content-continer {
+  background-color: var(--Website-body-color);
+  width: 100%;
+}
+
+.content {
+  margin-top: 100vh; /* Push content below the hero section */
+  padding: 200px;
+  position: relative;
+  width: 100%;
+}
+
+.page-content-text {
+  text-align: center;
   padding: 20px;
-  background: var(--Website-body-color); /* Background for content sections */
+  font-size: var(--font-size-page-content);
+  background: var(--Website-body-color);
+  margin-bottom: 3rem;
+}
+
+.para-intro {
+  text-align: start;
+  padding: 20px;
+  font-size: var(--font-size-page-subcontent);
+  /* font-weight: var(--font-weight-super-heading); */
+  background: var(--Website-body-color);
+  margin-bottom: 3rem;
+}
+
+.Belquis-paragraph {
+  border-left: 2px solid var(--Website-black-color);
+  margin-bottom: 5rem;
+  margin-top: 15rem;
+  color: var(--Website-black-color);
+}
+
+.Belquis-paragraph-heading {
+  font-size: var(--font-size-page-subheading);
+  font-weight: var(--font-weight-super-heading);
+  padding: 1rem;
+  color: var(--Website-black-color);
+}
+
+.Alberto-paragraph {
+  border-left: 2px solid var(--Website-black-color);
+  color: var(--Website-black-color);
+}
+
+.Alberto-paragraph-heading {
+  font-size: var(--font-size-page-subheading);
+  font-weight: var(--font-weight-super-heading);
+  padding: 1rem;
+  color: var(--Website-black-color);
 }

@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import Image from "next/image";
 import "./fullscreenmenuheader.css";
 
@@ -6,7 +7,14 @@ export default function FullScreenMenuHeader({ closeMenu }) {
   return (
     <header className="header">
       <div className="header-container-left">
-        <Image src="/Monogram.png" alt="Logo" width={55} height={55} />
+        <Link href="/" onClick={closeMenu}>
+          <Image
+            src="/Monogram.png" // The path relative to the "public" folder
+            alt="My Awesome Image"
+            width={55} // Width of the image
+            height={55} // Height of the image
+          />
+        </Link>
       </div>
 
       <div className="header-container-right">

@@ -9,17 +9,23 @@ body {
 }
 
 :root {
+  --Website-black-color: #505055;
+  --Website-body-color: #f3eeed;
+
   --font-size-super-heading: 96px;
   --font-weight-super-heading: 500;
 
   --font-size-footer-rights-text: 24px;
   --font-weight-footer-rights-text: 500;
 
-  --Website-black-color: #505055;
-  --Website-body-color: #f3eeed;
-
   --font-size-menu-heading: 84px;
 
   --font-size-menufooter-left-text: 18px;
   --font-weight-menufooter-left-text: 500;
+
+  --font-size-page-content: 35px;
+  --font-size-page-heading: 55px;
+
+  --font-size-page-subcontent: 28px;
+  --font-size-page-subheading: 34px;
 }
