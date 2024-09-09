@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
 
   // , "/getintouch", "/visionandmission"
 
-  const showFooterOn = ["/club", "/getintouch", "/visionandmission"];
+  const showFooterOn = ["/club", "/getintouch", "/visionandmission", "/login"];
 
   return (
     <html lang="en">

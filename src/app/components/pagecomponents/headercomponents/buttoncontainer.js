@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 // import "./buttoncontainer.css";
 
 export default function ButtonContainer({ onMenuClick, menuOpen }) {
@@ -7,7 +8,9 @@ export default function ButtonContainer({ onMenuClick, menuOpen }) {
     <>
       <div className="button-group-container">
         <button className="circular-button">
-          <Image src="/user.png" alt="User Icon" width={28} height={28} />
+          <Link href="/login">
+            <Image src="/user.png" alt="User Icon" width={28} height={28} />
+          </Link>
         </button>
         <button className="circular-button" onClick={onMenuClick}>
           <Image
