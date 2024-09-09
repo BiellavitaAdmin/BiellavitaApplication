@@ -10,6 +10,7 @@
   display: flex;
   justify-content: left;
   align-items: center;
+  color: var(--Website-black-color);
 }
 
 .footer-right {
