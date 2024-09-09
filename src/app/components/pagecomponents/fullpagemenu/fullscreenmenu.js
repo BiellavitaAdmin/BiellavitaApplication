@@ -9,7 +9,7 @@ export default function FullScreenMenu({ closeMenu }) {
     <div className="full-screen-menu">
       <FullScreenMenuHeader closeMenu={closeMenu} />
       <nav className="navigation-container">
-        <FullPageMenuContainer />
+        <FullPageMenuContainer closeMenu={closeMenu} />
       </nav>
       <FullPageMenuFooter />
     </div>

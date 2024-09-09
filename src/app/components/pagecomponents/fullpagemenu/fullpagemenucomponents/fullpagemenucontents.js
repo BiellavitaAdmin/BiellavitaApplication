@@ -1,10 +1,15 @@
+import Link from "next/link";
 import "./fullpagemenucontents.css";
 
-export default function FullPageMenuContainer() {
+export default function FullPageMenuContainer({ closeMenu }) {
   return (
     <div className="menu-content-container">
       <ul>
-        <li>The Club</li>
+        <li>
+          <Link href="/club" onClick={closeMenu}>
+            The Club
+          </Link>
+        </li>
         <li>Vision & Mission</li>
         <li>Private Events</li>
         <li>Projects</li>
