@@ -20,7 +20,7 @@ export default function Home() {
         Your browser does not support the video tag.
       </video>
       <div className="overlay"></div>
-      <Header onMenuClick={toggleMenu} />
+      <Header onMenuClick={toggleMenu} menuOpen={menuOpen} />
       <MainHeading />
       <Footer />
       {menuOpen && <FullScreenMenu closeMenu={toggleMenu} />}

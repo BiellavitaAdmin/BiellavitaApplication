@@ -1,28 +1,15 @@
 "use client";
-import { useState } from "react";
 import Image from "next/image";
 // import "./buttoncontainer.css";
 
-export default function ButtonContainer({ onMenuClick }) {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-    onMenuClick();
-  };
-
+export default function ButtonContainer({ onMenuClick, menuOpen }) {
   return (
     <>
       <div className="button-group-container">
         <button className="circular-button">
-          <Image
-            src="/user.png"
-            alt="My Awesome Image"
-            width={28}
-            height={28}
-          />
+          <Image src="/user.png" alt="User Icon" width={28} height={28} />
         </button>
-        <button className="circular-button" onClick={toggleMenu}>
+        <button className="circular-button" onClick={onMenuClick}>
           <Image
             src={menuOpen ? "/cross.png" : "/dots.png"}
             alt={menuOpen ? "Close menu" : "Open menu"}

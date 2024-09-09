@@ -5,7 +5,10 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: #f3eeed; /* Background color */
+  background-image: url("../../../../../public/fullmenubackground.png"); /* Replace with your image path */
+  background-size: cover; /* Ensures the image covers the entire screen */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
   z-index: 9999; /* Ensure it is on top of all content */
   display: flex;
   flex-direction: column;
@@ -22,4 +25,14 @@
   padding: 20px;
   background: transparent;
   z-index: 10000; /* Ensure it stays above everything else */
+}
+
+.navigation-container {
+  background-color: transparent;
+  margin-left: 13rem;
+  margin-right: 8rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+  width: 80%;
+  height: 70vh;
 }
