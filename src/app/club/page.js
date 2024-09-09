@@ -34,19 +34,16 @@ export default function Club() {
             <ParagraphSix />
             <ParagraphSeven />
             <h2 className="clubpage-heading">Founders</h2>
-
             <p className="page-content-text">
               Alberto and Belqis shared a passion for integrity and quality that
               led them to establish BiellaVita.
             </p>
           </article>
-
           <article className="Belquis-paragraph">
             <h2 className="Belquis-paragraph-heading">Belqis’s journey </h2>
             <ParagraphNine />
             <ParagraphTen />
           </article>
-
           <article className="Alberto-paragraph">
             <h2 className="Alberto-paragraph-heading">Alberto’s path</h2>
             <ParagraphEleven />
