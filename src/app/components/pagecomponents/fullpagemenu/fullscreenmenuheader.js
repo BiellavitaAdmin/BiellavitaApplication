@@ -20,7 +20,9 @@ export default function FullScreenMenuHeader({ closeMenu }) {
       <div className="header-container-right">
         <div className="button-group-container">
           <button className="circular-button">
-            <Image src="/user.png" alt="User Icon" width={28} height={28} />
+            <Link href="/login" onClick={closeMenu}>
+              <Image src="/user.png" alt="User Icon" width={28} height={28} />
+            </Link>
           </button>
           <button className="circular-button" onClick={closeMenu}>
             <Image src="/cross.png" alt="Close Menu" width={28} height={28} />

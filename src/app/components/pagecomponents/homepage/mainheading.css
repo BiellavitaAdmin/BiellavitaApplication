@@ -8,6 +8,7 @@
   align-items: center;
   background-color: transparent;
   z-index: 1; /* Above the overlay */
+  margin-top: 8rem;
 }
 
 .main-heading-homepage {

@@ -14,16 +14,20 @@ const playfairDisplay = Playfair_Display({
 });
 
 export default function RootLayout({ children }) {
-  // State to manage the menu open/close
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
-  // , "/getintouch", "/visionandmission"
-
-  const showFooterOn = ["/club", "/getintouch", "/visionandmission", "/login"];
+  const showFooterOn = [
+    "/club",
+    "/getintouch",
+    "/visionandmission",
+    "/login",
+    "/partnership",
+    "/membership",
+  ];
 
   return (
     <html lang="en">

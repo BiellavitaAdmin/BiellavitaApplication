@@ -1,5 +1,6 @@
 import "./footer.css";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -10,12 +11,18 @@ export default function Footer() {
         </h5>
         <button className="linkdin-circularbutton">
           {" "}
-          <Image
-            src="/Linkdin.png" // The path relative to the "public" folder
-            alt="My Awesome Image"
-            width={35} // Width of the image
-            height={35} // Height of the image
-          />
+          <a
+            href="https://www.linkedin.com/in/pier-alberto-furno-318944183/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src="/Linkdin.png" // The path relative to the "public" folder
+              alt="My Awesome Image"
+              width={35} // Width of the image
+              height={35} // Height of the image
+            />
+          </a>
         </button>
       </div>
     </footer>

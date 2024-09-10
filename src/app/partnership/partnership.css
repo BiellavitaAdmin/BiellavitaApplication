@@ -1,17 +1,17 @@
-.visionandmission-hero-section {
+.partnership-hero-section {
   position: fixed; /* Keeps the hero section fixed behind the header */
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh; /* Adjust as needed */
-  background-image: url("/visionandmission.png"); /* Path to your background image */
+  background-image: url("/Partnership.png"); /* Path to your background image */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   z-index: -1; /* Ensures the hero section stays behind other content */
 }
 
-.missionvision-hero-heading {
+.partnership-hero-heading {
   position: absolute; /* Position the heading absolutely within the hero section */
   top: 50%; /* Center vertically */
   left: 50%; /* Center horizontally */
@@ -26,7 +26,7 @@
   z-index: 1; /* Ensure heading stays above the background image */
 }
 
-.visionandmission-heading {
+.partnership-heading {
   text-align: center;
   font-size: var(--font-size-page-heading);
   font-weight: var(--font-weight-super-heading);
@@ -35,19 +35,19 @@
   margin-top: 8rem;
 }
 
-.visionandmission-content-continer {
+.partnership-content-continer {
   background-color: var(--Website-body-color);
   width: 100%;
 }
 
-.visionandmission-content {
+.partnership-content {
   margin-top: 100vh; /* Push content below the hero section */
   padding: 200px;
   position: relative;
   width: 100%;
 }
 
-.visionandmission-page-content-text {
+.partnership-page-content-text {
   text-align: center;
   padding: 20px;
   font-size: var(--font-size-page-content);
@@ -55,10 +55,25 @@
   margin-bottom: 3rem;
 }
 
-.motto-container {
+.partnership-page-content-text-lasttwo {
+  text-align: left;
+  padding: 20px;
+  font-size: var(--font-size-page-content);
+  background: var(--Website-body-color);
+  margin-bottom: 3rem;
+}
+
+.dual-pic-container {
   /* background-color: aqua; */
   display: flex;
   justify-content: center;
   margin-top: 8rem;
   margin-bottom: 8rem;
+}
+
+.large-pic-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
