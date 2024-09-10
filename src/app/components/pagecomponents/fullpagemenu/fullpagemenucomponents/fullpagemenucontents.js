@@ -21,7 +21,7 @@ export default function FullPageMenuContainer({ closeMenu }) {
           </Link>
         </li>
         <li>
-          <Link href="/Projects" onClick={closeMenu}>
+          <Link href="/projects" onClick={closeMenu}>
             Projects
           </Link>
         </li>
