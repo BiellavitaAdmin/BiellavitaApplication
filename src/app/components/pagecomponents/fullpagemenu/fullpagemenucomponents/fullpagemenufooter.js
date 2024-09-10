@@ -11,7 +11,13 @@ export default function FullPageMenuFooter() {
       </div>
       <div className="footer-right">
         <button className="circular-button">
-          <Image src="/linkdin.png" alt="User Icon" width={28} height={28} />
+          <a
+            href="https://www.linkedin.com/in/pier-alberto-furno-318944183/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image src="/linkdin.png" alt="User Icon" width={28} height={28} />
+          </a>
         </button>
       </div>
     </div>

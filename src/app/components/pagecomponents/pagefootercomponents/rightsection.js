@@ -7,8 +7,8 @@ export default function RightSection() {
         <Image
           src="/Biellavita-red.png"
           alt="Biellavita_red"
-          width={350}
-          height={350}
+          width={250}
+          height={250}
         />
       </div>
     </div>

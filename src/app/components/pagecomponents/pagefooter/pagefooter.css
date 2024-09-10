@@ -47,18 +47,19 @@
   display: flex;
   flex-direction: row;
   padding-left: 8.6rem;
-  padding-bottom: 5rem;
+  padding-bottom: 1rem;
 }
 
 .social-media-icon {
   font-size: var(--font-size-page-subheading);
+  margin-top: 1rem;
 }
 
 .pagefooter-rights-section {
   border-top: 1px solid var(--Website-black-color);
   display: flex;
   justify-content: center;
-  padding: 2rem;
+  padding: 1rem;
   background-color: var(--Website-Page-Footer-Background);
 }
 
