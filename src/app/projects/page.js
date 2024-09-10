@@ -33,7 +33,6 @@ export default function Projects() {
               </div>
             </div>
           </div>
-
           <div className="project-section margintop">
             <div className="right-section-project">
               <div className="pic-container">
@@ -59,7 +58,6 @@ export default function Projects() {
               </div>
             </div>
           </div>
-
           <div className="project-section margintop">
             <div className="left-section-project">
               <h2 className="project-heading">Project</h2>

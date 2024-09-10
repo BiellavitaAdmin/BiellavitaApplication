@@ -1,0 +1,131 @@
+.privateevents-hero-section {
+  position: fixed; /* Keeps the hero section fixed behind the header */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* Adjust as needed */
+  background-image: url("/Projectsback.png"); /* Path to your background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1; /* Ensures the hero section stays behind other content */
+}
+
+.privateevents-hero-heading {
+  position: absolute; /* Position the heading absolutely within the hero section */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Center both horizontally and vertically */
+  color: var(--Website-black-color); /* Adjust color for readability */
+  font-size: var(--font-size-menu-heading);
+  font-weight: var(--font-weight-super-heading);
+  text-align: center; /* Center text alignment */
+  z-index: 1; /* Ensure heading stays above the background image */
+}
+
+.privateevents-content-continer {
+  background-color: var(--Website-body-color);
+  width: 100%;
+}
+
+.privateevents-content {
+  margin-top: 100vh; /* Push content below the hero section */
+  padding: 200px;
+  position: relative;
+  width: 100%;
+}
+
+.upcoming-container {
+  width: 100%;
+}
+
+.upcoming-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.upcoming-section-heading-container {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.upcoming-heading {
+  color: var(--Website-black-color); /* Adjust color for readability */
+  font-size: var(--font-size-footer-rights-text);
+  font-weight: var(--font-weight-super-heading);
+  text-decoration: underline;
+}
+
+.upcoming-event-details-container {
+  margin-top: 1rem;
+  border-left: 2px solid var(--Website-black-color);
+  padding-left: 1rem;
+}
+
+.upcoming-event-large-heading-container {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.upcoming-event-large-heading {
+  color: var(--Website-black-color); /* Adjust color for readability */
+  font-size: var(--font-size-page-content);
+  font-weight: var(--font-weight-super-heading);
+}
+
+.upcoming-event-description {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.upcoming-event-details-button {
+  margin-top: 1rem;
+  border: 1px solid var(--Website-black-color);
+  padding: 0.5rem;
+  background-color: rgb(255, 255, 255, 0);
+  box-shadow: 1px 3px 16px -5px rgb(0, 0, 0, 25);
+}
+
+.previous-events-container {
+  width: 100%;
+  margin-top: 8rem;
+}
+
+.previous-events-cards-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.previous-events-heading {
+  margin-bottom: 1rem;
+  color: var(--Website-black-color); /* Adjust color for readability */
+  font-size: var(--font-size-footer-rights-text);
+  font-weight: var(--font-weight-super-heading);
+  text-decoration: underline;
+}
+
+.previous-card-heading {
+  color: var(--Website-black-color); /* Adjust color for readability */
+  font-size: var(--font-size-page-subcontent);
+  font-weight: var(--font-weight-super-heading);
+  margin-top: 1.5rem;
+}
+
+.previous-event-description {
+  margin-top: 0.6rem;
+  margin-bottom: 0.8rem;
+  width: 90%;
+}
+
+.previous-event-details-button {
+  margin-top: 1rem;
+  border: 1px solid var(--Website-black-color);
+  padding: 0.5rem;
+  background-color: rgb(255, 255, 255, 0);
+  box-shadow: 1px 3px 16px -5px rgb(0, 0, 0, 25);
+}

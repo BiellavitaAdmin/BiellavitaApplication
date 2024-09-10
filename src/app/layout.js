@@ -28,6 +28,7 @@ export default function RootLayout({ children }) {
     "/partnership",
     "/membership",
     "/projects",
+    "/privateevents",
   ];
 
   return (
