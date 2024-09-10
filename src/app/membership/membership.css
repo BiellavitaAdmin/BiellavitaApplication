@@ -1,0 +1,253 @@
+.membership-hero-section {
+  position: fixed; /* Keeps the hero section fixed behind the header */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* Adjust as needed */
+  background-image: url("/partnership.png"); /* Path to your background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1; /* Ensures the hero section stays behind other content */
+}
+
+.membership-hero-heading {
+  position: absolute; /* Position the heading absolutely within the hero section */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Center both horizontally and vertically */
+  color: var(--Website-black-color); /* Adjust color for readability */
+  font-size: var(--font-size-menu-heading);
+  font-weight: var(--font-weight-super-heading);
+  text-align: center; /* Center text alignment */
+  z-index: 1; /* Ensure heading stays above the background image */
+}
+
+.membership-heading {
+  text-align: center;
+  font-size: var(--font-size-page-heading);
+  font-weight: var(--font-weight-super-heading);
+  margin-bottom: 20px;
+  color: var(--Website-black-color);
+  margin-top: 8rem;
+}
+
+.membership-content-continer {
+  background-color: var(--Website-body-color);
+  width: 100%;
+}
+
+.membership-content {
+  margin-top: 100vh; /* Push content below the hero section */
+  padding: 200px;
+  position: relative;
+  width: 100%;
+}
+
+.membership-page-content-text {
+  text-align: center;
+  padding: 20px;
+  font-size: var(--font-size-page-content);
+  background: var(--Website-body-color);
+  margin-bottom: 3rem;
+}
+
+.membership-page-content-text-lasttwo {
+  text-align: left;
+  padding: 20px;
+  font-size: var(--font-size-page-content);
+  background: var(--Website-body-color);
+  margin-bottom: 3rem;
+}
+
+.card-container {
+  /* background-color: aqua; */
+  padding: 5rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.subscription-card-one {
+  width: 50%;
+  background-color: rgb(255, 255, 255, 0.3);
+  margin: 3rem;
+  border: 1px solid var(--Website-black-color);
+}
+
+.card-banner {
+  display: block;
+  width: 100%;
+  height: 300px;
+  background-color: gray;
+}
+
+.card-content-container {
+  padding: 1.5rem;
+}
+
+.card-heading {
+  font-size: var(--font-size-page-subheading);
+  color: var(--Website-black-color);
+  font-weight: var(--font-weight-super-heading);
+}
+
+.card-para-one {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: var(--Website-black-color);
+}
+
+.card-para-two {
+  color: var(--Website-black-color);
+}
+
+.card-button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2rem;
+  /* margin-bottom: 2rem; */
+}
+
+.card-button {
+  font-family: inherit;
+  width: 140px;
+  padding: 0.4rem;
+  border: 1px solid var(--Website-black-color);
+  border-radius: 10px;
+  font-size: var(--font-size-menufooter-left-text);
+  background-color: var(--Website-Page-Footer-Background);
+}
+
+.process-container {
+  width: 100%;
+}
+
+.process-main-heading-container {
+  margin-top: 3rem;
+  margin-bottom: 8rem;
+}
+
+.process-main-heading {
+  font-size: var(--font-size-page-heading);
+  font-weight: var(--font-weight-super-heading);
+  color: var(--Website-black-color);
+}
+
+.process-one-container {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.process-heading {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: var(--font-size-page-subheading);
+  font-weight: var(--font-weight-super-heading);
+  color: var(--Website-black-color);
+}
+
+.process-description {
+  text-align: center;
+}
+
+.process-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.topspacing {
+  margin-top: 18rem;
+}
+
+.bottomspacing {
+  margin-bottom: 18rem;
+}
+
+.benefits-container {
+  margin-top: 18rem;
+  width: 100%;
+}
+
+.benefits-heading-continer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 8rem;
+}
+
+.benefits-heading {
+  text-align: center;
+  font-size: var(--font-size-page-subheading);
+  font-weight: var(--font-weight-super-heading);
+  color: var(--Website-black-color);
+}
+
+.the-cards-collection {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.benefits-card-container {
+  background-color: rgb(255, 255, 255, 0.3);
+  margin: 2rem;
+  width: 70%;
+  height: 730px;
+  border-radius: 35px;
+}
+
+.benefits-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.benefits-card-heading {
+  font-size: var(--font-size-page-subheading);
+  font-weight: var(--font-weight-super-heading);
+  color: var(--Website-black-color);
+}
+
+.benefits-card-description {
+  font-size: var(--font-size-menufooter-left-text);
+  font-weight: var(--font-weight-super-heading);
+  color: var(--Website-black-color);
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.benefits-list {
+  /* list-style-image: url("../../../public/listbullet.png"); */
+  text-align: left;
+}
+
+.benefits-list-item {
+  font-size: var(--font-size-menufooter-left-text);
+  font-weight: var(--font-weight-super-heading);
+  color: var(--Website-black-color);
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.bullet-container {
+  margin: 1rem;
+}
+
+.spacingrightcard {
+  margin-top: 1rem;
+}
+
+.spacinglight {
+  margin-top: 0.4rem;
+}
