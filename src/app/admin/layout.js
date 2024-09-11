@@ -1,5 +1,4 @@
 import "./layout.css";
-
 import AdminFooter from "./components/adminfooter";
 import AdminHeader from "./components/adminheader";
 import AdminSidebar from "./components/adminsidebar";
