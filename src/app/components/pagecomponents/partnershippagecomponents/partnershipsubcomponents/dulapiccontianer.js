@@ -4,7 +4,7 @@ export default function DualPicContiner() {
     <>
       <div className="dual-pic-container">
         <Image
-          src="/dualpicpartership.png"
+          src="/dualpicpartership.webp"
           alt="My Awesome Image"
           width={1100}
           height={835}

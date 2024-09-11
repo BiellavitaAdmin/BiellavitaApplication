@@ -10,7 +10,7 @@ export default function SocialMediaContainer() {
             rel="noopener noreferrer"
           >
             <Image
-              src="/linkedinfooter.png"
+              src="/linkedinfooter.webp"
               alt="Biellavita_red"
               width={50}
               height={50}

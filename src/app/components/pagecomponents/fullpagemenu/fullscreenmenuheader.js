@@ -9,7 +9,7 @@ export default function FullScreenMenuHeader({ closeMenu }) {
       <div className="header-container-left">
         <Link href="/" onClick={closeMenu}>
           <Image
-            src="/Monogram.png" // The path relative to the "public" folder
+            src="/Monogram.webp" // The path relative to the "public" folder
             alt="My Awesome Image"
             width={55} // Width of the image
             height={55} // Height of the image

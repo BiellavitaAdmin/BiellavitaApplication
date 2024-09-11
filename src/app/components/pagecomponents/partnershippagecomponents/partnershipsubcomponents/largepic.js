@@ -4,7 +4,7 @@ export default function LargePic() {
     <>
       <div className="large-pic-container">
         <Image
-          src="/partnerhip_two.png"
+          src="/partnerhip_two.webp"
           alt="My Awesome Image"
           width={990}
           height={585}
