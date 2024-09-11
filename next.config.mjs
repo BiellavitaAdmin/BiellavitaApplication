@@ -1,21 +1,7 @@
-// /** @type {import('next').NextConfig} */
-// const nextConfig = {
-//   output: "export",
-// };
-
-// export default nextConfig;
-
-// /** @type {import('next').NextConfig} */
-// const nextConfig = {
-//   images: {
-//     unoptimized: true,
-//   },
-// };
-
-// export default nextConfig;
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  swcMinify: true, // Ensure SWC is used for JavaScript minification
+  compress: true, // Enable response compression (Gzip)
   output: "export",
   images: {
     unoptimized: true,

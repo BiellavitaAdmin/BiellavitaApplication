@@ -5,7 +5,7 @@ export default function PreviousEventsCards() {
       <div className="previous-events-card">
         <div className="previous-event-large-pic">
           <Image
-            src="/partnerhip_two.png"
+            src="/partnerhip_two.webp"
             alt="My Awesome Image"
             width={450}
             height={320}
@@ -23,7 +23,7 @@ export default function PreviousEventsCards() {
       <div className="previous-events-card">
         <div className="previous-event-large-pic">
           <Image
-            src="/partnerhip_two.png"
+            src="/partnerhip_two.webp"
             alt="My Awesome Image"
             width={450}
             height={320}
@@ -42,7 +42,7 @@ export default function PreviousEventsCards() {
       <div className="previous-events-card">
         <div className="previous-event-large-pic">
           <Image
-            src="/partnerhip_two.png"
+            src="/partnerhip_two.webp"
             alt="My Awesome Image"
             width={450}
             height={320}

@@ -4,7 +4,7 @@ export default function LargePicContainer() {
     <>
       <div className="privateevents-large-pic-container">
         <Image
-          src="/partnerhip_two.png"
+          src="/partnerhip_two.webp"
           alt="My Awesome Image"
           width={1550}
           height={785}

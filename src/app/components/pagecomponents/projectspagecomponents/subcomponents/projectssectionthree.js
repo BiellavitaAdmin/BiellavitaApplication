@@ -19,7 +19,7 @@ export default function ProjectsSectionThree() {
         <div className="right-section-project">
           <div className="pic-container">
             <Image
-              src="/partnerhip_two.png"
+              src="/partnerhip_two.webp"
               alt="My Awesome Image"
               width={650}
               height={435}

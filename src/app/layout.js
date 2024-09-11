@@ -1,9 +1,9 @@
 "use client";
-import { usePathname } from "next/navigation";
+import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation"; // Import usePathname
 import { Playfair_Display } from "next/font/google";
 import Header from "./components/sharedcomponents/header";
 import FullScreenMenu from "./components/pagecomponents/fullpagemenu/fullscreenmenu";
-import { useState } from "react";
 import "./styles/globals.css";
 import PageFooter from "./components/pagecomponents/pagefooter/pagefooter";
 
@@ -15,10 +15,22 @@ const playfairDisplay = Playfair_Display({
 
 export default function RootLayout({ children }) {
   const [menuOpen, setMenuOpen] = useState(false);
-  const pathname = usePathname();
+  const pathname = usePathname(); // Get the current pathname
+
+  // Function to toggle menu visibility
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
+    setMenuOpen((prevMenuOpen) => !prevMenuOpen);
   };
+
+  useEffect(() => {
+    // Function to handle menu closing after pathname changes
+    const closeMenu = () => {
+      setMenuOpen(false);
+    };
+
+    // Call closeMenu whenever pathname changes
+    closeMenu();
+  }, [pathname]); // Dependency on pathname
 
   const showFooterOn = [
     "/club",
