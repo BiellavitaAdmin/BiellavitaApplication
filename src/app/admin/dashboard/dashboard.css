@@ -1,0 +1,44 @@
+.stats-tabs-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2.7rem;
+  margin-top: 5rem;
+}
+
+.members-tab-container {
+  background-color: rgba(255, 255, 255, 0.795);
+  width: 20%;
+  border-radius: 25px;
+  padding-right: 0.8rem;
+  padding-left: 0.8rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tab-left-section {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0.5rem;
+}
+
+.tab-icons {
+  margin-top: 0.3rem;
+  margin-right: 0.6rem;
+}
+
+.tab-title {
+  font-size: var(--font-size-footer-rights-text);
+  font-weight: var(--font-weight-super-heading);
+  color: var(--Website-black-color);
+}
+
+.tab-numeric-value {
+  margin-top: 0.2rem;
+  font-size: var(--font-size-page-heading);
+  font-weight: var(--font-weight-super-heading);
+  color: var(--Website-black-color);
+}

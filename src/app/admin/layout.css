@@ -100,3 +100,8 @@
   font-size: var(--font-size-menufooter-left-text);
   font-weight: var(--font-weight-footer-rights-text);
 }
+
+.main-content {
+  width: 88%;
+  padding: 2rem;
+}
