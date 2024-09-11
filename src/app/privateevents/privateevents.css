@@ -60,6 +60,10 @@
   text-decoration: underline;
 }
 
+.privateevents-large-pic-container {
+  margin-bottom: 0;
+}
+
 .upcoming-event-details-container {
   margin-top: 1rem;
   border-left: 2px solid var(--Website-black-color);
