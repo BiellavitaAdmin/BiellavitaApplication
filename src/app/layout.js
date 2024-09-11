@@ -43,14 +43,17 @@ export default function RootLayout({ children }) {
     "/privateevents",
   ];
 
+  const isAdminRoute = pathname.startsWith("/admin");
+
   return (
     <html lang="en">
       <body className={playfairDisplay.className}>
-        {/* Header will be present on all pages */}
-        <Header onMenuClick={toggleMenu} menuOpen={menuOpen} />
-
-        {/* Full Screen Menu will be present on all pages */}
-        {menuOpen && <FullScreenMenu closeMenu={toggleMenu} />}
+        {!isAdminRoute && (
+          <>
+            <Header onMenuClick={toggleMenu} menuOpen={menuOpen} />
+            {menuOpen && <FullScreenMenu closeMenu={toggleMenu} />}
+          </>
+        )}
 
         {/* Render the rest of the page content */}
         {children}
