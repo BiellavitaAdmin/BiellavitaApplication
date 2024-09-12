@@ -26,3 +26,265 @@
   color: var(--Website-black-color);
   z-index: 1; /* Above the overlay */
 }
+
+/* Default styles (mobile-first approach) */
+
+/* Small phones (<= 320px) */
+@media (max-width: 320px) {
+  .footer-content-container {
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+  }
+
+  .linkdin-circularbutton {
+    width: 66px;
+  }
+
+  .rights-line-homepage {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--Website-black-color);
+    z-index: 1;
+  }
+}
+
+/* Standard small phones (<= 360px) */
+@media (max-width: 360px) {
+  .footer-content-container {
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+  }
+
+  .linkdin-circularbutton {
+    width: 59px;
+  }
+
+  .rights-line-homepage {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--Website-black-color);
+    z-index: 1;
+  }
+}
+
+/* iPhone 12, 13 Mini, SE (2020) */
+@media (min-width: 375px) {
+  .footer-content-container {
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+  }
+
+  .linkdin-circularbutton {
+    width: 59px;
+  }
+
+  .rights-line-homepage {
+    text-align: center;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--Website-black-color);
+    z-index: 1;
+  }
+}
+
+/* iPhone 14, 15 (standard model) */
+@media (min-width: 390px) {
+  .footer-content-container {
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+  }
+
+  .linkdin-circularbutton {
+    width: 59px;
+  }
+
+  .rights-line-homepage {
+    text-align: center;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--Website-black-color);
+    z-index: 1;
+  }
+}
+
+/* iPhone 14 Pro, 15 Pro */
+@media (min-width: 430px) {
+  .footer-content-container {
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+  }
+
+  .linkdin-circularbutton {
+    width: 59px;
+  }
+
+  .rights-line-homepage {
+    text-align: center;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--Website-black-color);
+    z-index: 1;
+  }
+}
+
+/* Larger phones and phablets (>= 480px) */
+@media (min-width: 480px) {
+  .footer-content-container {
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+  }
+
+  .linkdin-circularbutton {
+    width: 59px;
+  }
+
+  .rights-line-homepage {
+    text-align: center;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--Website-black-color);
+    z-index: 1;
+  }
+}
+
+/* Tablets (>= 600px) */
+@media (min-width: 600px) {
+  .footer-content-container {
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+  }
+
+  .linkdin-circularbutton {
+    width: 59px;
+  }
+
+  .rights-line-homepage {
+    text-align: center;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--Website-black-color);
+    z-index: 1;
+  }
+}
+
+/* Small laptops and larger tablets (>= 768px) */
+@media (min-width: 768px) {
+  .footer-content-container {
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+  }
+
+  .linkdin-circularbutton {
+    width: 59px;
+  }
+
+  .rights-line-homepage {
+    text-align: center;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--Website-black-color);
+    z-index: 1;
+  }
+}
+
+/* Medium laptops (>= 1024px) */
+@media (min-width: 1024px) {
+  .footer-content-container {
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+  }
+
+  .linkdin-circularbutton {
+    width: 59px;
+  }
+
+  .rights-line-homepage {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--Website-black-color);
+    z-index: 1;
+  }
+}
+
+/* Large laptops and desktops (>= 1280px) */
+@media (min-width: 1280px) {
+  .footer-content-container {
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+  }
+
+  .linkdin-circularbutton {
+    width: 59px;
+  }
+
+  .rights-line-homepage {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--Website-black-color);
+    z-index: 1;
+  }
+}
+
+/* Extra-large desktops (>= 1440px) */
+@media (min-width: 1440px) {
+  .footer-content-container {
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+  }
+
+  .linkdin-circularbutton {
+    width: 59px;
+  }
+
+  .rights-line-homepage {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--Website-black-color);
+    z-index: 1;
+  }
+}
+
+/* Ultra-wide screens (>= 1600px) */
+@media (min-width: 1600px) {
+  .footer-content-container {
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+  }
+
+  .linkdin-circularbutton {
+    width: 59px;
+  }
+
+  .rights-line-homepage {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--Website-black-color);
+    z-index: 1;
+  }
+}
+
+/* 4K screens (>= 1920px) */
+@media (min-width: 1920px) {
+  .footer-content-container {
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+  }
+
+  .linkdin-circularbutton {
+    width: 59px;
+  }
+
+  .rights-line-homepage {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--Website-black-color);
+    z-index: 1;
+  }
+}

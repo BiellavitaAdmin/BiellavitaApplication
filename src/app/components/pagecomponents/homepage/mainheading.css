@@ -17,3 +17,135 @@
   color: var(--Website-black-color);
   z-index: 1; /* Above the overlay */
 }
+
+/* Default styles (mobile-first approach) */
+
+/* Small phones (<= 320px) */
+@media (max-width: 320px) {
+  .main-heading-homepage {
+    font-size: 15px;
+    font-weight: var(--font-weight-super-heading);
+    color: var(--Website-black-color);
+    z-index: 1; /* Above the overlay */
+  }
+}
+
+/* Standard small phones (<= 360px) */
+@media (max-width: 360px) {
+  .main-heading-homepage {
+    font-size: var(--font-size-mobile-main-heading-360);
+    font-weight: var(--font-weight-super-heading);
+    color: var(--Website-black-color);
+    z-index: 1; /* Above the overlay */
+  }
+}
+
+/* iPhone 12, 13 Mini, SE (2020) */
+@media (min-width: 375px) {
+  .main-heading-homepage {
+    font-size: var(--font-size-mobile-main-heading-360);
+    font-weight: var(--font-weight-super-heading);
+    color: var(--Website-black-color);
+    z-index: 1; /* Above the overlay */
+  }
+}
+
+/* iPhone 14, 15 (standard model) */
+@media (min-width: 390px) {
+  .main-heading-homepage {
+    font-size: var(--font-size-mobile-main-heading-360);
+    font-weight: var(--font-weight-super-heading);
+    color: var(--Website-black-color);
+    z-index: 1; /* Above the overlay */
+  }
+}
+
+/* iPhone 14 Pro, 15 Pro */
+@media (min-width: 430px) {
+  .main-heading-homepage {
+    font-size: var(--font-size-mobile-main-heading-360);
+    font-weight: var(--font-weight-super-heading);
+    color: var(--Website-black-color);
+    z-index: 1; /* Above the overlay */
+  }
+}
+
+/* Larger phones and phablets (>= 480px) */
+@media (min-width: 480px) {
+  .main-heading-homepage {
+    font-size: var(--font-size-mobile-main-heading-360);
+    font-weight: var(--font-weight-super-heading);
+    color: var(--Website-black-color);
+    z-index: 1; /* Above the overlay */
+  }
+}
+
+/* Tablets (>= 600px) */
+@media (min-width: 600px) {
+  .main-heading-homepage {
+    font-size: var(--font-size-mobile-main-heading-360);
+    font-weight: var(--font-weight-super-heading);
+    color: var(--Website-black-color);
+    z-index: 1; /* Above the overlay */
+  }
+}
+
+/* Small laptops and larger tablets (>= 768px) */
+@media (min-width: 768px) {
+  .main-heading-homepage {
+    font-size: var(--font-size-mobile-main-heading-360);
+    font-weight: var(--font-weight-super-heading);
+    color: var(--Website-black-color);
+    z-index: 1; /* Above the overlay */
+  }
+}
+
+/* Medium laptops (>= 1024px) */
+@media (min-width: 1024px) {
+  .main-heading-homepage {
+    font-size: var(--font-size-mobile-main-heading-360);
+    font-weight: var(--font-weight-super-heading);
+    color: var(--Website-black-color);
+    z-index: 1; /* Above the overlay */
+  }
+}
+
+/* Large laptops and desktops (>= 1280px) */
+@media (min-width: 1280px) {
+  .main-heading-homepage {
+    font-size: var(--font-size-mobile-main-heading-360);
+    font-weight: var(--font-weight-super-heading);
+    color: var(--Website-black-color);
+    z-index: 1; /* Above the overlay */
+  }
+}
+
+/* Extra-large desktops (>= 1440px) */
+@media (min-width: 1440px) {
+  .main-heading-homepage {
+    font-size: var(--font-size-mobile-main-heading-360);
+    font-weight: var(--font-weight-super-heading);
+    color: var(--Website-black-color);
+    z-index: 1; /* Above the overlay */
+  }
+}
+
+/* Ultra-wide screens (>= 1600px) */
+@media (min-width: 1600px) {
+  .main-heading-homepage {
+    font-size: var(--font-size-mobile-main-heading-360);
+    font-weight: var(--font-weight-super-heading);
+    color: var(--Website-black-color);
+    z-index: 1; /* Above the overlay */
+  }
+}
+
+/* 4K screens (>= 1920px) */
+@media (min-width: 1920px) {
+  .main-heading-homepage {
+    font-size: var(--font-size-mobile-main-heading-360);
+    font-weight: var(--font-weight-super-heading);
+    color: var(--Website-black-color);
+    z-index: 1; /* Above the overlay */
+  }
+}

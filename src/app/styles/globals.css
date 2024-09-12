@@ -30,6 +30,9 @@ body {
 
   --font-size-page-subcontent: 28px;
   --font-size-page-subheading: 34px;
+
+  --font-size-mobile-main-heading-320: 55px;
+  --font-size-mobile-main-heading-360: 75px;
 }
 
 /* Global scrollbar styles */
