@@ -1,5 +1,5 @@
-import "./addmembers.css";
-export default function AddMembers() {
+import "./addprojects.css";
+export default function AddProjects() {
   return (
     <>
       <div className="form-container">
@@ -26,7 +26,7 @@ export default function AddMembers() {
               <input className="dash-form-input"></input>
             </div>
             <div className="dash-form-conatiner">
-              <button className="dash-form-button">Add Member</button>
+              <button className="dash-form-button">Add Projects</button>
             </div>
           </form>
         </div>

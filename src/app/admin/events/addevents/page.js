@@ -1,5 +1,5 @@
-import "./addmembers.css";
-export default function AddMembers() {
+import "./addevents.css";
+export default function AddEvents() {
   return (
     <>
       <div className="form-container">
