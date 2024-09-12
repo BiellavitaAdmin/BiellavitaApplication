@@ -11,7 +11,9 @@ export default function SidebarThirdItem() {
           height={25}
           className="dash-icons"
         />
-        <Link href="/admin/events">Events</Link>
+        <Link href="/admin/events" className="sidebar-link">
+          Events
+        </Link>
       </li>
     </>
   );

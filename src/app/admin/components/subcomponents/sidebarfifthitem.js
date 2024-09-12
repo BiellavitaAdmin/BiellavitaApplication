@@ -11,7 +11,9 @@ export default function SidebarFifthItem() {
           height={25}
           className="dash-icons"
         />
-        <Link href="/admin/partners">Partners</Link>
+        <Link href="/admin/partners" className="sidebar-link">
+          Partners
+        </Link>
       </li>
     </>
   );

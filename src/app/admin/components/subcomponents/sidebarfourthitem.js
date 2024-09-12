@@ -11,7 +11,9 @@ export default function SidebarFourthItem() {
           height={25}
           className="dash-icons"
         />
-        <Link href="/admin/projects">Projects</Link>
+        <Link href="/admin/projects" className="sidebar-link">
+          Projects
+        </Link>
       </li>
     </>
   );

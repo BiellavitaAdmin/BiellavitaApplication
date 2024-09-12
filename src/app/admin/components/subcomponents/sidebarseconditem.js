@@ -11,7 +11,9 @@ export default function SidebarSecondItem() {
           height={25}
           className="dash-icons"
         />
-        <Link href="/admin/members">Members</Link>
+        <Link href="/admin/members" className="sidebar-link">
+          Members
+        </Link>
       </li>
     </>
   );

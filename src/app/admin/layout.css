@@ -83,6 +83,12 @@
   height: 70px;
 }
 
+.sidebar-link {
+  text-decoration: none;
+  color: var(--Website-black-color);
+  display: block;
+}
+
 .dash-sidebar-item:hover {
   background-color: #f3eeed;
 }

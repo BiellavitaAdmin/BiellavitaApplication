@@ -11,7 +11,9 @@ export default function SidebarFirstItem() {
           height={25}
           className="dash-icons"
         />
-        <Link href="/admin/dashboard">Dashboard</Link>
+        <Link href="/admin/dashboard" className="sidebar-link">
+          Dashboard
+        </Link>
       </li>
     </>
   );
