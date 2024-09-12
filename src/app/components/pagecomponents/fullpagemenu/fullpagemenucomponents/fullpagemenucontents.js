@@ -1,46 +1,42 @@
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import "./fullpagemenucontents.css";
 
 export default function FullPageMenuContainer({ closeMenu }) {
+  const [animate, setAnimate] = useState(false);
+
+  // Trigger animation when the component mounts (menu opens)
+  useEffect(() => {
+    const timer = setTimeout(() => setAnimate(true), 50); // Small delay to ensure smooth animation
+    return () => clearTimeout(timer); // Cleanup
+  }, []);
+
   return (
     <div className="menu-content-container">
       <ul>
-        <li>
-          <Link href="/club" onClick={closeMenu}>
-            The Club
-          </Link>
-        </li>
-        <li>
-          <Link href="/visionandmission" onClick={closeMenu}>
-            Vision & Mission
-          </Link>
-        </li>
-        <li>
-          <Link href="/privateevents" onClick={closeMenu}>
-            Private Events
-          </Link>
-        </li>
-        <li>
-          <Link href="/projects" onClick={closeMenu}>
-            Projects
-          </Link>
-        </li>
-        <li>
-          <Link href="/partnership" onClick={closeMenu}>
-            Partnerships
-          </Link>
-        </li>
-        <li>
-          <Link href="/membership" onClick={closeMenu}>
-            Membership
-          </Link>
-        </li>
-        <li>
-          <Link href="/getintouch" onClick={closeMenu}>
-            Get in Touch
-          </Link>
-        </li>
+        {menuItems.map((item, index) => (
+          <li
+            key={index}
+            className={animate ? "slide-in" : ""}
+            style={{ transitionDelay: `${index * 100}ms` }}
+          >
+            <Link href={item.href} onClick={closeMenu}>
+              {item.text}
+            </Link>
+          </li>
+        ))}
       </ul>
     </div>
   );
 }
+
+// Sample array for menu items to make it dynamic
+const menuItems = [
+  { text: "The Club", href: "/club" },
+  { text: "Vision & Mission", href: "/visionandmission" },
+  { text: "Private Events", href: "/privateevents" },
+  { text: "Projects", href: "/projects" },
+  { text: "Partnerships", href: "/partnership" },
+  { text: "Membership", href: "/membership" },
+  { text: "Get in Touch", href: "/getintouch" },
+];

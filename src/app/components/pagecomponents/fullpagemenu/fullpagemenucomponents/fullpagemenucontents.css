@@ -1,33 +1,38 @@
+/* Container for the list of menu items */
 .menu-content-container {
   margin-top: 8rem;
+  overflow: hidden; /* Ensure content that is offscreen is hidden */
 }
 
-/* Remove default styling of list items and links */
+/* List reset */
 ul {
-  list-style: none; /* Remove bullet points */
-  padding: 0; /* Remove default padding */
-  margin: 0; /* Remove default margin */
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 li {
-  font-size: var(--font-size-menu-heading); /* Font size for menu items */
-  color: var(--Website-black-color); /* Text color for menu items */
-  line-height: 1.2; /* Line height for spacing */
+  font-size: var(--font-size-menu-heading);
+  color: var(--Website-black-color);
+  line-height: 1.2;
+  opacity: 0; /* Start with opacity 0 */
+  transform: translateX(20%); /* Start offscreen to the right */
+  transition: transform 0.9s ease, opacity 0.9s ease; /* Smooth transition for both transform and opacity */
+}
+
+/* Apply the slide-in effect */
+li.slide-in {
+  opacity: 1; /* Fade in */
+  transform: translateX(0); /* Slide in from the right */
 }
 
 /* Style links within list items */
 li a {
-  text-decoration: none; /* Remove underline from links */
-  color: inherit; /* Inherit color from parent (li) */
+  text-decoration: none;
+  color: inherit;
 }
 
-/* Active and hover states for links */
 li a:hover,
 li a:focus {
-  color: rgb(167, 167, 167); /* Hover color for links */
-}
-
-/* Optional: Active state (if you want to style the currently active link) */
-li a.active {
-  color: var(--Website-active-color); /* Active color for links */
+  color: rgb(167, 167, 167);
 }
