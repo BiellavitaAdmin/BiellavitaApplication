@@ -9,6 +9,12 @@
   background-position: center;
   background-repeat: no-repeat;
   z-index: -1; /* Ensures the hero section stays behind other content */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 1s ease-in-out; /* Transition for fade-in effect */
+}
+
+.privateevents-hero-section.show {
+  opacity: 1; /* Fully visible */
 }
 
 .privateevents-hero-heading {
@@ -24,6 +30,13 @@
   font-weight: var(--font-weight-super-heading);
   text-align: center; /* Center text alignment */
   z-index: 1; /* Ensure heading stays above the background image */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.privateevents-hero-heading.show {
+  opacity: 1; /* Fully visible */
+  transform: translate(-50%, -50%) scale(1.05); /* Slight zoom effect */
 }
 
 .privateevents-content-continer {

@@ -1,7 +1,10 @@
+"use client";
+
 import "./partnership.css";
 import PartnershipContent from "../components/pagecomponents/partnershippagecomponents/partnershipcontent";
-
+import { useHeroAnimation } from "../hooks/useHeroAnimation";
 export default function Partnership() {
+  useHeroAnimation("partnership-hero-section", "partnership-hero-heading");
   return (
     <>
       <div className="partnership-hero-section">

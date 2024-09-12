@@ -4,7 +4,7 @@ import "./projects.css";
 import ProjectsContent from "../components/pagecomponents/projectspagecomponents/projectscontent";
 import { useHeroAnimation } from "../hooks/useHeroAnimation";
 export default function Projects() {
-  useHeroAnimation();
+  useHeroAnimation("projects-hero-section", "projects-hero-heading");
   return (
     <>
       <div className="projects-hero-section">

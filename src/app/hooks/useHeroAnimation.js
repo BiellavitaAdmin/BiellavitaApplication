@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 
-export const useHeroAnimation = () => {
+export const useHeroAnimation = (sectionClass, headingClass) => {
   useEffect(() => {
-    const heroSection = document.querySelector(".projects-hero-section");
-    const heroHeading = document.querySelector(".projects-hero-heading");
+    const heroSection = document.querySelector(`.${sectionClass}`);
+    const heroHeading = document.querySelector(`.${headingClass}`);
 
     // Function to handle animations
     const handleAnimation = () => {
@@ -23,5 +23,5 @@ export const useHeroAnimation = () => {
     return () => {
       window.removeEventListener("scroll", handleAnimation);
     };
-  }, []);
+  }, [sectionClass, headingClass]); // Dependencies include class names
 };
