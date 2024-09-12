@@ -4,19 +4,29 @@ export default function LeftSectionNav() {
     <ul className="pagefooter-nav-row">
       <li className="footer-nav-text">
         {" "}
-        <Link href="/club">The Club</Link>
+        <Link href="/club" className="footer-links">
+          The Club
+        </Link>
       </li>
       <li className="footer-nav-text">
-        <Link href="/visionandmission">Vission & Mission</Link>
+        <Link href="/visionandmission" className="footer-links">
+          Vission & Mission
+        </Link>
       </li>
       <li className="footer-nav-text">
-        <Link href="/membership">Membership</Link>
+        <Link href="/membership" className="footer-links">
+          Membership
+        </Link>
       </li>
       <li className="footer-nav-text">
-        <Link href="/login">Login</Link>
+        <Link href="/login" className="footer-links">
+          Login
+        </Link>
       </li>
       <li className="footer-nav-text">
-        <Link href="/getintouch">Connect</Link>
+        <Link href="/getintouch" className="footer-links">
+          Connect
+        </Link>
       </li>
     </ul>
   );

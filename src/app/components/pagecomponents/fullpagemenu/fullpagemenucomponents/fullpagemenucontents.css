@@ -5,13 +5,14 @@
 }
 
 /* List reset */
-ul {
+.menu-content-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-li {
+/* List item styling */
+.menu-content-item {
   font-size: var(--font-size-menu-heading);
   color: var(--Website-black-color);
   line-height: 1.2;
@@ -21,18 +22,29 @@ li {
 }
 
 /* Apply the slide-in effect */
-li.slide-in {
+.menu-content-item.slide-in {
   opacity: 1; /* Fade in */
   transform: translateX(0); /* Slide in from the right */
 }
 
 /* Style links within list items */
-li a {
+.menu-content-link {
   text-decoration: none;
   color: inherit;
+  display: inline-block; /* Ensure the link is treated like an inline element with block behavior */
+  transition: transform 0.3s ease;
 }
 
-li a:hover,
-li a:focus {
+.menu-content-link:hover,
+.menu-content-link:focus {
   color: rgb(167, 167, 167);
+  transform: translateX(20px);
+}
+
+.menu-content-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: rgb(167, 167, 167); /* Same color as hover */
 }

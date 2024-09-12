@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import "./fullpagemenucontents.css";
@@ -13,14 +14,18 @@ export default function FullPageMenuContainer({ closeMenu }) {
 
   return (
     <div className="menu-content-container">
-      <ul>
+      <ul className="menu-content-list">
         {menuItems.map((item, index) => (
           <li
             key={index}
-            className={animate ? "slide-in" : ""}
+            className={`menu-content-item ${animate ? "slide-in" : ""}`}
             style={{ transitionDelay: `${index * 100}ms` }}
           >
-            <Link href={item.href} onClick={closeMenu}>
+            <Link
+              href={item.href}
+              onClick={closeMenu}
+              className="menu-content-link"
+            >
               {item.text}
             </Link>
           </li>
