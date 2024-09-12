@@ -1,10 +1,10 @@
 "use client";
-import ButtonContainer from "./buttoncontainer";
+import MainButtonContainer from "./buttoncontainer";
 
-export default function HeaderRightSection({ onMenuClick, menuOpen }) {
+export default function MainHeaderRightSection({ onMenuClick, menuOpen }) {
   return (
-    <div className="header-container-right">
-      <ButtonContainer onMenuClick={onMenuClick} menuOpen={menuOpen} />
+    <div className="main-header-container-right">
+      <MainButtonContainer onMenuClick={onMenuClick} menuOpen={menuOpen} />
     </div>
   );
 }

@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function HeaderLeftSection() {
+export default function MainHeaderLeftSection() {
   return (
-    <div className="header-container-left">
+    <div className="main-header-container-left">
       {" "}
       <Link href="/">
         <Image

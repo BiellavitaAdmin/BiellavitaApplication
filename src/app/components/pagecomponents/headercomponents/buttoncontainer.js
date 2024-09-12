@@ -3,10 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 // import "./buttoncontainer.css";
 
-export default function ButtonContainer({ onMenuClick, menuOpen }) {
+export default function MainButtonContainer({ onMenuClick, menuOpen }) {
   return (
     <>
-      <div className="button-group-container">
+      <div className="main-button-group-container">
         <button className="circular-button">
           <Link href="/login">
             <Image src="/user.png" alt="User Icon" width={28} height={28} />

@@ -1,13 +1,13 @@
 "use client";
 import "./header.css";
-import HeaderLeftSection from "../pagecomponents/headercomponents/headerleftsection";
-import HeaderRightSection from "../pagecomponents/headercomponents/headerrightsection";
+import MainHeaderLeftSection from "../pagecomponents/headercomponents/headerleftsection";
+import MainHeaderRightSection from "../pagecomponents/headercomponents/headerrightsection";
 
 export default function Header({ onMenuClick, menuOpen }) {
   return (
-    <header className="header">
-      <HeaderLeftSection />
-      <HeaderRightSection onMenuClick={onMenuClick} menuOpen={menuOpen} />
+    <header className="main-header">
+      <MainHeaderLeftSection />
+      <MainHeaderRightSection onMenuClick={onMenuClick} menuOpen={menuOpen} />
     </header>
   );
 }
