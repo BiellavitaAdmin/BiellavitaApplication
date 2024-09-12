@@ -13,7 +13,7 @@ export default function FullPageMenuContainer({ closeMenu }) {
   }, []);
 
   return (
-    <div className="menu-content-container">
+    <div className="pagemenu-content-container">
       <ul className="menu-content-list">
         {menuItems.map((item, index) => (
           <li

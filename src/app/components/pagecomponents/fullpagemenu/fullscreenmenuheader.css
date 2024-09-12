@@ -37,3 +37,133 @@
   border: 1px solid black; /* Border color */
   font-size: 16px;
 }
+
+/* Small phones (<= 320px) */
+@media (max-width: 320px) {
+  .button-group-container {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+/* Standard small phones (<= 360px) */
+@media (max-width: 360px) {
+  .button-group-container {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    margin-right: 0px;
+  }
+}
+
+/* iPhone 12, 13 Mini, SE (2020) */
+@media (min-width: 375px) {
+  .button-group-container {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 27px;
+    margin-right: 0px;
+  }
+}
+
+/* iPhone 14, 15 (standard model) */
+@media (min-width: 390px) {
+  .button-group-container {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 35px;
+    margin-right: 0px;
+  }
+}
+
+/* iPhone 14 Pro, 15 Pro */
+@media (min-width: 430px) {
+  .button-group-container {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 55px;
+    margin-right: 0px;
+  }
+}
+
+/* Larger phones and phablets (>= 480px) */
+@media (min-width: 480px) {
+  .button-group-container {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 80px;
+    margin-right: 0px;
+  }
+}
+
+/* Tablets (>= 600px) */
+@media (min-width: 600px) {
+  .button-group-container {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 140px;
+    margin-right: 0px;
+  }
+}
+
+/* Small laptops and larger tablets (>= 768px) */
+@media (min-width: 768px) {
+  .button-group-container {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 224px;
+    margin-right: 0px;
+  }
+}
+
+/* Medium laptops (>= 1024px) */
+@media (min-width: 1024px) {
+  .button-group-container {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 352px;
+    margin-right: 0px;
+  }
+}
+
+/* Large laptops and desktops (>= 1280px) */
+@media (min-width: 1280px) {
+  .button-group-container {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 480px;
+    margin-right: 0px;
+  }
+}
+
+/* Extra-large desktops (>= 1440px) */
+@media (min-width: 1440px) {
+  .button-group-container {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 560px;
+    margin-right: 0px;
+  }
+}
+
+/* Ultra-wide screens (>= 1600px) */
+@media (min-width: 1600px) {
+  .button-group-container {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 630px;
+    margin-right: 0px;
+  }
+}
+
+/* 4K screens (>= 1920px) */
+@media (min-width: 1920px) {
+  .button-group-container {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 800px;
+    margin-right: 0px;
+  }
+}

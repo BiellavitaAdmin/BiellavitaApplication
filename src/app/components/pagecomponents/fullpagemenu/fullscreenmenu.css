@@ -36,3 +36,142 @@
   width: 80%;
   height: 70vh;
 }
+
+/* Default styles (mobile-first approach) */
+
+/* Small phones (<= 320px) */
+@media (max-width: 320px) {
+  .navigation-container {
+    background-color: transparent;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 0.9rem;
+    margin-bottom: 0.5rem;
+    width: 80%;
+    height: 70vh;
+  }
+}
+
+/* Standard small phones (<= 360px) */
+@media (max-width: 360px) {
+  .pagemenu-content-container {
+    margin-top: 3rem;
+    overflow: hidden; /* Ensure content that is offscreen is hidden */
+  }
+  .navigation-container {
+    background-color: transparent;
+    margin-left: 1.6rem;
+    margin-right: 8rem;
+    margin-top: 4rem;
+    /* margin-bottom: 0.5rem; */
+    width: 80%;
+    height: 70vh;
+  }
+}
+
+/* iPhone 12, 13 Mini, SE (2020) */
+@media (min-width: 375px) {
+  .navigation-container {
+    background-color: transparent;
+    margin-left: 1.6rem;
+    margin-right: 8rem;
+    margin-top: 4rem;
+    /* margin-bottom: 0.5rem; */
+    width: 80%;
+    height: 70vh;
+  }
+}
+
+/* iPhone 14, 15 (standard model) */
+@media (min-width: 390px) {
+  /* Styles for iPhones with 390px width */
+}
+
+/* iPhone 14 Pro, 15 Pro */
+@media (min-width: 430px) {
+  /* Styles for iPhones with 430px width */
+}
+
+/* Larger phones and phablets (>= 480px) */
+@media (min-width: 480px) {
+  /* Styles for larger phones and phablets */
+}
+
+/* Tablets (>= 600px) */
+@media (min-width: 600px) {
+  .navigation-container {
+    background-color: transparent;
+    margin-left: 1.6rem;
+    margin-right: 8rem;
+    margin-top: 2rem;
+    margin-bottom: 0;
+    width: 80%;
+    height: 70vh;
+  }
+}
+
+/* Small laptops and larger tablets (>= 768px) */
+@media (min-width: 768px) {
+  .pagemenu-content-container {
+    margin-top: 2rem;
+    overflow: hidden; /* Ensure content that is offscreen is hidden */
+  }
+  .navigation-container {
+    background-color: transparent;
+    margin-left: 9rem;
+    margin-right: 8rem;
+    margin-top: 0rem;
+    margin-bottom: 0;
+    width: 80%;
+    height: 70vh;
+  }
+}
+
+/* Medium laptops (>= 1024px) */
+@media (min-width: 1024px) {
+  .pagemenu-content-container {
+    margin-top: 3rem;
+    overflow: hidden; /* Ensure content that is offscreen is hidden */
+  }
+  .navigation-container {
+    background-color: transparent;
+    margin-left: 8.5rem;
+    margin-right: 2rem;
+    margin-top: 0rem;
+    margin-bottom: 0;
+    width: 80%;
+    height: 70vh;
+  }
+}
+
+/* Large laptops and desktops (>= 1280px) */
+@media (min-width: 1280px) {
+  .pagemenu-content-container {
+    margin-top: 1rem;
+    overflow: hidden; /* Ensure content that is offscreen is hidden */
+  }
+  .navigation-container {
+    background-color: transparent;
+    margin-left: 9rem;
+    margin-right: 2rem;
+    margin-top: 0rem;
+    margin-bottom: 0;
+    width: 80%;
+    height: 70vh;
+  }
+}
+
+/* Extra-large desktops (>= 1440px) */
+@media (min-width: 1440px) {
+  /* Styles for extra-large desktops */
+}
+
+/* Ultra-wide screens (>= 1600px) */
+@media (min-width: 1600px) {
+  /* Styles for ultra-wide screens */
+}
+
+/* 4K screens (>= 1920px) */
+@media (min-width: 1920px) {
+  /* Styles for 4K screens */
+}

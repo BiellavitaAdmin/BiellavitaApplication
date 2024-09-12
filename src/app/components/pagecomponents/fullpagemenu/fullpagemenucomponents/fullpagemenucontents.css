@@ -1,5 +1,5 @@
 /* Container for the list of menu items */
-.menu-content-container {
+.pagemenu-content-container {
   margin-top: 8rem;
   overflow: hidden; /* Ensure content that is offscreen is hidden */
 }
@@ -47,4 +47,144 @@
   width: 0;
   height: 2px;
   background: rgb(167, 167, 167); /* Same color as hover */
+}
+
+/* Default styles (mobile-first approach) */
+
+/* Small phones (<= 320px) */
+@media (max-width: 320px) {
+  .menu-content-item {
+    font-size: var(--font-size-menu-heading);
+    color: var(--Website-black-color);
+    line-height: 1.2;
+    opacity: 0; /* Start with opacity 0 */
+    transform: translateX(20%); /* Start offscreen to the right */
+    transition: transform 0.9s ease, opacity 0.9s ease; /* Smooth transition for both transform and opacity */
+  }
+}
+
+/* Standard small phones (<= 360px) */
+@media (max-width: 360px) {
+  .menu-content-item {
+    font-size: 37px;
+    color: var(--Website-black-color);
+    /* line-height: 1.2; */
+    opacity: 0; /* Start with opacity 0 */
+    transform: translateX(20%); /* Start offscreen to the right */
+    transition: transform 0.9s ease, opacity 0.9s ease; /* Smooth transition for both transform and opacity */
+  }
+}
+
+/* iPhone 12, 13 Mini, SE (2020) */
+@media (min-width: 375px) {
+  .menu-content-item {
+    font-size: 37px;
+    color: var(--Website-black-color);
+    /* line-height: 1.2; */
+    opacity: 0; /* Start with opacity 0 */
+    transform: translateX(20%); /* Start offscreen to the right */
+    transition: transform 0.9s ease, opacity 0.9s ease; /* Smooth transition for both transform and opacity */
+  }
+}
+
+/* iPhone 14, 15 (standard model) */
+@media (min-width: 390px) {
+  /* Styles for iPhones with 390px width */
+}
+
+/* iPhone 14 Pro, 15 Pro */
+@media (min-width: 430px) {
+  /* Styles for iPhones with 430px width */
+}
+
+/* Larger phones and phablets (>= 480px) */
+@media (min-width: 480px) {
+  /* Styles for larger phones and phablets */
+}
+
+/* Tablets (>= 600px) */
+@media (min-width: 600px) {
+  .menu-content-item {
+    font-size: 45px;
+    color: var(--Website-black-color);
+    /* line-height: 1.2; */
+    opacity: 0; /* Start with opacity 0 */
+    transform: translateX(20%); /* Start offscreen to the right */
+    transition: transform 0.9s ease, opacity 0.9s ease; /* Smooth transition for both transform and opacity */
+  }
+}
+
+/* Small laptops and larger tablets (>= 768px) */
+@media (min-width: 768px) {
+  .pagemenu-content-container {
+    margin-top: 5rem;
+    overflow: hidden; /* Ensure content that is offscreen is hidden */
+  }
+  .menu-content-item {
+    font-size: 55px;
+    color: var(--Website-black-color);
+    /* line-height: 1.2; */
+    opacity: 0; /* Start with opacity 0 */
+    transform: translateX(20%); /* Start offscreen to the right */
+    transition: transform 0.9s ease, opacity 0.9s ease; /* Smooth transition for both transform and opacity */
+  }
+}
+
+/* Medium laptops (>= 1024px) */
+@media (min-width: 1024px) {
+  /* Styles for medium laptops */
+}
+
+/* Large laptops and desktops (>= 1280px) */
+@media (min-width: 1280px) {
+  .pagemenu-content-container {
+    margin-top: 2rem;
+    overflow: hidden; /* Ensure content that is offscreen is hidden */
+  }
+  .menu-content-item {
+    font-size: 65px;
+    color: var(--Website-black-color);
+    /* line-height: 1.2; */
+    opacity: 0; /* Start with opacity 0 */
+    transform: translateX(20%); /* Start offscreen to the right */
+    transition: transform 0.9s ease, opacity 0.9s ease; /* Smooth transition for both transform and opacity */
+  }
+}
+
+/* Extra-large desktops (>= 1440px) */
+@media (min-width: 1440px) {
+  .pagemenu-content-container {
+    margin-top: 0;
+    overflow: hidden; /* Ensure content that is offscreen is hidden */
+  }
+  .menu-content-item {
+    font-size: 72px;
+    color: var(--Website-black-color);
+    /* line-height: 1.2; */
+    opacity: 0; /* Start with opacity 0 */
+    transform: translateX(20%); /* Start offscreen to the right */
+    transition: transform 0.9s ease, opacity 0.9s ease; /* Smooth transition for both transform and opacity */
+  }
+}
+
+/* Ultra-wide screens (>= 1600px) */
+@media (min-width: 1600px) {
+  .pagemenu-content-container {
+    margin-top: 1.4rem;
+    overflow: hidden; /* Ensure content that is offscreen is hidden */
+  }
+  .menu-content-item {
+    font-size: 78px;
+    color: var(--Website-black-color);
+    /* line-height: 1.2; */
+    opacity: 0; /* Start with opacity 0 */
+    transform: translateX(20%); /* Start offscreen to the right */
+    transition: transform 0.9s ease, opacity 0.9s ease; /* Smooth transition for both transform and opacity */
+  }
+  /* Styles for ultra-wide screens */
+}
+
+/* 4K screens (>= 1920px) */
+@media (min-width: 1920px) {
+  /* Styles for 4K screens */
 }

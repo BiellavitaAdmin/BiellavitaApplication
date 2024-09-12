@@ -18,3 +18,100 @@
   justify-content: right;
   align-items: center;
 }
+
+/* Default styles (mobile-first approach) */
+
+/* Small phones (<= 320px) */
+@media (max-width: 320px) {
+  /* Styles for very small phones */
+}
+
+/* Standard small phones (<= 360px) */
+@media (max-width: 360px) {
+  .footer-container {
+    margin-top: 2rem;
+  }
+
+  .footer-left {
+    text-align: center;
+  }
+}
+
+/* iPhone 12, 13 Mini, SE (2020) */
+@media (min-width: 375px) {
+  .footer-container {
+    margin-top: 2rem;
+  }
+
+  .footer-left {
+    text-align: center;
+  }
+}
+
+/* iPhone 14, 15 (standard model) */
+@media (min-width: 390px) {
+  /* Styles for iPhones with 390px width */
+}
+
+/* iPhone 14 Pro, 15 Pro */
+@media (min-width: 430px) {
+  /* Styles for iPhones with 430px width */
+}
+
+/* Larger phones and phablets (>= 480px) */
+@media (min-width: 480px) {
+  /* Styles for larger phones and phablets */
+}
+
+/* Tablets (>= 600px) */
+@media (min-width: 600px) {
+  .footer-container {
+    margin-top: 1rem;
+  }
+
+  .footer-left {
+    text-align: center;
+  }
+}
+
+/* Small laptops and larger tablets (>= 768px) */
+@media (min-width: 768px) {
+  .footer-container {
+    margin-top: 1rem;
+  }
+
+  .footer-left {
+    text-align: center;
+  }
+}
+
+/* Medium laptops (>= 1024px) */
+@media (min-width: 1024px) {
+  /* Styles for medium laptops */
+}
+
+/* Large laptops and desktops (>= 1280px) */
+@media (min-width: 1280px) {
+  /* Styles for large laptops and desktops */
+}
+
+/* Extra-large desktops (>= 1440px) */
+@media (min-width: 1440px) {
+  /* Styles for extra-large desktops */
+}
+
+/* Ultra-wide screens (>= 1600px) */
+@media (min-width: 1600px) {
+  .footer-container {
+    margin-top: 3rem;
+  }
+
+  .footer-left {
+    text-align: center;
+  }
+}
+
+/* 4K screens (>= 1920px) */
+@media (min-width: 1920px) {
+  /* Styles for 4K screens */
+}
