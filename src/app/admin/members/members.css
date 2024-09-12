@@ -1,3 +1,9 @@
+.section-content-container {
+  padding-top: 4rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
 .dash-section-content {
   display: flex;
   flex-direction: column;
@@ -11,6 +17,8 @@
 
 .section-title {
   font-size: var(--font-size-page-subheading);
+  font-weight: var(--font-weight-super-heading);
+  color: var(--Website-black-color);
 }
 
 .add-button-dash {
@@ -33,6 +41,27 @@
 }
 
 .button-link:active,
-.button-link:visited {
+.button-link:visited,
+.button-link:focus {
   background-color: var(--Website-black-color);
+}
+
+.button-link:hover {
+  text-decoration: none;
+}
+
+.section-table-section {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.section-not-found {
+  width: 100%;
+  height: 500px;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.795);
 }
