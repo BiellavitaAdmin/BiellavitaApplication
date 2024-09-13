@@ -54,10 +54,6 @@
 
 /* Standard small phones (<= 360px) */
 @media (max-width: 360px) {
-  .pagemenu-content-container {
-    margin-top: 3rem;
-    overflow: hidden; /* Ensure content that is offscreen is hidden */
-  }
   .navigation-container {
     background-color: transparent;
     margin-left: 1.6rem;
@@ -112,10 +108,6 @@
 
 /* Small laptops and larger tablets (>= 768px) */
 @media (min-width: 768px) {
-  .pagemenu-content-container {
-    margin-top: 2rem;
-    overflow: hidden; /* Ensure content that is offscreen is hidden */
-  }
   .navigation-container {
     background-color: transparent;
     margin-left: 9rem;
