@@ -167,3 +167,13 @@
     margin-right: 0px;
   }
 }
+
+/* 4K screens (>= 1920px) */
+@media (min-width: 2560px) {
+  .button-group-container {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 1120px;
+    margin-right: 0px;
+  }
+}
