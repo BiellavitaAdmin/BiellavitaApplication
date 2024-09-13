@@ -200,21 +200,21 @@
 }
 
 /* Specific styles for a particular tablet */
-@media (min-width: 414px) and (min-height: 896px) {
+@media (width: 414px) and (height: 896px) {
   .menu-content-item {
     font-size: 45px;
   }
 }
 
 /* Specific styles for a particular tablet */
-@media (min-width: 390px) and (min-height: 844px) {
+@media (width: 390px) and (height: 844px) {
   .menu-content-item {
     font-size: 40px;
   }
 }
 
 /* Specific styles for a particular tablet */
-@media (min-width: 430px) and (min-height: 932px) {
+@media (width: 430px) and (height: 932px) {
   .pagemenu-content-container {
     margin-top: 1rem;
     padding-top: 12rem;
@@ -226,7 +226,7 @@
 }
 
 /* Specific styles for a particular tablet */
-@media (min-width: 412px) and (min-height: 915px) {
+@media (width: 412px) and (height: 915px) {
   .pagemenu-content-container {
     margin-top: 1rem;
     padding-top: 13rem;
@@ -238,7 +238,7 @@
 }
 
 /* Specific styles for a particular tablet */
-@media (min-width: 360px) and (min-height: 740px) {
+@media (width: 360px) and (height: 740px) {
   .pagemenu-content-container {
     margin-top: 0rem;
     padding-top: 5.7rem;
@@ -250,7 +250,7 @@
 }
 
 /* Specific styles for a particular tablet */
-@media (min-width: 412px) and (min-height: 915px) {
+@media (width: 412px) and (height: 915px) {
   .pagemenu-content-container {
     margin-top: 0rem;
     padding-top: 14.7rem;
@@ -262,7 +262,7 @@
 }
 
 /* Specific styles for a particular tablet */
-@media (min-width: 768px) and (min-height: 1024px) {
+@media (width: 768px) and (height: 1024px) {
   .pagemenu-content-container {
     margin-top: 0rem;
     padding-top: 14.7rem;
@@ -274,7 +274,7 @@
 }
 
 /* Specific styles for a particular tablet */
-@media (min-width: 820px) and (min-height: 1180px) {
+@media (width: 820px) and (height: 1180px) {
   .pagemenu-content-container {
     margin-top: 0rem;
     padding-top: 14.7rem;
@@ -286,10 +286,10 @@
 }
 
 /* Specific styles for a particular tablet */
-@media (min-width: 1024px) and (min-height: 1366px) {
+@media (width: 1024px) and (height: 1366px) {
   .pagemenu-content-container {
     margin-top: 0rem;
-    padding-top: 14.7rem;
+    padding-top: 19.7rem;
     overflow: hidden; /* Ensure content that is offscreen is hidden */
   }
   .menu-content-item {
@@ -298,10 +298,10 @@
 }
 
 /* Specific styles for a particular tablet */
-@media (min-width: 912px) and (min-height: 1368px) {
+@media (width: 912px) and (height: 1368px) {
   .pagemenu-content-container {
     margin-top: 0rem;
-    padding-top: 14.7rem;
+    padding-top: 20.7rem;
     overflow: hidden; /* Ensure content that is offscreen is hidden */
   }
   .menu-content-item {
@@ -310,22 +310,10 @@
 }
 
 /* Specific styles for a particular tablet */
-@media (min-width: 912px) and (min-height: 1368px) {
+@media (width: 853px) and (height: 1280px) {
   .pagemenu-content-container {
     margin-top: 0rem;
-    padding-top: 14.7rem;
-    overflow: hidden; /* Ensure content that is offscreen is hidden */
-  }
-  .menu-content-item {
-    font-size: 87px;
-  }
-}
-
-/* Specific styles for a particular tablet */
-@media (min-width: 853px) and (min-height: 1280px) {
-  .pagemenu-content-container {
-    margin-top: 0rem;
-    padding-top: 22rem;
+    padding-top: 27rem;
     overflow: hidden; /* Ensure content that is offscreen is hidden */
   }
   .menu-content-item {
@@ -334,7 +322,7 @@
 }
 
 /* Specific styles for a particular tablet */
-@media (min-width: 412px) and (min-height: 914px) {
+@media (width: 412px) and (height: 914px) {
   .pagemenu-content-container {
     margin-top: 0rem;
     padding-top: 13rem;
@@ -346,7 +334,7 @@
 }
 
 /* Specific styles for a particular tablet */
-@media (min-width: 1024px) and (min-height: 600px) {
+@media (width: 1024px) and (height: 600px) {
   .pagemenu-content-container {
     margin-top: 0rem;
     padding-top: 1rem;
@@ -358,7 +346,7 @@
 }
 
 /* Specific styles for a particular tablet */
-@media (min-width: 1280px) and (min-height: 800px) {
+@media (width: 1280px) and (height: 800px) {
   .pagemenu-content-container {
     margin-top: 0rem;
     padding-top: 0rem;
@@ -368,3 +356,113 @@
     font-size: 63px;
   }
 }
+
+/* Default styles (mobile-first approach) */
+
+/* Small phones (<= 320px) */
+/* @media (max-width: 320px) {
+} */
+
+/* Standard small phones (<= 360px) */
+/* @media (max-width: 360px) {
+} */
+
+/* iPhone 12, 13 Mini, SE (2020) */
+/* @media (min-width: 375px) {
+} */
+
+/* iPhone 14, 15 (standard model) */
+/* @media (min-width: 390px) {
+} */
+
+/* iPhone 14 Pro, 15 Pro */
+/* @media (min-width: 430px) {
+} */
+
+/* Larger phones and phablets (>= 480px) */
+/* @media (min-width: 480px) {
+} */
+
+/* Tablets (>= 600px) */
+/* @media (min-width: 600px) {
+} */
+
+/* Small laptops and larger tablets (>= 768px) */
+/* @media (min-width: 768px) {
+} */
+
+/* Medium laptops (>= 1024px) */
+/* @media (min-width: 1024px) {
+} */
+
+/* Extra-large desktops (>= 1440px) */
+/* @media (min-width: 1440px) {
+} */
+
+/* Ultra-wide screens (>= 1600px) */
+/* @media (min-width: 1600px) {
+} */
+
+/* Large laptops and desktops (>= 1280px) */
+/* @media (min-width: 1280px) {
+} */
+
+/* 4K screens (>= 1920px) */
+/* @media (min-width: 1920px) {
+} */
+
+/* Specific styles for a particular tablet */
+/* @media (width: 414px) and (height: 896px) {
+} */
+
+/* Specific styles for a particular tablet */
+/* @media (width: 390px) and (height: 844px) {
+} */
+
+/* Specific styles for a particular tablet */
+/* @media (width: 430px) and (height: 932px) {
+} */
+
+/* Specific styles for a particular tablet */
+/* @media (width: 412px) and (height: 915px) {
+} */
+
+/* Specific styles for a particular tablet */
+/* @media (width: 360px) and (height: 740px) {
+} */
+
+/* Specific styles for a particular tablet */
+/* @media (width: 412px) and (height: 915px) {
+} */
+
+/* Specific styles for a particular tablet */
+/* @media (width: 768px) and (height: 1024px) {
+} */
+
+/* Specific styles for a particular tablet */
+/* @media (width: 820px) and (height: 1180px) {
+} */
+
+/* Specific styles for a particular tablet */
+/* @media (width: 1024px) and (height: 1366px) {
+} */
+
+/* Specific styles for a particular tablet */
+/* @media (width: 912px) and (height: 1368px) {
+} */
+
+/* Specific styles for a particular tablet */
+/* @media (width: 853px) and (height: 1280px) {
+} */
+
+/* Specific styles for a particular tablet */
+/* @media (width: 412px) and (height: 914px) {
+} */
+
+/* Specific styles for a particular tablet */
+/* @media (width: 1024px) and (height: 600px) {
+} */
+
+/* Specific styles for a particular tablet */
+/* @media (width: 1280px) and (height: 800px) {
+} */
