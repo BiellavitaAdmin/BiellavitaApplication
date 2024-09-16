@@ -53,7 +53,7 @@
   .main-button-group-container {
     margin-top: 15px;
     margin-bottom: 15px;
-    margin-left: 32px;
+    margin-left: 12px;
     margin-right: 0px;
   }
 }
@@ -63,7 +63,7 @@
   .main-button-group-container {
     margin-top: 15px;
     margin-bottom: 15px;
-    margin-left: 56px;
+    margin-left: 32px;
     margin-right: 0px;
   }
 }
@@ -73,7 +73,7 @@
   .main-button-group-container {
     margin-top: 15px;
     margin-bottom: 15px;
-    margin-left: 65px;
+    margin-left: 75px;
     margin-right: 0px;
   }
 }
@@ -176,4 +176,138 @@
     margin-left: 989px;
     margin-right: 0px;
   }
+}
+
+/* 4K screens (>= 1920px) */
+@media (min-width: 2560px) {
+  .main-button-group-container {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 1370px;
+    margin-right: 0px;
+  }
+}
+
+/* Specific styles for a particular tablet */
+@media (width: 375px) and (height: 667px) {
+  .main-button-group-container {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 65px;
+    margin-right: 0px;
+  }
+}
+
+/* Specific styles for a particular tablet */
+@media (width: 414px) and (height: 896px) {
+  .main-button-group-container {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 85px;
+    margin-right: 0px;
+  }
+}
+
+/* Specific styles for a particular tablet */
+@media (width: 390px) and (height: 844px) {
+}
+
+/* Specific styles for a particular tablet */
+@media (width: 430px) and (height: 932px) {
+}
+
+/* Specific styles for a particular tablet */
+@media (width: 412px) and (height: 915px) {
+  .main-button-group-container {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 85px;
+    margin-right: 0px;
+  }
+}
+
+/* Specific styles for a particular tablet */
+@media (width: 360px) and (height: 740px) {
+  .main-button-group-container {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 56px;
+    margin-right: 0px;
+  }
+}
+
+/* Specific styles for a particular tablet */
+@media (width: 412px) and (height: 915px) {
+  .main-button-group-container {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 86px;
+    margin-right: 0px;
+  }
+}
+
+/* Specific styles for a particular tablet */
+@media (width: 768px) and (height: 1024px) {
+  .main-button-group-container {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 300px;
+    margin-right: 0px;
+  }
+}
+
+/* Specific styles for a particular tablet */
+@media (width: 820px) and (height: 1180px) {
+  .main-button-group-container {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 330px;
+    margin-right: 0px;
+  }
+}
+
+/* Specific styles for a particular tablet */
+@media (width: 1024px) and (height: 1366px) {
+}
+
+/* Specific styles for a particular tablet */
+@media (width: 912px) and (height: 1368px) {
+  .main-button-group-container {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 385px;
+    margin-right: 0px;
+  }
+}
+
+/* Specific styles for a particular tablet */
+@media (width: 540px) and (height: 720px) {
+  .main-button-group-container {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 164px;
+    margin-right: 0px;
+  }
+}
+
+/* Specific styles for a particular tablet */
+@media (width: 853px) and (height: 1280px) {
+}
+
+/* Specific styles for a particular tablet */
+@media (width: 412px) and (height: 914px) {
+  .main-button-group-container {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 87px;
+    margin-right: 0px;
+  }
+}
+
+/* Specific styles for a particular tablet */
+@media (width: 1024px) and (height: 600px) {
+}
+
+/* Specific styles for a particular tablet */
+@media (width: 1280px) and (height: 800px) {
 }
