@@ -115,7 +115,7 @@
 @media (min-width: 480px) {
   .pagemenu-content-container {
     margin-top: 0.8rem;
-    padding-top: 1rem;
+    padding-top: 5rem;
     overflow: hidden; /* Ensure content that is offscreen is hidden */
   }
   .menu-content-item {
@@ -125,6 +125,11 @@
 
 /* Tablets (>= 600px) */
 @media (min-width: 600px) {
+  .pagemenu-content-container {
+    margin-top: 0.8rem;
+    padding-top: 8rem;
+    overflow: hidden; /* Ensure content that is offscreen is hidden */
+  }
   .menu-content-item {
     font-size: 45px;
   }
@@ -306,6 +311,18 @@
   }
   .menu-content-item {
     font-size: 87px;
+  }
+}
+
+/* Specific styles for a particular tablet */
+@media (width: 540px) and (height: 720px) {
+  .pagemenu-content-container {
+    margin-top: 0rem;
+    padding-top: 2rem;
+    overflow: hidden; /* Ensure content that is offscreen is hidden */
+  }
+  .menu-content-item {
+    font-size: 47px;
   }
 }
 

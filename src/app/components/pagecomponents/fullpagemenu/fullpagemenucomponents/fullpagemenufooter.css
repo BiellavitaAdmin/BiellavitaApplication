@@ -84,7 +84,7 @@
 /* Small laptops and larger tablets (>= 768px) */
 @media (min-width: 768px) {
   .footer-container {
-    margin-top: 6rem;
+    margin-top: 1rem;
   }
 
   .footer-left {
@@ -135,7 +135,7 @@
 /* 4K screens (>= 1920px) */
 @media (min-width: 1920px) {
   .footer-container {
-    margin-top: 3rem;
+    margin-top: 1.5rem;
   }
 }
 
@@ -233,9 +233,9 @@
 }
 
 /* Specific styles for a particular tablet */
-@media (width: 912px) and (height: 1368px) {
+@media (width: 540px) and (height: 720px) {
   .footer-container {
-    margin-top: 11rem;
+    margin-top: 0rem;
     padding: 1rem;
   }
 }
