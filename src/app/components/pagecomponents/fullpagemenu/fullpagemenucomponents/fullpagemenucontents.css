@@ -200,7 +200,22 @@
 @media (min-width: 1920px) {
   .pagemenu-content-container {
     margin-top: 1rem;
+    padding-top: 2rem;
     overflow: hidden; /* Ensure content that is offscreen is hidden */
+  }
+  .menu-content-item {
+    font-size: 65px;
+  }
+}
+
+/* 4K screens (>= 1920px) */
+@media (min-width: 2560px) {
+  .pagemenu-content-container {
+    margin-top: 1rem;
+    overflow: hidden; /* Ensure content that is offscreen is hidden */
+  }
+  .menu-content-item {
+    font-size: 95px;
   }
 }
 

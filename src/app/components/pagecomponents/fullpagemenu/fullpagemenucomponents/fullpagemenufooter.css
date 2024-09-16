@@ -139,6 +139,13 @@
   }
 }
 
+/* 4K screens (>= 1920px) */
+@media (min-width: 2560px) {
+  .footer-container {
+    margin-top: 6rem;
+  }
+}
+
 /* Specific styles for a particular tablet */
 @media (width: 414px) and (height: 896px) {
   .footer-container {
