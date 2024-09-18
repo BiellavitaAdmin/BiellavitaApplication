@@ -1,8 +1,17 @@
+import Image from "next/image";
 export default function CardOne() {
   return (
     <>
       <div className="subscription-card-one">
-        <div className="card-banner"></div>
+        <div className="card-banner">
+          <Image
+            src="/bear-chess.png"
+            alt="User Icon"
+            width={28}
+            height={28}
+            className="cardone-image"
+          />
+        </div>
         <div className="card-content-container">
           <h2 className="card-heading">Active Membership</h2>
           <p className="card-para-one">
