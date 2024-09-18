@@ -13,20 +13,20 @@ export default function Content() {
     <div className="content">
       <article className="section-content">
         <ParagraphOne />
+        <br />
+        <br />
         <ParagraphTwo />
-        <div className="clubpage-image-one">
-          <Image
-            src="/Biella-lake.png"
-            alt="User Icon"
-            width={28}
-            height={28}
-            className="clubpage-large-image"
-          />
-        </div>
-        <h2 className="clubpage-heading">The source of the idea</h2>
-        <p className="page-content-text">
-          … is the inspirational city of Biella.
-        </p>
+        <br />
+        <br />
+        <br />
+        <br />
+        <section>
+          <h2 className="clubpage-heading">The source of the idea</h2>
+          <p className="page-content-text">
+            … is the inspirational city of Biella.
+          </p>
+        </section>
+        <br />
         <br />
         <br />
         <br />
@@ -34,63 +34,50 @@ export default function Content() {
           Nestled between Milan and Turin, this small city has become a symbol
           of excellence, exclusivity, and timeless values.
         </p>
-
-        <div className="clubpage-image-two">
-          <div className="left-dual-image">
-            <Image
-              src="/clubpage-left.png"
-              alt="User Icon"
-              width={28}
-              height={28}
-              className="clubpage-dual-image"
-            />
-          </div>
-          <div className="right-dual-image">
-            <Image
-              src="/clubpage-right.png"
-              alt="User Icon"
-              width={28}
-              height={28}
-              className="clubpage-dual-image"
-            />
-          </div>
-        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <p className="page-content-text">
           Named the “Capital of Wool” its picturesque valleys are adorned with
           renowned woolen mills.
         </p>
+        <br />
+        <br />
         <ParagraphSix />
-        <div className="clubpage-image-three">
-          <br />
-          <Image
-            src="/clubpage-third.png"
-            alt="User Icon"
-            width={28}
-            height={28}
-            className="clubpage-large-image-three"
-          />
-        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <ParagraphSeven />
-        <div className="clubpage-image-four">
-          <Image
-            src="/clubpage-tri-image.png"
-            alt="User Icon"
-            width={28}
-            height={28}
-            className="clubpage-large-image"
-          />
-        </div>
-        <h2 className="clubpage-heading">Founders</h2>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
         <p className="page-content-text">
           In the most unexpected of circumstances, two paths from vastly
           different backgrounds crossed to create a space that celebrates
           excellence and brings like-minded people together.
         </p>
+        <br />
+        <br />
         <p className="page-content-text">
           Alberto and Belqis shared a passion for integrity and quality that led
           them to establish BiellaVita.
         </p>
+        <br />
+        <br />
+        <br />
+        <br />
       </article>
+      <h2 className="clubpage-heading">Founders</h2>
       <article className="Belquis-paragraph">
         <h2 className="Belquis-paragraph-heading">Belqis’s journey </h2>
         <ParagraphNine />
