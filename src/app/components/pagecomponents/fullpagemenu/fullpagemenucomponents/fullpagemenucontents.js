@@ -43,5 +43,5 @@ const menuItems = [
   { text: "Projects", href: "/projects" },
   { text: "Partnerships", href: "/partnership" },
   { text: "Membership", href: "/membership" },
-  { text: "Get in Touch", href: "/getintouch" },
+  { text: "Connect", href: "/getintouch" },
 ];
