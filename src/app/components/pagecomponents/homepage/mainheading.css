@@ -12,7 +12,7 @@
 }
 
 .main-heading-homepage {
-  font-size: var(--font-size-super-heading);
+  font-size: var(--font-size-new-xl-large-heading);
   font-weight: var(--font-weight-super-heading);
   color: var(--Website-black-color);
   z-index: 1; /* Above the overlay */
@@ -93,7 +93,7 @@
 /* Small laptops and larger tablets (>= 768px) */
 @media (min-width: 768px) {
   .main-heading-homepage {
-    font-size: var(--font-size-mobile-main-heading-360);
+    font-size: var(--font-size-new-xl-large-heading);
     font-weight: var(--font-weight-super-heading);
     color: var(--Website-black-color);
     z-index: 1; /* Above the overlay */
@@ -103,7 +103,7 @@
 /* Medium laptops (>= 1024px) */
 @media (min-width: 1024px) {
   .main-heading-homepage {
-    font-size: var(--font-size-mobile-main-heading-360);
+    font-size: var(--font-size-new-xl-large-heading);
     font-weight: var(--font-weight-super-heading);
     color: var(--Website-black-color);
     z-index: 1; /* Above the overlay */
@@ -113,7 +113,7 @@
 /* Large laptops and desktops (>= 1280px) */
 @media (min-width: 1280px) {
   .main-heading-homepage {
-    font-size: var(--font-size-mobile-main-heading-360);
+    font-size: var(--font-size-new-xl-large-heading);
     font-weight: var(--font-weight-super-heading);
     color: var(--Website-black-color);
     z-index: 1; /* Above the overlay */
@@ -123,7 +123,7 @@
 /* Extra-large desktops (>= 1440px) */
 @media (min-width: 1440px) {
   .main-heading-homepage {
-    font-size: var(--font-size-mobile-main-heading-360);
+    font-size: var(--font-size-new-xl-large-heading);
     font-weight: var(--font-weight-super-heading);
     color: var(--Website-black-color);
     z-index: 1; /* Above the overlay */
@@ -133,7 +133,7 @@
 /* Ultra-wide screens (>= 1600px) */
 @media (min-width: 1600px) {
   .main-heading-homepage {
-    font-size: var(--font-size-mobile-main-heading-360);
+    font-size: var(--font-size-new-xl-large-heading);
     font-weight: var(--font-weight-super-heading);
     color: var(--Website-black-color);
     z-index: 1; /* Above the overlay */
@@ -143,7 +143,7 @@
 /* 4K screens (>= 1920px) */
 @media (min-width: 1920px) {
   .main-heading-homepage {
-    font-size: var(--font-size-mobile-main-heading-360);
+    font-size: var(--font-size-new-xl-large-heading);
     font-weight: var(--font-weight-super-heading);
     color: var(--Website-black-color);
     z-index: 1; /* Above the overlay */

@@ -264,14 +264,14 @@
 /* Tablets (>= 600px) */
 @media (min-width: 600px) {
   .clubpage-hero-heading {
-    font-size: 65px;
+    font-size: 76px;
   }
 }
 
 /* Small laptops and larger tablets (>= 768px) */
 @media (min-width: 768px) {
   .clubpage-hero-heading {
-    font-size: 70px;
+    font-size: 98px;
   }
 
   .Alberto-paragraph {
@@ -291,6 +291,9 @@
 
 /* Medium laptops (>= 1024px) */
 @media (min-width: 1024px) {
+  .clubpage-hero-heading {
+    font-size: 110px;
+  }
   .section-content {
     padding: 4rem;
   }
@@ -350,7 +353,7 @@
 /* Extra-large desktops (>= 1440px) */
 @media (min-width: 1440px) {
   .clubpage-hero-heading {
-    font-size: 85px;
+    font-size: 115px;
   }
 }
 

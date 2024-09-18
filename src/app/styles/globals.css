@@ -33,6 +33,9 @@ body {
 
   --font-size-mobile-main-heading-320: 55px;
   --font-size-mobile-main-heading-360: 75px;
+
+  --font-size-new-xl-large-heading: 122px;
+  --font-size-new-xl-large-hero-heading: 115px;
 }
 
 /* Global scrollbar styles */
