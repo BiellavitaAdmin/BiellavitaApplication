@@ -12,9 +12,10 @@ export default function Home() {
   return (
     <main className="homepage">
       <video autoPlay muted loop className="background-video">
-        <source src="/newBiella-three.mp4" type="video/mp4" />
+        <source src="/Slowed background.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
+      <div className="overlay"></div>
       <MainHeading />
       <Footer />
     </main>
