@@ -45,7 +45,7 @@
   font-weight: var(--font-weight-super-heading);
   margin-bottom: 20px;
   color: var(--Website-black-color);
-  margin-top: 8rem;
+  margin-top: 1.8rem;
 }
 
 .content-continer {
@@ -66,6 +66,77 @@
   font-size: var(--font-size-page-content);
   background: var(--Website-body-color);
   margin-bottom: 3rem;
+  margin-top: 5rem;
+}
+
+.clubpage-image-one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 700px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.clubpage-image-two {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.left-dual-image {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  /* padding: 2rem; */
+  padding-bottom: 11rem;
+  width: 50%;
+}
+
+.right-dual-image {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  /* padding: 2rem; */
+  padding-top: 11rem;
+  width: 50%;
+}
+
+.clubpage-large-image {
+  width: 70%;
+  height: 800px;
+}
+
+.clubpage-large-image-three {
+  width: 70%;
+  height: 650px;
+}
+
+.clubpage-dual-image {
+  width: 80%;
+  height: 807px;
+}
+
+.clubpage-image-three {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 550px;
+  margin-top: 11rem;
+  margin-bottom: 11rem;
+  padding: 2rem;
+}
+
+.clubpage-image-four {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 700px;
+  margin-top: 5rem;
+  /* margin-bottom: 4rem; */
 }
 
 .para-intro {
