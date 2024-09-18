@@ -9,6 +9,7 @@ export default function RightSection() {
           alt="Biellavita_red"
           width={250}
           height={250}
+          className="Biellavita-footer-logo"
         />
       </div>
     </div>
