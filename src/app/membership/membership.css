@@ -110,6 +110,7 @@
 }
 
 .card-heading {
+  padding-top: 4rem;
   font-size: var(--font-size-page-subheading);
   color: var(--Website-black-color);
   font-weight: var(--font-weight-super-heading);
