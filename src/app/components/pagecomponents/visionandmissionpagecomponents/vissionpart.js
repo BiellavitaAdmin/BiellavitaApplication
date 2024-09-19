@@ -14,6 +14,7 @@ export default function Vissionpart() {
           alt="My Awesome Image"
           width={360} // Width of the image
           height={635} // Height of the image
+          className="motto-class"
         />
       </div>
     </>

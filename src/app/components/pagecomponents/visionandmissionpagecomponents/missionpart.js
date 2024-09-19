@@ -8,6 +8,10 @@ export default function Missionpart() {
         that inspires personal growth, fosters meaningful connections, and makes
         a lasting positive impact on the world around us.
       </p>
+      <br />
+      <br />
+      <br />
+      <br />
     </>
   );
 }
