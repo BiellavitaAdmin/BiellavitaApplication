@@ -518,11 +518,11 @@
 /* 4K screens (>= 1920px) */
 @media (min-width: 1920px) {
   .getintouch-form {
-    width: 54%;
+    width: 49%;
     padding-left: 0rem;
     padding-right: 0.4rem;
     padding-top: 2rem;
-    padding-bottom: 1rem;
+    padding-bottom: 0.8rem;
   }
 }
 
