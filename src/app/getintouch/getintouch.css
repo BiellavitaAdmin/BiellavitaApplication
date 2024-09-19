@@ -102,6 +102,15 @@
   border-radius: 0.7rem;
 }
 
+.input-error {
+  border-bottom: 2px solid red;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.875em;
+}
+
 /* Default styles (mobile-first approach) */
 
 /* Small phones (<= 320px) */
