@@ -461,8 +461,8 @@
   }
 
   .motto-class {
-    width: 24%;
-    height: 994px;
+    width: 14%;
+    height: 654px;
   }
 }
 
@@ -472,10 +472,18 @@
 
 /* Iphone XR */
 @media (width: 414px) and (height: 896px) {
+  .motto-class {
+    width: 58%;
+    height: 384px;
+  }
 }
 
 /* Iphone 12 Pro */
 @media (width: 390px) and (height: 844px) {
+  .motto-class {
+    width: 58%;
+    height: 384px;
+  }
 }
 
 /* Iphone 14 Pro Max */
@@ -484,26 +492,50 @@
 
 /* Pixel 7 */
 @media (width: 412px) and (height: 915px) {
+  .motto-class {
+    width: 58%;
+    height: 384px;
+  }
 }
 
 /* Samsung Galaxy S8+ */
 @media (width: 360px) and (height: 740px) {
+  .motto-class {
+    width: 68%;
+    height: 384px;
+  }
 }
 
 /* Samsung Galaxy S20 Ultra */
 @media (width: 412px) and (height: 915px) {
+  .motto-class {
+    width: 68%;
+    height: 384px;
+  }
 }
 
 /* iPad Mini */
 @media (width: 768px) and (height: 1024px) {
+  .motto-class {
+    width: 38%;
+    height: 484px;
+  }
 }
 
 /* iPad Air */
 @media (width: 820px) and (height: 1180px) {
+  .motto-class {
+    width: 38%;
+    height: 484px;
+  }
 }
 
 /* iPad Pro */
 @media (width: 1024px) and (height: 1366px) {
+  .motto-class {
+    width: 28%;
+    height: 484px;
+  }
 }
 
 /* Surface Pro 7 */
@@ -512,16 +544,42 @@
 
 /* Surface Duo*/
 @media (width: 540px) and (height: 720px) {
+  .motto-class {
+    width: 50%;
+    height: 484px;
+  }
 }
 
 /* Samsung Galaxy A51/71 */
 @media (width: 412px) and (height: 914px) {
+  .motto-class {
+    width: 70%;
+    height: 484px;
+  }
 }
 
 /* Nest Hub */
 @media (width: 1024px) and (height: 600px) {
+  .visionandmission-page-content-text {
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 56px;
+    padding-right: 56px;
+    font-size: 32px;
+    margin-bottom: 3rem;
+  }
 }
 
 /* Nest Hub Max */
 @media (width: 1280px) and (height: 800px) {
+  .visionandmission-page-content-text {
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 56px;
+    padding-right: 56px;
+    font-size: 32px;
+    margin-bottom: 3rem;
+  }
 }
