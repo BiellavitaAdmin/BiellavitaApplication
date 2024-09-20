@@ -8,6 +8,7 @@ export default function LargePic() {
           alt="My Awesome Image"
           width={990}
           height={585}
+          className="largepic-partnership"
         />
       </div>
     </>
