@@ -402,12 +402,6 @@
     padding-right: 1rem;
   }
 
-  /* .benefits-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  } */
-
   .benefits-list-item {
     display: flex;
     flex-direction: column;
@@ -419,54 +413,2047 @@
 
 /* Standard small phones (<= 360px) */
 @media (max-width: 360px) {
+  .membership-hero-heading {
+    font-size: 50px;
+  }
+
+  .membership-content {
+    padding: 1rem;
+  }
+
+  .membership-page-content-text {
+    font-size: 20px;
+  }
+
+  .card-container {
+    padding: 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .subscription-card-one {
+    width: 100%;
+    margin: 0rem;
+    margin-bottom: 4rem;
+  }
+
+  .card-banner {
+    height: 182px;
+  }
+
+  .card-content-container {
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .card-heading {
+    padding-top: 2rem;
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .card-para-one {
+    text-align: center;
+  }
+
+  .card-para-two {
+    text-align: center;
+  }
+
+  .card-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    /* margin-bottom: 2rem; */
+  }
+
+  .process-main-heading-container {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .process-main-heading {
+    text-align: center;
+    font-size: 32px;
+  }
+
+  .process-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .process-one-container {
+    width: 100%;
+  }
+
+  .process-heading {
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .topspacing {
+    margin-top: 2rem;
+  }
+
+  .bottomspacing {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+
+  .benefits-container {
+    margin-top: 6rem;
+  }
+
+  .benefits-heading-continer {
+    margin-bottom: 3rem;
+  }
+
+  .benefits-card-heading {
+    font-size: 24px;
+  }
+
+  .the-cards-collection {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .benefits-card-container {
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    width: 100%;
+    height: auto;
+  }
+
+  .benefits-card {
+    padding-top: 4rem;
+    padding-bottom: 0.2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .benefits-list-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 /* iPhone 12, 13 Mini, SE (2020) */
 @media (min-width: 375px) {
+  .membership-hero-heading {
+    font-size: 50px;
+  }
+
+  .membership-content {
+    padding: 1rem;
+  }
+
+  .membership-page-content-text {
+    font-size: 20px;
+  }
+
+  .card-container {
+    padding: 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .subscription-card-one {
+    width: 100%;
+    margin: 0rem;
+    margin-bottom: 4rem;
+  }
+
+  .card-banner {
+    height: 182px;
+  }
+
+  .card-content-container {
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .card-heading {
+    padding-top: 2rem;
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .card-para-one {
+    text-align: center;
+  }
+
+  .card-para-two {
+    text-align: center;
+  }
+
+  .card-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    /* margin-bottom: 2rem; */
+  }
+
+  .process-main-heading-container {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .process-main-heading {
+    text-align: center;
+    font-size: 32px;
+  }
+
+  .process-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .process-one-container {
+    width: 100%;
+  }
+
+  .process-heading {
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .topspacing {
+    margin-top: 2rem;
+  }
+
+  .bottomspacing {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+
+  .benefits-container {
+    margin-top: 6rem;
+  }
+
+  .benefits-heading-continer {
+    margin-bottom: 3rem;
+  }
+
+  .benefits-card-heading {
+    font-size: 24px;
+  }
+
+  .the-cards-collection {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .benefits-card-container {
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    width: 100%;
+    height: auto;
+  }
+
+  .benefits-card {
+    padding-top: 4rem;
+    padding-bottom: 0.2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .benefits-list-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 /* iPhone 14, 15 (standard model) */
 @media (min-width: 390px) {
+  .membership-hero-heading {
+    font-size: 50px;
+  }
+
+  .membership-content {
+    padding: 1rem;
+  }
+
+  .membership-page-content-text {
+    font-size: 20px;
+  }
+
+  .card-container {
+    padding: 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .subscription-card-one {
+    width: 100%;
+    margin: 0rem;
+    margin-bottom: 4rem;
+  }
+
+  .card-banner {
+    height: 182px;
+  }
+
+  .card-content-container {
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .card-heading {
+    padding-top: 2rem;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .card-para-one {
+    text-align: center;
+  }
+
+  .card-para-two {
+    text-align: center;
+  }
+
+  .card-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    /* margin-bottom: 2rem; */
+  }
+
+  .process-main-heading-container {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .process-main-heading {
+    text-align: center;
+    font-size: 32px;
+  }
+
+  .process-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .process-one-container {
+    width: 100%;
+  }
+
+  .process-heading {
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .topspacing {
+    margin-top: 2rem;
+  }
+
+  .bottomspacing {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+
+  .benefits-container {
+    margin-top: 6rem;
+  }
+
+  .benefits-heading-continer {
+    margin-bottom: 3rem;
+  }
+
+  .benefits-card-heading {
+    font-size: 24px;
+  }
+
+  .the-cards-collection {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .benefits-card-container {
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    width: 100%;
+    height: auto;
+  }
+
+  .benefits-card {
+    padding-top: 4rem;
+    padding-bottom: 0.2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .benefits-list-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 /* iPhone 14 Pro, 15 Pro */
 @media (min-width: 430px) {
+  .membership-hero-heading {
+    font-size: 67px;
+  }
+
+  .membership-content {
+    padding: 1rem;
+  }
+
+  .membership-page-content-text {
+    font-size: 20px;
+  }
+
+  .benefits-heading {
+    font-size: 41px;
+  }
+
+  .card-container {
+    padding: 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .subscription-card-one {
+    width: 100%;
+    margin: 0rem;
+    margin-bottom: 4rem;
+  }
+
+  .card-banner {
+    height: 182px;
+  }
+
+  .card-content-container {
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .card-heading {
+    padding-top: 2rem;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 4rem;
+  }
+
+  .card-para-one {
+    text-align: center;
+  }
+
+  .card-para-two {
+    text-align: center;
+  }
+
+  .card-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    /* margin-bottom: 2rem; */
+  }
+
+  .process-main-heading-container {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .process-main-heading {
+    text-align: center;
+    font-size: 32px;
+  }
+
+  .process-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .process-one-container {
+    width: 100%;
+  }
+
+  .process-heading {
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .topspacing {
+    margin-top: 2rem;
+  }
+
+  .bottomspacing {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+
+  .benefits-container {
+    margin-top: 6rem;
+  }
+
+  .benefits-heading-continer {
+    margin-bottom: 3rem;
+  }
+
+  .benefits-card-heading {
+    font-size: 30px;
+  }
+
+  .the-cards-collection {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .benefits-card-container {
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    width: 100%;
+    height: auto;
+  }
+
+  .benefits-card {
+    padding-top: 4rem;
+    padding-bottom: 0.2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .benefits-list-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 /* Larger phones and phablets (>= 480px) */
 @media (min-width: 480px) {
+  .membership-hero-heading {
+    font-size: 67px;
+  }
+
+  .membership-content {
+    padding: 1rem;
+  }
+
+  .membership-page-content-text {
+    font-size: 20px;
+  }
+
+  .benefits-heading {
+    font-size: 41px;
+  }
+
+  .card-container {
+    padding: 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .subscription-card-one {
+    width: 100%;
+    margin: 0rem;
+    margin-bottom: 4rem;
+  }
+
+  .card-banner {
+    height: 182px;
+  }
+
+  .card-content-container {
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .card-heading {
+    padding-top: 2rem;
+    font-size: 35px;
+    text-align: center;
+    margin-top: 6rem;
+  }
+
+  .card-para-one {
+    text-align: center;
+  }
+
+  .card-para-two {
+    text-align: center;
+  }
+
+  .card-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    /* margin-bottom: 2rem; */
+  }
+
+  .process-main-heading-container {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .process-main-heading {
+    text-align: center;
+    font-size: 46px;
+  }
+
+  .process-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .process-one-container {
+    width: 100%;
+  }
+
+  .process-heading {
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .topspacing {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+
+  .bottomspacing {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+
+  .benefits-container {
+    margin-top: 6rem;
+  }
+
+  .benefits-heading-continer {
+    margin-bottom: 3rem;
+  }
+
+  .benefits-card-heading {
+    font-size: 30px;
+  }
+
+  .the-cards-collection {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .benefits-card-container {
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    width: 100%;
+    height: auto;
+  }
+
+  .benefits-card {
+    padding-top: 4rem;
+    padding-bottom: 0.2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .benefits-list-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .card-para-one {
+    font-size: 20px;
+  }
+
+  .card-para-two {
+    font-size: 20px;
+  }
+
+  .process-description {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .benefits-card-description {
+    margin-top: 2rem;
+    margin-bottom: 0rem;
+  }
 }
 
 /* Tablets (>= 600px) */
 @media (min-width: 600px) {
+  .membership-hero-heading {
+    font-size: 77px;
+  }
+
+  .membership-content {
+    padding: 1rem;
+  }
+
+  .membership-page-content-text {
+    font-size: 27px;
+  }
+
+  .benefits-heading {
+    font-size: 41px;
+  }
+
+  .card-container {
+    padding: 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .subscription-card-one {
+    width: 70%;
+    margin: 0rem;
+    margin-bottom: 4rem;
+  }
+
+  .card-banner {
+    height: 182px;
+  }
+
+  .card-content-container {
+    padding-top: 0.5rem;
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .card-heading {
+    padding-top: 2rem;
+    font-size: 33px;
+    text-align: center;
+    margin-top: 4rem;
+  }
+
+  .card-para-one {
+    text-align: center;
+  }
+
+  .card-para-two {
+    text-align: center;
+  }
+
+  .card-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    /* margin-bottom: 2rem; */
+  }
+
+  .process-main-heading-container {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .process-main-heading {
+    text-align: center;
+    font-size: 46px;
+  }
+
+  .process-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .process-one-container {
+    width: 100%;
+  }
+
+  .process-heading {
+    text-align: center;
+    font-size: 33px;
+  }
+
+  .topspacing {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+
+  .bottomspacing {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+
+  .benefits-container {
+    margin-top: 6rem;
+  }
+
+  .benefits-heading-continer {
+    margin-bottom: 3rem;
+  }
+
+  .benefits-card-heading {
+    font-size: 30px;
+  }
+
+  .the-cards-collection {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .benefits-card-container {
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    width: 100%;
+    height: auto;
+  }
+
+  .benefits-card {
+    padding-top: 4rem;
+    padding-bottom: 0.2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .benefits-list-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    font-size: 19px;
+  }
+
+  .card-para-one {
+    font-size: 20px;
+  }
+
+  .card-para-two {
+    font-size: 20px;
+  }
+
+  .process-description {
+    text-align: center;
+    font-size: 23px;
+    width: 80%;
+  }
+
+  .benefits-card-description {
+    margin-top: 2rem;
+    margin-bottom: 0rem;
+    font-size: 22px;
+  }
 }
 
 /* Small laptops and larger tablets (>= 768px) */
 @media (min-width: 768px) {
+  .membership-hero-heading {
+    font-size: 97px;
+  }
+
+  .membership-content {
+    padding: 1rem;
+  }
+
+  .membership-page-content-text {
+    font-size: 27px;
+  }
+
+  .benefits-heading {
+    font-size: 41px;
+  }
+
+  .card-container {
+    padding: 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .subscription-card-one {
+    width: 70%;
+    margin: 0rem;
+    margin-bottom: 4rem;
+  }
+
+  .card-banner {
+    height: 182px;
+  }
+
+  .card-content-container {
+    padding-top: 0.5rem;
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .card-heading {
+    padding-top: 2rem;
+    font-size: 33px;
+    text-align: center;
+    margin-top: 8rem;
+  }
+
+  .card-para-one {
+    text-align: center;
+  }
+
+  .card-para-two {
+    text-align: center;
+  }
+
+  .card-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    /* margin-bottom: 2rem; */
+  }
+
+  .process-main-heading-container {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .process-main-heading {
+    text-align: center;
+    font-size: 46px;
+  }
+
+  .process-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .process-one-container {
+    width: 100%;
+  }
+
+  .process-heading {
+    text-align: center;
+    font-size: 33px;
+  }
+
+  .topspacing {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+
+  .bottomspacing {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+
+  .benefits-container {
+    margin-top: 6rem;
+  }
+
+  .benefits-heading-continer {
+    margin-bottom: 3rem;
+  }
+
+  .benefits-card-heading {
+    font-size: 30px;
+  }
+
+  .the-cards-collection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .benefits-card-container {
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    width: 74%;
+    height: auto;
+  }
+
+  .benefits-card {
+    padding-top: 4rem;
+    padding-bottom: 0.2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .benefits-list-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    font-size: 19px;
+  }
+
+  .card-para-one {
+    font-size: 20px;
+  }
+
+  .card-para-two {
+    font-size: 20px;
+  }
+
+  .process-description {
+    text-align: center;
+    font-size: 23px;
+    width: 80%;
+  }
+
+  .benefits-card-description {
+    margin-top: 2rem;
+    margin-bottom: 0rem;
+    font-size: 22px;
+  }
 }
 
 /* Medium laptops (>= 1024px) */
 @media (min-width: 1024px) {
+  .membership-hero-heading {
+    font-size: 97px;
+  }
+
+  .membership-content {
+    padding: 1rem;
+  }
+
+  .membership-page-content-text {
+    font-size: 27px;
+  }
+
+  .benefits-heading {
+    font-size: 41px;
+  }
+
+  .card-container {
+    padding: 0rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .subscription-card-one {
+    width: 44%;
+    margin: 0rem;
+    margin-bottom: 4rem;
+  }
+
+  .card-banner {
+    height: 182px;
+  }
+
+  .card-content-container {
+    padding-top: 0.5rem;
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .card-heading {
+    padding-top: 2rem;
+    font-size: 32px;
+    text-align: center;
+    margin-top: 4rem;
+  }
+
+  .card-para-two {
+    text-align: center;
+  }
+
+  .card-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    /* margin-bottom: 2rem; */
+  }
+
+  .process-main-heading-container {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .process-main-heading {
+    text-align: center;
+    font-size: 46px;
+  }
+
+  .process-row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .process-one-container {
+    width: 100%;
+  }
+
+  .process-heading {
+    text-align: center;
+    font-size: 27px;
+  }
+
+  .topspacing {
+    margin-bottom: 0rem;
+    margin-top: 12rem;
+  }
+
+  .bottomspacing {
+    margin-bottom: 12rem;
+    margin-top: 0rem;
+  }
+
+  .benefits-container {
+    margin-top: 6rem;
+  }
+
+  .benefits-heading-continer {
+    margin-bottom: 3rem;
+  }
+
+  .benefits-card-heading {
+    font-size: 30px;
+  }
+
+  .the-cards-collection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.8rem;
+  }
+
+  .benefits-card-container {
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    width: 47%;
+    height: 95vh;
+  }
+
+  .benefits-card {
+    padding-top: 4rem;
+    padding-bottom: 0.2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .benefits-list-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    font-size: 19px;
+  }
+
+  .card-para-one {
+    font-size: 19px;
+    text-align: center;
+  }
+
+  .card-para-two {
+    font-size: 20px;
+  }
+
+  .process-description {
+    text-align: center;
+    font-size: 18px;
+    width: 95%;
+  }
+
+  .benefits-card-description {
+    margin-top: 2rem;
+    margin-bottom: 0rem;
+    font-size: 18px;
+  }
 }
 
 /* Large laptops and desktops (>= 1280px) */
 @media (min-width: 1280px) {
+  .membership-hero-heading {
+    font-size: 97px;
+  }
+
+  .membership-content {
+    padding: 1rem;
+  }
+
+  .membership-page-content-text {
+    font-size: 27px;
+    margin-top: 4rem;
+  }
+
+  .benefits-heading {
+    font-size: 41px;
+  }
+
+  .card-container {
+    padding: 0rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .subscription-card-one {
+    width: 33%;
+    margin: 0rem;
+    margin-bottom: 4rem;
+  }
+
+  .card-banner {
+    height: 182px;
+  }
+
+  .card-content-container {
+    padding-top: 0.5rem;
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .card-heading {
+    padding-top: 2rem;
+    font-size: 32px;
+    text-align: left;
+    margin-top: 4rem;
+  }
+
+  .card-para-two {
+    text-align: center;
+  }
+
+  .card-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    /* margin-bottom: 2rem; */
+  }
+
+  .process-main-heading-container {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .process-main-heading {
+    text-align: center;
+    font-size: 46px;
+  }
+
+  .process-row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .process-one-container {
+    width: 100%;
+  }
+
+  .process-heading {
+    text-align: center;
+    font-size: 27px;
+  }
+
+  .topspacing {
+    margin-bottom: 0rem;
+    margin-top: 12rem;
+  }
+
+  .bottomspacing {
+    margin-bottom: 12rem;
+    margin-top: 0rem;
+  }
+
+  .benefits-container {
+    margin-top: 6rem;
+  }
+
+  .benefits-heading-continer {
+    margin-bottom: 3rem;
+  }
+
+  .benefits-card-heading {
+    font-size: 30px;
+  }
+
+  .the-cards-collection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.8rem;
+  }
+
+  .benefits-card-container {
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    width: 41%;
+    height: 87vh;
+  }
+
+  .benefits-card {
+    padding-top: 4rem;
+    padding-bottom: 0.2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .benefits-list-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    font-size: 19px;
+  }
+
+  .card-para-one {
+    font-size: 19px;
+    text-align: left;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .card-para-two {
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .process-description {
+    text-align: center;
+    font-size: 18px;
+    width: 95%;
+  }
+
+  .benefits-card-description {
+    margin-top: 2rem;
+    margin-bottom: 0rem;
+    font-size: 18px;
+  }
 }
 
 /* Extra-large desktops (>= 1440px) */
 @media (min-width: 1440px) {
+  .membership-hero-heading {
+    font-size: 97px;
+  }
+
+  .membership-content {
+    padding: 1rem;
+  }
+
+  .membership-page-content-text {
+    font-size: 27px;
+    margin-top: 4rem;
+  }
+
+  .card-container {
+    padding: 0rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .subscription-card-one {
+    width: 39%;
+    margin: 0rem;
+    margin-bottom: 4rem;
+  }
+
+  .card-banner {
+    height: 182px;
+  }
+
+  .card-content-container {
+    padding-top: 0.5rem;
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .card-heading {
+    padding-top: 2rem;
+    font-size: 32px;
+    text-align: left;
+    margin-top: 9rem;
+  }
+
+  .card-para-two {
+    text-align: center;
+  }
+
+  .card-button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2rem;
+    /* margin-bottom: 2rem; */
+  }
+
+  .process-main-heading-container {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .process-main-heading {
+    text-align: center;
+    font-size: 58px;
+    margin-bottom: 8rem;
+  }
+
+  .process-row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .process-one-container {
+    width: 100%;
+  }
+
+  .process-heading {
+    text-align: center;
+    font-size: 27px;
+  }
+
+  .topspacing {
+    margin-bottom: 0rem;
+    margin-top: 16rem;
+  }
+
+  .bottomspacing {
+    margin-bottom: 16rem;
+    margin-top: 0rem;
+  }
+
+  .benefits-container {
+    margin-top: 6rem;
+  }
+
+  .benefits-heading-continer {
+    margin-bottom: 3rem;
+  }
+
+  .benefits-heading {
+    font-size: 58px;
+  }
+
+  .benefits-card-heading {
+    font-size: 30px;
+  }
+
+  .the-cards-collection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.8rem;
+  }
+
+  .benefits-card-container {
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    width: 41%;
+    height: 87vh;
+  }
+
+  .benefits-card {
+    padding-top: 4rem;
+    padding-bottom: 0.2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .benefits-list-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    font-size: 19px;
+  }
+
+  .card-para-one {
+    font-size: 19px;
+    text-align: left;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .card-para-two {
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .process-description {
+    text-align: center;
+    font-size: 18px;
+    width: 70%;
+  }
+
+  .benefits-card-description {
+    margin-top: 2rem;
+    margin-bottom: 0rem;
+    font-size: 18px;
+  }
 }
 
 /* Ultra-wide screens (>= 1600px) */
 @media (min-width: 1600px) {
+  .membership-hero-heading {
+    font-size: 111px;
+  }
+
+  .membership-content {
+    padding: 1rem;
+  }
+
+  .membership-page-content-text {
+    font-size: 27px;
+    margin-top: 4rem;
+  }
+
+  .card-container {
+    padding: 0rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .subscription-card-one {
+    width: 32%;
+    margin: 0rem;
+    margin-bottom: 4rem;
+  }
+
+  .card-banner {
+    height: 182px;
+  }
+
+  .card-content-container {
+    padding-top: 0.5rem;
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .card-heading {
+    padding-top: 2rem;
+    font-size: 32px;
+    text-align: left;
+    margin-top: 7rem;
+  }
+
+  .card-para-two {
+    text-align: center;
+  }
+
+  .card-button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2rem;
+    /* margin-bottom: 2rem; */
+  }
+
+  .process-main-heading-container {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .process-main-heading {
+    text-align: center;
+    font-size: 58px;
+    margin-bottom: 8rem;
+  }
+
+  .process-row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .process-one-container {
+    width: 100%;
+  }
+
+  .process-heading {
+    text-align: center;
+    font-size: 27px;
+  }
+
+  .topspacing {
+    margin-bottom: 0rem;
+    margin-top: 16rem;
+  }
+
+  .bottomspacing {
+    margin-bottom: 16rem;
+    margin-top: 0rem;
+  }
+
+  .benefits-container {
+    margin-top: 6rem;
+  }
+
+  .benefits-heading-continer {
+    margin-bottom: 3rem;
+  }
+
+  .benefits-heading {
+    font-size: 58px;
+  }
+
+  .benefits-card-heading {
+    font-size: 30px;
+  }
+
+  .the-cards-collection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.8rem;
+  }
+
+  .benefits-card-container {
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    width: 41%;
+    height: 87vh;
+  }
+
+  .benefits-card {
+    padding-top: 4rem;
+    padding-bottom: 0.2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .benefits-list-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    font-size: 19px;
+  }
+
+  .card-para-one {
+    font-size: 19px;
+    text-align: left;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .card-para-two {
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .process-description {
+    text-align: center;
+    font-size: 18px;
+    width: 70%;
+  }
+
+  .benefits-card-description {
+    margin-top: 2rem;
+    margin-bottom: 0rem;
+    font-size: 18px;
+  }
 }
 
 /* 4K screens (>= 1920px) */
 @media (min-width: 1920px) {
+  .membership-hero-heading {
+    font-size: 111px;
+  }
+
+  .membership-content {
+    padding: 1rem;
+  }
+
+  .membership-page-content-text {
+    font-size: 27px;
+    margin-top: 4rem;
+  }
+
+  .card-container {
+    padding: 0rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .subscription-card-one {
+    width: 25%;
+    margin: 0rem;
+    margin-bottom: 4rem;
+  }
+
+  .card-banner {
+    height: 182px;
+  }
+
+  .card-content-container {
+    padding-top: 0.5rem;
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .card-heading {
+    padding-top: 2rem;
+    font-size: 32px;
+    text-align: left;
+    margin-top: 7rem;
+  }
+
+  .card-para-two {
+    text-align: center;
+  }
+
+  .card-button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2rem;
+    /* margin-bottom: 2rem; */
+  }
+
+  .process-main-heading-container {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .process-main-heading {
+    text-align: center;
+    font-size: 67px;
+    margin-bottom: 8rem;
+  }
+
+  .process-row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .process-one-container {
+    width: 100%;
+  }
+
+  .process-heading {
+    text-align: center;
+    font-size: 32px;
+  }
+
+  .topspacing {
+    margin-bottom: 0rem;
+    margin-top: 16rem;
+  }
+
+  .bottomspacing {
+    margin-bottom: 16rem;
+    margin-top: 0rem;
+  }
+
+  .benefits-container {
+    margin-top: 6rem;
+  }
+
+  .benefits-heading-continer {
+    margin-bottom: 3rem;
+  }
+
+  .benefits-heading {
+    font-size: 58px;
+  }
+
+  .benefits-card-heading {
+    font-size: 32px;
+  }
+
+  .the-cards-collection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.8rem;
+  }
+
+  .benefits-card-container {
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    width: 33%;
+    height: 82vh;
+  }
+
+  .benefits-card {
+    padding-top: 4rem;
+    padding-bottom: 0.2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .benefits-list-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    font-size: 19px;
+  }
+
+  .card-para-one {
+    font-size: 19px;
+    text-align: left;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .card-para-two {
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .process-description {
+    text-align: center;
+    font-size: 22px;
+    width: 73%;
+  }
+
+  .benefits-card-description {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    font-size: 18px;
+  }
 }
 
 /* 4K screens (>= 1920px) */
 @media (min-width: 2560px) {
+  .membership-hero-heading {
+    font-size: 111px;
+  }
+
+  .membership-content {
+    padding: 1rem;
+  }
+
+  .membership-page-content-text {
+    font-size: 27px;
+    margin-top: 4rem;
+  }
+
+  .card-container {
+    padding: 0rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .subscription-card-one {
+    width: 25%;
+    margin: 0rem;
+    margin-bottom: 4rem;
+  }
+
+  .card-banner {
+    height: 182px;
+  }
+
+  .card-content-container {
+    padding-top: 0.5rem;
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .card-heading {
+    padding-top: 2rem;
+    font-size: 32px;
+    text-align: left;
+    margin-top: 12rem;
+  }
+
+  .card-para-two {
+    text-align: center;
+  }
+
+  .card-button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2rem;
+    /* margin-bottom: 2rem; */
+  }
+
+  .process-main-heading-container {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .process-main-heading {
+    text-align: center;
+    font-size: 67px;
+    margin-bottom: 8rem;
+  }
+
+  .process-row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .process-one-container {
+    width: 100%;
+  }
+
+  .process-heading {
+    text-align: center;
+    font-size: 32px;
+  }
+
+  .topspacing {
+    margin-bottom: 0rem;
+    margin-top: 16rem;
+  }
+
+  .bottomspacing {
+    margin-bottom: 16rem;
+    margin-top: 0rem;
+  }
+
+  .benefits-container {
+    margin-top: 6rem;
+  }
+
+  .benefits-heading-continer {
+    margin-bottom: 3rem;
+  }
+
+  .benefits-heading {
+    font-size: 58px;
+  }
+
+  .benefits-card-heading {
+    font-size: 32px;
+  }
+
+  .the-cards-collection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.8rem;
+  }
+
+  .benefits-card-container {
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    width: 33%;
+    height: 62vh;
+  }
+
+  .benefits-card {
+    padding-top: 4rem;
+    padding-bottom: 0.2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .benefits-list-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    font-size: 19px;
+  }
+
+  .card-para-one {
+    font-size: 19px;
+    text-align: left;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .card-para-two {
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .process-description {
+    text-align: center;
+    font-size: 22px;
+    width: 51%;
+  }
+
+  .benefits-card-description {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    font-size: 18px;
+  }
 }
 
 /* Iphone SE */
