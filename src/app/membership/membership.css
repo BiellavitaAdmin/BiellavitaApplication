@@ -2494,14 +2494,59 @@
 
 /* iPad Pro */
 @media (width: 1024px) and (height: 1366px) {
+  .benefits-card-container {
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    width: 47%;
+    height: 55vh;
+  }
 }
 
 /* Surface Pro 7 */
 @media (width: 912px) and (height: 1368px) {
+  .card-heading {
+    padding-top: 2rem;
+    font-size: 33px;
+    text-align: center;
+    margin-top: 12rem;
+  }
 }
 
 /* Surface Duo*/
 @media (width: 540px) and (height: 720px) {
+  .membership-page-content-text {
+    font-size: 30px;
+  }
+  .card-heading {
+    padding-top: 2rem;
+    font-size: 35px;
+    text-align: center;
+    margin-top: 7rem;
+  }
+
+  .card-para-one {
+    font-size: 24px;
+  }
+
+  .card-para-two {
+    font-size: 24px;
+  }
+
+  .process-description {
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .benefits-card-description {
+    font-size: 20px;
+  }
+
+  .benefits-list-item {
+    text-align: center;
+    font-size: 24px;
+  }
 }
 
 /* Samsung Galaxy A51/71 */
@@ -2510,6 +2555,14 @@
 
 /* Nest Hub */
 @media (width: 1024px) and (height: 600px) {
+  .benefits-card-container {
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    width: 45%;
+    height: 125vh;
+  }
 }
 
 /* Nest Hub Max */
