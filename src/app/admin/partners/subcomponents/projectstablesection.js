@@ -18,7 +18,7 @@ export default function MembersTableSection() {
       const response = await fetch("/api/partners");
       const data = await response.json();
       setPartners(data);
-      setFilteredPartners(data); // Set filtered members initially
+      setFilteredPartners(data);
     };
     fetchPartners();
   }, []);
@@ -47,7 +47,7 @@ export default function MembersTableSection() {
 
   const showEditModal = (partner) => {
     setSelectedPartner(partner);
-    form.setFieldsValue(partner); // Populate form with selected member data
+    form.setFieldsValue(partner);
     setIsEditModalVisible(true);
   };
 
@@ -60,14 +60,13 @@ export default function MembersTableSection() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ id: selectedPartner._id, ...values }), // Include the ID
+        body: JSON.stringify({ id: selectedPartner._id, ...values }),
       });
       setIsEditModalVisible(false);
-      // Refresh members
       const response = await fetch("/api/partners");
       const data = await response.json();
       setPartners(data);
-      setFilteredPartners(data); // Refresh filtered members too
+      setFilteredPartners(data);
     } catch (error) {
       console.error("Edit failed:", error);
     }
@@ -83,13 +82,12 @@ export default function MembersTableSection() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ id }), // Include the ID
+      body: JSON.stringify({ id }),
     });
-    // Refresh members
     const response = await fetch("/api/partners");
     const data = await response.json();
     setPartners(data);
-    setFilteredPartners(data); // Refresh filtered members too
+    setFilteredPartners(data);
   };
 
   const columns = [
@@ -193,7 +191,7 @@ export default function MembersTableSection() {
           dataSource={filteredPartners}
           columns={columns}
           rowKey="_id"
-          pagination={{ pageSize: 8 }} // Limit to 8 rows per page
+          pagination={{ pageSize: 8 }}
         />
       )}
 

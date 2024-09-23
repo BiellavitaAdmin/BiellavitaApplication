@@ -15,7 +15,7 @@ export default function AddPartners() {
   });
 
   const [errors, setErrors] = useState({});
-  const [isSubmitted, setIsSubmitted] = useState(false); // Track form submission
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
   const [successMessage, setSuccessMessage] = useState(null);
 
@@ -118,7 +118,7 @@ export default function AddPartners() {
           type="error"
           showIcon
           style={{
-            width: "20%", // Adjust the width as needed
+            width: "20%",
             marginBottom: "16px",
             textAlign: "right",
           }}
@@ -133,7 +133,7 @@ export default function AddPartners() {
             type="success"
             showIcon
             style={{
-              width: "20%", // Adjust the width as needed
+              width: "20%",
               marginBottom: "16px",
             }}
           />
@@ -150,7 +150,7 @@ export default function AddPartners() {
                 errors.firstname ? "input-error" : ""
               }`}
               name="firstname"
-              placeholder="Enter member's firstname" // Add placeholder
+              placeholder="Enter partner's firstname"
               value={formData.firstname}
               onChange={handleChange}
             />
@@ -166,7 +166,7 @@ export default function AddPartners() {
                 errors.lastname ? "input-error" : ""
               }`}
               name="lastname"
-              placeholder="Enter member's lastname" // Add placeholder
+              placeholder="Enter partner's lastname"
               value={formData.lastname}
               onChange={handleChange}
             />
@@ -182,7 +182,7 @@ export default function AddPartners() {
                 errors.address ? "input-error" : ""
               }`}
               name="address"
-              placeholder="Add member's address" // Add placeholder
+              placeholder="Add partner's address"
               value={formData.address}
               onChange={handleChange}
             />
@@ -196,7 +196,7 @@ export default function AddPartners() {
                 errors.cellPhone ? "input-error" : ""
               }`}
               name="cellPhone"
-              placeholder="000 000 0000" // Add placeholder for phone
+              placeholder="000 000 0000"
               value={formData.cellPhone}
               onChange={handleChange}
             />
@@ -210,35 +210,18 @@ export default function AddPartners() {
             <input
               className={`dash-form-input ${errors.email ? "input-error" : ""}`}
               name="email"
-              placeholder="Add member's email" // Add placeholder for email
+              placeholder="Add partner's email"
               value={formData.email}
               onChange={handleChange}
               type="email"
             />
           </div>
           {errors.email && <p className="error-message">{errors.email}</p>}
-
-          {/* <div className="dash-inputfield-group-column">
-            <label className="dash-form-label">Password</label>
-            <input
-              className={`dash-form-input ${
-                errors.password ? "input-error" : ""
-              }`}
-              name="password"
-              placeholder="Enter member's password"
-              value={formData.password}
-              onChange={handleChange}
-            />
-          </div>
-          {errors.password && (
-            <p className="error-message">{errors.password}</p>
-          )} */}
-
           <div className="dash-form-container">
             <button className="dash-form-button" type="submit">
               Add Partner
             </button>
-            {isSubmitted && ( // Conditionally show the "Back to Members" button
+            {isSubmitted && (
               <Link href="/admin/partners">
                 <button className="dash-form-button goto">
                   Back to Partners
