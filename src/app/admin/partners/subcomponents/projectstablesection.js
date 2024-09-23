@@ -5,35 +5,35 @@ import { Table, Button, Modal, Form, Input } from "antd";
 import Image from "next/image";
 
 export default function MembersTableSection() {
-  const [members, setMembers] = useState([]);
-  const [filteredMembers, setFilteredMembers] = useState([]);
-  const [selectedMember, setSelectedMember] = useState(null);
+  const [partners, setPartners] = useState([]);
+  const [filteredPartners, setFilteredPartners] = useState([]);
+  const [selectedPartner, setSelectedPartner] = useState(null);
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [isEditModalVisible, setIsEditModalVisible] = useState(false);
   const [searchText, setSearchText] = useState("");
   const [form] = Form.useForm();
 
   useEffect(() => {
-    const fetchMembers = async () => {
+    const fetchPartners = async () => {
       const response = await fetch("/api/partners");
       const data = await response.json();
-      setMembers(data);
-      setFilteredMembers(data); // Set filtered members initially
+      setPartners(data);
+      setFilteredPartners(data); // Set filtered members initially
     };
-    fetchMembers();
+    fetchPartners();
   }, []);
 
   const handleSearch = (e) => {
     const value = e.target.value.toLowerCase();
     setSearchText(value);
-    const filteredData = members.filter((member) =>
-      member.firstname.toLowerCase().includes(value)
+    const filteredData = partners.filter((partner) =>
+      partner.firstname.toLowerCase().includes(value)
     );
-    setFilteredMembers(filteredData);
+    setFilteredPartners(filteredData);
   };
 
-  const showModal = (member) => {
-    setSelectedMember(member);
+  const showModal = (partner) => {
+    setSelectedPartner(partner);
     setIsModalVisible(true);
   };
 
@@ -45,29 +45,29 @@ export default function MembersTableSection() {
     setIsModalVisible(false);
   };
 
-  const showEditModal = (member) => {
-    setSelectedMember(member);
-    form.setFieldsValue(member); // Populate form with selected member data
+  const showEditModal = (partner) => {
+    setSelectedPartner(partner);
+    form.setFieldsValue(partner); // Populate form with selected member data
     setIsEditModalVisible(true);
   };
 
   const handleEditOk = async () => {
     try {
       const values = await form.validateFields();
-      await fetch(`/api/members`, {
+      await fetch(`/api/partners`, {
         // Updated endpoint
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ id: selectedMember._id, ...values }), // Include the ID
+        body: JSON.stringify({ id: selectedPartner._id, ...values }), // Include the ID
       });
       setIsEditModalVisible(false);
       // Refresh members
-      const response = await fetch("/api/members");
+      const response = await fetch("/api/partners");
       const data = await response.json();
-      setMembers(data);
-      setFilteredMembers(data); // Refresh filtered members too
+      setPartners(data);
+      setFilteredPartners(data); // Refresh filtered members too
     } catch (error) {
       console.error("Edit failed:", error);
     }
@@ -78,7 +78,7 @@ export default function MembersTableSection() {
   };
 
   const handleDelete = async (id) => {
-    await fetch(`/api/members`, {
+    await fetch(`/api/partners`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -86,10 +86,10 @@ export default function MembersTableSection() {
       body: JSON.stringify({ id }), // Include the ID
     });
     // Refresh members
-    const response = await fetch("/api/members");
+    const response = await fetch("/api/partners");
     const data = await response.json();
-    setMembers(data);
-    setFilteredMembers(data); // Refresh filtered members too
+    setPartners(data);
+    setFilteredPartners(data); // Refresh filtered members too
   };
 
   const columns = [
@@ -178,7 +178,7 @@ export default function MembersTableSection() {
         />
       </div>
 
-      {filteredMembers.length === 0 ? (
+      {filteredPartners.length === 0 ? (
         <div className="section-not-found">
           <Image
             src="/nodataicon.png"
@@ -190,7 +190,7 @@ export default function MembersTableSection() {
         </div>
       ) : (
         <Table
-          dataSource={filteredMembers}
+          dataSource={filteredPartners}
           columns={columns}
           rowKey="_id"
           pagination={{ pageSize: 8 }} // Limit to 8 rows per page
@@ -198,14 +198,14 @@ export default function MembersTableSection() {
       )}
 
       <Modal
-        title="Member Details"
+        title="Partner Details"
         visible={isModalVisible}
         onOk={handleOk}
         onCancel={handleCancel}
       >
-        {selectedMember && (
+        {selectedPartner && (
           <div>
-            {Object.entries(selectedMember).map(([key, value]) => (
+            {Object.entries(selectedPartner).map(([key, value]) => (
               <p key={key}>
                 <strong>{key}:</strong> {value}
               </p>
@@ -215,7 +215,7 @@ export default function MembersTableSection() {
       </Modal>
 
       <Modal
-        title="Edit Member"
+        title="Edit Partner"
         visible={isEditModalVisible}
         onOk={handleEditOk}
         onCancel={handleEditCancel}
