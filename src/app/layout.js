@@ -6,6 +6,7 @@ import Header from "./components/sharedcomponents/header";
 import FullScreenMenu from "./components/pagecomponents/fullpagemenu/fullscreenmenu";
 import "./styles/globals.css";
 import PageFooter from "./components/pagecomponents/pagefooter/pagefooter";
+// import "antd/dist/antd.css"; // You can keep this for local imports
 
 const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
@@ -47,6 +48,12 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/antd/4.16.13/antd.min.css"
+        />
+      </head>
       <body className={playfairDisplay.className}>
         {!isAdminRoute && (
           <>
@@ -54,10 +61,7 @@ export default function RootLayout({ children }) {
             {menuOpen && <FullScreenMenu closeMenu={toggleMenu} />}
           </>
         )}
-
-        {/* Render the rest of the page content */}
         {children}
-
         {showFooterOn.includes(pathname) && <PageFooter />}
       </body>
     </html>

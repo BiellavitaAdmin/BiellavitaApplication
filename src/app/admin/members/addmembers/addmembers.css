@@ -11,14 +11,14 @@
 }
 
 .dash-form {
-  background-color: rgba(255, 255, 255, 0.795);
+  background-color: #f3eeed;
   padding-left: 2rem;
   padding-right: 2rem;
   padding-top: 5rem;
   padding-bottom: 5rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 0.9rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
   width: 40%;
@@ -61,4 +61,23 @@
   font-family: inherit;
   font-size: var(--font-size-menufooter-left-text);
   font-weight: var(--font-weight-super-heading);
+}
+
+.error-message {
+  display: flex;
+  padding-left: 8rem;
+  color: red;
+  font-size: 12px;
+}
+
+.goto {
+  margin-left: 1rem;
+  background-color: rgba(255, 255, 255, 0.795);
+  color: #505055;
+}
+
+.alert-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }

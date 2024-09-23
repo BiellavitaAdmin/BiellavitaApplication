@@ -1,7 +1,8 @@
 .section-content-container {
-  padding-top: 4rem;
+  padding-top: 1rem;
   padding-left: 4rem;
   padding-right: 4rem;
+  padding-bottom: 4rem;
 }
 
 .dash-section-content {
@@ -25,10 +26,11 @@
   padding: 0.9rem;
   border: none;
   border-radius: 18px;
-  background-color: rgba(255, 255, 255, 0.795);
+  /* background-color: rgba(255, 255, 255, 0.795); */
   font-size: var(--font-size-menufooter-left-text);
   font-weight: var(--font-weight-super-heading);
   font-family: inherit;
+  color: var(--Website-black-color);
 }
 
 .plus-sign {
@@ -43,11 +45,12 @@
 .button-link:active,
 .button-link:visited,
 .button-link:focus {
-  background-color: var(--Website-black-color);
+  background-color: none;
 }
 
 .button-link:hover {
   text-decoration: none;
+  color: var(--Website-black-color);
 }
 
 .section-table-section {

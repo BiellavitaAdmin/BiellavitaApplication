@@ -53,7 +53,7 @@
 
 .sidebar {
   width: 12%;
-  height: 720px;
+  height: calc(100vh - 8vh);
   background-color: rgba(255, 255, 255, 0.795);
   border-right: 1px solid #505055;
   border-top: 1px solid #505055;
@@ -94,9 +94,14 @@
 }
 
 .dashboard-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   border: 1px solid #505055;
   padding: 0.7rem;
   background-color: rgba(255, 255, 255, 0.795);
+  height: 80px;
+  z-index: 100; /* To ensure it stays above other content if necessary */
 }
 
 .admin-footer-text {
