@@ -47,6 +47,16 @@
   height: 34px;
 }
 
+.dash-form-input-message {
+  width: 100%;
+  height: 134px;
+}
+
+.dash-form-input-message-larger {
+  width: 100%;
+  height: 334px;
+}
+
 .dash-form-conatiner {
   width: 100%;
   display: flex;
