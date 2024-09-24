@@ -53,6 +53,14 @@
   padding-top: 1.7rem;
 }
 
+.address-text-full-page-footer {
+  padding-left: 3.7rem;
+  padding-right: 0rem;
+  padding-top: 0rem;
+  margin-bottom: 0.2rem;
+  font-size: 17px;
+}
+
 .social-media-row {
   display: flex;
   flex-direction: row;
