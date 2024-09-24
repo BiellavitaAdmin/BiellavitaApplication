@@ -27,7 +27,7 @@ export default function ProjectsTableSection() {
     const value = e.target.value.toLowerCase();
     setSearchText(value);
     const filteredData = projects.filter((project) =>
-      project.firstname.toLowerCase().includes(value)
+      project.projecttitle.toLowerCase().includes(value)
     );
     setFilteredProjects(filteredData);
   };
@@ -159,7 +159,7 @@ export default function ProjectsTableSection() {
         }}
       >
         <Input
-          placeholder="Search by Firstname"
+          placeholder="Search by Project Title"
           value={searchText}
           onChange={handleSearch}
           style={{ width: 200 }}
