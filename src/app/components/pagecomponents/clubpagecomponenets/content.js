@@ -1,11 +1,12 @@
 import SourceSection from "./sourcesection";
+import FoundersHeadingSection from "./foundersheadingsection";
 import BelquisPara from "./belquispara";
 import AlbertosPara from "./albertospara";
 export default function Content() {
   return (
     <div className="content">
       <SourceSection />
-      <h2 className="clubpage-heading">Founders</h2>
+      <FoundersHeadingSection />
       <BelquisPara />
       <AlbertosPara />
     </div>

@@ -120,20 +120,24 @@
   font-size: var(--font-size-page-subcontent);
   /* font-weight: var(--font-weight-super-heading); */
   background: var(--Website-body-color);
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
 .Belquis-paragraph {
   border-left: 2px solid var(--Website-black-color);
   margin-bottom: 5rem;
-  margin-top: 15rem;
+  margin-top: 2rem;
   color: var(--Website-black-color);
 }
 
 .Belquis-paragraph-heading {
   font-size: var(--font-size-page-subheading);
   font-weight: var(--font-weight-super-heading);
-  padding: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  margin-bottom: 0.1rem;
   color: var(--Website-black-color);
 }
 
@@ -145,7 +149,11 @@
 .Alberto-paragraph-heading {
   font-size: var(--font-size-page-subheading);
   font-weight: var(--font-weight-super-heading);
-  padding: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  margin-bottom: 0.1rem;
   color: var(--Website-black-color);
 }
 
