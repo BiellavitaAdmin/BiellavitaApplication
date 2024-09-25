@@ -1,32 +1,102 @@
+import { useEffect, useState } from "react";
+import { Modal, Spin } from "antd";
 import Image from "next/image";
+
 export default function ProjectsSectionOne() {
+  const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      setLoading(true);
+      try {
+        const response = await fetch("/api/projects");
+        const data = await response.json();
+        setTimeout(() => {
+          setProjects(data);
+          setLoading(false);
+        }, 3000); // Show the loader for at least 3 seconds
+      } catch (error) {
+        console.error("Error fetching projects:", error);
+        setLoading(false);
+      }
+    };
+
+    fetchProjects();
+  }, []);
+
+  const showModal = (project) => {
+    setSelectedProject(project);
+    setIsModalVisible(true);
+  };
+
+  const handleCancel = () => {
+    setIsModalVisible(false);
+  };
+
   return (
     <>
-      <div className="project-section">
-        <div className="left-section-project">
-          <h2 className="project-heading">Project</h2>
-          <p className="project-description">
-            simply dummy text of the printing and typesetting industry. Lorem
-            Ipsum has been the industry's standard dummy text ever since the
-            1500s, when an unknown printer took a galley of type and scrambled
-            it to make a type specimen book. It has survived not only five
-            centuries
-          </p>
-          <div className="project-button-container">
-            <button className="project-button">Discover More</button>
-          </div>
-        </div>
-        <div className="right-section-project">
-          <div className="pic-container">
-            <Image
-              src="/partnerhip_two.webp"
-              alt="My Awesome Image"
-              width={650}
-              height={435}
-            />
-          </div>
-        </div>
+      <div className="projects-hero-section">
+        <h1 className="projects-hero-heading show">Our Projects</h1>
       </div>
+
+      <div className="projects-content-container">
+        {loading ? (
+          <Spin size="large" className="loading-spinner" />
+        ) : (
+          <div className="projects-content">
+            {projects.map((project, index) => (
+              <div
+                key={project._id}
+                className={`project-section ${
+                  index % 2 === 0 ? "even-project" : "odd-project"
+                }`}
+              >
+                <div className="project-content">
+                  <div className="left-section-project">
+                    <h2 className="project-heading">{project.projecttitle}</h2>
+                    <p className="project-description">
+                      {project.shortdescription}
+                    </p>
+                    <button
+                      className="project-button"
+                      onClick={() => showModal(project)}
+                    >
+                      Discover More
+                    </button>
+                  </div>
+                  <div className="right-section-project">
+                    <Image
+                      src={project.imagelink}
+                      alt={project.projecttitle}
+                      width={650}
+                      height={435}
+                    />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+
+      <Modal
+        title={selectedProject?.projecttitle}
+        visible={isModalVisible}
+        onCancel={handleCancel}
+        footer={null}
+        width="70%"
+      >
+        <p>
+          <strong>Short Description:</strong>{" "}
+          {selectedProject?.shortdescription}
+        </p>
+        <p>
+          <strong>Details:</strong> {selectedProject?.details}
+        </p>
+      </Modal>
     </>
   );
 }

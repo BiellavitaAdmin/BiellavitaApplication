@@ -1,42 +1,103 @@
+.project-section {
+  display: flex;
+  justify-content: space-between;
+  /* margin: 3rem 0; */
+  padding: 2rem;
+  background-color: #f3eeed;
+  border-radius: 10px;
+}
+
+.project-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.odd-project .project-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.even-project .project-content {
+  display: flex;
+  flex-direction: row-reverse; /* Reverse row for even projects */
+}
+
+.left-section-project {
+  width: 50%;
+  padding: 2rem;
+  margin-left: 6rem;
+  margin-right: 6rem;
+  border-top: 2px solid black;
+}
+
+.right-section-project {
+  width: 50%;
+  padding: 2rem;
+  margin-left: 6rem;
+  margin-right: 6rem;
+}
+
+.project-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.project-description {
+  font-size: 16px;
+  margin-bottom: 1.5rem;
+}
+
+.project-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
 .projects-hero-section {
-  position: fixed; /* Keeps the hero section fixed behind the header */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh; /* Adjust as needed */
-  background-image: url("/Projectsback.webp"); /* Path to your background image */
+  height: 100vh;
+  background-image: url("/Projectsback.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: -1; /* Ensures the hero section stays behind other content */
-  opacity: 0; /* Initially hidden */
-  transition: opacity 1s ease-in-out; /* Transition for fade-in effect */
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
 .projects-hero-section.show {
-  opacity: 1; /* Fully visible */
+  opacity: 1;
 }
 
 .projects-hero-heading {
-  position: absolute; /* Position the heading absolutely within the hero section */
-  top: 50%; /* Center vertically */
-  left: 50%; /* Center horizontally */
-  transform: translate(
-    -50%,
-    -50%
-  ); /* Center both horizontally and vertically */
-  color: var(--Website-black-color); /* Adjust color for readability */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--Website-black-color);
   font-size: var(--font-size-menu-heading);
   font-weight: var(--font-weight-super-heading);
-  text-align: center; /* Center text alignment */
-  z-index: 1; /* Ensure heading stays above the background image */
-  opacity: 0; /* Initially hidden */
-  transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Transition for fade-in and slide effect */
+  text-align: center;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
 .projects-hero-heading.show {
-  opacity: 1; /* Fully visible */
-  transform: translate(-50%, -50%) scale(1.05); /* Slight zoom effect */
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.05);
 }
 
 .projects-content-container {
@@ -45,50 +106,18 @@
 }
 
 .projects-content {
-  margin-top: 100vh; /* Push content below the hero section */
-  padding: 200px;
+  margin-top: 100vh;
+  padding: 50px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
   position: relative;
   width: 100%;
-  background-color: #f3eeed;
 }
 
-.project-section {
-  width: 100%;
+.loading-spinner {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-.margintop {
-  margin-top: 20rem;
-}
-
-.left-section-project {
-  width: 30%;
-  padding-top: 8rem;
-}
-
-.project-heading {
-  padding-top: 1.2rem;
-  border-top: 2px solid var(--Website-black-color);
-  color: var(--Website-black-color); /* Adjust color for readability */
-  font-size: var(--font-size-page-subheading);
-  font-weight: var(--font-weight-super-heading);
-}
-
-.project-description {
-  width: 100%;
-  margin-top: 2rem;
-  margin-bottom: 0.8rem;
-  color: var(--Website-black-color); /* Adjust color for readability */
-  font-size: var(--font-size-menufooter-left-text);
-  font-weight: var(--font-weight-super-heading);
-}
-
-.project-button {
-  margin-top: 1rem;
-  border: 1px solid var(--Website-black-color);
-  padding: 0.5rem;
-  background-color: rgb(255, 255, 255, 0);
-  box-shadow: 1px 3px 16px -5px rgb(0, 0, 0, 25);
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }

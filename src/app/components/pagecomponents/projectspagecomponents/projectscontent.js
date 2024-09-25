@@ -6,8 +6,8 @@ export default function ProjectsContent() {
     <>
       <div className="projects-content">
         <ProjectsSectionOne />
-        <ProjectsSectionTwo />
-        <ProjectsSectionThree />
+        {/* <ProjectsSectionTwo />
+        <ProjectsSectionThree /> */}
       </div>
     </>
   );
