@@ -44,7 +44,9 @@ export default function ProjectsSectionOne() {
 
       <div className="projects-content-container">
         {loading ? (
-          <Spin size="large" className="loading-spinner" />
+          <div className="projects-content">
+            <Spin size="large" className="loading-spinner" />
+          </div>
         ) : (
           <div className="projects-content">
             {projects.map((project, index) => (
