@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Table, Button, Modal, Form, Input } from "antd";
+import { Table, Button, Modal, Form, Input, DatePicker } from "antd";
 import Image from "next/image";
+import dayjs from "dayjs";
 
 export default function EventsableSection() {
   const [events, setEvents] = useState([]);
@@ -45,29 +46,46 @@ export default function EventsableSection() {
     setIsModalVisible(false);
   };
 
+  // In your showEditModal function
   const showEditModal = (event) => {
     setSelectedEvent(event);
-    form.setFieldsValue(event); // Populate form with selected member data
+    form.setFieldsValue({
+      ...event,
+      date: event.eventdate ? dayjs(event.eventdate, "DD/MM/YYYY") : null, // Set the date properly
+    });
     setIsEditModalVisible(true);
   };
 
   const handleEditOk = async () => {
     try {
       const values = await form.validateFields();
+
+      // Check if date is valid before formatting
+      const formattedDate = values.date
+        ? dayjs(values.date).isValid()
+          ? dayjs(values.date).format("DD/MM/YYYY")
+          : null
+        : null;
+
       await fetch(`/api/events`, {
-        // Updated endpoint
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ id: selectedProject._id, ...values }), // Include the ID
+        body: JSON.stringify({
+          id: selectedEvent._id,
+          ...values,
+          eventdate: formattedDate, // Save the formatted date
+        }),
       });
+
       setIsEditModalVisible(false);
-      // Refresh members
+
+      // Refresh events data
       const response = await fetch("/api/events");
       const data = await response.json();
       setEvents(data);
-      setFilteredEvents(data); // Refresh filtered members too
+      setFilteredEvents(data);
     } catch (error) {
       console.error("Edit failed:", error);
     }
@@ -85,11 +103,11 @@ export default function EventsableSection() {
       },
       body: JSON.stringify({ id }), // Include the ID
     });
-    // Refresh members
+    // Refresh events
     const response = await fetch("/api/events");
     const data = await response.json();
     setEvents(data);
-    setFilteredEvents(data); // Refresh filtered members too
+    setFilteredEvents(data); // Refresh filtered events too
   };
 
   const columns = [
@@ -105,7 +123,12 @@ export default function EventsableSection() {
       key: "shortdescription",
       width: 650,
     },
-
+    {
+      title: "EventDate",
+      dataIndex: "eventdate",
+      key: "eventdate",
+      width: 250,
+    },
     {
       title: "Actions",
       key: "actions",
@@ -203,13 +226,13 @@ export default function EventsableSection() {
       </Modal>
 
       <Modal
-        title="Edit Project"
+        title="Edit Event"
         visible={isEditModalVisible}
         onOk={handleEditOk}
         onCancel={handleEditCancel}
       >
         <Form form={form} layout="vertical">
-          {/* Project Title */}
+          {/* Event Title */}
           <Form.Item
             name="eventtitle"
             label="Event Title"
@@ -232,6 +255,7 @@ export default function EventsableSection() {
             <Input />
           </Form.Item>
 
+          {/* Image Link */}
           <Form.Item
             name="imagelink"
             label="Image Link"
@@ -240,18 +264,26 @@ export default function EventsableSection() {
                 required: true,
                 message: "Please add image link",
               },
-              {
-                validator: (_, value) => {
-                  const wordCount = value ? value.split(/\s+/).length : 0;
-                  if (wordCount > 15) {
-                    return Promise.reject("Add Link");
-                  }
-                  return Promise.resolve();
-                },
-              },
             ]}
           >
             <Input />
+          </Form.Item>
+
+          {/* Date Picker (Save in day/month/year format) */}
+          <Form.Item
+            name="date"
+            label="Event Date"
+            rules={[
+              {
+                required: true,
+                message: "Please select the event date",
+              },
+            ]}
+          >
+            <DatePicker
+              format="DD/MM/YYYY" // Specify the date format
+              style={{ width: "100%" }}
+            />
           </Form.Item>
 
           {/* Short Description */}
