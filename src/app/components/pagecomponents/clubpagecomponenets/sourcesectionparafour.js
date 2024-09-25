@@ -4,14 +4,14 @@ export default function SourceSectionParaFour() {
     <>
       <div className="dual-pic-continer-club-page">
         <Image
-          src="/clubpage-left.png"
+          src="/clubpage-left.webp"
           alt="My Awesome Image"
           width={100}
           height={835}
           className="club-page-dual-image-settings-one"
         />
         <Image
-          src="/clubpage-right.png"
+          src="/clubpage-right.webp"
           alt="My Awesome Image"
           width={100}
           height={835}

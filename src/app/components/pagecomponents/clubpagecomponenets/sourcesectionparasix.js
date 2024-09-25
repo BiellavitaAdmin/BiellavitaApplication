@@ -4,7 +4,7 @@ export default function SourceSectionParaSix() {
     <>
       <div className="large-pic-continer-club-page">
         <Image
-          src="/clubpage-third.png"
+          src="/clubpage-third.webp"
           alt="My Awesome Image"
           width={100}
           height={835}

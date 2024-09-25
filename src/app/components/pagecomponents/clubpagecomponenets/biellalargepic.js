@@ -4,7 +4,7 @@ export default function BiellaLargePic() {
     <>
       <div className="large-pic-continer-club-page">
         <Image
-          src="/Biella-lake.png"
+          src="/Biella-lake.webp"
           alt="My Awesome Image"
           width={100}
           height={835}

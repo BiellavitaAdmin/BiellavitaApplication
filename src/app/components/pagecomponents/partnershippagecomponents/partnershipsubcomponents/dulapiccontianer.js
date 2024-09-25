@@ -14,14 +14,14 @@ export default function DualPicContiner() {
       <div className="dual-pic-column-container">
         <div className="dual-pic-column">
           <Image
-            src="/dualone.png"
+            src="/dualone.webp"
             alt="My Awesome Image"
             width={315}
             height={425}
             className="dualimage-partnership"
           />
           <Image
-            src="/dualtwo.png"
+            src="/dualtwo.webp"
             alt="My Awesome Image"
             width={315}
             height={425}
