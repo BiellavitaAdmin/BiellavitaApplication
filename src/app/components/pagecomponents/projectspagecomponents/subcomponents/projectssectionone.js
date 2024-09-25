@@ -75,6 +75,7 @@ export default function ProjectsSectionOne() {
                       alt={project.projecttitle}
                       width={650}
                       height={435}
+                      className="projects-large-image"
                     />
                   </div>
                 </div>
