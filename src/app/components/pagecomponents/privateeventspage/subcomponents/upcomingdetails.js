@@ -1,5 +1,3 @@
-// src/components/subcomponents/upcomingdetails.js
-
 import { useState } from "react";
 import { Modal, Button } from "antd";
 // import "antd/dist/antd.css"; // Ensure Ant Design styles are imported

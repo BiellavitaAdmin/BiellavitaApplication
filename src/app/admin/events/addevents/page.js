@@ -17,15 +17,12 @@ export default function AddEvents() {
   });
 
   const [errors, setErrors] = useState({});
-  const [isSubmitted, setIsSubmitted] = useState(false); // Track form submission
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
   const [successMessage, setSuccessMessage] = useState(null);
 
-  // Input change handler
   const handleChange = (e) => {
     const { name, value } = e.target;
-
-    // Alphabetic validation for eventtitle
     if (name === "eventtitle") {
       if (/[^a-zA-Z\s]/.test(value)) {
         setErrors({
@@ -36,17 +33,15 @@ export default function AddEvents() {
         setErrors({ ...errors, [name]: "" });
       }
     }
-
     setFormData({ ...formData, [name]: value });
   };
 
-  // Validate form fields
   const validateForm = () => {
     const newErrors = {};
     if (!formData.eventtitle)
       newErrors.eventtitle = "Project title is required";
     if (!formData.eventdate) newErrors.eventdate = "Event date is required";
-    if (!formData.imagelink) newErrors.imagelink = "Image link is required"; // Updated the message for clarity
+    if (!formData.imagelink) newErrors.imagelink = "Image link is required";
     if (!formData.shortdescription)
       newErrors.shortdescription = "Short description is required";
     if (!formData.details) newErrors.details = "Details are required";
@@ -54,7 +49,6 @@ export default function AddEvents() {
     return Object.keys(newErrors).length === 0;
   };
 
-  // Submit handler
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validateForm()) return;
@@ -65,7 +59,7 @@ export default function AddEvents() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData), // Submit with eventdate included
+        body: JSON.stringify(formData),
       });
 
       if (res.ok) {
@@ -75,9 +69,9 @@ export default function AddEvents() {
           imagelink: "",
           shortdescription: "",
           details: "",
-          eventdate: "", // Reset date on successful submission
+          eventdate: "",
         });
-        setIsSubmitted(true); // Set submission state
+        setIsSubmitted(true);
       } else {
         setErrorMessage("Failed to add event.");
       }
@@ -86,15 +80,17 @@ export default function AddEvents() {
     }
   };
 
-  // Function to handle date change
   const handleDateChange = (date, dateString) => {
-    setFormData({ ...formData, eventdate: dateString });
-    setErrors({ ...errors, eventdate: "" }); // Clear error when date is selected
+    if (date && date.isValid()) {
+      setFormData({ ...formData, eventdate: dateString });
+      setErrors({ ...errors, eventdate: "" });
+    } else {
+      setErrors({ ...errors, eventdate: "Invalid date" });
+    }
   };
 
   return (
     <div className="form-container">
-      {/* Display Antd Alert for errors */}
       {errorMessage && (
         <Alert
           message={errorMessage}
@@ -108,7 +104,6 @@ export default function AddEvents() {
         />
       )}
 
-      {/* Display Antd Alert for success */}
       {successMessage && (
         <div className="alert-container">
           <Alert
@@ -125,7 +120,6 @@ export default function AddEvents() {
 
       <div className="form-section">
         <form className="dash-form" onSubmit={handleSubmit}>
-          {/* Event Title */}
           <div className="dash-inputfield-group-column">
             <label className="dash-form-label">Event Title</label>
             <input
@@ -142,16 +136,19 @@ export default function AddEvents() {
             <p className="error-message">{errors.eventtitle}</p>
           )}
 
-          {/* Event Date (Ant Design DatePicker) */}
           <div className="dash-inputfield-group-column">
             <label className="dash-form-label">Event Date</label>
             <DatePicker
               className={`dash-form-input ${
                 errors.eventdate ? "input-error" : ""
               }`}
-              format="DD-MM-YYYY" // Date format for the input
-              onChange={handleDateChange} // Update state on date change
-              value={formData.eventdate ? dayjs(formData.eventdate) : null} // Set the date picker value
+              format="DD-MM-YYYY"
+              onChange={handleDateChange}
+              value={
+                formData.eventdate
+                  ? dayjs(formData.eventdate, "DD-MM-YYYY")
+                  : null
+              }
             />
           </div>
           {errors.eventdate && (
@@ -174,7 +171,6 @@ export default function AddEvents() {
             <p className="error-message">{errors.imagelink}</p>
           )}
 
-          {/* Short Description */}
           <div className="dash-inputfield-group-column">
             <label className="dash-form-label">Short Description</label>
             <textarea
@@ -192,7 +188,6 @@ export default function AddEvents() {
             <p className="error-message">{errors.shortdescription}</p>
           )}
 
-          {/* Details */}
           <div className="dash-inputfield-group-column">
             <label className="dash-form-label">Details</label>
             <textarea
