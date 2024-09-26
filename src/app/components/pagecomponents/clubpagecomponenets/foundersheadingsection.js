@@ -4,7 +4,7 @@ export default function FoundersHeadingSection() {
     <>
       <div className="large-pic-continer-club-page">
         <Image
-          src="/clubpage-tri-image.png"
+          src="/clubpage-tri-image.webp"
           alt="My Awesome Image"
           width={100}
           height={835}
