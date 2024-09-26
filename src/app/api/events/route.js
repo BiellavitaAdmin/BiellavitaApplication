@@ -1,48 +1,49 @@
 import clientPromise from "../../../lib/mongodb";
 import { ObjectId } from "mongodb";
+import { NextResponse } from "next/server";
 
-export async function GET() {
+export async function GET(request) {
   const client = await clientPromise;
   const db = client.db();
 
   try {
     const events = await db.collection("events").find({}).toArray();
-    return new Response(JSON.stringify(events), { status: 200 });
+    return NextResponse.json(events, { status: 200 });
   } catch (error) {
     console.error("Error fetching events:", error);
-    return new Response(
-      JSON.stringify({
+    return NextResponse.json(
+      {
         message: "Error fetching events",
         error: error.message,
-      }),
+      },
       { status: 500 }
     );
   }
 }
 
-export async function POST(req) {
-  const eventData = await req.json();
+export async function POST(request) {
+  const eventData = await request.json();
   const client = await clientPromise;
   const db = client.db();
 
   try {
     const result = await db.collection("events").insertOne(eventData);
-    return new Response(
-      JSON.stringify({ message: "event added successfully!" }),
+    return NextResponse.json(
+      { message: "Event added successfully!" },
       { status: 201 }
     );
   } catch (error) {
     console.error("Error adding event:", error);
-    return new Response(
-      JSON.stringify({ message: "Error adding event", error: error.message }),
+    return NextResponse.json(
+      { message: "Error adding event", error: error.message },
       { status: 500 }
     );
   }
 }
 
-// Edit Member API
-export async function PUT(req) {
-  const { id, ...updateData } = await req.json();
+// Edit Event API
+export async function PUT(request) {
+  const { id, ...updateData } = await request.json();
   const client = await clientPromise;
   const db = client.db();
 
@@ -52,31 +53,31 @@ export async function PUT(req) {
       .updateOne({ _id: new ObjectId(id) }, { $set: updateData });
 
     if (result.modifiedCount === 0) {
-      return new Response(
-        JSON.stringify({ message: "No event found with that ID" }),
+      return NextResponse.json(
+        { message: "No event found with that ID" },
         { status: 404 }
       );
     }
 
-    return new Response(
-      JSON.stringify({ message: "event updated successfully!" }),
+    return NextResponse.json(
+      { message: "Event updated successfully!" },
       { status: 200 }
     );
   } catch (error) {
     console.error("Error updating event:", error);
-    return new Response(
-      JSON.stringify({
+    return NextResponse.json(
+      {
         message: "Error updating event",
         error: error.message,
-      }),
+      },
       { status: 500 }
     );
   }
 }
 
-// Delete Member API
-export async function DELETE(req) {
-  const { id } = await req.json();
+// Delete Event API
+export async function DELETE(request) {
+  const { id } = await request.json();
   const client = await clientPromise;
   const db = client.db();
 
@@ -86,23 +87,23 @@ export async function DELETE(req) {
       .deleteOne({ _id: new ObjectId(id) });
 
     if (result.deletedCount === 0) {
-      return new Response(
-        JSON.stringify({ message: "No event found with that ID" }),
+      return NextResponse.json(
+        { message: "No event found with that ID" },
         { status: 404 }
       );
     }
 
-    return new Response(
-      JSON.stringify({ message: "event deleted successfully!" }),
+    return NextResponse.json(
+      { message: "Event deleted successfully!" },
       { status: 200 }
     );
   } catch (error) {
     console.error("Error deleting event:", error);
-    return new Response(
-      JSON.stringify({
+    return NextResponse.json(
+      {
         message: "Error deleting event",
         error: error.message,
-      }),
+      },
       { status: 500 }
     );
   }
