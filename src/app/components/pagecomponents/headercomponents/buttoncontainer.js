@@ -2,9 +2,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation"; // Import useRouter for navigation
+import Cookies from "js-cookie"; // Import Cookies
 
 export default function MainButtonContainer({ onMenuClick, menuOpen }) {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const router = useRouter(); // Initialize router
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -13,10 +16,10 @@ export default function MainButtonContainer({ onMenuClick, menuOpen }) {
   }, []);
 
   const handleLogout = () => {
-    localStorage.removeItem("token"); // Remove the token from local storage
-    setIsLoggedIn(false); // Update the state
-    // Optionally redirect to login page
-    window.location.href = "/login"; // Redirect to the login page
+    // Clear localStorage and cookies
+    localStorage.removeItem("token");
+    Cookies.remove("token"); // Remove the token cookie
+    router.push("/login"); // Redirect to login page
   };
 
   return (

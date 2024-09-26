@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation"; // use for redirection after login
 import axios from "axios"; // For sending login request
-import jwt_decode from "jwt-decode"; // For decoding JWT token
+import Cookies from "js-cookie"; // For managing cookies
 import "./login.css";
 
 export default function Login() {
@@ -16,12 +16,17 @@ export default function Login() {
     try {
       const response = await axios.post("/api/login", { email, password });
 
-      // If login is successful, store the JWT token in localStorage or cookies
+      // If login is successful, store the JWT token in cookies and localStorage
       const token = response.data.token;
       console.log("token", token);
-      localStorage.setItem("token", response.data.token);
 
-      // Redirect to a restricted page, e.g. /members
+      // Store in localStorage
+      localStorage.setItem("token", token);
+
+      // Store in cookies for 7 days
+      Cookies.set("token", token, { expires: 7 });
+
+      // Redirect to a restricted page, e.g. /projects
       router.push("/projects");
     } catch (error) {
       setError("Invalid credentials. Please try again.");
