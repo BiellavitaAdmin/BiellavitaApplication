@@ -1,6 +1,6 @@
 import clientPromise from "../../../lib/mongodb";
 
-export async function GET(req) {
+export async function GET(request) {
   try {
     const client = await clientPromise; // This line establishes the connection
     return new Response(

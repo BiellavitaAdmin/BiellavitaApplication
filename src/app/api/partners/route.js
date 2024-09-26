@@ -1,7 +1,7 @@
 import clientPromise from "../../../lib/mongodb";
 import { ObjectId } from "mongodb";
 
-export async function GET() {
+export async function GET(request) {
   const client = await clientPromise;
   const db = client.db();
 
@@ -20,8 +20,8 @@ export async function GET() {
   }
 }
 
-export async function POST(req) {
-  const memberData = await req.json();
+export async function POST(request) {
+  const memberData = await request.json();
   const client = await clientPromise;
   const db = client.db();
 
@@ -41,8 +41,8 @@ export async function POST(req) {
 }
 
 // Edit Member API
-export async function PUT(req) {
-  const { id, ...updateData } = await req.json();
+export async function PUT(request) {
+  const { id, ...updateData } = await request.json();
   const client = await clientPromise;
   const db = client.db();
 
@@ -75,8 +75,8 @@ export async function PUT(req) {
 }
 
 // Delete Member API
-export async function DELETE(req) {
-  const { id } = await req.json();
+export async function DELETE(request) {
+  const { id } = await request.json();
   const client = await clientPromise;
   const db = client.db();
 
