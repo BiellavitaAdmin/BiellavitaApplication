@@ -17,6 +17,8 @@ export default function Login() {
       const response = await axios.post("/api/login", { email, password });
 
       // If login is successful, store the JWT token in localStorage or cookies
+      const token = response.data.token;
+      console.log("token", token);
       localStorage.setItem("token", response.data.token);
 
       // Redirect to a restricted page, e.g. /members
