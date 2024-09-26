@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import bcrypt from "bcryptjs"; // Import bcrypt for password hashing
 import { Alert } from "antd";
 import "./addmembers.css";
 
@@ -16,7 +17,7 @@ export default function AddMembers() {
   });
 
   const [errors, setErrors] = useState({});
-  const [isSubmitted, setIsSubmitted] = useState(false); // Track form submission
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
   const [successMessage, setSuccessMessage] = useState(null);
 
@@ -59,19 +60,30 @@ export default function AddMembers() {
     return Object.keys(newErrors).length === 0;
   };
 
-  // Submit handler
+  // Submit handler with password hashing
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validateForm()) return;
 
     try {
+      // Hash the password before sending it to the server
+      const salt = await bcrypt.genSalt(10);
+      const hashedPassword = await bcrypt.hash(formData.password, salt);
+
+      // Create a new form data object with the hashed password
+      const updatedFormData = {
+        ...formData,
+        password: hashedPassword, // Use the hashed password
+      };
+
       const res = await fetch("/api/members", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(updatedFormData),
       });
+
       if (res.ok) {
         setSuccessMessage("Member added successfully!");
         setFormData({
@@ -120,7 +132,7 @@ export default function AddMembers() {
           type="error"
           showIcon
           style={{
-            width: "20%", // Adjust the width as needed
+            width: "20%",
             marginBottom: "16px",
             textAlign: "right",
           }}
@@ -135,7 +147,7 @@ export default function AddMembers() {
             type="success"
             showIcon
             style={{
-              width: "20%", // Adjust the width as needed
+              width: "20%",
               marginBottom: "16px",
             }}
           />
@@ -152,7 +164,7 @@ export default function AddMembers() {
                 errors.firstname ? "input-error" : ""
               }`}
               name="firstname"
-              placeholder="Enter member's firstname" // Add placeholder
+              placeholder="Enter member's firstname"
               value={formData.firstname}
               onChange={handleChange}
             />
@@ -168,7 +180,7 @@ export default function AddMembers() {
                 errors.lastname ? "input-error" : ""
               }`}
               name="lastname"
-              placeholder="Enter member's lastname" // Add placeholder
+              placeholder="Enter member's lastname"
               value={formData.lastname}
               onChange={handleChange}
             />
@@ -184,7 +196,7 @@ export default function AddMembers() {
                 errors.address ? "input-error" : ""
               }`}
               name="address"
-              placeholder="Add member's address" // Add placeholder
+              placeholder="Add member's address"
               value={formData.address}
               onChange={handleChange}
             />
@@ -198,7 +210,7 @@ export default function AddMembers() {
                 errors.cellPhone ? "input-error" : ""
               }`}
               name="cellPhone"
-              placeholder="000 000 0000" // Add placeholder for phone
+              placeholder="000 000 0000"
               value={formData.cellPhone}
               onChange={handleChange}
             />
@@ -212,7 +224,7 @@ export default function AddMembers() {
             <input
               className={`dash-form-input ${errors.email ? "input-error" : ""}`}
               name="email"
-              placeholder="Add member's email" // Add placeholder for email
+              placeholder="Add member's email"
               value={formData.email}
               onChange={handleChange}
               type="email"
@@ -227,9 +239,10 @@ export default function AddMembers() {
                 errors.password ? "input-error" : ""
               }`}
               name="password"
-              placeholder="Enter member's password" // Add placeholder for password
+              placeholder="Enter member's password"
               value={formData.password}
               onChange={handleChange}
+              type="password"
             />
           </div>
           {errors.password && (
@@ -240,7 +253,7 @@ export default function AddMembers() {
             <button className="dash-form-button" type="submit">
               Add Member
             </button>
-            {isSubmitted && ( // Conditionally show the "Back to Members" button
+            {isSubmitted && (
               <Link href="/admin/members">
                 <button className="dash-form-button goto">
                   Back to Members
