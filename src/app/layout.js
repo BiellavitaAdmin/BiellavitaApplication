@@ -1,12 +1,11 @@
 "use client";
 import { useState, useEffect } from "react";
-import { usePathname, useRouter } from "next/navigation"; // Import usePathname and useRouter
+import { usePathname, useRouter } from "next/navigation";
 import { Playfair_Display } from "next/font/google";
 import Header from "./components/sharedcomponents/header";
 import FullScreenMenu from "./components/pagecomponents/fullpagemenu/fullscreenmenu";
 import "./styles/globals.css";
 import PageFooter from "./components/pagecomponents/pagefooter/pagefooter";
-// import "antd/dist/antd.css"; // You can keep this for local imports
 
 const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
@@ -17,11 +16,10 @@ const playfairDisplay = Playfair_Display({
 export default function RootLayout({ children }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [loading, setLoading] = useState(true); // Add loading state
-  const pathname = usePathname(); // Get the current pathname
-  const router = useRouter(); // Initialize router
+  const [loading, setLoading] = useState(true);
+  const pathname = usePathname();
+  const router = useRouter();
 
-  // Function to toggle menu visibility
   const toggleMenu = () => {
     setMenuOpen((prevMenuOpen) => !prevMenuOpen);
   };
@@ -34,27 +32,23 @@ export default function RootLayout({ children }) {
       } else {
         setIsLoggedIn(false);
       }
-      setLoading(false); // Set loading to false after check
+      setLoading(false);
     };
 
-    checkAuth(); // Check authentication on component mount
+    checkAuth();
 
-    // Function to handle menu closing after pathname changes
     const closeMenu = () => {
       setMenuOpen(false);
     };
 
-    // Call closeMenu whenever pathname changes
     closeMenu();
-  }, [pathname]); // Dependency on pathname
+  }, [pathname]);
 
-  // List of pages that require authentication
   const restrictedPages = ["/privateevents", "/projects", "/partnership"];
 
-  // Check if the current page is restricted and the user is not logged in
   if (restrictedPages.includes(pathname) && !isLoggedIn) {
-    router.push("/login"); // Redirect to login if not authenticated
-    return null; // Prevent rendering of children while redirecting
+    router.push("/login");
+    return null;
   }
 
   const showFooterOn = [
@@ -67,9 +61,9 @@ export default function RootLayout({ children }) {
 
   const isAdminRoute = pathname.startsWith("/admin");
 
-  if (loading) {
-    return <p>Loading...</p>; // Show loading message while checking auth
-  }
+  // if (loading) {
+  //   return <p>Loading...</p>;
+  // }
 
   return (
     <html lang="en">
