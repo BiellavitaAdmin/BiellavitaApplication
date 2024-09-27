@@ -16,7 +16,10 @@ export default function EventsableSection() {
 
   useEffect(() => {
     const fetchEvents = async () => {
-      const response = await fetch("/api/events");
+      const response = await fetch("/api/events", {
+        method: "GET",
+        mode: "no-cors", // This bypasses CORS, but the response will be opaque
+      });
       const data = await response.json();
       setEvents(data);
       setFilteredEvents(data); // Set filtered members initially
