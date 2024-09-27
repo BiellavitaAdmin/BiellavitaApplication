@@ -57,6 +57,9 @@ export default function RootLayout({ children }) {
     "/visionandmission",
     "/login",
     "/partnership",
+    "/membership",
+    "/projects",
+    "/privateevents",
   ];
 
   const isAdminRoute = pathname.startsWith("/admin");

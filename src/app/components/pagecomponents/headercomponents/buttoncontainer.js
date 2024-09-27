@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation"; // Import useRouter for navigation
 import Cookies from "js-cookie"; // Import Cookies
+import { Tooltip } from "antd";
 
 export default function MainButtonContainer({ onMenuClick, menuOpen }) {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -26,12 +27,16 @@ export default function MainButtonContainer({ onMenuClick, menuOpen }) {
     <div className="main-button-group-container">
       {isLoggedIn ? (
         <button className="circular-button" onClick={handleLogout}>
-          <Image src="/logout.png" alt="Logout Icon" width={28} height={28} />
+          <Tooltip title="Logout">
+            <Image src="/logout.png" alt="Logout Icon" width={28} height={28} />
+          </Tooltip>
         </button>
       ) : (
         <button className="circular-button">
           <Link href="/login">
-            <Image src="/user.png" alt="User Icon" width={28} height={28} />
+            <Tooltip title="Login">
+              <Image src="/user.png" alt="User Icon" width={28} height={28} />
+            </Tooltip>
           </Link>
         </button>
       )}
