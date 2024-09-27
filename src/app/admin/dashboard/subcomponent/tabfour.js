@@ -10,7 +10,7 @@ export default function TabFour() {
     // Fetch the total number of events
     const fetchEventsCount = async () => {
       try {
-        const response = await fetch("/api/events", {
+        const response = await fetch("/api/partners", {
           method: "GET",
         });
         if (!response.ok) {

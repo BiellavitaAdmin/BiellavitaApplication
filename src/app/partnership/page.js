@@ -8,7 +8,7 @@ export default function Partnership() {
   return (
     <>
       <div className="partnership-hero-section">
-        <h2 className="partnership-hero-heading">Partnership</h2>
+        <h2 className="partnership-hero-heading">Partnerships</h2>
       </div>
       <div className="partnership-content-continer">
         <PartnershipContent />
