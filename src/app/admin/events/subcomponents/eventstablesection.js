@@ -16,9 +16,7 @@ export default function EventsableSection() {
 
   useEffect(() => {
     const fetchEvents = async () => {
-      const response = await fetch(
-        "https://test-j3kjctnm4-aitizaz-ul-haqs-projects.vercel.app/api/events"
-      );
+      const response = await fetch("/api/events");
       const data = await response.json();
       setEvents(data);
       setFilteredEvents(data); // Set filtered members initially
