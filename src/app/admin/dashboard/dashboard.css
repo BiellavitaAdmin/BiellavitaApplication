@@ -7,7 +7,7 @@
 }
 
 .members-tab-container {
-  background-color: rgba(255, 255, 255, 0.795);
+  background-color: rgba(243, 238, 237, 0.795);
   width: 20%;
   border-radius: 25px;
   padding-right: 1rem;
@@ -17,6 +17,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  height: 95px;
 }
 
 .tab-left-section {
