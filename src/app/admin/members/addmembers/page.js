@@ -11,6 +11,8 @@ export default function AddMembers() {
     firstname: "",
     lastname: "",
     address: "",
+    country: "",
+    city: "",
     cellPhone: "",
     email: "",
     password: "",
@@ -53,9 +55,11 @@ export default function AddMembers() {
     if (!formData.firstname) newErrors.firstname = "Firstname is required";
     if (!formData.lastname) newErrors.lastname = "Lastname is required";
     if (!formData.address) newErrors.address = "Address is required";
+    if (!formData.city) newErrors.city = "City is required";
+    if (!formData.country) newErrors.country = "Country is required";
     if (!formData.cellPhone) newErrors.cellPhone = "Cell Phone is required";
     if (!formData.email) newErrors.email = "Email is required";
-    if (!formData.password) newErrors.password = "Password is required";
+    // if (!formData.password) newErrors.password = "Password is required";
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -66,14 +70,17 @@ export default function AddMembers() {
     if (!validateForm()) return;
 
     try {
-      // Hash the password before sending it to the server
-      const salt = await bcrypt.genSalt(10);
-      const hashedPassword = await bcrypt.hash(formData.password, salt);
+      // Use a fixed default password instead of the one from formData
+      const defaultPassword = "defaultPassword123";
 
-      // Create a new form data object with the hashed password
+      // Hash the default password before sending it to the server
+      const salt = await bcrypt.genSalt(10);
+      const hashedPassword = await bcrypt.hash(defaultPassword, salt);
+
+      // Create a new form data object with the hashed default password
       const updatedFormData = {
         ...formData,
-        password: hashedPassword, // Use the hashed password
+        password: hashedPassword, // Use the hashed default password
       };
 
       const res = await fetch("/api/members", {
@@ -90,6 +97,8 @@ export default function AddMembers() {
           firstname: "",
           lastname: "",
           address: "",
+          city: "",
+          country: "",
           cellPhone: "",
           email: "",
           password: "",
@@ -204,6 +213,32 @@ export default function AddMembers() {
           {errors.address && <p className="error-message">{errors.address}</p>}
 
           <div className="dash-inputfield-group-column">
+            <label className="dash-form-label">City</label>
+            <input
+              className={`dash-form-input ${errors.city ? "input-error" : ""}`}
+              name="city"
+              placeholder="Add member's city"
+              value={formData.city}
+              onChange={handleChange}
+            />
+          </div>
+          {errors.city && <p className="error-message">{errors.city}</p>}
+
+          <div className="dash-inputfield-group-column">
+            <label className="dash-form-label">Country</label>
+            <input
+              className={`dash-form-input ${
+                errors.country ? "input-error" : ""
+              }`}
+              name="country"
+              placeholder="Add member's country"
+              value={formData.country}
+              onChange={handleChange}
+            />
+          </div>
+          {errors.country && <p className="error-message">{errors.country}</p>}
+
+          <div className="dash-inputfield-group-column">
             <label className="dash-form-label">Cell Phone</label>
             <input
               className={`dash-form-input ${
@@ -232,7 +267,7 @@ export default function AddMembers() {
           </div>
           {errors.email && <p className="error-message">{errors.email}</p>}
 
-          <div className="dash-inputfield-group-column">
+          {/* <div className="dash-inputfield-group-column">
             <label className="dash-form-label">Password</label>
             <input
               className={`dash-form-input ${
@@ -247,7 +282,7 @@ export default function AddMembers() {
           </div>
           {errors.password && (
             <p className="error-message">{errors.password}</p>
-          )}
+          )} */}
 
           <div className="dash-form-container">
             <button className="dash-form-button" type="submit">

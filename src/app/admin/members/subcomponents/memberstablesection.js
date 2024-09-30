@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Table, Button, Modal, Form, Input } from "antd";
+import { Table, Button, Modal, Form, Input, Select } from "antd";
 import Image from "next/image";
+
+const { Option } = Select;
 
 export default function MembersTableSection() {
   const [members, setMembers] = useState([]);
@@ -11,6 +13,7 @@ export default function MembersTableSection() {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [isEditModalVisible, setIsEditModalVisible] = useState(false);
   const [searchText, setSearchText] = useState("");
+  const [searchColumn, setSearchColumn] = useState("firstname"); // Default search column
   const [form] = Form.useForm();
 
   useEffect(() => {
@@ -26,10 +29,14 @@ export default function MembersTableSection() {
   const handleSearch = (e) => {
     const value = e.target.value.toLowerCase();
     setSearchText(value);
-    const filteredData = members.filter((member) =>
-      member.firstname.toLowerCase().includes(value)
+    const filteredData = members.filter(
+      (member) => member[searchColumn]?.toLowerCase().includes(value) // Search based on the selected column
     );
     setFilteredMembers(filteredData);
+  };
+
+  const handleColumnChange = (value) => {
+    setSearchColumn(value); // Update the column to search by
   };
 
   const showModal = (member) => {
@@ -55,7 +62,6 @@ export default function MembersTableSection() {
     try {
       const values = await form.validateFields();
       await fetch(`/api/members`, {
-        // Updated endpoint
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -114,6 +120,16 @@ export default function MembersTableSection() {
       key: "address",
     },
     {
+      title: "City",
+      dataIndex: "city",
+      key: "city",
+    },
+    {
+      title: "Country",
+      dataIndex: "country",
+      key: "country",
+    },
+    {
       title: "CellPhone",
       dataIndex: "cellPhone",
       key: "cellPhone",
@@ -161,7 +177,7 @@ export default function MembersTableSection() {
 
   return (
     <>
-      {/* Search Bar */}
+      {/* Search Bar and Column Selector */}
       <div
         style={{
           display: "flex",
@@ -170,8 +186,21 @@ export default function MembersTableSection() {
           marginTop: 16,
         }}
       >
+        <Select
+          defaultValue={searchColumn}
+          onChange={handleColumnChange}
+          style={{ marginRight: 10 }}
+        >
+          <Option value="firstname">Firstname</Option>
+          <Option value="lastname">Lastname</Option>
+          <Option value="email">Email</Option>
+          <Option value="address">Address</Option>
+          <Option value="cellPhone">Cell Phone</Option>
+          <Option value="city">City</Option>
+          <Option value="country">Country</Option>
+        </Select>
         <Input
-          placeholder="Search by Firstname"
+          placeholder={`Search by ${searchColumn}`}
           value={searchText}
           onChange={handleSearch}
           style={{ width: 200 }}
@@ -249,6 +278,19 @@ export default function MembersTableSection() {
           >
             <Input />
           </Form.Item>
+          <Form.Item name="city" label="City" rules={[{ required: true }]}>
+            <Input />
+          </Form.Item>
+          <Form.Item
+            name="country"
+            label="Country"
+            rules={[{ required: true }]}
+          >
+            <Input />
+          </Form.Item>
+          <Form.Item name="city" label="City" rules={[{ required: true }]}>
+            <Input />
+          </Form.Item>
           <Form.Item
             name="cellPhone"
             label="Cell Phone"
@@ -261,5 +303,3 @@ export default function MembersTableSection() {
     </>
   );
 }
-
-// ProjectsTableSection
