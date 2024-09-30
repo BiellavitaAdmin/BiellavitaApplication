@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-export default function TabTwo() {
+export default function TabThree() {
   const [projectCount, setProjectCount] = useState(0);
 
   useEffect(() => {

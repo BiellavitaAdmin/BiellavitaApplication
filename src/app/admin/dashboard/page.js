@@ -1,7 +1,7 @@
 import "./dashboard.css";
 import TabOne from "./subcomponent/tabone";
-import TabTwo from "./subcomponent/tabfour";
-import TabThree from "./subcomponent/tabtwo";
+import TabTwo from "./subcomponent/tabtwo";
+import TabThree from "./subcomponent/tabthree";
 import TabFour from "./subcomponent/tabfour";
 export default function Admin() {
   return (
