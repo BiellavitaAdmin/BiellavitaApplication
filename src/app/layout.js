@@ -27,25 +27,28 @@ export default function RootLayout({ children }) {
   useEffect(() => {
     const checkAuth = () => {
       const token = localStorage.getItem("token");
-      setIsLoggedIn(!!token); // Update login state based on token presence
-      setLoading(false); // Set loading to false after checking
+      if (token) {
+        setIsLoggedIn(true);
+      } else {
+        setIsLoggedIn(false);
+      }
+      setLoading(false);
     };
 
     checkAuth();
-  }, []);
 
-  // Restricted pages that require authentication
+    const closeMenu = () => {
+      setMenuOpen(false);
+    };
+
+    closeMenu();
+  }, [pathname]);
+
   const restrictedPages = ["/privateevents", "/projects", "/partnership"];
 
-  // If loading, show nothing (optional loading state)
-  // if (loading) {
-  //   return <p>Loading...</p>; // Consider replacing with a loading spinner
-  // }
-
-  // Redirect if accessing restricted pages without being logged in
   if (restrictedPages.includes(pathname) && !isLoggedIn) {
     router.push("/login");
-    return null; // Prevent rendering of restricted content
+    return null;
   }
 
   const showFooterOn = [
@@ -60,6 +63,10 @@ export default function RootLayout({ children }) {
   ];
 
   const isAdminRoute = pathname.startsWith("/admin");
+
+  // if (loading) {
+  //   return <p>Loading...</p>;
+  // }
 
   return (
     <html lang="en">
