@@ -59,17 +59,37 @@ export default function AddMembers() {
     if (!formData.country) newErrors.country = "Country is required";
     if (!formData.cellPhone) newErrors.cellPhone = "Cell Phone is required";
     if (!formData.email) newErrors.email = "Email is required";
-    // if (!formData.password) newErrors.password = "Password is required";
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
-  // Submit handler with password hashing
+  // Function to check if email exists in the database
+  const checkEmailExists = async (email) => {
+    try {
+      const res = await fetch(`/api/members/check-email?email=${email}`);
+      const data = await res.json();
+      return data.exists; // Assuming the API returns { exists: true } if the email exists
+    } catch (err) {
+      console.error("Error checking email:", err);
+      setErrorMessage("Error checking email. Please try again.");
+      return false;
+    }
+  };
+
+  // Submit handler with email check and password hashing
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validateForm()) return;
 
     try {
+      // Check if the email already exists
+      const emailExists = await checkEmailExists(formData.email);
+
+      if (emailExists) {
+        setErrorMessage("Email already exists!");
+        return; // Stop form submission
+      }
+
       // Use a fixed default password instead of the one from formData
       const defaultPassword = "defaultPassword123";
 
@@ -266,23 +286,6 @@ export default function AddMembers() {
             />
           </div>
           {errors.email && <p className="error-message">{errors.email}</p>}
-
-          {/* <div className="dash-inputfield-group-column">
-            <label className="dash-form-label">Password</label>
-            <input
-              className={`dash-form-input ${
-                errors.password ? "input-error" : ""
-              }`}
-              name="password"
-              placeholder="Enter member's password"
-              value={formData.password}
-              onChange={handleChange}
-              type="password"
-            />
-          </div>
-          {errors.password && (
-            <p className="error-message">{errors.password}</p>
-          )} */}
 
           <div className="dash-form-container">
             <button className="dash-form-button" type="submit">
