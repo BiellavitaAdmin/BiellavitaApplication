@@ -46,6 +46,46 @@
   z-index: 10; /* Higher than 0 to ensure it is on top */
 }
 
+.notification-container {
+  width: 100%;
+  /* background-color: orange; */
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 0.4rem;
+}
+
+.notification-box-green {
+  width: 30%;
+  height: auto;
+  background-color: rgb(209, 236, 218);
+  border-radius: 12px;
+}
+
+.notification-box-red {
+  width: 30%;
+  height: auto;
+  background-color: rgb(240, 216, 216);
+  border-radius: 12px;
+}
+
+.notification-box-container {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center;
+  align-items: center; */
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 3rem;
+}
+
+.notification-description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
 /* Default styles (mobile-first approach) */
 
 /* Small phones (<= 320px) */

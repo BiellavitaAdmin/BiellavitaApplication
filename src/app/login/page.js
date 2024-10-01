@@ -4,7 +4,8 @@ import { useRouter } from "next/navigation"; // use for redirection after login
 import axios from "axios"; // For sending login request
 import Cookies from "js-cookie"; // For managing cookies
 import "./login.css";
-
+import SuccessAlert from "../components/pagecomponents/headercomponents/successalert";
+import ErrorAlert from "../components/pagecomponents/headercomponents/erroralert";
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -40,6 +41,8 @@ export default function Login() {
         <div className="login-heading-container">
           <h2 className="login-main-heading">Welcome Back</h2>
         </div>
+        <SuccessAlert />
+        <ErrorAlert />
         <div className="login-form-container">
           <div className="login-form">
             <h3 className="form-title">Enter Your Credentials</h3>
