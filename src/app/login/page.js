@@ -1,15 +1,18 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation"; // use for redirection after login
 import axios from "axios"; // For sending login request
 import Cookies from "js-cookie"; // For managing cookies
 import "./login.css";
 import SuccessAlert from "../components/pagecomponents/headercomponents/successalert";
 import ErrorAlert from "../components/pagecomponents/headercomponents/erroralert";
+
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [showSuccess, setShowSuccess] = useState(false);
+  const [showError, setShowError] = useState(false);
   const router = useRouter();
 
   const handleLogin = async (e) => {
@@ -27,10 +30,25 @@ export default function Login() {
       // Store in cookies for 7 days
       Cookies.set("token", token, { expires: 7 });
 
-      // Redirect to a restricted page, e.g. /projects
-      router.push("/projects");
+      // Show success alert
+      setShowSuccess(true);
+      setShowError(false); // Hide error alert
+
+      // Hide success alert after 30 seconds
+      setTimeout(() => {
+        setShowSuccess(false);
+        router.push("/projects"); // Redirect after hiding alert
+      }, 8000); // 30000 ms = 30 seconds
     } catch (error) {
       setError("Invalid credentials. Please try again.");
+      setShowError(true);
+      setShowSuccess(false); // Hide success alert
+
+      // Hide error alert after 30 seconds
+      setTimeout(() => {
+        setShowError(false);
+      }, 30000); // 30000 ms = 30 seconds
+
       console.log(error);
     }
   };
@@ -41,8 +59,10 @@ export default function Login() {
         <div className="login-heading-container">
           <h2 className="login-main-heading">Welcome Back</h2>
         </div>
-        <SuccessAlert />
-        <ErrorAlert />
+        <div className="notification-container">
+          {showSuccess && <SuccessAlert />}
+          {showError && <ErrorAlert />}
+        </div>
         <div className="login-form-container">
           <div className="login-form">
             <h3 className="form-title">Enter Your Credentials</h3>

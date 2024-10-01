@@ -76,7 +76,7 @@
   align-items: center; */
   flex-wrap: wrap;
   gap: 2rem;
-  padding: 3rem;
+  padding: 1.4rem;
 }
 
 .notification-description {

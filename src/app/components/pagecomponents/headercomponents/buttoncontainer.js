@@ -26,16 +26,8 @@ export default function MainButtonContainer({ onMenuClick, menuOpen }) {
   };
 
   const handleLogin = () => {
-    // Simulated login logic for demonstration
-    const success = true; // Change this based on your login logic
-
-    if (success) {
-      localStorage.setItem("token", "yourTokenHere"); // Simulate storing a token
-      setIsLoggedIn(true); // Update login state
-      router.push("/projects"); // Redirect immediately after login
-    } else {
-      console.error("Login failed"); // Handle login failure
-    }
+    // Instead of simulating login, redirect to login page
+    router.push("/login"); // Redirect to login page
   };
 
   // Menu items for dropdown when logged in
@@ -44,14 +36,14 @@ export default function MainButtonContainer({ onMenuClick, menuOpen }) {
       <Menu.Item key="change-password" onClick={handleChangePassword}>
         <Image
           src="/change-password.png"
-          alt="Settings Icon"
+          alt="Change Password Icon"
           width={24}
           height={24}
         />{" "}
         Change Password
       </Menu.Item>
       <Menu.Item key="logout" onClick={handleLogout}>
-        <Image src="/logout.png" alt="Settings Icon" width={24} height={24} />{" "}
+        <Image src="/logout.png" alt="Logout Icon" width={24} height={24} />{" "}
         Logout
       </Menu.Item>
     </Menu>
