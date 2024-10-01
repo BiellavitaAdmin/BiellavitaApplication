@@ -1,36 +1,34 @@
 "use client";
 import { useState, useEffect } from "react";
-import { Dropdown, Menu, Tooltip } from "antd"; // Import Tooltip for tooltips
-import { useRouter } from "next/navigation"; // Import useRouter for navigation
-import Cookies from "js-cookie"; // Import Cookies
-import Image from "next/image"; // Import Image for PNGs
+import { Dropdown, Menu, Tooltip } from "antd";
+import { useRouter } from "next/navigation";
+import Cookies from "js-cookie";
+import Image from "next/image";
 
 export default function MainButtonContainer({ onMenuClick, menuOpen }) {
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // State to check if user is logged in
-  const router = useRouter(); // Initialize router
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
-    const token = localStorage.getItem("token"); // Check for token in local storage
-    setIsLoggedIn(!!token); // Update login state based on token presence
+    const token = localStorage.getItem("token");
+    setIsLoggedIn(!!token);
   }, []);
 
   const handleLogout = () => {
-    localStorage.removeItem("token"); // Clear local storage token
-    Cookies.remove("token"); // Remove token cookie
-    setIsLoggedIn(false); // Update login state
-    router.push("/login"); // Redirect to login page
+    localStorage.removeItem("token");
+    Cookies.remove("token");
+    setIsLoggedIn(false);
+    router.push("/login");
   };
 
   const handleChangePassword = () => {
-    router.push("/changepassword"); // Redirect to change password page
+    router.push("/changepassword");
   };
 
   const handleLogin = () => {
-    // Instead of simulating login, redirect to login page
-    router.push("/login"); // Redirect to login page
+    router.push("/login");
   };
 
-  // Menu items for dropdown when logged in
   const menuItems = (
     <Menu>
       <Menu.Item key="change-password" onClick={handleChangePassword}>
@@ -52,11 +50,10 @@ export default function MainButtonContainer({ onMenuClick, menuOpen }) {
   return (
     <div className="main-button-group-container">
       {isLoggedIn ? (
-        // Dropdown for logged-in user with settings and logout options
         <Dropdown
           overlay={menuItems}
           trigger={["click"]}
-          placement="bottomLeft" // Opens dropdown towards the left
+          placement="bottomLeft"
         >
           <button className="circular-button">
             <Tooltip title="Settings">
@@ -70,7 +67,6 @@ export default function MainButtonContainer({ onMenuClick, menuOpen }) {
           </button>
         </Dropdown>
       ) : (
-        // User icon when not logged in
         <button className="circular-button" onClick={handleLogin}>
           <Tooltip title="Login">
             <Image src="/user.png" alt="User Icon" width={28} height={28} />

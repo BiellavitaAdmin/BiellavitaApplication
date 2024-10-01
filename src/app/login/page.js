@@ -1,12 +1,11 @@
 "use client";
 import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation"; // use for redirection after login
-import axios from "axios"; // For sending login request
-import Cookies from "js-cookie"; // For managing cookies
+import { useRouter } from "next/navigation";
+import axios from "axios";
+import Cookies from "js-cookie";
 import "./login.css";
 import SuccessAlert from "../components/pagecomponents/headercomponents/successalert";
 import ErrorAlert from "../components/pagecomponents/headercomponents/erroralert";
-
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -19,40 +18,26 @@ export default function Login() {
     e.preventDefault();
     try {
       const response = await axios.post("/api/login", { email, password });
-
-      // If login is successful, store the JWT token in cookies and localStorage
       const token = response.data.token;
       console.log("token", token);
-
-      // Store in localStorage
       localStorage.setItem("token", token);
-
-      // Store in cookies for 7 days
-      Cookies.set("token", token, { expires: 7 });
-
-      // Show success alert
+      Cookies.set("token", token, { expires: 1 });
       setShowSuccess(true);
-      setShowError(false); // Hide error alert
-
-      // Hide success alert after 30 seconds
+      setShowError(false);
       setTimeout(() => {
         setShowSuccess(false);
-        router.push("/projects"); // Redirect after hiding alert
-      }, 8000); // 30000 ms = 30 seconds
+        router.push("/projects");
+      }, 8000);
     } catch (error) {
       setError("Invalid credentials. Please try again.");
       setShowError(true);
-      setShowSuccess(false); // Hide success alert
-
-      // Hide error alert after 30 seconds
+      setShowSuccess(false);
       setTimeout(() => {
         setShowError(false);
-      }, 30000); // 30000 ms = 30 seconds
-
+      }, 30000);
       console.log(error);
     }
   };
-
   return (
     <>
       <div className="login-container">
@@ -78,7 +63,6 @@ export default function Login() {
                   required
                 />
               </div>
-
               <div className="message-field-container">
                 <label className="form-labels">Password</label>
                 <input
