@@ -1,5 +1,13 @@
-import SecondProcess from "./secondprocess";
-import FirstProcess from "./firstprocess";
+import dynamic from "next/dynamic";
+
+// Dynamically import the subcomponents
+const FirstProcess = dynamic(() => import("./firstprocess"), {
+  ssr: false, // Disable server-side rendering
+});
+const SecondProcess = dynamic(() => import("./secondprocess"), {
+  ssr: false,
+});
+
 export default function ProcessRowOne() {
   return (
     <>

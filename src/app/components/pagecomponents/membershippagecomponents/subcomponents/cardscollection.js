@@ -1,5 +1,15 @@
-import ActiveMembershipCard from "./activemembershipcard";
-import NonActiveMembershipCard from "./nonactivemembershipcard";
+import dynamic from "next/dynamic";
+
+// Dynamically import the ActiveMembershipCard and NonActiveMembershipCard components
+const ActiveMembershipCard = dynamic(() => import("./activemembershipcard"), {
+  ssr: false, // Disable server-side rendering
+});
+const NonActiveMembershipCard = dynamic(
+  () => import("./nonactivemembershipcard"),
+  {
+    ssr: false,
+  }
+);
 
 export default function CardsCollection() {
   return (

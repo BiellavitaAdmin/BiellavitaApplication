@@ -1,5 +1,12 @@
-import Vissionpart from "./vissionpart";
-import Missionpart from "./missionpart";
+import dynamic from "next/dynamic";
+
+// Dynamically import the components
+const Vissionpart = dynamic(() => import("./vissionpart"), {
+  ssr: false, // Optional: Disable server-side rendering if not required
+});
+const Missionpart = dynamic(() => import("./missionpart"), {
+  ssr: false, // Optional: Disable server-side rendering if not required
+});
 
 export default function Vmcontent() {
   return (

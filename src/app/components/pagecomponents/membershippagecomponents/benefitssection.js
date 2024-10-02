@@ -1,4 +1,13 @@
-import CardsCollection from "./subcomponents/cardscollection";
+import dynamic from "next/dynamic";
+
+// Dynamically import the CardsCollection component
+const CardsCollection = dynamic(
+  () => import("./subcomponents/cardscollection"),
+  {
+    ssr: false, // Disable server-side rendering
+  }
+);
+
 export default function BenefitsSection() {
   return (
     <>

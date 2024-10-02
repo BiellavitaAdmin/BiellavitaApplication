@@ -1,12 +1,18 @@
-import CardOne from "./subcomponents/cardone";
-import CardTwo from "./subcomponents/cardtwo";
+import dynamic from "next/dynamic";
+
+// Dynamically import the subcomponents
+const CardOne = dynamic(() => import("./subcomponents/cardone"), {
+  ssr: false, // Disable server-side rendering
+});
+const CardTwo = dynamic(() => import("./subcomponents/cardtwo"), {
+  ssr: false,
+});
+
 export default function MembershipCards() {
   return (
-    <>
-      <div className="card-container">
-        <CardOne />
-        <CardTwo />
-      </div>
-    </>
+    <div className="card-container">
+      <CardOne />
+      <CardTwo />
+    </div>
   );
 }

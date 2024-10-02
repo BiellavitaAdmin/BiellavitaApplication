@@ -1,6 +1,16 @@
-import MembershipCards from "./membershipcards";
-import ProcessSection from "./processsection";
-import BenefitsSection from "./benefitssection";
+import dynamic from "next/dynamic";
+
+// Dynamically import the components
+const MembershipCards = dynamic(() => import("./membershipcards"), {
+  ssr: false, // Disable server-side rendering if these are client-side only
+});
+const ProcessSection = dynamic(() => import("./processsection"), {
+  ssr: false,
+});
+const BenefitsSection = dynamic(() => import("./benefitssection"), {
+  ssr: false,
+});
+
 export default function MembershipPageContent() {
   return (
     <>

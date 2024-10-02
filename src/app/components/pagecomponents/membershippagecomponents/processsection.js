@@ -1,5 +1,13 @@
-import ProcessRowOne from "./subcomponents/processrowone";
-import ProcessRowTwo from "./subcomponents/processrowtwo";
+import dynamic from "next/dynamic";
+
+// Dynamically import the subcomponents
+const ProcessRowOne = dynamic(() => import("./subcomponents/processrowone"), {
+  ssr: false, // Disable server-side rendering
+});
+const ProcessRowTwo = dynamic(() => import("./subcomponents/processrowtwo"), {
+  ssr: false,
+});
+
 export default function ProcessSection() {
   return (
     <>
