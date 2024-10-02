@@ -16,7 +16,7 @@ export default function Footer() {
             rel="noopener noreferrer"
           >
             <Image
-              src="/Linkdin.png" // The path relative to the "public" folder
+              src="/linkdin.png" // The path relative to the "public" folder
               alt="My Awesome Image"
               width={35} // Width of the image
               height={35} // Height of the image
