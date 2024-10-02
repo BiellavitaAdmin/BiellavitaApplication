@@ -70,6 +70,7 @@ export default function Login() {
                   className="input-fields"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
+                  autoComplete="off"
                   required
                 />
               </div>

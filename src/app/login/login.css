@@ -77,6 +77,10 @@
   height: 40px;
 }
 
+.input-fields:focus {
+  outline: none;
+}
+
 .form-labels {
   margin: 0.5rem;
 }
