@@ -1,13 +1,45 @@
-import ParaOne from "./partnershipsubcomponents/paraone";
-import ParaTwo from "./partnershipsubcomponents/paratwo";
-import DualPicContiner from "./partnershipsubcomponents/dulapiccontianer";
-import ParaThree from "./partnershipsubcomponents/parathree";
-import ParaFour from "./partnershipsubcomponents/parafour";
-import LargePic from "./partnershipsubcomponents/largepic";
-import ParaFive from "./partnershipsubcomponents/parafive";
-import ParaSix from "./partnershipsubcomponents/parasix";
-import ParaSeven from "./partnershipsubcomponents/paraseven";
-import ParaEight from "./partnershipsubcomponents/paraeight";
+import dynamic from "next/dynamic";
+
+// Dynamically import the subcomponents
+const ParaOne = dynamic(() => import("./partnershipsubcomponents/paraone"), {
+  ssr: false,
+});
+const DualPicContainer = dynamic(
+  () => import("./partnershipsubcomponents/dulapiccontianer"),
+  {
+    ssr: false,
+  }
+);
+const ParaThree = dynamic(
+  () => import("./partnershipsubcomponents/parathree"),
+  {
+    ssr: false,
+  }
+);
+const ParaFour = dynamic(() => import("./partnershipsubcomponents/parafour"), {
+  ssr: false,
+});
+const LargePic = dynamic(() => import("./partnershipsubcomponents/largepic"), {
+  ssr: false,
+});
+const ParaFive = dynamic(() => import("./partnershipsubcomponents/parafive"), {
+  ssr: false,
+});
+const ParaSix = dynamic(() => import("./partnershipsubcomponents/parasix"), {
+  ssr: false,
+});
+const ParaSeven = dynamic(
+  () => import("./partnershipsubcomponents/paraseven"),
+  {
+    ssr: false,
+  }
+);
+const ParaEight = dynamic(
+  () => import("./partnershipsubcomponents/paraeight"),
+  {
+    ssr: false,
+  }
+);
 
 export default function PartnershipContent() {
   return (
@@ -17,11 +49,11 @@ export default function PartnershipContent() {
           <ParaOne />
           <p className="partnership-page-content-text">
             By embracing the core values that define BiellaVita—such as
-            integrity, innovative, education and truthful—these collaborations
-            will not only enhance the brand's mission but also create synergies
-            that benefit all parties involved.
+            integrity, innovation, education, and truthfulness—these
+            collaborations will not only enhance the brand's mission but also
+            create synergies that benefit all parties involved.
           </p>
-          <DualPicContiner />
+          <DualPicContainer />
           <ParaThree />
           <ParaFour />
           <LargePic />
