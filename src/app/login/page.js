@@ -24,6 +24,7 @@ export default function Login() {
       Cookies.set("token", token, { expires: 1 });
       setShowSuccess(true);
       setShowError(false);
+
       setTimeout(() => {
         setShowSuccess(false);
         router.push("/projects");
