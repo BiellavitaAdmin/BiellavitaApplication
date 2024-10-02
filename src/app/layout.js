@@ -26,30 +26,24 @@ export default function RootLayout({ children }) {
 
   useEffect(() => {
     const checkAuth = () => {
-      const token = localStorage.getItem("token");
-      if (token) {
-        setIsLoggedIn(true);
-      } else {
-        setIsLoggedIn(false);
+      // Ensure we're only running this on the client side
+      if (typeof window !== "undefined") {
+        const token = localStorage.getItem("token");
+        setIsLoggedIn(!!token); // Set isLoggedIn to true if token exists
       }
       setLoading(false);
     };
 
     checkAuth();
+  }, []);
 
-    const closeMenu = () => {
-      setMenuOpen(false);
-    };
-
-    closeMenu();
-  }, [pathname]);
-
+  // Redirect to login if trying to access restricted pages without being logged in
   const restrictedPages = ["/privateevents", "/projects", "/partnership"];
-
-  if (restrictedPages.includes(pathname) && !isLoggedIn) {
-    router.push("/login");
-    return null;
-  }
+  useEffect(() => {
+    if (!loading && restrictedPages.includes(pathname) && !isLoggedIn) {
+      router.push("/login");
+    }
+  }, [loading, pathname, isLoggedIn, router]);
 
   const showFooterOn = [
     "/club",
@@ -65,7 +59,7 @@ export default function RootLayout({ children }) {
   const isAdminRoute = pathname.startsWith("/admin");
 
   // if (loading) {
-  //   return <p>Loading...</p>;
+  //   return <div>Loading...</div>; // Display a loading state
   // }
 
   return (
