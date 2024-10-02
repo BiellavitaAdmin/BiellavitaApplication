@@ -1,5 +1,4 @@
 import Image from "next/image";
-import paraData from "./data/SourceSectionParaSixData.json";
 export default function SourceSectionParaSix() {
   return (
     <>
@@ -12,7 +11,11 @@ export default function SourceSectionParaSix() {
           className="club-page-large-image-settings"
         />
       </div>
-      <p className="page-content-text">{paraData.paragraph}</p>
+      <p className="page-content-text">
+        In the most unexpected of circumstances, two paths from vastly different
+        backgrounds crossed to create a space that celebrates excellence and
+        brings like-minded people together.
+      </p>
     </>
   );
 }
