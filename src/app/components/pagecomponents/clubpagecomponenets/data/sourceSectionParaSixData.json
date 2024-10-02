@@ -1,0 +1,10 @@
+{
+  "image": {
+    "src": "/clubpage-third.webp",
+    "alt": "My Awesome Image",
+    "width": 100,
+    "height": 835,
+    "className": "club-page-large-image-settings"
+  },
+  "paragraph": "In the most unexpected of circumstances, two paths from vastly different backgrounds crossed to create a space that celebrates excellence and brings like-minded people together."
+}
