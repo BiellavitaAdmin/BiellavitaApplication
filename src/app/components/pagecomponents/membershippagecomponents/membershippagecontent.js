@@ -10,15 +10,15 @@ const ProcessSection = dynamic(() => import("./processsection"), {
 const BenefitsSection = dynamic(() => import("./benefitssection"), {
   ssr: false,
 });
+const MembershipTopPara = dynamic(() => import("./memebrshiptoppara"), {
+  ssr: false,
+});
 
 export default function MembershipPageContent() {
   return (
     <>
       <article className="section-content">
-        <p className="membership-page-content-text">
-          Membership at BiellaVita is an invitation-only privilege, with two
-          categories: Active and Non-Active members.
-        </p>
+        <MembershipTopPara /> {/* Use the new dynamic component */}
         <MembershipCards />
         <ProcessSection />
         <BenefitsSection />
