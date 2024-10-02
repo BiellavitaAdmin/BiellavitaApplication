@@ -1,8 +1,21 @@
 "use client";
 
 import "./projects.css";
-import ProjectsContent from "../components/pagecomponents/projectspagecomponents/projectscontent";
+import dynamic from "next/dynamic";
+
+// Dynamically import the ProjectsContent component
+const ProjectsContent = dynamic(
+  () =>
+    import(
+      "../components/pagecomponents/projectspagecomponents/projectscontent"
+    ),
+  {
+    ssr: false, // Disable server-side rendering if the component relies on client-side behavior
+  }
+);
+
 import { useHeroAnimation } from "../hooks/useHeroAnimation";
+
 export default function Projects() {
   useHeroAnimation("projects-hero-section", "projects-hero-heading");
   return (

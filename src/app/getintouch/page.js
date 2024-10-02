@@ -1,5 +1,16 @@
+"use client"; // Use client-side rendering
+
 import "./getintouch.css";
-import ContactForm from "../components/pagecomponents/getintouchcomponents/contactform";
+import dynamic from "next/dynamic"; // Import dynamic from Next.js
+
+// Dynamically import ContactForm
+const ContactForm = dynamic(
+  () => import("../components/pagecomponents/getintouchcomponents/contactform"),
+  {
+    ssr: false, // Disable server-side rendering
+  }
+);
+
 export default function GetInTouch() {
   return (
     <>
