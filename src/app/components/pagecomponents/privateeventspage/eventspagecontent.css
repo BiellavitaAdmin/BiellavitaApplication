@@ -80,6 +80,68 @@
   box-shadow: 1px 3px 16px -5px rgb(0, 0, 0, 25);
 }
 
+.new-previous-event-section {
+  width: 100%;
+}
+
+.new-previous-events-card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 6rem;
+  gap: 2rem;
+}
+
+.new-previous-events-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-previous-events-label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.new-previous-events-label-text {
+  font-size: 22px;
+  color: #505055;
+  text-decoration: underline;
+}
+
+.new-previous-events-card {
+  width: 21%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.new-previous-large-image {
+  width: 400px;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.new-previous-events-card-title {
+  font-size: 23px;
+  font-weight: 500;
+  color: var(--Website-black-color);
+}
+
+.new-previous-events-card-shortdescription {
+  font-size: 15px;
+}
+
 /* Default styles (mobile-first approach) */
 
 /* Small phones (<= 320px) */
