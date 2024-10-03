@@ -54,7 +54,7 @@ export default function EventsableSection() {
     setSelectedEvent(event);
     form.setFieldsValue({
       ...event,
-      date: event.eventdate ? dayjs(event.eventdate, "DD/MM/YYYY") : null, // Set the date properly
+      date: event.eventdate ? dayjs(event.eventdate, "DD-MM-YYYY") : null, // Set the date properly
     });
     setIsEditModalVisible(true);
   };
@@ -66,7 +66,7 @@ export default function EventsableSection() {
       // Check if date is valid before formatting
       const formattedDate = values.date
         ? dayjs(values.date).isValid()
-          ? dayjs(values.date).format("DD/MM/YYYY")
+          ? dayjs(values.date).format("DD-MM-YYYY")
           : null
         : null;
 
