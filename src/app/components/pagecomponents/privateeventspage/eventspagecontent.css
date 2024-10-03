@@ -84,58 +84,380 @@
 
 /* Small phones (<= 320px) */
 @media (max-width: 320px) {
+  .new-events-content-container {
+    padding: 1rem;
+  }
+
+  .new-upcoming-events-container {
+    width: 100%;
+  }
+
+  .new-upcoming-large-image {
+    width: 320px;
+  }
+
+  .new-upcoming-event-description-container {
+    width: 100%;
+  }
+
+  .new-upcoming-events-larger-heading {
+    font-size: 25px;
+  }
+
+  .new-upcoming-events-shortdescription {
+    font-size: 20px;
+  }
 }
 
 /* Standard small phones (<= 360px) */
 @media (max-width: 360px) {
+  .new-events-content-container {
+    padding: 13px;
+  }
+
+  .new-upcoming-events-container {
+    width: 100%;
+  }
+
+  .new-upcoming-large-image {
+    width: 360px;
+  }
+
+  .new-upcoming-event-description-container {
+    width: 100%;
+  }
+
+  .new-upcoming-events-larger-heading {
+    font-size: 25px;
+  }
+
+  .new-upcoming-events-shortdescription {
+    font-size: 20px;
+  }
 }
 
 /* iPhone 12, 13 Mini, SE (2020) */
 @media (min-width: 375px) {
+  .new-events-content-container {
+    padding: 11px;
+  }
+
+  .new-upcoming-events-container {
+    width: 100%;
+  }
+
+  .new-upcoming-large-image {
+    width: 375px;
+  }
+
+  .new-upcoming-event-description-container {
+    width: 100%;
+  }
+
+  .new-upcoming-events-larger-heading {
+    font-size: 25px;
+  }
+
+  .new-upcoming-events-shortdescription {
+    font-size: 20px;
+  }
 }
 
 /* iPhone 14, 15 (standard model) */
 @media (min-width: 390px) {
+  .new-events-content-container {
+    padding: 9px;
+  }
+
+  .new-upcoming-events-container {
+    width: 100%;
+  }
+
+  .new-upcoming-large-image {
+    width: 390px;
+  }
+
+  .new-upcoming-event-description-container {
+    width: 100%;
+  }
+
+  .new-upcoming-events-larger-heading {
+    font-size: 25px;
+  }
+
+  .new-upcoming-events-shortdescription {
+    font-size: 20px;
+  }
 }
 
 /* iPhone 14 Pro, 15 Pro */
 @media (min-width: 430px) {
+  .new-events-content-container {
+    padding: 15px;
+  }
+
+  .new-upcoming-events-container {
+    width: 100%;
+  }
+
+  .new-upcoming-large-image {
+    width: 428px;
+  }
+
+  .new-upcoming-event-description-container {
+    width: 100%;
+  }
+
+  .new-upcoming-events-larger-heading {
+    font-size: 25px;
+  }
+
+  .new-upcoming-events-shortdescription {
+    font-size: 20px;
+  }
 }
 
 /* Larger phones and phablets (>= 480px) */
 @media (min-width: 480px) {
+  .new-events-content-container {
+    padding: 15px;
+  }
+
+  .new-upcoming-events-container {
+    width: 100%;
+  }
+
+  .new-upcoming-large-image {
+    width: 478px;
+  }
+
+  .new-upcoming-event-description-container {
+    width: 100%;
+  }
+
+  .new-upcoming-events-larger-heading {
+    font-size: 25px;
+  }
+
+  .new-upcoming-events-shortdescription {
+    font-size: 20px;
+  }
 }
 
 /* Tablets (>= 600px) */
 @media (min-width: 600px) {
+  .new-events-content-container {
+    padding: 15px;
+  }
+
+  .new-upcoming-events-container {
+    width: 100%;
+  }
+
+  .new-upcoming-large-image {
+    width: 478px;
+  }
+
+  .new-upcoming-event-description-container {
+    width: 85%;
+  }
+
+  .new-upcoming-events-larger-heading {
+    font-size: 25px;
+  }
+
+  .new-upcoming-events-shortdescription {
+    font-size: 20px;
+  }
 }
 
 /* Small laptops and larger tablets (>= 768px) */
 @media (min-width: 768px) {
+  .new-events-content-container {
+    padding: 15px;
+  }
+
+  .new-upcoming-events-container {
+    width: 100%;
+  }
+
+  .new-upcoming-large-image {
+    width: 618px;
+  }
+
+  .new-upcoming-event-description-container {
+    width: 84%;
+  }
+
+  .new-upcoming-events-larger-heading {
+    font-size: 25px;
+  }
+
+  .new-upcoming-events-shortdescription {
+    font-size: 20px;
+  }
 }
 
 /* Medium laptops (>= 1024px) */
 @media (min-width: 1024px) {
+  .new-events-content-container {
+    padding: 15px;
+  }
+
+  .new-upcoming-events-container {
+    width: 100%;
+  }
+
+  .new-upcoming-large-image {
+    width: 751px;
+  }
+
+  .new-upcoming-event-description-container {
+    width: 76%;
+  }
+
+  .new-upcoming-events-larger-heading {
+    font-size: 25px;
+  }
+
+  .new-upcoming-events-shortdescription {
+    font-size: 20px;
+  }
 }
 
 /* Large laptops and desktops (>= 1280px) */
 @media (min-width: 1280px) {
+  .new-events-content-container {
+    padding: 15px;
+  }
+
+  .new-upcoming-events-container {
+    width: 100%;
+  }
+
+  .new-upcoming-large-image {
+    width: 915px;
+  }
+
+  .new-upcoming-event-description-container {
+    width: 74%;
+  }
+
+  .new-upcoming-events-larger-heading {
+    font-size: 25px;
+  }
+
+  .new-upcoming-events-shortdescription {
+    font-size: 20px;
+  }
 }
 
 /* Extra-large desktops (>= 1440px) */
 @media (min-width: 1440px) {
+  .new-events-content-container {
+    padding: 15px;
+  }
+
+  .new-upcoming-events-container {
+    width: 100%;
+  }
+
+  .new-upcoming-large-image {
+    width: 915px;
+  }
+
+  .new-upcoming-event-description-container {
+    width: 66%;
+  }
+
+  .new-upcoming-events-larger-heading {
+    font-size: 25px;
+  }
+
+  .new-upcoming-events-shortdescription {
+    font-size: 20px;
+  }
 }
 
 /* Ultra-wide screens (>= 1600px) */
 @media (min-width: 1600px) {
+  .new-events-content-container {
+    padding: 15px;
+  }
+
+  .new-upcoming-events-container {
+    width: 100%;
+  }
+
+  .new-upcoming-large-image {
+    width: 915px;
+  }
+
+  .new-upcoming-event-description-container {
+    width: 59%;
+  }
+
+  .new-upcoming-events-larger-heading {
+    font-size: 25px;
+  }
+
+  .new-upcoming-events-shortdescription {
+    font-size: 20px;
+  }
 }
 
 /* 4K screens (>= 1920px) */
 @media (min-width: 1920px) {
+  .new-events-content-container {
+    padding: 15px;
+  }
+
+  .new-upcoming-events-container {
+    width: 100%;
+  }
+
+  .new-upcoming-large-image {
+    width: 915px;
+  }
+
+  .new-upcoming-event-description-container {
+    width: 49%;
+  }
+
+  .new-upcoming-events-larger-heading {
+    font-size: 33px;
+  }
+
+  .new-upcoming-events-shortdescription {
+    font-size: 24px;
+  }
 }
 
 /* 4K screens (>= 1920px) */
 @media (min-width: 2560px) {
+  .new-events-content-container {
+    padding: 15px;
+  }
+
+  .new-upcoming-events-container {
+    width: 100%;
+  }
+
+  .new-upcoming-large-image {
+    width: 1232px;
+  }
+
+  .new-upcoming-event-description-container {
+    width: 49%;
+  }
+
+  .new-upcoming-events-larger-heading {
+    font-size: 45px;
+  }
+
+  .new-upcoming-events-shortdescription {
+    font-size: 32px;
+  }
 }
 
 /* Iphone SE */
@@ -172,6 +494,9 @@
 
 /* iPad Air */
 @media (width: 820px) and (height: 1180px) {
+  .new-upcoming-event-description-container {
+    width: 79%;
+  }
 }
 
 /* iPad Pro */
@@ -184,10 +509,16 @@
 
 /* Surface Duo*/
 @media (width: 540px) and (height: 720px) {
+  .new-upcoming-large-image {
+    width: 538px;
+  }
 }
 
 /* Samsung Galaxy A51/71 */
 @media (width: 412px) and (height: 914px) {
+  .new-upcoming-large-image {
+    width: 410px;
+  }
 }
 
 /* Nest Hub */
