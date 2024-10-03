@@ -86,11 +86,9 @@
 
 .new-previous-events-card-container {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 6rem;
-  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Center the cards */
+  gap: 2rem; /* Control the space between cards */
 }
 
 .new-previous-events-container {
@@ -98,8 +96,9 @@
   flex-direction: column;
   flex-wrap: wrap;
   gap: 2rem;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 8rem;
 }
 
 .new-previous-events-label {
@@ -117,7 +116,7 @@
 }
 
 .new-previous-events-card {
-  width: 21%;
+  width: calc(33.33% - 2rem); /* 3 cards per row with a 2rem gap */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -126,7 +125,7 @@
 }
 
 .new-previous-large-image {
-  width: 400px;
+  width: 100%; /* Make image fill the card width */
   height: auto;
   object-fit: cover;
   display: block;

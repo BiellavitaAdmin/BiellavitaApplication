@@ -1,7 +1,47 @@
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Modal, Button } from "antd";
+
 export default function NewPreviousEventSection() {
+  const [previousEvents, setPreviousEvents] = useState([]);
+
+  useEffect(() => {
+    const fetchEvents = async () => {
+      const response = await fetch("/api/events");
+      const data = await response.json();
+
+      // Get the current date
+      const currentDate = new Date();
+
+      // Filter events to only include those with past dates
+      const filteredEvents = data.filter((event) => {
+        let eventDate;
+
+        // Normalize event date
+        if (event.eventdate.includes("/")) {
+          // Handle MM/DD/YYYY format
+          const [month, day, year] = event.eventdate.split("/").map(Number);
+          eventDate = new Date(year, month - 1, day); // Month is 0-indexed
+        } else if (event.eventdate.includes("-")) {
+          // Handle DD-MM-YYYY format
+          const [day, month, year] = event.eventdate.split("-").map(Number);
+          eventDate = new Date(year, month - 1, day); // Month is 0-indexed
+        }
+
+        // Check if eventDate is valid and in the past
+        return (
+          eventDate instanceof Date &&
+          !isNaN(eventDate) &&
+          eventDate < currentDate
+        );
+      });
+
+      setPreviousEvents(filteredEvents);
+    };
+
+    fetchEvents();
+  }, []);
+
   return (
     <div className="new-previous-event-section">
       <div className="new-previous-events-container">
@@ -9,83 +49,32 @@ export default function NewPreviousEventSection() {
           <h3 className="new-previous-events-label-text">Previous Events</h3>
         </div>
         <div className="new-previous-events-card-container">
-          <div className="new-previous-events-card">
-            <div className="new-previous-events-banner-container">
-              <Image
-                src="eventtwo.webp"
-                alt="previous events image"
-                width={20}
-                height={20}
-                className="new-previous-large-image"
-              />
-            </div>
-            <div className="new-previous-events-card-title">
-              Where does it come from?
-            </div>
-            <div className="new-previous-events-card-shortdescription">
-              Contrary to popular belief, Lorem Ipsum is not simply random text.
-              It has roots in a piece of classical Latin literature from 45 BC,
-              making it over 2000 years old. Richard McClintock, a Latin
-              professor at Hampden-Sydney College in Virginia, looked up one of
-              the more obscure Latin words, consectetur, from a Lorem Ipsum
-              passage, and going through the cites of the word in
-            </div>
-            <button className="new-upcoming-event-details-button">
-              Discover More
-            </button>
-          </div>
-
-          <div className="new-previous-events-card">
-            <div className="new-previous-events-banner-container">
-              <Image
-                src="eventtwo.webp"
-                alt="previous events image"
-                width={20}
-                height={20}
-                className="new-previous-large-image"
-              />
-            </div>
-            <div className="new-previous-events-card-title">
-              Where does it come from?
-            </div>
-            <div className="new-previous-events-card-shortdescription">
-              Contrary to popular belief, Lorem Ipsum is not simply random text.
-              It has roots in a piece of classical Latin literature from 45 BC,
-              making it over 2000 years old. Richard McClintock, a Latin
-              professor at Hampden-Sydney College in Virginia, looked up one of
-              the more obscure Latin words, consectetur, from a Lorem Ipsum
-              passage, and going through the cites of the word in
-            </div>
-            <button className="new-upcoming-event-details-button">
-              Discover More
-            </button>
-          </div>
-
-          <div className="new-previous-events-card">
-            <div className="new-previous-events-banner-container">
-              <Image
-                src="eventtwo.webp"
-                alt="previous events image"
-                width={20}
-                height={20}
-                className="new-previous-large-image"
-              />
-            </div>
-            <div className="new-previous-events-card-title">
-              Where does it come from?
-            </div>
-            <div className="new-previous-events-card-shortdescription">
-              Contrary to popular belief, Lorem Ipsum is not simply random text.
-              It has roots in a piece of classical Latin literature from 45 BC,
-              making it over 2000 years old. Richard McClintock, a Latin
-              professor at Hampden-Sydney College in Virginia, looked up one of
-              the more obscure Latin words, consectetur, from a Lorem Ipsum
-              passage, and going through the cites of the word in
-            </div>
-            <button className="new-upcoming-event-details-button">
-              Discover More
-            </button>
-          </div>
+          {previousEvents.length > 0 ? (
+            previousEvents.map((event) => (
+              <div className="new-previous-events-card" key={event._id}>
+                <div className="new-previous-events-banner-container">
+                  <Image
+                    src={event.imageUrl || "eventtwo.webp"} // Use event image URL or fallback image
+                    alt={event.title || "previous events image"}
+                    width={20}
+                    height={20}
+                    className="new-previous-large-image"
+                  />
+                </div>
+                <div className="new-previous-events-card-title">
+                  {event.title}
+                </div>
+                <div className="new-previous-events-card-shortdescription">
+                  {event.shortDescription}
+                </div>
+                <button className="new-upcoming-event-details-button">
+                  Discover More
+                </button>
+              </div>
+            ))
+          ) : (
+            <p>No previous events found.</p>
+          )}
         </div>
       </div>
     </div>
