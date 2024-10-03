@@ -9,6 +9,7 @@ export default function NewPreviousEventSection() {
     const fetchEvents = async () => {
       const response = await fetch("/api/events");
       const data = await response.json();
+      console.log(data);
 
       // Get the current date
       const currentDate = new Date();
@@ -35,7 +36,7 @@ export default function NewPreviousEventSection() {
           eventDate < currentDate
         );
       });
-
+      console.log("filtered data....", filteredEvents);
       setPreviousEvents(filteredEvents);
     };
 
@@ -49,32 +50,31 @@ export default function NewPreviousEventSection() {
           <h3 className="new-previous-events-label-text">Previous Events</h3>
         </div>
         <div className="new-previous-events-card-container">
-          {previousEvents.length > 0 ? (
-            previousEvents.map((event) => (
+          {previousEvents.map((event) => {
+            console.log(event); // Add this to see if each event has the correct fields
+            return (
               <div className="new-previous-events-card" key={event._id}>
                 <div className="new-previous-events-banner-container">
                   <Image
-                    src={event.imageUrl || "eventtwo.webp"} // Use event image URL or fallback image
-                    alt={event.title || "previous events image"}
-                    width={20}
-                    height={20}
+                    src={event.imagelink || "/eventtwo.webp"}
+                    alt={event.eventtitle || "previous events image"}
+                    width={200}
+                    height={200}
                     className="new-previous-large-image"
                   />
                 </div>
                 <div className="new-previous-events-card-title">
-                  {event.title}
+                  {event.eventtitle}
                 </div>
                 <div className="new-previous-events-card-shortdescription">
-                  {event.shortDescription}
+                  {event.shortdescription}
                 </div>
                 <button className="new-upcoming-event-details-button">
                   Discover More
                 </button>
               </div>
-            ))
-          ) : (
-            <p>No previous events found.</p>
-          )}
+            );
+          })}
         </div>
       </div>
     </div>
