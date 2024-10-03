@@ -3,6 +3,7 @@
 import "./privateevents.css";
 import UpcomingEvent from "../components/pagecomponents/privateeventspage/upcomingevent";
 import PreviousEvents from "../components/pagecomponents/privateeventspage/previousevents";
+import EventsPageContent from "../components/pagecomponents/privateeventspage/eventspagecontent";
 import { useHeroAnimation } from "../hooks/useHeroAnimation";
 export default function PrivateEvents() {
   useHeroAnimation("privateevents-hero-section", "privateevents-hero-heading");
@@ -13,8 +14,9 @@ export default function PrivateEvents() {
       </div>
       <div className="privateevents-content-continer">
         <div className="privateevents-content">
-          <UpcomingEvent />
-          <PreviousEvents />
+          {/* <UpcomingEvent />
+          <PreviousEvents /> */}
+          <EventsPageContent />
         </div>
       </div>
     </>
