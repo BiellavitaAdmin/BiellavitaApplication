@@ -122,12 +122,29 @@
   justify-content: flex-start;
   align-items: flex-start;
   gap: 1rem;
+  height: 500px; /* Set a fixed height for the card */
+  border: 1px solid #ddd; /* Optional: Add a border for better visuals */
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add box-shadow for card elevation */
+  position: relative; /* Needed for the button to stay at the bottom */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth movement */
+}
+
+.new-previous-events-card:hover {
+  transform: translateY(-10px); /* Move the card up by 10px on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a slightly larger shadow for hover effect */
+}
+
+.new-previous-events-banner-container {
+  width: 100%;
+  height: 200px; /* Increase height for a more balanced image display */
+  overflow: hidden; /* Hide any overflowed content */
 }
 
 .new-previous-large-image {
-  width: 100%; /* Make image fill the card width */
-  height: auto;
-  object-fit: cover;
+  width: 100%; /* Fill the container width */
+  height: 100%; /* Fill the container height */
+  object-fit: cover; /* Ensures image fits inside without stretching */
   display: block;
 }
 
@@ -135,10 +152,33 @@
   font-size: 23px;
   font-weight: 500;
   color: var(--Website-black-color);
+  line-height: 1.2; /* Optional: Adjust line height for better spacing */
+  max-height: 2.4em; /* Limit the height for 2 lines */
+  overflow: hidden; /* Hide overflowed text */
+  text-overflow: ellipsis; /* Add ellipsis for overflowing text */
+  white-space: nowrap; /* Prevent text from wrapping to the next line */
 }
 
 .new-previous-events-card-shortdescription {
   font-size: 15px;
+  flex-grow: 1; /* Allow this section to grow and take available space */
+  overflow: hidden; /* Hide overflowed text */
+  text-overflow: ellipsis; /* Show ellipsis if the text is too long */
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Limit to 3 lines of text */
+  -webkit-box-orient: vertical;
+}
+
+.new-previous-event-details-button {
+  margin-top: auto; /* Ensure the button stays at the bottom */
+  border: 1px solid var(--Website-black-color);
+  padding: 0.5rem;
+  background-color: rgb(255, 255, 255, 0);
+  box-shadow: 1px 3px 16px -5px rgb(0, 0, 0, 0.25);
+  position: absolute; /* Stick button to the bottom-left */
+  bottom: 1rem;
+  left: 1rem;
+  width: 22%; /* Make the button 35% of the card's width */
 }
 
 /* Default styles (mobile-first approach) */
@@ -168,6 +208,27 @@
   .new-upcoming-events-shortdescription {
     font-size: 20px;
   }
+
+  .new-previous-events-card-container {
+    flex-direction: column;
+  }
+
+  .new-previous-events-card {
+    width: calc(111.33% - 2rem);
+    height: 584px;
+  }
+
+  .new-previous-event-details-button {
+    width: 36%;
+  }
+
+  .new-previous-events-card {
+    transition: none;
+  }
+
+  .new-previous-events-card:hover {
+    transform: none; /* No movement on hover */
+  }
 }
 
 /* Standard small phones (<= 360px) */
@@ -181,7 +242,7 @@
   }
 
   .new-upcoming-large-image {
-    width: 360px;
+    width: 320px;
   }
 
   .new-upcoming-event-description-container {
@@ -194,6 +255,26 @@
 
   .new-upcoming-events-shortdescription {
     font-size: 20px;
+  }
+
+  .new-previous-events-card-container {
+    flex-direction: column;
+  }
+
+  .new-previous-events-card {
+    width: calc(111.33% - 2rem);
+    height: 584px;
+  }
+
+  .new-previous-event-details-button {
+    width: 36%;
+  }
+  .new-previous-events-card {
+    transition: none;
+  }
+
+  .new-previous-events-card:hover {
+    transform: none; /* No movement on hover */
   }
 }
 
@@ -222,6 +303,27 @@
   .new-upcoming-events-shortdescription {
     font-size: 20px;
   }
+
+  .new-previous-events-card-container {
+    flex-direction: column;
+  }
+
+  .new-previous-events-card {
+    width: calc(109.33% - 2rem);
+    height: 584px;
+  }
+
+  .new-previous-event-details-button {
+    width: 36%;
+  }
+
+  .new-previous-events-card {
+    transition: none;
+  }
+
+  .new-previous-events-card:hover {
+    transform: none; /* No movement on hover */
+  }
 }
 
 /* iPhone 14, 15 (standard model) */
@@ -248,6 +350,27 @@
 
   .new-upcoming-events-shortdescription {
     font-size: 20px;
+  }
+
+  .new-previous-events-card-container {
+    flex-direction: column;
+  }
+
+  .new-previous-events-card {
+    width: calc(109.33% - 2rem);
+    height: 584px;
+  }
+
+  .new-previous-event-details-button {
+    width: 36%;
+  }
+
+  .new-previous-events-card {
+    transition: none;
+  }
+
+  .new-previous-events-card:hover {
+    transform: none; /* No movement on hover */
   }
 }
 
@@ -276,6 +399,27 @@
   .new-upcoming-events-shortdescription {
     font-size: 20px;
   }
+
+  .new-previous-events-card-container {
+    flex-direction: column;
+  }
+
+  .new-previous-events-card {
+    width: calc(109.33% - 2rem);
+    height: 584px;
+  }
+
+  .new-previous-event-details-button {
+    width: 36%;
+  }
+
+  .new-previous-events-card {
+    transition: none;
+  }
+
+  .new-previous-events-card:hover {
+    transform: none; /* No movement on hover */
+  }
 }
 
 /* Larger phones and phablets (>= 480px) */
@@ -303,6 +447,27 @@
   .new-upcoming-events-shortdescription {
     font-size: 20px;
   }
+
+  .new-previous-events-card-container {
+    flex-direction: column;
+  }
+
+  .new-previous-events-card {
+    width: calc(107.33% - 2rem);
+    height: 584px;
+  }
+
+  .new-previous-event-details-button {
+    width: 36%;
+  }
+
+  .new-previous-events-card {
+    transition: none;
+  }
+
+  .new-previous-events-card:hover {
+    transform: none; /* No movement on hover */
+  }
 }
 
 /* Tablets (>= 600px) */
@@ -329,6 +494,10 @@
 
   .new-upcoming-events-shortdescription {
     font-size: 20px;
+  }
+  .new-previous-events-card {
+    width: calc(105.33% - 2rem);
+    height: 507px;
   }
 }
 
@@ -384,6 +553,15 @@
   .new-upcoming-events-shortdescription {
     font-size: 20px;
   }
+
+  .new-previous-events-card {
+    width: calc(51.33% - 2rem);
+    height: 507px;
+  }
+
+  .new-previous-events-card-container {
+    flex-direction: row;
+  }
 }
 
 /* Large laptops and desktops (>= 1280px) */
@@ -411,6 +589,19 @@
   .new-upcoming-events-shortdescription {
     font-size: 20px;
   }
+
+  .new-previous-events-card {
+    width: calc(50.33% - 2rem);
+    height: 507px;
+  }
+
+  .new-previous-events-card {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .new-previous-events-card:hover {
+    transform: translateY(-10px); /* This moves the card up slightly */
+  }
 }
 
 /* Extra-large desktops (>= 1440px) */
@@ -437,6 +628,11 @@
 
   .new-upcoming-events-shortdescription {
     font-size: 20px;
+  }
+
+  .new-previous-events-card {
+    width: calc(33.33% - 2rem);
+    height: 507px;
   }
 }
 
@@ -492,6 +688,19 @@
   .new-upcoming-events-shortdescription {
     font-size: 24px;
   }
+
+  .new-previous-events-card-container {
+    gap: 2.7rem;
+  }
+
+  .new-previous-event-details-button {
+    width: 21%;
+  }
+
+  .new-previous-events-card:hover {
+    transform: translateY(-10px); /* Move the card up by 10px on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a slightly larger shadow for hover effect */
+  }
 }
 
 /* 4K screens (>= 1920px) */
@@ -518,6 +727,11 @@
 
   .new-upcoming-events-shortdescription {
     font-size: 32px;
+  }
+
+  .new-previous-events-card {
+    width: calc(24.33% - 2rem);
+    height: 507px;
   }
 }
 
