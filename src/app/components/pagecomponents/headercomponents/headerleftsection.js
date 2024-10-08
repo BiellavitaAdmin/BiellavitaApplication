@@ -7,7 +7,7 @@ export default function MainHeaderLeftSection() {
       {" "}
       <Link href="/">
         <Image
-          src="/Monogram.webp" // The path relative to the "public" folder
+          src="/redbiella.png" // The path relative to the "public" folder
           alt="My Awesome Image"
           width={55} // Width of the image
           height={55} // Height of the image

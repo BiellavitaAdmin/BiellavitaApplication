@@ -87,6 +87,9 @@ export default function NewUpcomingEventsSection() {
               <h2 className="new-upcoming-events-larger-heading">
                 {event.eventtitle}
               </h2>
+              <h2 className="new-upcoming-events-larger-heading">
+                ({event.eventdate})
+              </h2>
             </div>
             <div className="new-upcoming-events-shortdescription">
               {event.shortdescription}

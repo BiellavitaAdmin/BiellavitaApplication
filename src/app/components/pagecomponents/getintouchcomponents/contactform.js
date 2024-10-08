@@ -47,6 +47,8 @@ export default function ContactForm() {
           email: "",
           message: "",
         });
+
+        console.log(formData);
         setErrors({});
       } else {
         alert("Failed to send message.");

@@ -3,6 +3,10 @@
   overflow: hidden;
   height: 100vh;
   margin: 0;
+  background-image: url("/arch.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .video-container {

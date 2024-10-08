@@ -14,7 +14,7 @@ export async function POST(request) {
   const mailOptions = {
     from: email,
     to: process.env.RECEIVING_EMAIL,
-    subject: `New message from ${firstname} ${lastname}`,
+    subject: `New message from ${firstname} ${lastname} please reply at ${email}`,
     text: message,
   };
 
