@@ -13,7 +13,7 @@ export default function MembersTableSection() {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [isEditModalVisible, setIsEditModalVisible] = useState(false);
   const [searchText, setSearchText] = useState("");
-  const [searchColumn, setSearchColumn] = useState("firstname"); // Default search column
+  const [searchColumn, setSearchColumn] = useState("lastname"); // Default search column
   const [form] = Form.useForm();
 
   useEffect(() => {
@@ -98,6 +98,82 @@ export default function MembersTableSection() {
     setFilteredMembers(data); // Refresh filtered members too
   };
 
+  // const columns = [
+  //   {
+  //     title: "Firstname",
+  //     dataIndex: "firstname",
+  //     key: "firstname",
+  //   },
+  //   {
+  //     title: "Lastname",
+  //     dataIndex: "lastname",
+  //     key: "lastname",
+  //   },
+  //   {
+  //     title: "Email",
+  //     dataIndex: "email",
+  //     key: "email",
+  //   },
+  //   {
+  //     title: "Address",
+  //     dataIndex: "address",
+  //     key: "address",
+  //   },
+  //   {
+  //     title: "City",
+  //     dataIndex: "city",
+  //     key: "city",
+  //   },
+  //   {
+  //     title: "Country",
+  //     dataIndex: "country",
+  //     key: "country",
+  //   },
+  //   {
+  //     title: "CellPhone",
+  //     dataIndex: "cellPhone",
+  //     key: "cellPhone",
+  //   },
+  //   {
+  //     title: "Actions",
+  //     key: "actions",
+  //     render: (text, record) => (
+  //       <span>
+  //         <Button
+  //           style={{
+  //             backgroundColor: "#F3EEED",
+  //             color: "black",
+  //             marginLeft: 8,
+  //           }}
+  //           onClick={() => showModal(record)}
+  //         >
+  //           View
+  //         </Button>
+  //         <Button
+  //           onClick={() => showEditModal(record)}
+  //           style={{
+  //             backgroundColor: "#F3EEED",
+  //             color: "black",
+  //             marginLeft: 8,
+  //           }}
+  //         >
+  //           Edit
+  //         </Button>
+  //         <Button
+  //           onClick={() => handleDelete(record._id)}
+  //           type="danger"
+  //           style={{
+  //             backgroundColor: "#FF2400",
+  //             color: "white",
+  //             marginLeft: 8,
+  //           }}
+  //         >
+  //           Delete
+  //         </Button>
+  //       </span>
+  //     ),
+  //   },
+  // ];
   const columns = [
     {
       title: "Firstname",
@@ -114,23 +190,44 @@ export default function MembersTableSection() {
       dataIndex: "email",
       key: "email",
     },
-    {
-      title: "Address",
-      dataIndex: "address",
-      key: "address",
-    },
+    // {
+    //   title: "Address",
+    //   dataIndex: "address",
+    //   key: "address",
+    // },
     {
       title: "City",
       dataIndex: "city",
       key: "city",
     },
+    // {
+    //   title: "Country",
+    //   dataIndex: "country",
+    //   key: "country",
+    // },
     {
-      title: "Country",
-      dataIndex: "country",
-      key: "country",
+      title: "Nationality",
+      dataIndex: "nationality",
+      key: "nationality",
     },
     {
-      title: "CellPhone",
+      title: "Profession",
+      dataIndex: "profession",
+      key: "profession",
+    },
+    // {
+    //   title: "Date of Birth",
+    //   dataIndex: "dateofbirth",
+    //   key: "dateofbirth",
+    //   render: (text) => new Date(text).toLocaleDateString(), // Format date
+    // },
+    {
+      title: "Hobbies",
+      dataIndex: "hobbies",
+      key: "hobbies",
+    },
+    {
+      title: "Cell Phone",
       dataIndex: "cellPhone",
       key: "cellPhone",
     },
@@ -191,13 +288,16 @@ export default function MembersTableSection() {
           onChange={handleColumnChange}
           style={{ marginRight: 10 }}
         >
-          <Option value="firstname">Firstname</Option>
+          {/* <Option value="firstname">Firstname</Option> */}
           <Option value="lastname">Lastname</Option>
-          <Option value="email">Email</Option>
-          <Option value="address">Address</Option>
-          <Option value="cellPhone">Cell Phone</Option>
           <Option value="city">City</Option>
-          <Option value="country">Country</Option>
+          <Option value="nationality">Nationality</Option>
+          <Option value="profession">Profession</Option>
+          {/* <Option value="email">Email</Option> */}
+          <Option value="cellPhone">Cell Phone</Option>
+          <Option value="hobbies">Hobbies</Option>
+
+          {/* <Option value="country">Country</Option> */}
         </Select>
         <Input
           placeholder={`Search by ${searchColumn}`}
@@ -234,11 +334,40 @@ export default function MembersTableSection() {
       >
         {selectedMember && (
           <div>
-            {Object.entries(selectedMember).map(([key, value]) => (
-              <p key={key}>
-                <strong>{key}:</strong> {value}
-              </p>
-            ))}
+            <p>
+              <strong>Firstname:</strong> {selectedMember.firstname}
+            </p>
+            <p>
+              <strong>Lastname:</strong> {selectedMember.lastname}
+            </p>
+            <p>
+              <strong>Email:</strong> {selectedMember.email}
+            </p>
+            <p>
+              <strong>Address:</strong> {selectedMember.address}
+            </p>
+            <p>
+              <strong>City:</strong> {selectedMember.city}
+            </p>
+            <p>
+              <strong>Country:</strong> {selectedMember.country}
+            </p>
+            <p>
+              <strong>Nationality:</strong> {selectedMember.nationality}
+            </p>
+            <p>
+              <strong>Profession:</strong> {selectedMember.profession}
+            </p>
+            <p>
+              <strong>Date of Birth:</strong>{" "}
+              {new Date(selectedMember.dateofbirth).toLocaleDateString()}
+            </p>
+            <p>
+              <strong>Hobbies:</strong> {selectedMember.hobbies}
+            </p>
+            <p>
+              <strong>Cell Phone:</strong> {selectedMember.cellPhone}
+            </p>
           </div>
         )}
       </Modal>
@@ -288,7 +417,32 @@ export default function MembersTableSection() {
           >
             <Input />
           </Form.Item>
-          <Form.Item name="city" label="City" rules={[{ required: true }]}>
+          <Form.Item
+            name="nationality"
+            label="Nationality"
+            rules={[{ required: true }]}
+          >
+            <Input />
+          </Form.Item>
+          <Form.Item
+            name="profession"
+            label="Profession"
+            rules={[{ required: true }]}
+          >
+            <Input />
+          </Form.Item>
+          <Form.Item
+            name="dateofbirth"
+            label="Date of Birth"
+            rules={[{ required: true }]}
+          >
+            <Input type="date" />
+          </Form.Item>
+          <Form.Item
+            name="hobbies"
+            label="Hobbies"
+            rules={[{ required: true }]}
+          >
             <Input />
           </Form.Item>
           <Form.Item
