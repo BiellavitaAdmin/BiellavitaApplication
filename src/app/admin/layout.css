@@ -53,7 +53,8 @@
 
 .sidebar {
   width: 12%;
-  height: calc(100vh - 8vh);
+  /* height: calc(100vh - 8vh); */
+  height: 150vh;
   background-color: rgba(255, 255, 255, 0.795);
   border-right: 1px solid #505055;
   border-top: 1px solid #505055;

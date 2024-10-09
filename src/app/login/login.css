@@ -124,6 +124,7 @@
   .login-form {
     height: 46vh;
     padding: 2rem;
+    border-radius: 4rem;
   }
 
   .form-title {
@@ -158,6 +159,7 @@
   .login-form {
     height: 46vh;
     padding: 2rem;
+    border-radius: 4rem;
   }
 
   .form-title {
@@ -192,6 +194,7 @@
   .login-form {
     height: 46vh;
     padding: 2rem;
+    border-radius: 4rem;
   }
 
   .form-title {
@@ -226,6 +229,7 @@
   .login-form {
     height: 46vh;
     padding: 2rem;
+    border-radius: 4rem;
   }
 
   .form-title {
@@ -260,6 +264,7 @@
   .login-form {
     height: 46vh;
     padding: 2rem;
+    border-radius: 4rem;
   }
 
   .form-title {
@@ -295,6 +300,7 @@
     width: 100%;
     height: 46vh;
     padding: 2rem;
+    border-radius: 4rem;
   }
 
   .form-title {
@@ -331,6 +337,7 @@
     width: 70%;
     height: 46vh;
     padding: 2rem;
+    border-radius: 4rem;
   }
 
   .form-title {
@@ -367,6 +374,7 @@
     width: 50%;
     height: 46vh;
     padding: 2rem;
+    border-radius: 4rem;
   }
 
   .form-title {
@@ -404,6 +412,7 @@
     width: 40%;
     height: 46vh;
     padding: 2rem;
+    border-radius: 4rem;
   }
 
   .form-title {
@@ -435,6 +444,7 @@
     width: 30%;
     height: 46vh;
     padding: 2rem;
+    border-radius: 4rem;
   }
 }
 
@@ -450,6 +460,11 @@
 @media (min-width: 1920px) {
   .login-main-heading {
     font-size: 60px;
+  }
+
+  .login-form {
+    border-radius: 4rem;
+    /* border: 0.1px solid gray; */
   }
 
   .login-form-container {
@@ -468,6 +483,7 @@
     width: 20%;
     height: 40vh;
     padding: 2rem;
+    border-radius: 4rem;
   }
 }
 
@@ -493,6 +509,7 @@
     width: 20%;
     height: 34vh;
     padding: 2rem;
+    border-radius: 4rem;
   }
 }
 

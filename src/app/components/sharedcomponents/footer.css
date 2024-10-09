@@ -47,6 +47,10 @@
     color: var(--Website-black-color);
     z-index: 1;
   }
+
+  .address-text-full-page-footer {
+    padding-left: 0.7rem;
+  }
 }
 
 /* Standard small phones (<= 360px) */
@@ -127,6 +131,10 @@
     color: var(--Website-black-color);
     z-index: 1;
   }
+
+  .address-text-full-page-footer {
+    padding-left: 1.7rem;
+  }
 }
 
 /* Larger phones and phablets (>= 480px) */
@@ -187,6 +195,10 @@
     color: var(--Website-black-color);
     z-index: 1;
   }
+
+  .social-media-row {
+    padding-left: 1.3rem;
+  }
 }
 
 /* Medium laptops (>= 1024px) */
@@ -206,6 +218,10 @@
     font-weight: 600;
     color: var(--Website-black-color);
     z-index: 1;
+  }
+
+  .social-media-row {
+    padding-left: 1.4rem;
   }
 }
 
@@ -227,6 +243,14 @@
     color: var(--Website-black-color);
     z-index: 1;
   }
+
+  .address-text-full-page-footer {
+    padding-left: 3.7rem;
+  }
+
+  .social-media-row {
+    padding-left: 3.4rem;
+  }
 }
 
 /* Extra-large desktops (>= 1440px) */
@@ -246,6 +270,10 @@
     font-weight: 600;
     color: var(--Website-black-color);
     z-index: 1;
+  }
+
+  .social-media-row {
+    padding-left: 3.4rem;
   }
 }
 
@@ -267,6 +295,10 @@
     color: var(--Website-black-color);
     z-index: 1;
   }
+
+  .social-media-row {
+    padding-left: 3.3rem;
+  }
 }
 
 /* 4K screens (>= 1920px) */
@@ -286,5 +318,9 @@
     font-weight: 600;
     color: var(--Website-black-color);
     z-index: 1;
+  }
+
+  .social-media-row {
+    padding-left: 3.2rem;
   }
 }
