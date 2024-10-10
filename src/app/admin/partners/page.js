@@ -1,13 +1,13 @@
 import "./partners.css";
-import ProjectsTableSection from "./subcomponents/projectstablesection";
-import ProjectsUpperSection from "./subcomponents/projectsuppersection";
+import PartnersUpperSection from "./subcomponents/partnersuppersection";
+import PartnersTableSection from "./subcomponents/partnerststablesection";
 export default function Members() {
   return (
     <>
       <div className="section-content-container">
         <div className="dash-section-content">
-          <ProjectsUpperSection />
-          <ProjectsTableSection />
+          <PartnersUpperSection />
+          <PartnersTableSection />
         </div>
       </div>
     </>

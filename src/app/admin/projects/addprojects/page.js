@@ -251,7 +251,7 @@ export default function AddProjects() {
   const validateForm = () => {
     const newErrors = {};
     if (!formData.projecttitle)
-      newErrors.projecttitle = "Project name is required";
+      newErrors.projecttitle = "Project title is required";
     if (!formData.imagelink) newErrors.imagelink = "Image link is required";
     if (!formData.shortdescription)
       newErrors.shortdescription = "Short description is required";

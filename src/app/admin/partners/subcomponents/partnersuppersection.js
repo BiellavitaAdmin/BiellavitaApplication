@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-export default function ProjectsUpperSection() {
+export default function PartnersUpperSection() {
   return (
     <>
       <div className="title-button-row">
