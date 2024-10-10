@@ -195,6 +195,28 @@
     height: auto;
     padding: 1rem;
   }
+
+  .project-details-modal-title {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .details-projects-large-image {
+    max-width: 900px;
+    max-height: 500px;
+  }
+
+  .details-dual-image-container {
+    padding: 0rem;
+  }
+
+  .projects-details-text {
+    font-size: 16px;
+    font-family: "Playfair Display", serif;
+    text-align: left;
+  }
 }
 
 /* Standard small phones (<= 360px) */
@@ -240,6 +262,28 @@
     height: auto;
     padding: 1rem;
   }
+
+  .project-details-modal-title {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .details-projects-large-image {
+    max-width: 900px;
+    max-height: 500px;
+  }
+
+  .details-dual-image-container {
+    padding: 0rem;
+  }
+
+  .projects-details-text {
+    font-size: 16px;
+    font-family: "Playfair Display", serif;
+    text-align: left;
+  }
 }
 
 /* iPhone 12, 13 Mini, SE (2020) */
@@ -284,6 +328,28 @@
     width: 320px;
     height: auto;
     padding: 1rem;
+  }
+
+  .project-details-modal-title {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .details-projects-large-image {
+    max-width: 900px;
+    max-height: 500px;
+  }
+
+  .details-dual-image-container {
+    padding: 0rem;
+  }
+
+  .projects-details-text {
+    font-size: 18px;
+    font-family: "Playfair Display", serif;
+    text-align: left;
   }
 }
 
@@ -426,6 +492,19 @@
     padding-left: 0rem;
     padding-right: 0rem;
   }
+
+  .project-details-modal-title {
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+    text-align: center;
+  }
+
+  .projects-details-text {
+    font-size: 22px;
+    font-family: "Playfair Display", serif;
+    text-align: left;
+  }
 }
 
 /* Tablets (>= 600px) */
@@ -473,6 +552,14 @@
     padding-bottom: 2rem;
     padding-left: 0rem;
     padding-right: 0rem;
+  }
+
+  .project-details-modal-title {
+    font-size: 40px;
+  }
+
+  .projects-details-text {
+    font-size: 23px;
   }
 }
 
@@ -586,6 +673,18 @@
     padding-left: 0rem;
     padding-right: 0rem;
   }
+
+  .details-dual-image-container {
+    /* padding: 4rem; */
+    padding-left: 6rem;
+    padding-right: 6rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+  }
+
+  .project-details-modal-title {
+    font-size: 46px;
+  }
 }
 
 /* Extra-large desktops (>= 1440px) */
@@ -651,6 +750,11 @@
   .project-description {
     font-size: 20px;
   }
+
+  .projects-details-text {
+    font-size: 25px;
+    text-align: center;
+  }
 }
 
 /* 4K screens (>= 1920px) */
@@ -687,64 +791,134 @@
     padding-left: 0rem;
     padding-right: 0rem;
   }
+
+  .projects-details-text {
+    font-size: 33px;
+    text-align: center;
+  }
+
+  .details-projects-large-image {
+    max-width: 1330px;
+    max-height: 757px;
+  }
 }
 
 /* Iphone SE */
 @media (width: 375px) and (height: 667px) {
+  .details-dual-image-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 }
 
 /* Iphone XR */
 @media (width: 414px) and (height: 896px) {
+  .details-dual-image-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 }
 
 /* Iphone 12 Pro */
 @media (width: 390px) and (height: 844px) {
+  .details-dual-image-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 }
 
 /* Iphone 14 Pro Max */
 @media (width: 430px) and (height: 932px) {
+  .details-dual-image-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 }
 
 /* Pixel 7 */
 @media (width: 412px) and (height: 915px) {
+  .details-dual-image-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 }
 
 /* Samsung Galaxy S8+ */
 @media (width: 360px) and (height: 740px) {
+  .details-dual-image-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 }
 
 /* Samsung Galaxy S20 Ultra */
 @media (width: 412px) and (height: 915px) {
+  .details-dual-image-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 }
 
 /* iPad Mini */
 @media (width: 768px) and (height: 1024px) {
+  .details-dual-image-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 }
 
 /* iPad Air */
 @media (width: 820px) and (height: 1180px) {
+  .details-dual-image-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 }
 
 /* iPad Pro */
 @media (width: 1024px) and (height: 1366px) {
+  .details-dual-image-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 }
 
 /* Surface Pro 7 */
 @media (width: 912px) and (height: 1368px) {
+  .details-dual-image-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 }
 
 /* Surface Duo*/
 @media (width: 540px) and (height: 720px) {
+  .details-dual-image-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 }
 
 /* Samsung Galaxy A51/71 */
 @media (width: 412px) and (height: 914px) {
+  .details-dual-image-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 }
 
 /* Nest Hub */
 @media (width: 1024px) and (height: 600px) {
+  .details-dual-image-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 }
 
 /* Nest Hub Max */
 @media (width: 1280px) and (height: 800px) {
+  .details-dual-image-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 }
