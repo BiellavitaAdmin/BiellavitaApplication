@@ -1,8 +1,206 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Table, Button, Modal, Form, Input } from "antd";
+import { Table, Button, Modal, Form, Input, Select } from "antd";
 import Image from "next/image";
+
+// List of countries
+const countries = [
+  "Afghanistan",
+  "Albania",
+  "Algeria",
+  "Andorra",
+  "Angola",
+  "Antigua and Barbuda",
+  "Argentina",
+  "Armenia",
+  "Australia",
+  "Austria",
+  "Azerbaijan",
+  "Bahamas",
+  "Bahrain",
+  "Bangladesh",
+  "Barbados",
+  "Belarus",
+  "Belgium",
+  "Belize",
+  "Benin",
+  "Bhutan",
+  "Bolivia",
+  "Bosnia and Herzegovina",
+  "Botswana",
+  "Brazil",
+  "Brunei",
+  "Bulgaria",
+  "Burkina Faso",
+  "Burundi",
+  "Cabo Verde",
+  "Cambodia",
+  "Cameroon",
+  "Canada",
+  "Central African Republic",
+  "Chad",
+  "Chile",
+  "China",
+  "Colombia",
+  "Comoros",
+  "Congo",
+  "Costa Rica",
+  "Croatia",
+  "Cuba",
+  "Cyprus",
+  "Czech Republic",
+  "Democratic Republic of the Congo",
+  "Denmark",
+  "Djibouti",
+  "Dominica",
+  "Dominican Republic",
+  "Ecuador",
+  "Egypt",
+  "El Salvador",
+  "Equatorial Guinea",
+  "Eritrea",
+  "Estonia",
+  "Eswatini",
+  "Ethiopia",
+  "Fiji",
+  "Finland",
+  "France",
+  "Gabon",
+  "Gambia",
+  "Georgia",
+  "Germany",
+  "Ghana",
+  "Greece",
+  "Grenada",
+  "Guatemala",
+  "Guinea",
+  "Guinea-Bissau",
+  "Guyana",
+  "Haiti",
+  "Honduras",
+  "Hungary",
+  "Iceland",
+  "India",
+  "Indonesia",
+  "Iran",
+  "Iraq",
+  "Ireland",
+  "Israel",
+  "Italy",
+  "Jamaica",
+  "Japan",
+  "Jordan",
+  "Kazakhstan",
+  "Kenya",
+  "Kiribati",
+  "Kuwait",
+  "Kyrgyzstan",
+  "Laos",
+  "Latvia",
+  "Lebanon",
+  "Lesotho",
+  "Liberia",
+  "Libya",
+  "Liechtenstein",
+  "Lithuania",
+  "Luxembourg",
+  "Madagascar",
+  "Malawi",
+  "Malaysia",
+  "Maldives",
+  "Mali",
+  "Malta",
+  "Marshall Islands",
+  "Mauritania",
+  "Mauritius",
+  "Mexico",
+  "Micronesia",
+  "Moldova",
+  "Monaco",
+  "Mongolia",
+  "Montenegro",
+  "Morocco",
+  "Mozambique",
+  "Myanmar",
+  "Namibia",
+  "Nauru",
+  "Nepal",
+  "Netherlands",
+  "New Zealand",
+  "Nicaragua",
+  "Niger",
+  "Nigeria",
+  "North Korea",
+  "North Macedonia",
+  "Norway",
+  "Oman",
+  "Pakistan",
+  "Palau",
+  "Panama",
+  "Papua New Guinea",
+  "Paraguay",
+  "Peru",
+  "Philippines",
+  "Poland",
+  "Portugal",
+  "Qatar",
+  "Romania",
+  "Russia",
+  "Rwanda",
+  "Saint Kitts and Nevis",
+  "Saint Lucia",
+  "Saint Vincent and the Grenadines",
+  "Samoa",
+  "San Marino",
+  "Sao Tome and Principe",
+  "Saudi Arabia",
+  "Senegal",
+  "Serbia",
+  "Seychelles",
+  "Sierra Leone",
+  "Singapore",
+  "Slovakia",
+  "Slovenia",
+  "Solomon Islands",
+  "Somalia",
+  "South Africa",
+  "South Korea",
+  "South Sudan",
+  "Spain",
+  "Sri Lanka",
+  "Sudan",
+  "Suriname",
+  "Sweden",
+  "Switzerland",
+  "Syria",
+  "Taiwan",
+  "Tajikistan",
+  "Tanzania",
+  "Thailand",
+  "Timor-Leste",
+  "Togo",
+  "Tonga",
+  "Trinidad and Tobago",
+  "Tunisia",
+  "Turkey",
+  "Turkmenistan",
+  "Tuvalu",
+  "Uganda",
+  "Ukraine",
+  "United Arab Emirates",
+  "United Kingdom",
+  "United States",
+  "Uruguay",
+  "Uzbekistan",
+  "Vanuatu",
+  "Vatican City",
+  "Venezuela",
+  "Vietnam",
+  "Yemen",
+  "Zambia",
+  "Zimbabwe",
+];
 
 export default function ProjectsTableSection() {
   const [projects, setProjects] = useState([]);
@@ -11,6 +209,7 @@ export default function ProjectsTableSection() {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [isEditModalVisible, setIsEditModalVisible] = useState(false);
   const [searchText, setSearchText] = useState("");
+  const [searchColumn, setSearchColumn] = useState("");
   const [form] = Form.useForm();
 
   useEffect(() => {
@@ -18,7 +217,7 @@ export default function ProjectsTableSection() {
       const response = await fetch("/api/projects");
       const data = await response.json();
       setProjects(data);
-      setFilteredProjects(data); // Set filtered members initially
+      setFilteredProjects(data); // Set filtered projects initially
     };
     fetchProjects();
   }, []);
@@ -26,10 +225,21 @@ export default function ProjectsTableSection() {
   const handleSearch = (e) => {
     const value = e.target.value.toLowerCase();
     setSearchText(value);
-    const filteredData = projects.filter((project) =>
-      project.projecttitle.toLowerCase().includes(value)
-    );
+
+    const filteredData = projects.filter((project) => {
+      const field = project[searchColumn]
+        ? project[searchColumn].toLowerCase()
+        : "";
+      return field.includes(value);
+    });
+
     setFilteredProjects(filteredData);
+  };
+
+  const handleFilterChange = (value) => {
+    setSearchColumn(value);
+    setSearchText("");
+    setFilteredProjects(projects); // Reset filtered data when column changes
   };
 
   const showModal = (project) => {
@@ -47,7 +257,7 @@ export default function ProjectsTableSection() {
 
   const showEditModal = (project) => {
     setSelectedProject(project);
-    form.setFieldsValue(project); // Populate form with selected member data
+    form.setFieldsValue(project); // Populate form with selected project data
     setIsEditModalVisible(true);
   };
 
@@ -55,7 +265,6 @@ export default function ProjectsTableSection() {
     try {
       const values = await form.validateFields();
       await fetch(`/api/projects`, {
-        // Updated endpoint
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -63,11 +272,11 @@ export default function ProjectsTableSection() {
         body: JSON.stringify({ id: selectedProject._id, ...values }), // Include the ID
       });
       setIsEditModalVisible(false);
-      // Refresh members
+      // Refresh projects
       const response = await fetch("/api/projects");
       const data = await response.json();
       setProjects(data);
-      setFilteredProjects(data); // Refresh filtered members too
+      setFilteredProjects(data); // Refresh filtered projects too
     } catch (error) {
       console.error("Edit failed:", error);
     }
@@ -85,27 +294,50 @@ export default function ProjectsTableSection() {
       },
       body: JSON.stringify({ id }), // Include the ID
     });
-    // Refresh members
+    // Refresh projects
     const response = await fetch("/api/projects");
     const data = await response.json();
     setProjects(data);
-    setFilteredProjects(data); // Refresh filtered members too
+    setFilteredProjects(data); // Refresh filtered projects too
   };
 
   const columns = [
     {
-      title: "ProjectTitle",
+      title: "Project Title",
       dataIndex: "projecttitle",
       key: "projecttitle",
-      width: 350,
+      width: 200,
     },
     {
-      title: "ShortDescription",
+      title: "Short Description",
       dataIndex: "shortdescription",
       key: "shortdescription",
-      width: 650,
+      width: 700,
     },
-
+    // {
+    //   title: "Details",
+    //   dataIndex: "details",
+    //   key: "details",
+    //   width: 250,
+    // },
+    {
+      title: "City",
+      dataIndex: "city",
+      key: "city",
+      width: 100,
+    },
+    {
+      title: "Country",
+      dataIndex: "country",
+      key: "country",
+      width: 120,
+    },
+    {
+      title: "Category",
+      dataIndex: "category",
+      key: "category",
+      width: 120,
+    },
     {
       title: "Actions",
       key: "actions",
@@ -149,7 +381,7 @@ export default function ProjectsTableSection() {
 
   return (
     <>
-      {/* Search Bar */}
+      {/* Search Bar and Filter Dropdown */}
       <div
         style={{
           display: "flex",
@@ -158,8 +390,22 @@ export default function ProjectsTableSection() {
           marginTop: 16,
         }}
       >
+        <Select
+          defaultValue="Select Column"
+          style={{ width: 200 }}
+          onChange={handleFilterChange}
+        >
+          <Select.Option value="projecttitle">Project Name</Select.Option>
+          <Select.Option value="shortdescription">
+            Short Description
+          </Select.Option>
+          <Select.Option value="details">Details</Select.Option>
+          <Select.Option value="city">City</Select.Option>
+          <Select.Option value="country">Country</Select.Option>
+          <Select.Option value="category">Category</Select.Option>
+        </Select>
         <Input
-          placeholder="Search by Project Title"
+          placeholder="Search"
           value={searchText}
           onChange={handleSearch}
           style={{ width: 200 }}
@@ -186,123 +432,113 @@ export default function ProjectsTableSection() {
       )}
 
       <Modal
-        title="Projects Details"
+        title="Project Details"
         visible={isModalVisible}
         onOk={handleOk}
         onCancel={handleCancel}
       >
         {selectedProject && (
           <div>
-            {Object.entries(selectedProject).map(([key, value]) => (
-              <p key={key}>
-                <strong>{key}:</strong> {value}
-              </p>
-            ))}
+            {Object.entries(selectedProject)
+              .filter(([key]) => key !== "_id" && !key.includes("imagelink")) // Exclude ID and image links
+              .map(([key, value]) => (
+                <p key={key}>
+                  <strong>{key}:</strong> {value}
+                </p>
+              ))}
           </div>
         )}
       </Modal>
 
+      {/* Edit Modal */}
       <Modal
         title="Edit Project"
         visible={isEditModalVisible}
-        onOk={handleEditOk}
-        onCancel={handleEditCancel}
+        onOk={handleEditOk} // Call the handleEditOk function directly
+        onCancel={handleEditCancel} // You can use your existing handleCancel logic
       >
         <Form form={form} layout="vertical">
-          {/* Project Title */}
           <Form.Item
             name="projecttitle"
             label="Project Title"
-            rules={[
-              {
-                required: true,
-                message: "Please input the project title",
-              },
-              {
-                validator: (_, value) => {
-                  const wordCount = value ? value.split(/\s+/).length : 0;
-                  if (wordCount > 15) {
-                    return Promise.reject("Title must not exceed 15 words");
-                  }
-                  return Promise.resolve();
-                },
-              },
-            ]}
+            rules={[{ required: true }]}
           >
             <Input />
           </Form.Item>
-
           <Form.Item
             name="imagelink"
             label="Image Link"
-            rules={[
-              {
-                required: true,
-                message: "Please add image link",
-              },
-              {
-                validator: (_, value) => {
-                  const wordCount = value ? value.split(/\s+/).length : 0;
-                  if (wordCount > 15) {
-                    return Promise.reject("Add Link");
-                  }
-                  return Promise.resolve();
-                },
-              },
-            ]}
+            rules={[{ required: true }]}
           >
             <Input />
           </Form.Item>
 
-          {/* Short Description */}
+          <Form.Item
+            name="detailsimageone"
+            label="Details Image One"
+            rules={[{ required: true }]}
+          >
+            <Input />
+          </Form.Item>
+          <Form.Item
+            name="detailsimagetwo"
+            label="Details Image Two"
+            rules={[{ required: true }]}
+          >
+            <Input />
+          </Form.Item>
           <Form.Item
             name="shortdescription"
             label="Short Description"
-            rules={[
-              {
-                required: true,
-                message: "Please input the short description",
-              },
-              {
-                validator: (_, value) => {
-                  const wordCount = value ? value.split(/\s+/).length : 0;
-                  if (wordCount > 100) {
-                    return Promise.reject(
-                      "Short description must not exceed 100 words"
-                    );
-                  }
-                  return Promise.resolve();
-                },
-              },
-            ]}
+            rules={[{ required: true }]}
           >
-            <Input.TextArea rows={6} />
+            <Input.TextArea rows={4} />
           </Form.Item>
-
-          {/* Details */}
+          <Form.Item name="city" label="City" rules={[{ required: true }]}>
+            <Input />
+          </Form.Item>
           <Form.Item
-            name="details"
-            label="Details"
-            rules={[
-              {
-                required: true,
-                message: "Please input the project details",
-              },
-              {
-                validator: (_, value) => {
-                  const wordCount = value ? value.split(/\s+/).length : 0;
-                  if (wordCount > 200) {
-                    return Promise.reject("Details must not exceed 200 words");
-                  }
-                  return Promise.resolve();
-                },
-              },
-            ]}
+            name="country"
+            label="Country"
+            rules={[{ required: true, message: "Please select a country!" }]}
           >
-            <Input.TextArea rows={12} />
+            <Select
+              showSearch
+              placeholder="Select a country"
+              optionFilterProp="children"
+              filterOption={(input, option) =>
+                option?.children.toLowerCase().includes(input.toLowerCase())
+              }
+              style={{ width: "100%" }}
+            >
+              {countries.map((country) => (
+                <Select.Option key={country} value={country}>
+                  {country}
+                </Select.Option>
+              ))}
+            </Select>
+          </Form.Item>
+          <Form.Item
+            name="category"
+            label="Category"
+            rules={[{ required: true }]}
+          >
+            <Input />
           </Form.Item>
         </Form>
       </Modal>
     </>
   );
+}
+
+{
+  /* <Form.Item name="imagelink" label="Image Link">
+<Input />
+</Form.Item>
+<Form.Item name="detailsimageone" label="Details Image One">
+<Input />
+</Form.Item>
+<Form.Item name="detailsimagetwo" label="Details Image Two">
+<Input />
+</Form.Item> */
 }
