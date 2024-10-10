@@ -436,6 +436,7 @@ export default function ProjectsTableSection() {
         visible={isModalVisible}
         onOk={handleOk}
         onCancel={handleCancel}
+        width="80%"
       >
         {selectedProject && (
           <div>
@@ -523,7 +524,15 @@ export default function ProjectsTableSection() {
             label="Category"
             rules={[{ required: true }]}
           >
-            <Input />
+            <Select placeholder="Select a category" style={{ width: "100%" }}>
+              <Select.Option value="art">Art</Select.Option>
+              <Select.Option value="charity">Charity</Select.Option>
+              <Select.Option value="fashion">Fashion</Select.Option>
+              <Select.Option value="sports">Sports</Select.Option>
+              <Select.Option value="culinary">Culinary</Select.Option>
+              <Select.Option value="culture">Culture</Select.Option>
+              <Select.Option value="health">Health</Select.Option>
+            </Select>
           </Form.Item>
         </Form>
       </Modal>

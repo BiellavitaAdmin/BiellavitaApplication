@@ -86,18 +86,40 @@ export default function ProjectsSectionOne() {
       </div>
 
       <Modal
-        title={selectedProject?.projecttitle}
+        title="Complete Description"
         visible={isModalVisible}
         onCancel={handleCancel}
         footer={null}
-        width="70%"
+        width="80%"
       >
-        <p>
-          <strong>Short Description:</strong>{" "}
+        <h2 className="project-details-modal-title">
+          {selectedProject?.projecttitle}
+        </h2>
+        <p className="projects-details-text">
+          <div className="details-dual-image-container">
+            <Image
+              src={selectedProject?.detailsimageone}
+              alt={selectedProject?.detailsimageone}
+              width={650}
+              height={435}
+              className="details-projects-large-image"
+            />
+          </div>
+          <strong>Project Description:</strong>{" "}
           {selectedProject?.shortdescription}
         </p>
-        <p>
-          <strong>Details:</strong> {selectedProject?.details}
+        <p className="projects-details-text">
+          <div className="details-dual-image-container">
+            <Image
+              src={selectedProject?.detailsimagetwo}
+              alt={selectedProject?.detailsimagetwo}
+              width={650}
+              height={435}
+              className="details-projects-large-image"
+            />
+          </div>
+          <strong>Project Details:</strong>
+          {selectedProject?.details}
         </p>
       </Modal>
     </>
