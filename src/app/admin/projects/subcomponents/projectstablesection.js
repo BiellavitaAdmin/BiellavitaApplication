@@ -396,10 +396,10 @@ export default function ProjectsTableSection() {
           onChange={handleFilterChange}
         >
           <Select.Option value="projecttitle">Project Name</Select.Option>
-          <Select.Option value="shortdescription">
+          {/* <Select.Option value="shortdescription">
             Short Description
           </Select.Option>
-          <Select.Option value="details">Details</Select.Option>
+          <Select.Option value="details">Details</Select.Option> */}
           <Select.Option value="city">City</Select.Option>
           <Select.Option value="country">Country</Select.Option>
           <Select.Option value="category">Category</Select.Option>

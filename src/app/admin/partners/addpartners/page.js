@@ -302,6 +302,7 @@ export default function AddPartners() {
         setFormData({
           firstname: "",
           lastname: "",
+          companyName: "",
           address: "",
           city: "",
           country: "",

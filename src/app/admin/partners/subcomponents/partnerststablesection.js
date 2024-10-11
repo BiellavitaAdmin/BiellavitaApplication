@@ -459,7 +459,7 @@ export default function PartnersTableSection() {
   ];
 
   const searchFieldsOptions = [
-    { label: "Firstname", value: "firstname" },
+    // { label: "Firstname", value: "firstname" },
     { label: "Lastname", value: "lastname" },
     // { label: "Company Name", value: "companyName" },
     // { label: "City", value: "city" },
