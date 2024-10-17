@@ -120,20 +120,20 @@ export default function NewUpcomingEventsSection() {
       >
         {selectedEvent && (
           <>
-            <p className="projects-details-text">
-              <div className="details-dual-image-container">
+            <p className="projects-details-text-private">
+              <div className="details-dual-image-container-private">
                 <Image
                   src={selectedEvent.imagelink}
                   alt={selectedEvent.imagelink}
                   width={650}
                   height={435}
-                  className="details-projects-large-image"
+                  className="details-projects-large-image-private"
                 />
               </div>
-              <h2 className="project-details-modal-title">
+              <h2 className="project-details-modal-title-private">
                 {selectedEvent.eventtitle}
               </h2>
-              <p className="projects-details-text">
+              <p className="projects-details-text-private">
                 <strong>Date:</strong> {formatDate(selectedEvent.eventdate)}
               </p>
               {/* <strong>Project Details:</strong> */}

@@ -126,22 +126,22 @@ export default function NewPreviousEventSection() {
       >
         {selectedEvent && (
           <>
-            <div className="details-dual-image-container">
+            <div className="details-dual-image-container-private">
               <Image
                 src={selectedEvent.imagelink}
                 alt={selectedEvent.imagelink}
                 width={650}
                 height={435}
-                className="details-projects-large-image"
+                className="details-projects-large-image-private"
               />
             </div>
-            <h2 className="project-details-modal-title">
+            <h2 className="project-details-modal-title-private">
               {selectedEvent.eventtitle}
             </h2>
-            <p className="projects-details-text">
+            <p className="projects-details-text-private">
               <strong>Dated: </strong> {formatDate(selectedEvent.eventdate)}
             </p>
-            <p className="projects-details-text">
+            <p className="projects-details-text-private">
               <strong>Event Details: </strong> {selectedEvent.details}
             </p>
           </>

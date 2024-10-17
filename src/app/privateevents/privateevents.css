@@ -177,24 +177,37 @@
   padding: 1rem; /* Add padding for better spacing */
 }
 
-.project-details-modal-title {
+.projects-details-text-private {
+  font-size: 23px;
+  font-family: "Playfair Display", serif;
+}
+
+.project-details-modal-title-private {
   font-size: 33px;
   font-family: "Playfair Display", serif;
   font-weight: 700;
 }
 
-.projects-details-text {
+.projects-details-text-private {
   font-size: 23px;
   font-family: "Playfair Display", serif;
 }
 
-.details-dual-image-container {
+.details-dual-image-container-private {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 1rem;
   padding: 2rem;
+}
+
+.details-projects-large-image-private {
+  max-width: 900px;
+  max-height: 500px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 /* Default styles (mobile-first approach) */
@@ -234,6 +247,20 @@
     width: 308px;
     height: auto;
   }
+
+  .details-dual-image-container-private {
+    padding: 0rem;
+  }
+
+  .project-details-modal-title-private {
+    font-size: 25px;
+    margin-top: 1rem;
+  }
+
+  .projects-details-text-private {
+    font-size: 18px;
+    font-family: "Playfair Display", serif;
+  }
 }
 
 /* Standard small phones (<= 360px) */
@@ -267,9 +294,18 @@
     margin-left: 1rem;
   }
 
-  .previous-event-large-image-settings {
-    width: 347px;
-    height: auto;
+  .details-dual-image-container-private {
+    padding: 0rem;
+  }
+
+  .project-details-modal-title-private {
+    font-size: 25px;
+    margin-top: 1rem;
+  }
+
+  .projects-details-text-private {
+    font-size: 20px;
+    font-family: "Playfair Display", serif;
   }
 }
 
@@ -308,6 +344,20 @@
     width: 362px;
     height: auto;
   }
+
+  .details-dual-image-container-private {
+    padding: 0rem;
+  }
+
+  .project-details-modal-title-private {
+    font-size: 25px;
+    margin-top: 1rem;
+  }
+
+  .projects-details-text-private {
+    font-size: 22px;
+    font-family: "Playfair Display", serif;
+  }
 }
 
 /* iPhone 14, 15 (standard model) */
@@ -344,6 +394,20 @@
   .previous-event-large-image-settings {
     width: 377px;
     height: auto;
+  }
+
+  .details-dual-image-container-private {
+    padding: 0rem;
+  }
+
+  .project-details-modal-title-private {
+    font-size: 31px;
+    margin-top: 1rem;
+  }
+
+  .projects-details-text-private {
+    font-size: 24px;
+    font-family: "Playfair Display", serif;
   }
 }
 
@@ -382,6 +446,20 @@
     width: 417px;
     height: auto;
   }
+
+  .details-dual-image-container-private {
+    padding: 0rem;
+  }
+
+  .project-details-modal-title-private {
+    font-size: 31px;
+    margin-top: 1rem;
+  }
+
+  .projects-details-text-private {
+    font-size: 24px;
+    font-family: "Playfair Display", serif;
+  }
 }
 
 /* Larger phones and phablets (>= 480px) */
@@ -418,6 +496,20 @@
   .previous-event-large-image-settings {
     width: 467px;
     height: auto;
+  }
+
+  .details-dual-image-container-private {
+    padding: 0rem;
+  }
+
+  .project-details-modal-title-private {
+    font-size: 31px;
+    margin-top: 1rem;
+  }
+
+  .projects-details-text-private {
+    font-size: 24px;
+    font-family: "Playfair Display", serif;
   }
 }
 
@@ -469,6 +561,20 @@
   .previous-event-large-image-settings {
     width: 590px;
     height: auto;
+  }
+
+  .details-dual-image-container-private {
+    padding: 0rem;
+  }
+
+  .project-details-modal-title-private {
+    font-size: 31px;
+    margin-top: 1rem;
+  }
+
+  .projects-details-text-private {
+    font-size: 24px;
+    font-family: "Playfair Display", serif;
   }
 }
 
@@ -532,6 +638,20 @@
     margin-left: 8.4rem;
     margin-right: 8.4rem;
   }
+
+  .details-dual-image-container-private {
+    padding: 0rem;
+  }
+
+  .project-details-modal-title-private {
+    font-size: 31px;
+    margin-top: 1rem;
+  }
+
+  .projects-details-text-private {
+    font-size: 24px;
+    font-family: "Playfair Display", serif;
+  }
 }
 
 /* Medium laptops (>= 1024px) */
@@ -569,6 +689,19 @@
     margin-right: 12rem;
     margin-bottom: 4rem;
   }
+  .details-dual-image-container-private {
+    padding: 0rem;
+  }
+
+  .project-details-modal-title-private {
+    font-size: 31px;
+    margin-top: 1rem;
+  }
+
+  .projects-details-text-private {
+    font-size: 24px;
+    font-family: "Playfair Display", serif;
+  }
 }
 
 /* Large laptops and desktops (>= 1280px) */
@@ -599,6 +732,10 @@
     height: auto;
     margin-top: 2rem;
   }
+
+  .details-projects-large-image-private {
+    max-width: 1091px;
+  }
 }
 
 /* Extra-large desktops (>= 1440px) */
@@ -612,6 +749,10 @@
     margin-right: 18.8rem;
     margin-bottom: 4rem;
   }
+
+  .details-projects-large-image-private {
+    max-width: 1236px;
+  }
 }
 
 /* Ultra-wide screens (>= 1600px) */
@@ -624,6 +765,11 @@
     margin-left: 23.8rem;
     margin-right: 23.8rem;
     margin-bottom: 4rem;
+  }
+
+  .details-projects-large-image-private {
+    max-width: 1379px;
+    max-height: 624px;
   }
 }
 
@@ -641,6 +787,11 @@
     height: auto;
     margin-top: 2rem;
   }
+
+  .details-projects-large-image-private {
+    max-width: 1657px;
+    max-height: 755px;
+  }
 }
 
 /* 4K screens (>= 1920px) */
@@ -650,6 +801,16 @@
     margin-left: 51.8rem;
     margin-right: 51.8rem;
     margin-bottom: 4rem;
+  }
+
+  .project-details-modal-title-private {
+    font-size: 70px;
+    margin-top: 1rem;
+  }
+
+  .projects-details-text-private {
+    font-size: 39px;
+    font-family: "Playfair Display", serif;
   }
 }
 
