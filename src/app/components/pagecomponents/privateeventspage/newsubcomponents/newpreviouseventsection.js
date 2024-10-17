@@ -98,8 +98,7 @@ export default function NewPreviousEventSection() {
                   {event.eventtitle}
                 </div>
                 <div className="new-previous-events-card-date">
-                  {formatDate(event.eventdate)}{" "}
-                  {/* Display the formatted date */}
+                  {formatDate(event.eventdate)}
                 </div>
                 <div className="new-previous-events-card-shortdescription">
                   {event.shortdescription}
@@ -118,30 +117,35 @@ export default function NewPreviousEventSection() {
 
       {/* Ant Design Modal to display event details */}
       <Modal
-        title={"previous events details"} // Show event title
+        title={"Previous Event Details"} // Show event title
         open={isModalVisible} // Control modal visibility
         onCancel={handleModalClose} // Handle modal close
         footer={null} // No footer buttons
         centered // Center the modal
         width="90%" // Set modal width to 90%
       >
-        <h2 className="project-details-modal-title">
-          {selectedEvent?.eventtitle}
-        </h2>
-
-        <p className="projects-details-text">
-          {/* <div className="details-dual-image-container">
-            <Image
-              src={selectedProject?.detailsimagetwo}
-              alt={selectedProject?.detailsimagetwo}
-              width={650}
-              height={435}
-              className="details-projects-large-image"
-            />
-          </div> */}
-          <strong>Project Details:</strong>
-          {selectedEvent?.details}
-        </p>
+        {selectedEvent && (
+          <>
+            <div className="details-dual-image-container">
+              <Image
+                src={selectedEvent.imagelink}
+                alt={selectedEvent.imagelink}
+                width={650}
+                height={435}
+                className="details-projects-large-image"
+              />
+            </div>
+            <h2 className="project-details-modal-title">
+              {selectedEvent.eventtitle}
+            </h2>
+            <p className="projects-details-text">
+              <strong>Dated: </strong> {formatDate(selectedEvent.eventdate)}
+            </p>
+            <p className="projects-details-text">
+              <strong>Event Details: </strong> {selectedEvent.details}
+            </p>
+          </>
+        )}
         <div style={{ textAlign: "right", marginTop: "20px" }}>
           <Button type="primary" onClick={handleModalClose}>
             Close

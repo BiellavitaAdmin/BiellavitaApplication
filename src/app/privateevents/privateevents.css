@@ -188,6 +188,15 @@
   font-family: "Playfair Display", serif;
 }
 
+.details-dual-image-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
 /* Default styles (mobile-first approach) */
 
 /* Small phones (<= 320px) */
