@@ -21,6 +21,13 @@ export default function NewUpcomingEventsSection() {
     setIsModalVisible(false);
   };
 
+  const formatDate = (dateString) => {
+    const [day, month, year] = dateString.split("-").map(Number);
+    const eventDate = new Date(year, month - 1, day); // Convert to a valid Date object
+    const options = { day: "2-digit", month: "long", year: "numeric" }; // Format: 01/Month full name/yyyy
+    return eventDate.toLocaleDateString("en-US", options);
+  };
+
   useEffect(() => {
     const fetchEvents = async () => {
       try {
@@ -37,11 +44,6 @@ export default function NewUpcomingEventsSection() {
             const [day, month, year] = event.eventdate.split("-").map(Number);
             eventDate = new Date(year, month - 1, day); // Month is 0-indexed
           }
-
-          // Log parsed event date for debugging
-          console.log(
-            `Event: ${event.eventdate}, Parsed Event Date: ${eventDate}, Current Date: ${today}`
-          );
 
           return eventDate >= today; // Check if eventDate is today or in the future
         });
@@ -87,8 +89,9 @@ export default function NewUpcomingEventsSection() {
               <h2 className="new-upcoming-events-larger-heading">
                 {event.eventtitle}
               </h2>
-              <h2 className="new-upcoming-events-larger-heading">
-                ({event.eventdate})
+              <h2 className="new-upcoming-events-shortdescription">
+                {formatDate(event.eventdate)}{" "}
+                {/* Display date in the new format */}
               </h2>
             </div>
             <div className="new-upcoming-events-shortdescription">

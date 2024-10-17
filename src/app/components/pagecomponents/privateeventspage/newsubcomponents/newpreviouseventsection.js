@@ -7,39 +7,57 @@ export default function NewPreviousEventSection() {
   const [selectedEvent, setSelectedEvent] = useState(null); // To hold the event data for the modal
   const [isModalVisible, setIsModalVisible] = useState(false); // Modal visibility state
 
+  // Function to format the date in "01/Month Full Name/YYYY" format
+  const formatDate = (dateString) => {
+    let eventDate;
+    if (dateString.includes("/")) {
+      const [month, day, year] = dateString.split("/").map(Number);
+      eventDate = new Date(year, month - 1, day);
+    } else if (dateString.includes("-")) {
+      const [day, month, year] = dateString.split("-").map(Number);
+      eventDate = new Date(year, month - 1, day);
+    }
+
+    const options = { day: "2-digit", month: "long", year: "numeric" };
+    return eventDate.toLocaleDateString("en-US", options); // Format the date as "01/Month Full Name/YYYY"
+  };
+
   useEffect(() => {
     const fetchEvents = async () => {
       const response = await fetch("/api/events");
       const data = await response.json();
-      console.log(data);
 
-      // Get the current date
       const currentDate = new Date();
 
       // Filter events to only include those with past dates
       const filteredEvents = data.filter((event) => {
         let eventDate;
 
-        // Normalize event date
         if (event.eventdate.includes("/")) {
-          // Handle MM/DD/YYYY format
           const [month, day, year] = event.eventdate.split("/").map(Number);
-          eventDate = new Date(year, month - 1, day); // Month is 0-indexed
+          eventDate = new Date(year, month - 1, day);
         } else if (event.eventdate.includes("-")) {
-          // Handle DD-MM-YYYY format
           const [day, month, year] = event.eventdate.split("-").map(Number);
-          eventDate = new Date(year, month - 1, day); // Month is 0-indexed
+          eventDate = new Date(year, month - 1, day);
         }
 
-        // Check if eventDate is valid and in the past
         return (
           eventDate instanceof Date &&
           !isNaN(eventDate) &&
           eventDate < currentDate
         );
       });
-      console.log("filtered data....", filteredEvents);
-      setPreviousEvents(filteredEvents);
+
+      // Sort events by date, most recent first
+      const sortedEvents = filteredEvents.sort((a, b) => {
+        const aDate = new Date(a.eventdate.split("-").reverse().join("-"));
+        const bDate = new Date(b.eventdate.split("-").reverse().join("-"));
+        return bDate - aDate; // Sort descending by date
+      });
+
+      // Get the last three previous events
+      const lastThreeEvents = sortedEvents.slice(0, 3);
+      setPreviousEvents(lastThreeEvents);
     };
 
     fetchEvents();
@@ -78,6 +96,10 @@ export default function NewPreviousEventSection() {
                 </div>
                 <div className="new-previous-events-card-title">
                   {event.eventtitle}
+                </div>
+                <div className="new-previous-events-card-date">
+                  {formatDate(event.eventdate)}{" "}
+                  {/* Display the formatted date */}
                 </div>
                 <div className="new-previous-events-card-shortdescription">
                   {event.shortdescription}

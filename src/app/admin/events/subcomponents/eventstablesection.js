@@ -1,11 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Table, Button, Modal, Form, Input, DatePicker } from "antd";
+import { Table, Button, Modal, Form, Input, DatePicker, Select } from "antd";
 import Image from "next/image";
 import dayjs from "dayjs";
 
-export default function EventsableSection() {
+export default function EventsTableSection() {
   const [events, setEvents] = useState([]);
   const [filteredEvents, setFilteredEvents] = useState([]);
   const [selectedEvent, setSelectedEvent] = useState(null);
@@ -13,18 +13,227 @@ export default function EventsableSection() {
   const [isEditModalVisible, setIsEditModalVisible] = useState(false);
   const [searchText, setSearchText] = useState("");
   const [form] = Form.useForm();
+  const [members, setMembers] = useState([]);
 
+  const countries = [
+    "Afghanistan",
+    "Albania",
+    "Algeria",
+    "Andorra",
+    "Angola",
+    "Antigua and Barbuda",
+    "Argentina",
+    "Armenia",
+    "Australia",
+    "Austria",
+    "Azerbaijan",
+    "Bahamas",
+    "Bahrain",
+    "Bangladesh",
+    "Barbados",
+    "Belarus",
+    "Belgium",
+    "Belize",
+    "Benin",
+    "Bhutan",
+    "Bolivia",
+    "Bosnia and Herzegovina",
+    "Botswana",
+    "Brazil",
+    "Brunei",
+    "Bulgaria",
+    "Burkina Faso",
+    "Burundi",
+    "Cabo Verde",
+    "Cambodia",
+    "Cameroon",
+    "Canada",
+    "Central African Republic",
+    "Chad",
+    "Chile",
+    "China",
+    "Colombia",
+    "Comoros",
+    "Congo",
+    "Costa Rica",
+    "Croatia",
+    "Cuba",
+    "Cyprus",
+    "Czech Republic",
+    "Democratic Republic of the Congo",
+    "Denmark",
+    "Djibouti",
+    "Dominica",
+    "Dominican Republic",
+    "Ecuador",
+    "Egypt",
+    "El Salvador",
+    "Equatorial Guinea",
+    "Eritrea",
+    "Estonia",
+    "Eswatini",
+    "Ethiopia",
+    "Fiji",
+    "Finland",
+    "France",
+    "Gabon",
+    "Gambia",
+    "Georgia",
+    "Germany",
+    "Ghana",
+    "Greece",
+    "Grenada",
+    "Guatemala",
+    "Guinea",
+    "Guinea-Bissau",
+    "Guyana",
+    "Haiti",
+    "Honduras",
+    "Hungary",
+    "Iceland",
+    "India",
+    "Indonesia",
+    "Iran",
+    "Iraq",
+    "Ireland",
+    "Israel",
+    "Italy",
+    "Jamaica",
+    "Japan",
+    "Jordan",
+    "Kazakhstan",
+    "Kenya",
+    "Kiribati",
+    "Kuwait",
+    "Kyrgyzstan",
+    "Laos",
+    "Latvia",
+    "Lebanon",
+    "Lesotho",
+    "Liberia",
+    "Libya",
+    "Liechtenstein",
+    "Lithuania",
+    "Luxembourg",
+    "Madagascar",
+    "Malawi",
+    "Malaysia",
+    "Maldives",
+    "Mali",
+    "Malta",
+    "Marshall Islands",
+    "Mauritania",
+    "Mauritius",
+    "Mexico",
+    "Micronesia",
+    "Moldova",
+    "Monaco",
+    "Mongolia",
+    "Montenegro",
+    "Morocco",
+    "Mozambique",
+    "Myanmar",
+    "Namibia",
+    "Nauru",
+    "Nepal",
+    "Netherlands",
+    "New Zealand",
+    "Nicaragua",
+    "Niger",
+    "Nigeria",
+    "North Korea",
+    "North Macedonia",
+    "Norway",
+    "Oman",
+    "Pakistan",
+    "Palau",
+    "Panama",
+    "Papua New Guinea",
+    "Paraguay",
+    "Peru",
+    "Philippines",
+    "Poland",
+    "Portugal",
+    "Qatar",
+    "Romania",
+    "Russia",
+    "Rwanda",
+    "Saint Kitts and Nevis",
+    "Saint Lucia",
+    "Saint Vincent and the Grenadines",
+    "Samoa",
+    "San Marino",
+    "Sao Tome and Principe",
+    "Saudi Arabia",
+    "Senegal",
+    "Serbia",
+    "Seychelles",
+    "Sierra Leone",
+    "Singapore",
+    "Slovakia",
+    "Slovenia",
+    "Solomon Islands",
+    "Somalia",
+    "South Africa",
+    "South Korea",
+    "South Sudan",
+    "Spain",
+    "Sri Lanka",
+    "Sudan",
+    "Suriname",
+    "Sweden",
+    "Switzerland",
+    "Syria",
+    "Taiwan",
+    "Tajikistan",
+    "Tanzania",
+    "Thailand",
+    "Timor-Leste",
+    "Togo",
+    "Tonga",
+    "Trinidad and Tobago",
+    "Tunisia",
+    "Turkey",
+    "Turkmenistan",
+    "Tuvalu",
+    "Uganda",
+    "Ukraine",
+    "United Arab Emirates",
+    "United Kingdom",
+    "United States",
+    "Uruguay",
+    "Uzbekistan",
+    "Vanuatu",
+    "Vatican City",
+    "Venezuela",
+    "Vietnam",
+    "Yemen",
+    "Zambia",
+    "Zimbabwe",
+  ];
+
+  // Fetch events and members
   useEffect(() => {
     const fetchEvents = async () => {
-      const response = await fetch("/api/events", {
-        method: "GET",
-        mode: "no-cors", // This bypasses CORS, but the response will be opaque
-      });
+      const response = await fetch("/api/events");
       const data = await response.json();
       setEvents(data);
-      setFilteredEvents(data); // Set filtered members initially
+      setFilteredEvents(data);
     };
+
+    const fetchMembers = async () => {
+      const response = await fetch("/api/members");
+      const data = await response.json();
+      setMembers(
+        data.map((member) => ({
+          value: member.lastname,
+          label: member.lastname,
+        }))
+      );
+    };
+
     fetchEvents();
+    fetchMembers();
   }, []);
 
   const handleSearch = (e) => {
@@ -49,12 +258,15 @@ export default function EventsableSection() {
     setIsModalVisible(false);
   };
 
-  // In your showEditModal function
+  // Edit modal functionality
   const showEditModal = (event) => {
     setSelectedEvent(event);
     form.setFieldsValue({
       ...event,
-      date: event.eventdate ? dayjs(event.eventdate, "DD-MM-YYYY") : null, // Set the date properly
+      date: event.eventdate ? dayjs(event.eventdate, "DD-MM-YYYY") : null,
+      attendees: event.attendees || [], // Pre-fill attendees in the tags field
+      country: event.country || "", // Pre-fill country
+      city: event.city || "", // Pre-fill city
     });
     setIsEditModalVisible(true);
   };
@@ -78,7 +290,7 @@ export default function EventsableSection() {
         body: JSON.stringify({
           id: selectedEvent._id,
           ...values,
-          eventdate: formattedDate, // Save the formatted date
+          eventdate: formattedDate,
         }),
       });
 
@@ -104,30 +316,30 @@ export default function EventsableSection() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ id }), // Include the ID
+      body: JSON.stringify({ id }),
     });
     // Refresh events
     const response = await fetch("/api/events");
     const data = await response.json();
     setEvents(data);
-    setFilteredEvents(data); // Refresh filtered events too
+    setFilteredEvents(data);
   };
 
   const columns = [
     {
-      title: "EventTitle",
+      title: "Event Title",
       dataIndex: "eventtitle",
       key: "eventtitle",
       width: 350,
     },
     {
-      title: "ShortDescription",
+      title: "Short Description",
       dataIndex: "shortdescription",
       key: "shortdescription",
       width: 650,
     },
     {
-      title: "EventDate",
+      title: "Event Date",
       dataIndex: "eventdate",
       key: "eventdate",
       width: 250,
@@ -207,32 +419,56 @@ export default function EventsableSection() {
           dataSource={filteredEvents}
           columns={columns}
           rowKey="_id"
-          pagination={{ pageSize: 8 }} // Limit to 8 rows per page
+          pagination={{ pageSize: 8 }}
         />
       )}
 
+      {/* View Modal */}
       <Modal
-        title="Projects Details"
+        title="Event Details"
         visible={isModalVisible}
         onOk={handleOk}
         onCancel={handleCancel}
+        width="60%"
       >
         {selectedEvent && (
           <div>
-            {Object.entries(selectedEvent).map(([key, value]) => (
-              <p key={key}>
-                <strong>{key}:</strong> {value}
-              </p>
-            ))}
+            <p>
+              <strong>Event Title:</strong> {selectedEvent.eventtitle}
+            </p>
+            <p>
+              <strong>Short Description:</strong>{" "}
+              {selectedEvent.shortdescription}
+            </p>
+            <p>
+              <strong>Event Date:</strong> {selectedEvent.eventdate}
+            </p>
+            <p>
+              <strong>Country:</strong> {selectedEvent.country}
+            </p>
+            <p>
+              <strong>City:</strong> {selectedEvent.city}
+            </p>
+            <p>
+              <strong>Details:</strong> {selectedEvent.details}
+            </p>
+            <p>
+              <strong>Attendees:</strong>{" "}
+              {selectedEvent.attendees
+                ? selectedEvent.attendees.join(", ")
+                : "None"}
+            </p>
           </div>
         )}
       </Modal>
 
+      {/* Edit Modal */}
       <Modal
         title="Edit Event"
         visible={isEditModalVisible}
         onOk={handleEditOk}
         onCancel={handleEditCancel}
+        width="60%"
       >
         <Form form={form} layout="vertical">
           {/* Event Title */}
@@ -335,6 +571,44 @@ export default function EventsableSection() {
             ]}
           >
             <Input.TextArea rows={12} />
+          </Form.Item>
+
+          {/* Country */}
+          <Form.Item name="country" label="Country">
+            <Select
+              showSearch
+              placeholder="Select a country"
+              options={countries.map((country) => ({
+                value: country,
+                label: country,
+              }))}
+              defaultValue={selectedEvent?.country || ""}
+            />
+          </Form.Item>
+
+          {/* City */}
+          <Form.Item
+            name="city"
+            label="City"
+            rules={[
+              {
+                required: true,
+                message: "Please input the city",
+              },
+            ]}
+          >
+            <Input />
+          </Form.Item>
+
+          {/* Attendees */}
+          <Form.Item name="attendees" label="Attendees">
+            <Select
+              mode="tags"
+              style={{ width: "100%" }}
+              placeholder="Select or add attendees"
+              defaultValue={selectedEvent?.attendees || []} // Show existing attendees
+              options={members} // Members fetched from /api/members
+            />
           </Form.Item>
         </Form>
       </Modal>
