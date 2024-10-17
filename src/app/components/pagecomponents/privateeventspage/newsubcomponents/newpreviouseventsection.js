@@ -118,15 +118,30 @@ export default function NewPreviousEventSection() {
 
       {/* Ant Design Modal to display event details */}
       <Modal
-        title={selectedEvent?.eventtitle} // Show event title
+        title={"previous events details"} // Show event title
         open={isModalVisible} // Control modal visibility
         onCancel={handleModalClose} // Handle modal close
         footer={null} // No footer buttons
         centered // Center the modal
         width="90%" // Set modal width to 90%
       >
-        <p>{selectedEvent?.details}</p> {/* Display event details */}
-        {/* Close Button */}
+        <h2 className="project-details-modal-title">
+          {selectedEvent?.eventtitle}
+        </h2>
+
+        <p className="projects-details-text">
+          {/* <div className="details-dual-image-container">
+            <Image
+              src={selectedProject?.detailsimagetwo}
+              alt={selectedProject?.detailsimagetwo}
+              width={650}
+              height={435}
+              className="details-projects-large-image"
+            />
+          </div> */}
+          <strong>Project Details:</strong>
+          {selectedEvent?.details}
+        </p>
         <div style={{ textAlign: "right", marginTop: "20px" }}>
           <Button type="primary" onClick={handleModalClose}>
             Close

@@ -109,7 +109,8 @@ export default function NewUpcomingEventsSection() {
 
       {/* Ant Design Modal */}
       <Modal
-        title={selectedEvent ? selectedEvent.eventtitle : "Event Details"} // Display selected event title
+        // title={selectedEvent ? selectedEvent.eventtitle : "Event Details"} // Display selected event title
+        title={"Event Details"} // Display selected event title
         open={isModalVisible}
         onOk={handleOk}
         onCancel={handleCancel}
@@ -119,8 +120,23 @@ export default function NewUpcomingEventsSection() {
       >
         {selectedEvent && (
           <>
-            <h2>{selectedEvent.eventtitle}</h2>
-            <p>{selectedEvent.details}</p> {/* Display event details */}
+            <h2 className="project-details-modal-title">
+              {selectedEvent.eventtitle}
+            </h2>
+
+            <p className="projects-details-text">
+              {/* <div className="details-dual-image-container">
+            <Image
+              src={selectedProject?.detailsimagetwo}
+              alt={selectedProject?.detailsimagetwo}
+              width={650}
+              height={435}
+              className="details-projects-large-image"
+            />
+          </div> */}
+              <strong>Project Details:</strong>
+              {selectedEvent.details}
+            </p>
           </>
         )}
         <div style={{ textAlign: "right" }}>

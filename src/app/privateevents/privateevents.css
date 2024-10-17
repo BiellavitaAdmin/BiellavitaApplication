@@ -177,6 +177,17 @@
   padding: 1rem; /* Add padding for better spacing */
 }
 
+.project-details-modal-title {
+  font-size: 33px;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+}
+
+.projects-details-text {
+  font-size: 23px;
+  font-family: "Playfair Display", serif;
+}
+
 /* Default styles (mobile-first approach) */
 
 /* Small phones (<= 320px) */
