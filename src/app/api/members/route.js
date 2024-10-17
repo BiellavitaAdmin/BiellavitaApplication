@@ -81,11 +81,12 @@ export async function POST(request) {
     // Email HTML template with a change password link
     const emailTemplate = `
       <div style="font-family: Arial, sans-serif; color: #333;">
-        <h2 style="color: #4CAF50;">Welcome to Our Platform, ${firstname}!</h2>
+        <h2 style="color: #4CAF50;">Welcome to Biellavita, ${firstname}!</h2>
         <p>Dear ${firstname} ${lastname},</p>
-        <p>We're excited to have you on board! Below are your login details:</p>
-        <p><strong>Email:</strong> ${email}</p>
+        <p>Your memebrship is activated We're excited to have you on board! Below are your login details:</p>
+        <p><strong>Username:</strong> ${email}</p>
         <p><strong>Temporary Password:</strong> ${defaultPassword}</p>
+         <p>Given below is link to change password page please click it and change your password</p>
         <p>Please <a href="https://yourwebsite.com/change-password?email=${email}" style="color: #4CAF50;">click here</a> to change your password.</p>
         <br>
         <p>Best regards,<br>Your Company Team</p>
