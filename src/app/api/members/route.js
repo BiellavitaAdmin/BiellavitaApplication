@@ -80,18 +80,239 @@ export async function POST(request) {
 
     // Email HTML template with a change password link
     const emailTemplate = `
-      <div style="font-family: Arial, sans-serif; color: #333;">
-        <h2 style="color: #4CAF50;">Welcome to Biellavita, ${firstname}!</h2>
-        <p>Dear ${firstname} ${lastname},</p>
-        <p>Your memebrship is activated We're excited to have you on board! Below are your login details:</p>
-        <p><strong>Username:</strong> ${email}</p>
-        <p><strong>Temporary Password:</strong> ${defaultPassword}</p>
-         <p>Given below is link to change password page please click it and change your password</p>
-        <p>Please <a href="https://yourwebsite.com/change-password?email=${email}" style="color: #4CAF50;">click here</a> to change your password.</p>
-        <br>
-        <p>Best regards,<br>Your Company Team</p>
-      </div>
-    `;
+    <div
+   style="
+     width: 100%;
+     background-color: #effaf6;
+     padding: 20px;
+   "
+ >
+   <!-- Template Content Container -->
+   <table
+     align="center"
+     cellpadding="0"
+     cellspacing="0"
+     width="100%"
+     style="
+       max-width: 600px;
+       background-color: white;
+       border-collapse: collapse;
+       border-top-left-radius: 50px;
+       border-top-right-radius: 50px;
+       border-bottom-left-radius: 50px;
+       border-bottom-right-radius: 50px;
+     "
+   >
+     <!-- Template Header -->
+     <tr>
+       <td style="padding: 2rem;">
+         <!-- Header Table -->
+         <table width="100%">
+           <tr>
+             <!-- Logo on the Left -->
+             <td style="width: 50%; vertical-align: top;">
+               <a
+                 href="https://yourcompanywebsite.com"
+                 style="text-decoration: none;"
+               >
+                 <img
+                   src="https://i.imgur.com/5sQQ2bY.png"
+                   alt="Company Logo"
+                   style="
+                     width: 90px;
+                     height: auto;
+                     display: block;
+                   "
+                 />
+               </a>
+             </td>
+             <!-- Social Icons, Follow Us, and Biellavita on the Right -->
+             <td style="text-align: right; width: 50%; vertical-align: top;">
+               <!-- Social Icons Container -->
+               <table style="display: inline-block;">
+                 <tr>
+                   <td style="padding: 0 5px;">
+                     <img
+                       src="https://i.imgur.com/BxIK1ya.png"
+                       alt="Social Icon"
+                       style="width: 20px; height: 20px;"
+                     />
+                   </td>
+                   <td style="padding: 0 5px;">
+                     <img
+                       src="https://i.imgur.com/px6RVRc.png"
+                       alt="Social Icon"
+                       style="width: 23px; height: 23px;"
+                     />
+                   </td>
+                 </tr>
+               </table>
+               <!-- Follow Us and Biellavita -->
+               <p
+                 style="
+                   font-size: 12px;
+                   color: #333;
+                   font-weight: 700;
+                   margin-top: 5px;
+                   text-align: right;
+                 "
+               >
+                 Follow Us
+               </p>
+               <strong
+                 style="
+                   font-family: 'Playfair Display', serif;
+                   font-style: italic;
+                   font-size: 25px;
+                   text-align: right;
+                   display: block;
+                 "
+               >
+                 Biellavita
+               </strong>
+             </td>
+           </tr>
+         </table>
+       </td>
+     </tr>
+ 
+     <!-- Template Content -->
+     <tr>
+       <td
+         style="
+           background-color: #f5f3f3;
+           padding: 20px;
+           border-bottom-left-radius: 50px;
+           border-bottom-right-radius: 50px;
+         "
+       >
+         <img
+           src="https://i.imgur.com/aASE61O.png"
+           alt="Padlock Icon"
+           style="
+             width: 70px;
+             height: 70px;
+             display: block;
+             margin: 0 auto 20px auto;
+           "
+         />
+         <p
+           style="
+             color: black;
+             font-family: 'Playfair Display', serif;
+             font-style: italic;
+             font-weight: 700;
+             font-size: 30px;
+             text-align: center;
+           "
+         >
+           Welcome to Biellavita,
+         </p>
+         <p
+           style="
+             color: black;
+             font-family: 'Playfair Display', serif;
+             font-style: italic;
+             font-size: 25px;
+             text-align: center;
+           "
+         >
+           Your Membership for Biellavita has been activated and we have created
+           a secure password for you.
+         </p>
+         <br />
+         <p
+           style="
+             color: black;
+             font-family: 'Playfair Display', serif;
+             font-style: italic;
+             font-size: 25px;
+             text-align: center;
+           "
+         >
+           Please find Biellavita password for your account:
+         </p>
+         <br />
+         <p
+           style="
+             color: black;
+             font-family: 'Helvetica', sans-serif;
+             font-weight: 700;
+             font-size: 39px;
+             text-align: center;
+           "
+         >
+           defaultPassword123
+         </p>
+         <br />
+         <p
+           style="
+             color: black;
+             font-family: 'Playfair Display', serif;
+             font-style: italic;
+             font-size: 25px;
+             text-align: center;
+           "
+         >
+           Use the above password with your email id to
+           <span
+             style="
+               font-family: 'Playfair Display', serif;
+               font-style: italic;
+               font-weight: 700;
+               font-size: 25px;
+             "
+             >Change Password</span
+           >
+           before you log into your Biellavita account.
+         </p>
+         <br />
+         <p
+           style="
+             color: black;
+             font-family: 'Playfair Display', serif;
+             font-style: italic;
+             font-size: 25px;
+             text-align: center;
+           "
+         >
+           If you have any questions, please feel free to contact us at
+           <span
+             style="
+               font-family: 'Playfair Display', serif;
+               font-style: italic;
+               font-weight: 600;
+               font-size: 25px;
+             "
+             >help@Biellavita.com</span
+           >
+         </p>
+         <br />
+         <p
+           style="
+             color: black;
+             font-family: 'Playfair Display', serif;
+             font-style: italic;
+             font-size: 25px;
+             text-align: center;
+           "
+         >
+           By using the Biellavita account, you agree to our
+           <span
+             style="
+               font-family: 'Playfair Display', serif;
+               font-weight: 600;
+               font-size: 25px;
+             "
+             >terms & conditions & privacy policy</span
+           >.
+         </p>
+       </td>
+     </tr>
+   </table>
+ </div>
+ 
+ `;
 
     // Send the email
     const mailOptions = {

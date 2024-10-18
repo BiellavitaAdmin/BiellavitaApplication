@@ -333,7 +333,7 @@ export default function AddMembers() {
       const salt = await bcrypt.genSalt(10);
       const hashedPassword = await bcrypt.hash(defaultPassword, salt);
 
-      console.log(hashedPassword);
+      // console.log(hashedPassword);
 
       // Create a new form data object with the hashed default password
       const updatedFormData = {
