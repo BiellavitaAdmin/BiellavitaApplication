@@ -125,7 +125,7 @@
   .main-heading-homepage {
     font-size: var(--font-size-new-xl-large-heading);
     font-weight: var(--font-weight-super-heading);
-    color: #a31700;
+    color: var(--Website-red-color);
     z-index: 1; /* Above the overlay */
   }
 }
@@ -135,7 +135,7 @@
   .main-heading-homepage {
     font-size: var(--font-size-new-xl-large-heading);
     font-weight: var(--font-weight-super-heading);
-    color: #a31700;
+    color: var(--Website-red-color);
     z-index: 1; /* Above the overlay */
   }
 }
@@ -145,7 +145,7 @@
   .main-heading-homepage {
     font-size: var(--font-size-new-xl-large-heading);
     font-weight: var(--font-weight-super-heading);
-    color: #a31700;
+    color: var(--Website-red-color);
     z-index: 1; /* Above the overlay */
   }
 }

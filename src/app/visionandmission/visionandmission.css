@@ -25,7 +25,8 @@
     -50%,
     -50%
   ); /* Center both horizontally and vertically */
-  color: var(--Website-black-color); /* Adjust color for readability */
+  /* color: var(--Website-black-color);  */
+  color: var(--Website-red-color);
   font-size: var(--font-size-menu-heading);
   font-weight: var(--font-weight-super-heading);
   text-align: center; /* Center text alignment */

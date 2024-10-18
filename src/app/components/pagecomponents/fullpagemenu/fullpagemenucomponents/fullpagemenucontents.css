@@ -37,7 +37,7 @@
 
 .menu-content-link:hover,
 .menu-content-link:focus {
-  color: rgb(167, 167, 167);
+  color: var(--Website-red-color);
   transform: translateX(20px);
 }
 

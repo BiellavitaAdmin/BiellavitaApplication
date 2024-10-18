@@ -86,7 +86,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: var(--Website-black-color);
+  /* color: var(--Website-black-color); */
+  color: var(--Website-red-color);
   font-size: var(--font-size-menu-heading);
   font-weight: var(--font-weight-super-heading);
   text-align: center;
