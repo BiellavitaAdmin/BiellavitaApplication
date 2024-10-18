@@ -38,7 +38,12 @@ export default function RootLayout({ children }) {
   }, []);
 
   // Redirect to login if trying to access restricted pages without being logged in
-  const restrictedPages = ["/privateevents", "/projects", "/partnership"];
+  const restrictedPages = [
+    "/privateevents",
+    "/projects",
+    "/partnership",
+    "/changepassword",
+  ];
   useEffect(() => {
     if (!loading && restrictedPages.includes(pathname) && !isLoggedIn) {
       router.push("/login");
@@ -54,6 +59,7 @@ export default function RootLayout({ children }) {
     "/membership",
     "/projects",
     "/privateevents",
+    "/changepassword",
   ];
 
   const isAdminRoute = pathname.startsWith("/admin");
