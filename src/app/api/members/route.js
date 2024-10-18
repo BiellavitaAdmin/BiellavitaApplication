@@ -262,9 +262,18 @@ export async function POST(request) {
                font-weight: 700;
                font-size: 25px;
              "
-             >Change Password</span
+             >login</span
            >
-           before you log into your Biellavita account.
+           and then 
+            <span
+             style="
+               font-family: 'Playfair Display', serif;
+               font-style: italic;
+               font-weight: 700;
+               font-size: 25px;
+             "
+             >Change Password</span
+           > from settings.
          </p>
          <br />
          <p
