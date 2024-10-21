@@ -28,9 +28,9 @@ export default function CardTwo() {
             proactive role within the organization and contribute directly to
             its initiatives and activities.
           </p>
-          <div className="card-button-container">
+          {/* <div className="card-button-container">
             <button className="card-button">Apply now</button>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

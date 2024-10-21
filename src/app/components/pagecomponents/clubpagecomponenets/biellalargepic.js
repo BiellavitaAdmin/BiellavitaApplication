@@ -11,10 +11,12 @@ export default function BiellaLargePic() {
           className="club-page-large-image-settings"
         />
       </div>
-      <h2 className="clubpage-heading">The source of the idea</h2>
-      <p className="page-content-text">
+      <h2 className="clubpage-heading">
+        The source of the idea is the inspirational city of Biella.
+      </h2>
+      {/* <p className="page-content-text">
         … is the inspirational city of Biella.
-      </p>
+      </p> */}
     </>
   );
 }

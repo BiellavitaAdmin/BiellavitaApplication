@@ -7,7 +7,7 @@ export default function ListNonActiveBenefits() {
           <div className="bullet-container">
             {" "}
             <Image
-              src="/listbullet.png" // The path relative to the "public" folder
+              src="/redbiella.png" // The path relative to the "public" folder
               alt="My Awesome Image"
               width={25} // Width of the image
               height={25} // Height of the image
@@ -21,7 +21,7 @@ export default function ListNonActiveBenefits() {
           <div className="bullet-container">
             {" "}
             <Image
-              src="/listbullet.png" // The path relative to the "public" folder
+              src="/redbiella.png" // The path relative to the "public" folder
               alt="My Awesome Image"
               width={25} // Width of the image
               height={25} // Height of the image
@@ -35,7 +35,7 @@ export default function ListNonActiveBenefits() {
           <div className="bullet-container">
             {" "}
             <Image
-              src="/listbullet.png" // The path relative to the "public" folder
+              src="/redbiella.png" // The path relative to the "public" folder
               alt="My Awesome Image"
               width={25} // Width of the image
               height={25} // Height of the image
@@ -49,7 +49,7 @@ export default function ListNonActiveBenefits() {
           <div className="bullet-container">
             {" "}
             <Image
-              src="/listbullet.png" // The path relative to the "public" folder
+              src="/redbiella.png" // The path relative to the "public" folder
               alt="My Awesome Image"
               width={25} // Width of the image
               height={25} // Height of the image

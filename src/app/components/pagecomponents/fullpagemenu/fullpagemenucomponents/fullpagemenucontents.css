@@ -30,14 +30,14 @@
 /* Style links within list items */
 .menu-content-link {
   text-decoration: none;
-  color: inherit;
+  color: var(--Website-red-color);
   display: inline-block; /* Ensure the link is treated like an inline element with block behavior */
   transition: transform 0.3s ease;
 }
 
 .menu-content-link:hover,
 .menu-content-link:focus {
-  color: var(--Website-red-color);
+  color: var(--Website-black-color);
   transform: translateX(20px);
 }
 

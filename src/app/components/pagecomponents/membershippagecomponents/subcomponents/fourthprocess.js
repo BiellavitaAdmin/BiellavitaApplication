@@ -14,7 +14,7 @@ export default function FourthProcess() {
       <h2 className="process-heading">Celebrate Your Membership</h2>
       <p className="process-description">
         If all goes well, we would be delighted to officially welcome you as a
-        member! You’ll be invited to a special induction ceremony where we
+        member! You’ll be invited to a special introduction ceremony where we
         celebrate new members and their unique contributions to our community.
       </p>
     </div>
