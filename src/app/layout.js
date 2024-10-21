@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation"; // Use 'usePathname' for route change detection
 import { Playfair_Display } from "next/font/google";
 import Header from "./components/sharedcomponents/header";
 import FullScreenMenu from "./components/pagecomponents/fullpagemenu/fullscreenmenu";
@@ -17,16 +17,15 @@ export default function RootLayout({ children }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [loading, setLoading] = useState(true);
-  const pathname = usePathname();
-  const router = useRouter();
+  const pathname = usePathname(); // Detect pathname changes
 
   const toggleMenu = () => {
     setMenuOpen((prevMenuOpen) => !prevMenuOpen);
   };
 
+  // Authentication logic (unchanged)
   useEffect(() => {
     const checkAuth = () => {
-      // Ensure we're only running this on the client side
       if (typeof window !== "undefined") {
         const token = localStorage.getItem("token");
         setIsLoggedIn(!!token); // Set isLoggedIn to true if token exists
@@ -37,7 +36,22 @@ export default function RootLayout({ children }) {
     checkAuth();
   }, []);
 
-  // Redirect to login if trying to access restricted pages without being logged in
+  // Disable browser's scroll restoration
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      // Disable the browser's automatic scroll restoration
+      window.history.scrollRestoration = "manual";
+    }
+  }, []);
+
+  // Scroll to top when pathname changes
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.scrollTo(0, 0); // Scroll to top of the page when route changes
+    }
+  }, [pathname]); // This will fire every time the pathname changes
+
+  // Redirect to login if accessing restricted pages without being logged in
   const restrictedPages = [
     "/privateevents",
     "/projects",
@@ -48,7 +62,7 @@ export default function RootLayout({ children }) {
     if (!loading && restrictedPages.includes(pathname) && !isLoggedIn) {
       router.push("/login");
     }
-  }, [loading, pathname, isLoggedIn, router]);
+  }, [loading, pathname, isLoggedIn]);
 
   const showFooterOn = [
     "/club",
@@ -63,10 +77,6 @@ export default function RootLayout({ children }) {
   ];
 
   const isAdminRoute = pathname.startsWith("/admin");
-
-  // if (loading) {
-  //   return <div>Loading...</div>; // Display a loading state
-  // }
 
   return (
     <html lang="en">
