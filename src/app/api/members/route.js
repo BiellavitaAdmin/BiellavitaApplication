@@ -234,17 +234,31 @@ export async function POST(request) {
          </p>
          <br />
          <p
+         style="
+           color: black;
+           font-family: 'Helvetica', sans-serif;
+           font-weight: 700;
+            font-size: 32px;
+           text-align: center;
+           text-decoration: none;
+           margin: 0rem;
+         "
+       >
+         ${email} 
+       </p>
+         <p
            style="
              color: black;
              font-family: 'Helvetica', sans-serif;
              font-weight: 700;
              font-size: 39px;
              text-align: center;
+             margin: 0rem;
            "
          >
            defaultPassword123
          </p>
-         <br />
+        
          <p
            style="
              color: black;
