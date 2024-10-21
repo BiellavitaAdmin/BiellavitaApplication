@@ -306,7 +306,6 @@ export default function AddMembers() {
   };
 
   // Submit handler with email check and password hashing
-  // Submit handler with email check and password hashing
   const handleSubmit = async (e) => {
     e.preventDefault();
 
