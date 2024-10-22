@@ -27,15 +27,19 @@
   margin: 15px;
 }
 
-.circular-button {
+.circular-button-menu {
   width: 60px; /* Diameter of the button */
   height: 60px; /* Diameter of the button */
   margin: 5px;
   border-radius: 50%; /* Makes the button circular */
   background-color: transparent;
-  color: black; /* Text color */
-  border: 1px solid black; /* Border color */
+  color: var(--Website-red-color); /* Text color */
+  border: 1px solid var(--Website-red-color); /* Border color */
   font-size: 16px;
+}
+
+.circular-button-menu:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Add a hover effect */
 }
 
 /* Small phones (<= 320px) */

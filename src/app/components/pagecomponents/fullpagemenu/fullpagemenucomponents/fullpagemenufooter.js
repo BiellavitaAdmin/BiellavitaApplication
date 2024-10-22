@@ -10,13 +10,32 @@ export default function FullPageMenuFooter() {
         </p>
       </div>
       <div className="footer-right">
-        <button className="circular-button">
+        <button className="circular-button-menu">
           <a
             href="https://www.linkedin.com/in/pier-alberto-furno-318944183/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image src="/linkdin.png" alt="User Icon" width={28} height={28} />
+            <Image
+              src="/linkedinred.png"
+              alt="User Icon"
+              width={28}
+              height={28}
+            />
+          </a>
+        </button>
+        <button className="circular-button-menu">
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src="/instagramred.png"
+              alt="User Icon"
+              width={28}
+              height={28}
+            />
           </a>
         </button>
       </div>

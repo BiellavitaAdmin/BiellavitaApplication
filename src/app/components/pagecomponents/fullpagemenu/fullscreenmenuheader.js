@@ -39,10 +39,10 @@ export default function FullScreenMenuHeader({ closeMenu }) {
       <div className="header-container-right">
         <div className="button-group-container">
           {isLoggedIn ? (
-            <button className="circular-button" onClick={handleLogout}>
+            <button className="circular-button-menu" onClick={handleLogout}>
               <Tooltip title="Logout">
                 <Image
-                  src="/logout.png" // Change image when logged in
+                  src="/logoutred.png" // Change image when logged in
                   alt="Logout Icon"
                   width={28}
                   height={28}
@@ -50,7 +50,7 @@ export default function FullScreenMenuHeader({ closeMenu }) {
               </Tooltip>
             </button>
           ) : (
-            <button className="circular-button">
+            <button className="circular-button-menu">
               <Link href="/login" onClick={closeMenu}>
                 <Tooltip title="Login">
                   <Image
@@ -64,9 +64,14 @@ export default function FullScreenMenuHeader({ closeMenu }) {
             </button>
           )}
 
-          <button className="circular-button" onClick={closeMenu}>
+          <button className="circular-button-menu" onClick={closeMenu}>
             <Tooltip title="Close Menu">
-              <Image src="/cross.png" alt="Close Menu" width={28} height={28} />
+              <Image
+                src="/closered.png"
+                alt="Close Menu"
+                width={28}
+                height={28}
+              />
             </Tooltip>
           </button>
         </div>
