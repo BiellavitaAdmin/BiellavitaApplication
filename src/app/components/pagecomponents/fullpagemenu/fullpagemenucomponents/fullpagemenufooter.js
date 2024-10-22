@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Tooltip } from "antd"; // Import Tooltip from Ant Design
 import "./fullpagemenufooter.css";
 
 export default function FullPageMenuFooter() {
@@ -10,34 +11,45 @@ export default function FullPageMenuFooter() {
         </p>
       </div>
       <div className="footer-right">
-        <button className="circular-button-menu">
+        <Tooltip
+          title="Connect with us on LinkedIn"
+          placement="left"
+          zIndex={20000}
+        >
+          {" "}
+          {/* Add higher zIndex if needed */}
           <a
             href="https://www.linkedin.com/in/pier-alberto-furno-318944183/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image
-              src="/linkedinred.png"
-              alt="User Icon"
-              width={28}
-              height={28}
-            />
+            <button className="circular-button-menu">
+              <Image
+                src="/linkedinred.png"
+                alt="LinkedIn Icon"
+                width={28}
+                height={28}
+              />
+            </button>
           </a>
-        </button>
-        <button className="circular-button-menu">
+        </Tooltip>
+
+        <Tooltip title="Follow us on Instagram" zIndex={20000}>
           <a
             href="https://www.instagram.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image
-              src="/instagramred.png"
-              alt="User Icon"
-              width={28}
-              height={28}
-            />
+            <button className="circular-button-menu">
+              <Image
+                src="/instagramred.png"
+                alt="Instagram Icon"
+                width={28}
+                height={28}
+              />
+            </button>
           </a>
-        </button>
+        </Tooltip>
       </div>
     </div>
   );

@@ -31,19 +31,27 @@ export default function MainButtonContainer({ onMenuClick, menuOpen }) {
 
   const menuItems = (
     <Menu>
-      <Menu.Item key="change-password" onClick={handleChangePassword}>
-        <Image
-          src="/change-password.png"
-          alt="Change Password Icon"
-          width={24}
-          height={24}
-        />{" "}
-        Change Password
-      </Menu.Item>
-      <Menu.Item key="logout" onClick={handleLogout}>
-        <Image src="/logout.png" alt="Logout Icon" width={24} height={24} />{" "}
-        Logout
-      </Menu.Item>
+      <Tooltip
+        title="Change your current password"
+        placement="left"
+        zIndex={20000}
+      >
+        <Menu.Item key="change-password" onClick={handleChangePassword}>
+          <Image
+            src="/change-password.png"
+            alt="Change Password Icon"
+            width={24}
+            height={24}
+          />{" "}
+          Change Password
+        </Menu.Item>
+      </Tooltip>
+      <Tooltip title="Logout of your Account" placement="left" zIndex={20000}>
+        <Menu.Item key="logout" onClick={handleLogout}>
+          <Image src="/logout.png" alt="Logout Icon" width={24} height={24} />{" "}
+          Logout
+        </Menu.Item>
+      </Tooltip>
     </Menu>
   );
 
@@ -55,32 +63,34 @@ export default function MainButtonContainer({ onMenuClick, menuOpen }) {
           trigger={["click"]}
           placement="bottomLeft"
         >
-          <button className="custom-circular-button">
-            <Tooltip title="Settings">
+          <Tooltip title="Settings" placement="left" zIndex={20000}>
+            <button className="custom-circular-button">
               <Image
                 src="/settingsred.png"
                 alt="Settings Icon"
                 width={28}
                 height={28}
               />
-            </Tooltip>
-          </button>
+            </button>
+          </Tooltip>
         </Dropdown>
       ) : (
-        <button className="custom-circular-button" onClick={handleLogin}>
-          <Tooltip title="Login">
+        <Tooltip title="Login" placement="bottom" zIndex={20000}>
+          <button className="custom-circular-button" onClick={handleLogin}>
             <Image src="/userred.png" alt="User Icon" width={28} height={28} />
-          </Tooltip>
-        </button>
+          </button>
+        </Tooltip>
       )}
-      <button className="custom-circular-button" onClick={onMenuClick}>
-        <img
-          src={menuOpen ? "/closered.png" : "/dotsred.png"}
-          alt={menuOpen ? "Close menu" : "Open menu"}
-          width={28}
-          height={28}
-        />
-      </button>
+      <Tooltip title="Menu" placement="bottom" zIndex={20000}>
+        <button className="custom-circular-button" onClick={onMenuClick}>
+          <img
+            src={menuOpen ? "/closered.png" : "/dotsred.png"}
+            alt={menuOpen ? "Close menu" : "Open menu"}
+            width={28}
+            height={28}
+          />
+        </button>
+      </Tooltip>
     </div>
   );
 }

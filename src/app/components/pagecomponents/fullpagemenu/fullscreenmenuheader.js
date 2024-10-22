@@ -39,41 +39,40 @@ export default function FullScreenMenuHeader({ closeMenu }) {
       <div className="header-container-right">
         <div className="button-group-container">
           {isLoggedIn ? (
-            <button className="circular-button-menu" onClick={handleLogout}>
-              <Tooltip title="Logout">
+            <Tooltip title="Logout" placement="bottom" zIndex={20000}>
+              <button className="circular-button-menu" onClick={handleLogout}>
                 <Image
                   src="/logoutred.png" // Change image when logged in
                   alt="Logout Icon"
                   width={28}
                   height={28}
                 />
-              </Tooltip>
-            </button>
+              </button>
+            </Tooltip>
           ) : (
-            <button className="circular-button-menu">
-              <Link href="/login" onClick={closeMenu}>
-                <Tooltip title="Login">
+            <Tooltip title="Login" placement="bottom" zIndex={20000}>
+              <button className="circular-button-menu">
+                <Link href="/login" onClick={closeMenu}>
                   <Image
                     src="/user.png" // Change image when not logged in
                     alt="User Icon"
                     width={28}
                     height={28}
                   />
-                </Tooltip>
-              </Link>
-            </button>
+                </Link>
+              </button>
+            </Tooltip>
           )}
-
-          <button className="circular-button-menu" onClick={closeMenu}>
-            <Tooltip title="Close Menu">
+          <Tooltip title="Close Menu" placement="bottom" zIndex={20000}>
+            <button className="circular-button-menu" onClick={closeMenu}>
               <Image
                 src="/closered.png"
                 alt="Close Menu"
                 width={28}
                 height={28}
               />
-            </Tooltip>
-          </button>
+            </button>
+          </Tooltip>
         </div>
       </div>
     </header>

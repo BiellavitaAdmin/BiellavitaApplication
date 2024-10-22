@@ -24,16 +24,27 @@
 /* Small phones (<= 320px) */
 @media (max-width: 320px) {
   /* Styles for very small phones */
+  .footer-container {
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 }
 
 /* Standard small phones (<= 360px) */
 @media (max-width: 360px) {
   .footer-container {
     margin-top: 2rem;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   .footer-left {
     text-align: center;
+    padding-top: 1.2rem;
   }
 }
 
@@ -42,12 +53,16 @@
   .footer-container {
     margin-top: 0.1rem;
     padding-top: 3rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 0.1rem;
+    padding-right: 0.3rem;
   }
 
   .footer-left {
     text-align: center;
+  }
+
+  .menufooter-text {
+    margin-bottom: 0.1em;
   }
 }
 
@@ -56,13 +71,27 @@
   .footer-container {
     margin-top: 0.1rem;
     padding-top: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+  }
+
+  .menufooter-text {
+    margin-bottom: 0em;
   }
 }
 
 /* iPhone 14 Pro, 15 Pro */
 @media (min-width: 430px) {
+  .footer-container {
+    margin-top: 0.1rem;
+    padding-top: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 0.6rem;
+  }
+
+  .menufooter-text {
+    margin-bottom: 0em;
+  }
 }
 
 /* Larger phones and phablets (>= 480px) */
