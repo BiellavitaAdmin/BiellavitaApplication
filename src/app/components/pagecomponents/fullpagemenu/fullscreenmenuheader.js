@@ -54,7 +54,7 @@ export default function FullScreenMenuHeader({ closeMenu }) {
               <button className="circular-button-menu">
                 <Link href="/login" onClick={closeMenu}>
                   <Image
-                    src="/user.png" // Change image when not logged in
+                    src="/userred.png" // Change image when not logged in
                     alt="User Icon"
                     width={28}
                     height={28}
