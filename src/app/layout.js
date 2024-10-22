@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { usePathname } from "next/navigation"; // Use 'usePathname' for route change detection
+import { useRouter, usePathname } from "next/navigation"; // Use useRouter and usePathname from next/navigation
 import { Playfair_Display } from "next/font/google";
 import Header from "./components/sharedcomponents/header";
 import FullScreenMenu from "./components/pagecomponents/fullpagemenu/fullscreenmenu";
@@ -18,6 +18,7 @@ export default function RootLayout({ children }) {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [loading, setLoading] = useState(true);
   const pathname = usePathname(); // Detect pathname changes
+  const router = useRouter(); // Use the updated useRouter from next/navigation
 
   const toggleMenu = () => {
     setMenuOpen((prevMenuOpen) => !prevMenuOpen);
@@ -39,8 +40,7 @@ export default function RootLayout({ children }) {
   // Disable browser's scroll restoration
   useEffect(() => {
     if (typeof window !== "undefined") {
-      // Disable the browser's automatic scroll restoration
-      window.history.scrollRestoration = "manual";
+      window.history.scrollRestoration = "manual"; // Disable the browser's automatic scroll restoration
     }
   }, []);
 
@@ -60,9 +60,9 @@ export default function RootLayout({ children }) {
   ];
   useEffect(() => {
     if (!loading && restrictedPages.includes(pathname) && !isLoggedIn) {
-      router.push("/login");
+      router.push("/login"); // Use router.push for navigation
     }
-  }, [loading, pathname, isLoggedIn]);
+  }, [loading, pathname, isLoggedIn, router]);
 
   const showFooterOn = [
     "/club",

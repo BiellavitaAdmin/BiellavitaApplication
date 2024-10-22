@@ -4,33 +4,45 @@
   justify-content: space-between;
   align-items: center;
   padding-left: 2rem;
-  padding-right: 1.8rem;
-  z-index: 2; /* Above the overlay */
+  padding-right: 2rem;
+  z-index: 2;
 }
 
 .linkdin-circularbutton {
-  width: 60px; /* Diameter of the button */
-  height: 60px; /* Diameter of the button */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
   margin: 5px;
-  border-radius: 50%; /* Makes the button circular */
+  border-radius: 50%;
   background-color: transparent;
-  color: black; /* Text color */
-  border: 1px solid black; /* Removes the default border */
+  border: 1px solid #a31700;
   font-size: 16px;
-  z-index: 1; /* Above the overlay */
+  color: black;
+  text-decoration: none;
+  z-index: 1;
+}
+
+.linkdin-circularbutton:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Add a hover effect */
 }
 
 .rights-line-homepage {
   font-size: var(--font-size-footer-rights-text);
   font-weight: var(--font-weight-footer-rights-text);
   color: var(--Website-black-color);
-  z-index: 1; /* Above the overlay */
+  z-index: 1;
+}
+
+.social-media-links-button-continer-footer {
+  z-index: 1;
 }
 
 /* Default styles (mobile-first approach) */
 
 /* Small phones (<= 320px) */
-@media (max-width: 320px) {
+/* @media (max-width: 320px) {
   .footer-content-container {
     padding-left: 0.2rem;
     padding-right: 0.2rem;
@@ -51,10 +63,10 @@
   .address-text-full-page-footer {
     padding-left: 0.7rem;
   }
-}
+} */
 
 /* Standard small phones (<= 360px) */
-@media (max-width: 360px) {
+/* @media (max-width: 360px) {
   .footer-content-container {
     padding-left: 0.2rem;
     padding-right: 0.2rem;
@@ -71,10 +83,10 @@
     color: var(--Website-black-color);
     z-index: 1;
   }
-}
+} */
 
 /* iPhone 12, 13 Mini, SE (2020) */
-@media (min-width: 375px) {
+/* @media (min-width: 375px) {
   .footer-content-container {
     padding-left: 0.2rem;
     padding-right: 0.2rem;
@@ -91,10 +103,10 @@
     color: var(--Website-black-color);
     z-index: 1;
   }
-}
+} */
 
 /* iPhone 14, 15 (standard model) */
-@media (min-width: 390px) {
+/* @media (min-width: 390px) {
   .footer-content-container {
     padding-left: 0.7rem;
     padding-right: 0.7rem;
@@ -111,10 +123,10 @@
     color: var(--Website-black-color);
     z-index: 1;
   }
-}
+} */
 
 /* iPhone 14 Pro, 15 Pro */
-@media (min-width: 430px) {
+/* @media (min-width: 430px) {
   .footer-content-container {
     padding-left: 0.4rem;
     padding-right: 0.4rem;
@@ -135,10 +147,10 @@
   .address-text-full-page-footer {
     padding-left: 1.7rem;
   }
-}
+} */
 
 /* Larger phones and phablets (>= 480px) */
-@media (min-width: 480px) {
+/* @media (min-width: 480px) {
   .footer-content-container {
     padding-left: 0.7rem;
     padding-right: 0.7rem;
@@ -155,10 +167,10 @@
     color: var(--Website-black-color);
     z-index: 1;
   }
-}
+} */
 
 /* Tablets (>= 600px) */
-@media (min-width: 600px) {
+/* @media (min-width: 600px) {
   .footer-content-container {
     padding-left: 0.7rem;
     padding-right: 0.7rem;
@@ -175,10 +187,10 @@
     color: var(--Website-black-color);
     z-index: 1;
   }
-}
+} */
 
 /* Small laptops and larger tablets (>= 768px) */
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .footer-content-container {
     padding-left: 0.7rem;
     padding-right: 0.7rem;
@@ -199,10 +211,10 @@
   .social-media-row {
     padding-left: 1.3rem;
   }
-}
+} */
 
 /* Medium laptops (>= 1024px) */
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   .footer-content-container {
     padding-left: 0.9rem;
     padding-right: 0.9rem;
@@ -223,10 +235,10 @@
   .social-media-row {
     padding-left: 1.4rem;
   }
-}
+} */
 
 /* Large laptops and desktops (>= 1280px) */
-@media (min-width: 1280px) {
+/* @media (min-width: 1280px) {
   .footer-content-container {
     padding-left: 0.9rem;
     padding-right: 0.9rem;
@@ -251,10 +263,10 @@
   .social-media-row {
     padding-left: 3.4rem;
   }
-}
+} */
 
 /* Extra-large desktops (>= 1440px) */
-@media (min-width: 1440px) {
+/* @media (min-width: 1440px) {
   .footer-content-container {
     padding-left: 0.9rem;
     padding-right: 0.9rem;
@@ -275,10 +287,10 @@
   .social-media-row {
     padding-left: 3.4rem;
   }
-}
+} */
 
 /* Ultra-wide screens (>= 1600px) */
-@media (min-width: 1600px) {
+/* @media (min-width: 1600px) {
   .footer-content-container {
     padding-left: 0.9rem;
     padding-right: 0.9rem;
@@ -299,10 +311,10 @@
   .social-media-row {
     padding-left: 3.3rem;
   }
-}
+} */
 
 /* 4K screens (>= 1920px) */
-@media (min-width: 1920px) {
+/* @media (min-width: 1920px) {
   .footer-content-container {
     padding-left: 0.9rem;
     padding-right: 0.9rem;
@@ -323,4 +335,4 @@
   .social-media-row {
     padding-left: 3.2rem;
   }
-}
+} */

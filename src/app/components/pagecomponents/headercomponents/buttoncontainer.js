@@ -55,10 +55,10 @@ export default function MainButtonContainer({ onMenuClick, menuOpen }) {
           trigger={["click"]}
           placement="bottomLeft"
         >
-          <button className="circular-button">
+          <button className="custom-circular-button">
             <Tooltip title="Settings">
               <Image
-                src="/settings.png"
+                src="/settingsred.png"
                 alt="Settings Icon"
                 width={28}
                 height={28}
@@ -67,15 +67,15 @@ export default function MainButtonContainer({ onMenuClick, menuOpen }) {
           </button>
         </Dropdown>
       ) : (
-        <button className="circular-button" onClick={handleLogin}>
+        <button className="custom-circular-button" onClick={handleLogin}>
           <Tooltip title="Login">
-            <Image src="/user.png" alt="User Icon" width={28} height={28} />
+            <Image src="/userred.png" alt="User Icon" width={28} height={28} />
           </Tooltip>
         </button>
       )}
-      <button className="circular-button" onClick={onMenuClick}>
+      <button className="custom-circular-button" onClick={onMenuClick}>
         <img
-          src={menuOpen ? "/cross.png" : "/dots.png"}
+          src={menuOpen ? "/closered.png" : "/dotsred.png"}
           alt={menuOpen ? "Close menu" : "Open menu"}
           width={28}
           height={28}

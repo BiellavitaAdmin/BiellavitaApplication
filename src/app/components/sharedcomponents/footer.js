@@ -8,21 +8,34 @@ export default function Footer() {
         <h5 className="rights-line-homepage">
           © 2024 BiellaVita. All Rights Reserved.
         </h5>
-        <button className="linkdin-circularbutton">
-          {" "}
+        <div className="social-media-links-button-continer-footer">
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="linkdin-circularbutton"
+          >
+            <Image
+              src="/instagramred.png"
+              alt="Instagram Icon"
+              width={35}
+              height={35}
+            />
+          </a>
           <a
             href="https://www.linkedin.com/in/pier-alberto-furno-318944183/"
             target="_blank"
             rel="noopener noreferrer"
+            className="linkdin-circularbutton"
           >
             <Image
-              src="/linkdin.png" // The path relative to the "public" folder
-              alt="My Awesome Image"
-              width={35} // Width of the image
-              height={35} // Height of the image
+              src="/linkedinred.png"
+              alt="LinkedIn Icon"
+              width={35}
+              height={35}
             />
           </a>
-        </button>
+        </div>
       </div>
     </footer>
   );
