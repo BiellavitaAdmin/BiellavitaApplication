@@ -1,5 +1,5 @@
 .membership-hero-section {
-  position: fixed; /* Keeps the hero section fixed behind the header */
+  position: relative; /* Keeps the hero section fixed behind the header */
   top: 0;
   left: 0;
   width: 100%;
@@ -53,7 +53,7 @@
 }
 
 .membership-content {
-  margin-top: 100vh; /* Push content below the hero section */
+  /* margin-top: 100vh;  */
   padding: 200px;
   position: relative;
   width: 100%;
@@ -76,28 +76,37 @@
 }
 
 .card-container {
-  /* background-color: aqua; */
-  padding: 5rem;
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  align-items: stretch; /* Ensures cards have equal height */
+  gap: 2rem;
+  flex-wrap: wrap; /* Makes the cards wrap on smaller screens */
+  margin: 2rem auto;
+  max-width: 1200px; /* Maximum width for larger screens */
 }
 
 .subscription-card-one {
-  width: 50%;
-  background-color: rgb(255, 255, 255, 0.3);
-  margin: 3rem;
+  flex-grow: 1; /* Ensures both cards grow equally */
+  max-width: 400px; /* Controls the max width of each card */
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin: 0 1rem; /* Adds some margin between cards */
   border: 1px solid var(--Website-black-color);
 }
 
 .card-banner {
-  display: block;
-  width: 100%;
   height: 300px;
   background-color: gray;
+  flex-shrink: 0; /* Prevents the banner from shrinking */
 }
 
 .card-content-container {
+  flex-grow: 1; /* Ensures the content fills the remaining space */
   padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distributes content evenly */
 }
 
 .cardone-image {
@@ -111,19 +120,14 @@
 }
 
 .card-heading {
-  padding-top: 4rem;
+  text-align: center;
   font-size: var(--font-size-page-subheading);
-  color: var(--Website-black-color);
   font-weight: var(--font-weight-super-heading);
 }
 
-.card-para-one {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  color: var(--Website-black-color);
-}
-
+.card-para-one,
 .card-para-two {
+  text-align: center;
   color: var(--Website-black-color);
 }
 
@@ -1462,19 +1466,12 @@
   }
 
   .card-container {
-    padding: 0rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;
+    flex-wrap: nowrap; /* Prevents the cards from stacking vertically */
   }
 
   .subscription-card-one {
-    width: 44%;
-    margin: 0rem;
-    margin-bottom: 4rem;
+    width: 44%; /* Adjust the width of the cards */
+    max-width: none; /* Remove any max-width to allow more flexibility */
   }
 
   .card-banner {
@@ -1609,6 +1606,7 @@
 }
 
 /* Large laptops and desktops (>= 1280px) */
+/* Large laptops and desktops (>= 1280px) */
 @media (min-width: 1280px) {
   .membership-hero-heading {
     font-size: 97px;
@@ -1628,50 +1626,59 @@
   }
 
   .card-container {
-    padding: 0rem;
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    align-items: stretch; /* Ensure all cards have equal height */
     gap: 2rem;
+    flex-wrap: wrap; /* Wrap cards on smaller screens */
+    margin: 2rem auto;
+    max-width: 900px; /* Maximum width for larger screens */
+    flex-direction: row;
   }
 
   .subscription-card-one {
-    width: 33%;
+    display: flex;
+    flex-direction: column; /* Ensure content stacks properly */
+    flex-grow: 1; /* Ensures both cards grow equally */
+    width: 33%; /* Adjust card width */
     margin: 0rem;
     margin-bottom: 4rem;
+    border: 1px solid var(--Website-black-color);
+    min-height: 450px; /* Set a minimum height for equal card sizes */
   }
 
   .card-banner {
-    height: 182px;
+    /* height: 300px;  */
+    background-color: gray;
+    flex-shrink: 0; /* Prevents the banner from shrinking */
   }
 
   .card-content-container {
-    padding-top: 0.5rem;
-    padding-left: 1.4rem;
-    padding-right: 1.4rem;
-    padding-bottom: 1.5rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Ensure content starts below the banner */
+    flex-grow: 1; /* Make the content fill the remaining space */
   }
 
   .card-heading {
-    padding-top: 2rem;
-    font-size: 32px;
-    text-align: left;
+    font-size: 1.5rem;
     margin-top: 4rem;
+    text-align: center;
   }
 
+  .card-para-one,
   .card-para-two {
+    margin-top: 1rem;
     text-align: center;
+    color: var(--Website-black-color);
   }
 
   .card-button-container {
     display: flex;
     justify-content: center;
-    margin-top: 2rem;
-    /* margin-bottom: 2rem; */
+    margin-top: auto; /* Push the button to the bottom */
   }
-
   .process-main-heading-container {
     margin-top: 3rem;
     margin-bottom: 3rem;
@@ -1685,15 +1692,6 @@
   .process-row {
     display: flex;
     flex-direction: row;
-  }
-
-  .process-one-container {
-    width: 100%;
-  }
-
-  .process-heading {
-    text-align: center;
-    font-size: 27px;
   }
 
   .topspacing {
@@ -1722,7 +1720,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: stretch; /* Ensures equal height */
     flex-wrap: wrap;
     gap: 1.8rem;
   }
@@ -1733,7 +1731,10 @@
     margin-left: 0rem;
     margin-right: 0rem;
     width: 41%;
-    height: 87vh;
+    height: auto; /* Allow the card to adjust its height based on content */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensure content is distributed evenly */
   }
 
   .benefits-card {
@@ -1741,6 +1742,7 @@
     padding-bottom: 0.2rem;
     padding-left: 1rem;
     padding-right: 1rem;
+    flex-grow: 1; /* Ensure the content container grows with the content */
   }
 
   .benefits-list-item {
@@ -1793,50 +1795,59 @@
   }
 
   .card-container {
-    padding: 0rem;
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    align-items: stretch; /* Ensure all cards have equal height */
     gap: 2rem;
+    flex-wrap: wrap; /* Wrap cards on smaller screens */
+    margin: 2rem auto;
+    max-width: 900px; /* Maximum width for larger screens */
+    flex-direction: row;
   }
 
   .subscription-card-one {
-    width: 39%;
+    display: flex;
+    flex-direction: column; /* Ensure content stacks properly */
+    flex-grow: 1; /* Ensures both cards grow equally */
+    width: 33%; /* Adjust card width */
     margin: 0rem;
     margin-bottom: 4rem;
+    border: 1px solid var(--Website-black-color);
+    min-height: 450px; /* Set a minimum height for equal card sizes */
   }
 
   .card-banner {
-    height: 182px;
+    /* height: 300px;  */
+    background-color: gray;
+    flex-shrink: 0; /* Prevents the banner from shrinking */
   }
 
   .card-content-container {
-    padding-top: 0.5rem;
-    padding-left: 1.4rem;
-    padding-right: 1.4rem;
-    padding-bottom: 1.5rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Ensure content starts below the banner */
+    flex-grow: 1; /* Make the content fill the remaining space */
   }
 
   .card-heading {
-    padding-top: 2rem;
-    font-size: 32px;
-    text-align: left;
-    margin-top: 9rem;
+    font-size: 1.5rem;
+    margin-top: 4rem;
+    text-align: center;
   }
 
+  .card-para-one,
   .card-para-two {
+    margin-top: 1rem;
     text-align: center;
+    color: var(--Website-black-color);
   }
 
   .card-button-container {
     display: flex;
-    justify-content: flex-end;
-    margin-top: 2rem;
-    /* margin-bottom: 2rem; */
+    justify-content: center;
+    margin-top: auto; /* Push the button to the bottom */
   }
-
   .process-main-heading-container {
     margin-top: 3rem;
     margin-bottom: 3rem;
@@ -1963,48 +1974,58 @@
   }
 
   .card-container {
-    padding: 0rem;
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    align-items: stretch; /* Ensure all cards have equal height */
     gap: 2rem;
+    flex-wrap: wrap; /* Wrap cards on smaller screens */
+    margin: 2rem auto;
+    max-width: 900px; /* Maximum width for larger screens */
+    flex-direction: row;
   }
 
   .subscription-card-one {
-    width: 32%;
+    display: flex;
+    flex-direction: column; /* Ensure content stacks properly */
+    flex-grow: 1; /* Ensures both cards grow equally */
+    width: 33%; /* Adjust card width */
     margin: 0rem;
     margin-bottom: 4rem;
+    border: 1px solid var(--Website-black-color);
+    min-height: 450px; /* Set a minimum height for equal card sizes */
   }
 
   .card-banner {
-    height: 182px;
+    /* height: 300px;  */
+    background-color: gray;
+    flex-shrink: 0; /* Prevents the banner from shrinking */
   }
 
   .card-content-container {
-    padding-top: 0.5rem;
-    padding-left: 1.4rem;
-    padding-right: 1.4rem;
-    padding-bottom: 1.5rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Ensure content starts below the banner */
+    flex-grow: 1; /* Make the content fill the remaining space */
   }
 
   .card-heading {
-    padding-top: 2rem;
-    font-size: 32px;
-    text-align: left;
-    margin-top: 7rem;
+    font-size: 1.5rem;
+    margin-top: 4rem;
+    text-align: center;
   }
 
+  .card-para-one,
   .card-para-two {
+    margin-top: 1rem;
     text-align: center;
+    color: var(--Website-black-color);
   }
 
   .card-button-container {
     display: flex;
-    justify-content: flex-end;
-    margin-top: 2rem;
-    /* margin-bottom: 2rem; */
+    justify-content: center;
+    margin-top: auto; /* Push the button to the bottom */
   }
 
   .process-main-heading-container {
@@ -2133,48 +2154,58 @@
   }
 
   .card-container {
-    padding: 0rem;
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    align-items: stretch; /* Ensure all cards have equal height */
     gap: 2rem;
+    flex-wrap: wrap; /* Wrap cards on smaller screens */
+    margin: 2rem auto;
+    max-width: 900px; /* Maximum width for larger screens */
+    flex-direction: row;
   }
 
   .subscription-card-one {
-    width: 25%;
+    display: flex;
+    flex-direction: column; /* Ensure content stacks properly */
+    flex-grow: 1; /* Ensures both cards grow equally */
+    width: 33%; /* Adjust card width */
     margin: 0rem;
     margin-bottom: 4rem;
+    border: 1px solid var(--Website-black-color);
+    min-height: 450px; /* Set a minimum height for equal card sizes */
   }
 
   .card-banner {
-    height: 182px;
+    /* height: 300px;  */
+    background-color: gray;
+    flex-shrink: 0; /* Prevents the banner from shrinking */
   }
 
   .card-content-container {
-    padding-top: 0.5rem;
-    padding-left: 1.4rem;
-    padding-right: 1.4rem;
-    padding-bottom: 1.5rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Ensure content starts below the banner */
+    flex-grow: 1; /* Make the content fill the remaining space */
   }
 
   .card-heading {
-    padding-top: 2rem;
-    font-size: 32px;
-    text-align: left;
-    margin-top: 7rem;
+    font-size: 1.5rem;
+    margin-top: 4rem;
+    text-align: center;
   }
 
+  .card-para-one,
   .card-para-two {
+    margin-top: 1rem;
     text-align: center;
+    color: var(--Website-black-color);
   }
 
   .card-button-container {
     display: flex;
-    justify-content: flex-end;
-    margin-top: 2rem;
-    /* margin-bottom: 2rem; */
+    justify-content: center;
+    margin-top: auto; /* Push the button to the bottom */
   }
 
   .process-main-heading-container {
@@ -2303,50 +2334,59 @@
   }
 
   .card-container {
-    padding: 0rem;
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    align-items: stretch; /* Ensure all cards have equal height */
     gap: 2rem;
+    flex-wrap: wrap; /* Wrap cards on smaller screens */
+    margin: 2rem auto;
+    max-width: 900px; /* Maximum width for larger screens */
+    flex-direction: row;
   }
 
   .subscription-card-one {
-    width: 25%;
+    display: flex;
+    flex-direction: column; /* Ensure content stacks properly */
+    flex-grow: 1; /* Ensures both cards grow equally */
+    width: 33%; /* Adjust card width */
     margin: 0rem;
     margin-bottom: 4rem;
+    border: 1px solid var(--Website-black-color);
+    min-height: 450px; /* Set a minimum height for equal card sizes */
   }
 
   .card-banner {
-    height: 182px;
+    /* height: 300px;  */
+    background-color: gray;
+    flex-shrink: 0; /* Prevents the banner from shrinking */
   }
 
   .card-content-container {
-    padding-top: 0.5rem;
-    padding-left: 1.4rem;
-    padding-right: 1.4rem;
-    padding-bottom: 1.5rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Ensure content starts below the banner */
+    flex-grow: 1; /* Make the content fill the remaining space */
   }
 
   .card-heading {
-    padding-top: 2rem;
-    font-size: 32px;
-    text-align: left;
-    margin-top: 12rem;
+    font-size: 1.5rem;
+    margin-top: 4rem;
+    text-align: center;
   }
 
+  .card-para-one,
   .card-para-two {
+    margin-top: 1rem;
     text-align: center;
+    color: var(--Website-black-color);
   }
 
   .card-button-container {
     display: flex;
-    justify-content: flex-end;
-    margin-top: 2rem;
-    /* margin-bottom: 2rem; */
+    justify-content: center;
+    margin-top: auto; /* Push the button to the bottom */
   }
-
   .process-main-heading-container {
     margin-top: 3rem;
     margin-bottom: 3rem;

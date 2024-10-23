@@ -37,6 +37,8 @@ export default function RootLayout({ children }) {
     checkAuth();
   }, []);
 
+  const heroPages = ["/membership"];
+
   // Disable browser's scroll restoration
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -44,12 +46,11 @@ export default function RootLayout({ children }) {
     }
   }, []);
 
-  // Scroll to top when pathname changes
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.scrollTo(0, 0); // Scroll to top of the page when route changes
+    if (typeof window !== "undefined" && !heroPages.includes(pathname)) {
+      window.scrollTo(0, 0); // Scroll to top of the page when route changes, except on hero section pages
     }
-  }, [pathname]); // This will fire every time the pathname changes
+  }, [pathname]);
 
   // Redirect to login if accessing restricted pages without being logged in
   const restrictedPages = [

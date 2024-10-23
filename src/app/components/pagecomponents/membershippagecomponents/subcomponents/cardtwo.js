@@ -15,18 +15,18 @@ export default function CardTwo() {
         <div className="card-content-container">
           <h2 className="card-heading">Non-Active Membership</h2>
           <p className="card-para-one">
-            The active members of BiellaVita will have the opportunity to
-            propose and contribute to a variety of projects. These projects may
-            be in the field of education, culture, art, fashion, food and other
-            topics in relation with the lifestyle and BiellaVita values. Active
-            members can play a hands-on role in the execution of these projects,
-            leveraging their own contacts and relationships to support the work
-            of BiellaVita.
+            On the other hand, Non-Active members are those who have accepted
+            our invitation to join BiellaVita based on their alignment with our
+            values and vision. While they may not have the time or desire to
+            take on an active role, Non-Active members are welcome to attend
+            various events and activities organized by the organization.
           </p>
+          {/* <br /> */}
           <p className="card-para-two">
-            This active membership is ideal for individuals who wish to take a
-            proactive role within the organization and contribute directly to
-            its initiatives and activities.
+            This Non-Active membership allows individuals to stay connected with
+            BiellaVita, participate in select events, and support the
+            organization's mission, without the need for a significant time
+            commitment or active involvement
           </p>
           {/* <div className="card-button-container">
             <button className="card-button">Apply now</button>
