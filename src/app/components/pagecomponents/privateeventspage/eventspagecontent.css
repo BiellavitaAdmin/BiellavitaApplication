@@ -152,34 +152,34 @@
   font-size: 23px;
   font-weight: 500;
   color: var(--Website-black-color);
-  line-height: 1.2; /* Optional: Adjust line height for better spacing */
-  max-height: 2.4em; /* Limit the height for 2 lines */
-  overflow: hidden; /* Hide overflowed text */
-  text-overflow: ellipsis; /* Add ellipsis for overflowing text */
-  white-space: nowrap; /* Prevent text from wrapping to the next line */
+  line-height: 1.2;
+  max-height: 2.4em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .new-previous-events-card-shortdescription {
   font-size: 15px;
-  flex-grow: 1; /* Allow this section to grow and take available space */
-  overflow: hidden; /* Hide overflowed text */
-  text-overflow: ellipsis; /* Show ellipsis if the text is too long */
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 3; /* Limit to 3 lines of text */
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   line-clamp: 3;
 }
 
 .new-previous-event-details-button {
-  margin-top: auto; /* Ensure the button stays at the bottom */
+  margin-top: auto;
   border: 1px solid var(--Website-black-color);
   padding: 0.5rem;
   background-color: rgb(255, 255, 255, 0);
   box-shadow: rgb(0, 0, 0) 1px 3px 16px -5px;
-  position: absolute; /* Stick button to the bottom-left */
+  position: absolute;
   bottom: 1rem;
   left: 1rem;
-  width: 22%; /* Make the button 35% of the card's width */
+  width: 22%;
 }
 
 /* Default styles (mobile-first approach) */
