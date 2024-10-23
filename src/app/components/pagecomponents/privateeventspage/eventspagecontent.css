@@ -174,7 +174,7 @@
   border: 1px solid var(--Website-black-color);
   padding: 0.5rem;
   background-color: rgb(255, 255, 255, 0);
-  box-shadow: 1px 3px 16px -5px rgb(0, 0, 0, 0.25);
+  box-shadow: rgb(0, 0, 0) 1px 3px 16px -5px;
   position: absolute; /* Stick button to the bottom-left */
   bottom: 1rem;
   left: 1rem;
