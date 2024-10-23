@@ -83,7 +83,9 @@ export default function ChangePasswordForm() {
         </div>
 
         <div className="address-field-container">
-          <label className="form-labels">Default Password</label>
+          <label className="form-labels">
+            Default Password or Current Password
+          </label>
           <input
             className={`input-fields ${
               errors.defaultPassword ? "input-error" : ""
