@@ -27,8 +27,10 @@ export default function Login() {
 
       setTimeout(() => {
         setShowSuccess(false);
-        router.push("/projects");
-      }, 8000);
+        window.location.href = "/projects";
+        // router.reload();
+        // router.push("/projects");
+      }, 2000);
     } catch (error) {
       setError("Invalid credentials. Please try again.");
       setShowError(true);

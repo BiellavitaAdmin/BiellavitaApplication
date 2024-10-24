@@ -25,7 +25,7 @@ export default function FullScreenMenuHeader({ closeMenu }) {
     await closeMenu();
 
     // Now redirect to login page
-    router.replace("/login");
+    window.location.href = "/login";
   };
 
   return (
