@@ -16,11 +16,16 @@ export default function FullScreenMenuHeader({ closeMenu }) {
     setIsLoggedIn(!!token); // Check if token exists
   }, []);
 
-  const handleLogout = () => {
+  const handleLogout = async () => {
     // Clear localStorage and cookies
     localStorage.removeItem("token");
-    Cookies.remove("token"); // Remove the token cookie
-    router.push("/login"); // Redirect to login page
+    Cookies.remove("token");
+
+    // Wait for closeMenu to finish (if it's async)
+    await closeMenu();
+
+    // Now redirect to login page
+    router.replace("/login");
   };
 
   return (
