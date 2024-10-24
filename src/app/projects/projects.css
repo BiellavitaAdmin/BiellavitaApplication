@@ -1,3 +1,49 @@
+.projects-hero-section {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url("/Projectsback.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.projects-hero-section.show {
+  opacity: 1;
+}
+
+.projects-hero-heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* color: var(--Website-black-color); */
+  color: var(--Website-red-color);
+  font-size: var(--font-size-menu-heading);
+  font-weight: var(--font-weight-super-heading);
+  text-align: center;
+  z-index: 1;
+}
+
+.projects-hero-heading.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+.projects-first-heading {
+  text-align: center;
+  font-size: var(--font-size-page-heading);
+  font-weight: var(--font-weight-super-heading);
+  margin-bottom: 20px;
+  color: var(--Website-black-color);
+  padding-top: 8rem;
+}
+
 .project-section {
   display: flex;
   justify-content: space-between;
@@ -73,53 +119,14 @@
   cursor: pointer;
 }
 
-.projects-hero-section {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-image: url("/Projectsback.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-.projects-hero-section.show {
-  opacity: 1;
-}
-
-.projects-hero-heading {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /* color: var(--Website-black-color); */
-  color: var(--Website-red-color);
-  font-size: var(--font-size-menu-heading);
-  font-weight: var(--font-weight-super-heading);
-  text-align: center;
-  z-index: 1;
-  opacity: 0;
-  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-}
-
-.projects-hero-heading.show {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1.05);
-}
-
 .projects-content-container {
   background-color: var(--Website-body-color);
   width: 100%;
 }
 
 .projects-content {
-  margin-top: 100vh;
-  padding: 50px;
+  /* margin-top: 100vh; */
+  /* padding: 50px; */
   padding-left: 0px;
   padding-right: 0px;
   padding-bottom: 0px;

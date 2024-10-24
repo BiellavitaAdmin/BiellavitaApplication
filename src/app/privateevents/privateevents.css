@@ -1,5 +1,5 @@
 .privateevents-hero-section {
-  position: fixed; /* Keeps the hero section fixed behind the header */
+  position: relative; /* Keeps the hero section fixed behind the header */
   top: 0;
   left: 0;
   width: 100%;
@@ -10,7 +10,7 @@
   background-repeat: no-repeat;
   z-index: -1; /* Ensures the hero section stays behind other content */
   opacity: 0; /* Initially hidden */
-  transition: opacity 1s ease-in-out; /* Transition for fade-in effect */
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
 .privateevents-hero-section.show {
@@ -31,8 +31,6 @@
   font-weight: var(--font-weight-super-heading);
   text-align: center; /* Center text alignment */
   z-index: 1; /* Ensure heading stays above the background image */
-  opacity: 0; /* Initially hidden */
-  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
 .privateevents-hero-heading.show {
@@ -46,7 +44,7 @@
 }
 
 .privateevents-content {
-  margin-top: 100vh; /* Push content below the hero section */
+  /* margin-top: 100vh;  */
   padding: 200px;
   position: relative;
   width: 100%;
@@ -110,7 +108,7 @@
 
 .previous-events-container {
   width: 100%;
-  margin-top: 8rem;
+  /* margin-top: 8rem; */
 }
 
 .previous-events-cards-container {
@@ -216,7 +214,7 @@
 /* Small phones (<= 320px) */
 @media (max-width: 320px) {
   .privateevents-hero-heading {
-    font-size: 1.5rem;
+    font-size: 58px;
   }
 
   .privateevents-content {
@@ -267,7 +265,7 @@
 /* Standard small phones (<= 360px) */
 @media (max-width: 360px) {
   .privateevents-hero-heading {
-    font-size: 1.7rem;
+    font-size: 50px;
   }
 
   .privateevents-content {
@@ -313,7 +311,8 @@
 /* iPhone 12, 13 Mini, SE (2020) */
 @media (min-width: 375px) {
   .privateevents-hero-heading {
-    font-size: 1.7rem;
+    font-size: 52px;
+    /* width: 100%; */
   }
 
   .privateevents-content {
@@ -415,7 +414,7 @@
 /* iPhone 14 Pro, 15 Pro */
 @media (min-width: 430px) {
   .privateevents-hero-heading {
-    font-size: 1.7rem;
+    font-size: 58px;
   }
 
   .privateevents-content {
@@ -466,7 +465,7 @@
 /* Larger phones and phablets (>= 480px) */
 @media (min-width: 480px) {
   .privateevents-hero-heading {
-    font-size: 2.3rem;
+    font-size: 58px;
   }
 
   .privateevents-content {
@@ -517,7 +516,7 @@
 /* Tablets (>= 600px) */
 @media (min-width: 600px) {
   .privateevents-hero-heading {
-    font-size: 2.3rem;
+    font-size: 62px;
   }
 
   .privateevents-content {
@@ -582,7 +581,7 @@
 /* Small laptops and larger tablets (>= 768px) */
 @media (min-width: 768px) {
   .privateevents-hero-heading {
-    font-size: 3.7rem;
+    font-size: 64px;
   }
 
   .privateevents-content {
@@ -657,6 +656,9 @@
 
 /* Medium laptops (>= 1024px) */
 @media (min-width: 1024px) {
+  .privateevents-hero-heading {
+    font-size: 68px;
+  }
   .space-left {
     margin-left: 0rem;
     margin-right: 0rem;

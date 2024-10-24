@@ -14,7 +14,7 @@ export default function ListNonActiveBenefits() {
             />
           </div>
           <div className="list-item-desc spacingrightcard">
-            Invitation to the club events
+            Invitation to the club events.
           </div>
         </li>
         <li className="benefits-list-item">
@@ -28,7 +28,7 @@ export default function ListNonActiveBenefits() {
             />
           </div>
           <div className="list-item-desc spacingrightcard">
-            Access to our partnership’s facilities, products, and services
+            Access to our partnership’s facilities, products, and services.
           </div>
         </li>
         <li className="benefits-list-item">
@@ -42,7 +42,7 @@ export default function ListNonActiveBenefits() {
             />
           </div>
           <div className="list-item-desc spacingrightcard">
-            Being amongst like-minded people
+            Being amongst like-minded people.
           </div>
         </li>
         <li className="benefits-list-item">

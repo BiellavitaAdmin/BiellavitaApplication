@@ -38,11 +38,11 @@ export default function ProjectsSectionOne() {
 
   return (
     <>
-      <div className="projects-hero-section">
-        <h1 className="projects-hero-heading show">Our Projects</h1>
-      </div>
+      {/* <div className="projects-hero-section">
+      </div> */}
 
       <div className="projects-content-container">
+        {/* <h1 className="projects-first-heading">Our Projects</h1> */}
         {loading ? (
           <div className="projects-content">
             <Spin size="large" className="loading-spinner" />

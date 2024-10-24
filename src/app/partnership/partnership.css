@@ -1,5 +1,5 @@
 .partnership-hero-section {
-  position: fixed; /* Keeps the hero section fixed behind the header */
+  position: relative; /* Keeps the hero section fixed behind the header */
   top: 0;
   left: 0;
   width: 100%;
@@ -10,7 +10,7 @@
   background-repeat: no-repeat;
   z-index: -1; /* Ensures the hero section stays behind other content */
   opacity: 0; /* Initially hidden */
-  transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
 .partnership-hero-section.show {
@@ -31,8 +31,6 @@
   font-weight: var(--font-weight-super-heading);
   text-align: center; /* Center text alignment */
   z-index: 1; /* Ensure heading stays above the background image */
-  opacity: 0; /* Initially hidden */
-  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
 .partnership-hero-heading.show {
@@ -55,7 +53,7 @@
 }
 
 .partnership-content {
-  margin-top: 100vh; /* Push content below the hero section */
+  /* margin-top: 100vh;  */
   padding: 200px;
   position: relative;
   width: 100%;
@@ -105,7 +103,7 @@
 /* Small phones (<= 320px) */
 @media (max-width: 320px) {
   .partnership-hero-heading {
-    font-size: 50px;
+    font-size: 10px;
   }
 
   .partnership-content {
@@ -152,7 +150,7 @@
 /* Standard small phones (<= 360px) */
 @media (max-width: 360px) {
   .partnership-hero-heading {
-    font-size: 60px;
+    font-size: 50px;
   }
 
   .partnership-content {
@@ -199,7 +197,7 @@
 /* iPhone 12, 13 Mini, SE (2020) */
 @media (min-width: 375px) {
   .partnership-hero-heading {
-    font-size: 63px;
+    font-size: 58px;
   }
 
   .partnership-content {
