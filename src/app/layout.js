@@ -39,16 +39,15 @@ export default function RootLayout({ children }) {
 
   const heroPages = ["/membership"];
 
-  // Disable browser's scroll restoration
   useEffect(() => {
     if (typeof window !== "undefined") {
-      window.history.scrollRestoration = "manual"; // Disable the browser's automatic scroll restoration
+      window.history.scrollRestoration = "manual";
     }
   }, []);
 
   useEffect(() => {
     if (typeof window !== "undefined" && !heroPages.includes(pathname)) {
-      window.scrollTo(0, 0); // Scroll to top of the page when route changes, except on hero section pages
+      window.scrollTo(0, 0);
     }
   }, [pathname]);
 
