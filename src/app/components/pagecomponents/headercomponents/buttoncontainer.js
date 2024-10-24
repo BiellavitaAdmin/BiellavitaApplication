@@ -18,7 +18,9 @@ export default function MainButtonContainer({ onMenuClick, menuOpen }) {
     localStorage.removeItem("token");
     Cookies.remove("token");
     setIsLoggedIn(false);
-    router.push("/login");
+    setTimeout(() => {
+      window.location.href = "/login"; // Force a full page reload and navigate to login
+    }, 100); // Small delay to ensure the menu closes before the redirect
   };
 
   const handleChangePassword = () => {
@@ -26,7 +28,9 @@ export default function MainButtonContainer({ onMenuClick, menuOpen }) {
   };
 
   const handleLogin = () => {
-    router.push("/login");
+    setTimeout(() => {
+      window.location.href = "/login"; // Force a full page reload and navigate to login
+    }, 100); // Small delay to ensure the menu closes before the redirect
   };
 
   const menuItems = (
