@@ -56,15 +56,22 @@ export default function FullScreenMenuHeader({ closeMenu }) {
             </Tooltip>
           ) : (
             <Tooltip title="Login" placement="bottom" zIndex={20000}>
-              <button className="circular-button-menu">
-                <Link href="/login" onClick={closeMenu}>
-                  <Image
-                    src="/userred.png" // Change image when not logged in
-                    alt="User Icon"
-                    width={28}
-                    height={28}
-                  />
-                </Link>
+              <button
+                className="circular-button-menu"
+                onClick={() => {
+                  // Close the menu first, then navigate to the login page
+                  closeMenu(); // Close the menu
+                  setTimeout(() => {
+                    window.location.href = "/login"; // Force a full page reload and navigate to login
+                  }, 100); // Small delay to ensure the menu closes before the redirect
+                }}
+              >
+                <Image
+                  src="/userred.png" // Change image when not logged in
+                  alt="User Icon"
+                  width={28}
+                  height={28}
+                />
               </button>
             </Tooltip>
           )}
