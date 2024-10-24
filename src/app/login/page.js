@@ -79,7 +79,7 @@ export default function Login() {
               </div>
               <div className="button-container">
                 <button className="contact-button" type="submit">
-                  Submit
+                  Login
                 </button>
               </div>
             </form>

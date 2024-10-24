@@ -117,7 +117,7 @@ export default function ContactForm() {
 
         <div className="button-container">
           <button className="contact-button" type="submit">
-            Submit
+            Send
           </button>
         </div>
       </form>
