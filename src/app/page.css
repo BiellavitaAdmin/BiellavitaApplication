@@ -41,64 +41,236 @@
 /* Small phones (<= 320px) */
 @media (max-width: 320px) {
   /* Styles for very small phones */
+  .homepage {
+    background-position: 45% 20%;
+    background-size: 334%;
+  }
 }
 
 /* Standard small phones (<= 360px) */
 @media (max-width: 360px) {
   /* Styles for common small Android phones */
+  .homepage {
+    background-position: 44% 20%;
+    background-size: 295%;
+  }
 }
 
 /* iPhone 12, 13 Mini, SE (2020) */
 @media (min-width: 375px) {
   /* Styles for iPhones with 375px width */
+  .homepage {
+    background-position: 44% 20%;
+    background-size: 282%;
+  }
 }
 
 /* iPhone 14, 15 (standard model) */
 @media (min-width: 390px) {
   /* Styles for iPhones with 390px width */
+  .homepage {
+    background-position: 44% 20%;
+    background-size: 280%;
+  }
 }
 
 /* iPhone 14 Pro, 15 Pro */
 @media (min-width: 430px) {
   /* Styles for iPhones with 430px width */
+  .homepage {
+    background-position: 44% 20%;
+    background-size: 280%;
+  }
 }
 
 /* Larger phones and phablets (>= 480px) */
 @media (min-width: 480px) {
   /* Styles for larger phones and phablets */
+  .homepage {
+    background-position: 44% 20%;
+    background-size: 263%;
+  }
 }
 
 /* Tablets (>= 600px) */
 @media (min-width: 600px) {
   /* Styles for tablets and larger devices */
+  .homepage {
+    background-position: 44% 20%;
+    background-size: 257%;
+  }
 }
 
 /* Small laptops and larger tablets (>= 768px) */
 @media (min-width: 768px) {
   /* Styles for small laptops and larger tablets */
+  .homepage {
+    background-position: 44% 24%;
+    background-size: 218%;
+  }
 }
 
 /* Medium laptops (>= 1024px) */
 @media (min-width: 1024px) {
   /* Styles for medium laptops */
+  .homepage {
+    background-position: 43% 24%;
+    background-size: 194%;
+  }
 }
 
 /* Large laptops and desktops (>= 1280px) */
 @media (min-width: 1280px) {
   /* Styles for large laptops and desktops */
+  .homepage {
+    background-position: 43% 24%;
+    background-size: 159%;
+  }
 }
 
 /* Extra-large desktops (>= 1440px) */
 @media (min-width: 1440px) {
   /* Styles for extra-large desktops */
+  .homepage {
+    background-position: 27% 24%;
+    background-size: 120%;
+  }
 }
 
 /* Ultra-wide screens (>= 1600px) */
 @media (min-width: 1600px) {
   /* Styles for ultra-wide screens */
+  .homepage {
+    background-position: -2% 24%;
+    background-size: 103%;
+  }
 }
 
 /* 4K screens (>= 1920px) */
 @media (min-width: 1920px) {
   /* Styles for 4K screens */
+  .homepage {
+    background-position: 0% 24%;
+    background-size: 103%;
+  }
+}
+
+/* Specific styles for a particular tablet */
+@media (width: 375px) and (height: 667px) {
+  .homepage {
+    background-position: 44% 24%;
+    background-size: 238%;
+  }
+}
+
+/* Specific styles for a particular tablet */
+@media (width: 414px) and (height: 896px) {
+  .homepage {
+    background-position: 44% 24%;
+    background-size: 297%;
+  }
+}
+
+/* Specific styles for a particular tablet */
+@media (width: 390px) and (height: 844px) {
+  .homepage {
+    background-position: 44% 24%;
+    background-size: 289%;
+  }
+}
+
+/* Specific styles for a particular tablet */
+@media (width: 430px) and (height: 932px) {
+  .homepage {
+    background-position: 44% 24%;
+    background-size: 289%;
+  }
+}
+
+/* Specific styles for a particular tablet */
+@media (width: 412px) and (height: 915px) {
+  .homepage {
+    background-position: 44% 24%;
+    background-size: 379%;
+  }
+}
+
+/* Specific styles for a particular tablet */
+@media (width: 360px) and (height: 740px) {
+  .homepage {
+    background-position: 44% 24%;
+    background-size: 379%;
+  }
+}
+
+/* Specific styles for a particular tablet */
+@media (width: 412px) and (height: 915px) {
+  .homepage {
+    background-position: 44% 24%;
+    background-size: 379%;
+  }
+}
+
+/* Specific styles for a particular tablet */
+@media (width: 768px) and (height: 1024px) {
+  /* .main-button-group-container {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 300px;
+    margin-right: 0px;
+  } */
+}
+
+/* Specific styles for a particular tablet */
+@media (width: 820px) and (height: 1180px) {
+  /* .main-button-group-container {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 330px;
+    margin-right: 0px;
+  } */
+}
+
+/* Specific styles for a particular tablet */
+@media (width: 1024px) and (height: 1366px) {
+}
+
+/* Specific styles for a particular tablet */
+@media (width: 912px) and (height: 1368px) {
+  /* .main-button-group-container {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 385px;
+    margin-right: 0px;
+  } */
+}
+
+/* Specific styles for a particular tablet */
+@media (width: 540px) and (height: 720px) {
+  /* .main-button-group-container {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 164px;
+    margin-right: 0px;
+  } */
+}
+
+/* Specific styles for a particular tablet */
+@media (width: 853px) and (height: 1280px) {
+}
+
+/* Specific styles for a particular tablet */
+@media (width: 412px) and (height: 914px) {
+  .homepage {
+    background-position: 44% 24%;
+    background-size: 379%;
+  }
+}
+
+/* Specific styles for a particular tablet */
+@media (width: 1024px) and (height: 600px) {
+}
+
+/* Specific styles for a particular tablet */
+@media (width: 1280px) and (height: 800px) {
 }
