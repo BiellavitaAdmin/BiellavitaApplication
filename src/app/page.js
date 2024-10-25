@@ -4,8 +4,9 @@ import "./page.css";
 
 // Add metadata directly to the page.js
 export const metadata = {
-  title: "Home | Biella Vita",
+  title: "Home | BiellaVita",
   description: "Private social club",
+  canonical: "https://www.biellavita.com",
 };
 
 export default function Home() {
