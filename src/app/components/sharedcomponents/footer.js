@@ -6,9 +6,9 @@ export default function Footer() {
   return (
     <footer>
       <div className="footer-content-container">
-        <h5 className="rights-line-homepage">
+        <p className="rights-line-homepage">
           © 2024 BiellaVita. All Rights Reserved.
-        </h5>
+        </p>
         <div className="social-media-links-button-continer-footer">
           <Tooltip
             title="Follow us on Instagram"

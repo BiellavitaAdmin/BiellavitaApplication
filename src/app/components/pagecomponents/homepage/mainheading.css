@@ -14,7 +14,7 @@
 .main-heading-homepage {
   font-size: var(--font-size-new-xl-large-heading);
   font-weight: var(--font-weight-super-heading);
-  color: #a31700;
+  color: var(--Website-red-color);
   z-index: 1; /* Above the overlay */
 }
 
@@ -25,7 +25,7 @@
   .main-heading-homepage {
     font-size: 15px;
     font-weight: var(--font-weight-super-heading);
-    color: var(--Website-black-color);
+    color: var(--Website-red-color);
     z-index: 1; /* Above the overlay */
   }
 }
@@ -35,7 +35,7 @@
   .main-heading-homepage {
     font-size: var(--font-size-mobile-main-heading-360);
     font-weight: var(--font-weight-super-heading);
-    color: var(--Website-black-color);
+    color: var(--Website-red-color);
     z-index: 1; /* Above the overlay */
   }
 }
@@ -45,7 +45,7 @@
   .main-heading-homepage {
     font-size: var(--font-size-mobile-main-heading-360);
     font-weight: var(--font-weight-super-heading);
-    color: var(--Website-black-color);
+    color: var(--Website-red-color);
     z-index: 1; /* Above the overlay */
   }
 }
@@ -55,7 +55,7 @@
   .main-heading-homepage {
     font-size: var(--font-size-mobile-main-heading-360);
     font-weight: var(--font-weight-super-heading);
-    color: var(--Website-black-color);
+    color: var(--Website-red-color);
     z-index: 1; /* Above the overlay */
   }
 }
@@ -65,7 +65,7 @@
   .main-heading-homepage {
     font-size: var(--font-size-mobile-main-heading-360);
     font-weight: var(--font-weight-super-heading);
-    color: var(--Website-black-color);
+    color: var(--Website-red-color);
     z-index: 1; /* Above the overlay */
   }
 }
@@ -75,7 +75,7 @@
   .main-heading-homepage {
     font-size: var(--font-size-mobile-main-heading-360);
     font-weight: var(--font-weight-super-heading);
-    color: var(--Website-black-color);
+    color: var(--Website-red-color);
     z-index: 1; /* Above the overlay */
   }
 }
@@ -85,7 +85,7 @@
   .main-heading-homepage {
     font-size: var(--font-size-mobile-main-heading-360);
     font-weight: var(--font-weight-super-heading);
-    color: var(--Website-black-color);
+    color: var(--Website-red-color);
     z-index: 1; /* Above the overlay */
   }
 }
@@ -95,7 +95,7 @@
   .main-heading-homepage {
     font-size: var(--font-size-new-xl-large-heading);
     font-weight: var(--font-weight-super-heading);
-    color: var(--Website-black-color);
+    color: var(--Website-red-color);
     z-index: 1; /* Above the overlay */
   }
 }
@@ -105,7 +105,7 @@
   .main-heading-homepage {
     font-size: var(--font-size-new-xl-large-heading);
     font-weight: var(--font-weight-super-heading);
-    color: #a31700;
+    color: var(--Website-red-color);
     z-index: 1; /* Above the overlay */
   }
 }
@@ -115,7 +115,7 @@
   .main-heading-homepage {
     font-size: var(--font-size-new-xl-large-heading);
     font-weight: var(--font-weight-super-heading);
-    color: #a31700;
+    color: var(--Website-red-color);
     z-index: 1; /* Above the overlay */
   }
 }
