@@ -4,7 +4,7 @@ import "./page.css";
 
 // Add metadata directly to the page.js
 export const metadata = {
-  title: "BiellaVita",
+  title: "Home | Biella Vita",
   description: "Private social club",
 };
 
