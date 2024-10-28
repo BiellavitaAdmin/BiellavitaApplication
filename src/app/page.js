@@ -30,9 +30,9 @@ export const metadata = {
     locale: "en_US",
 
     // Additional Open Graph tags for enhanced richness
-    "article:author": "https://www.linkedin.com/in/yourprofile", // Optional, if there's a personal LinkedIn profile to link
+    // "article:author": "https://www.linkedin.com/in/yourprofile",
     "article:section": "Lifestyle", // General category
-    "article:tag": ["Social Club", "Well-being", "Lifestyle"], // Relevant tags to aid discovery on LinkedIn
+    "article:tag": ["Social Club", "Well-being", "Lifestyle"],
   },
 };
 
