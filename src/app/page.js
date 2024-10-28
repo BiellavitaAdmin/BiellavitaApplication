@@ -13,6 +13,7 @@ export const metadata = {
     apple: "https://i.imgur.com/5sQQ2bY.png", // Optional, for Apple devices
   },
   openGraph: {
+    type: "website",
     url: "https://www.biellavita.com",
     title: "Home | BiellaVita",
     description:
@@ -25,6 +26,9 @@ export const metadata = {
         alt: "Biella Vita social preview",
       },
     ],
+
+    site_name: "BiellaVita",
+    locale: "en_US",
   },
 };
 
