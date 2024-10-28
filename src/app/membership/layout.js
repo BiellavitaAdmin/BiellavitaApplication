@@ -6,7 +6,7 @@ export const metadata = {
     "Discover membership opportunities at BiellaVita, a club for those who value excellence, nature, well-being, and a unique community experience.",
   openGraph: {
     type: "website",
-    url: "https://www.biellavita.com/club",
+    url: "https://www.biellavita.com/membership",
     title: "Membership | BiellaVita",
     description:
       "Join BiellaVita and access exclusive benefits tailored to a lifestyle of excellence, well-being, and shared values.",

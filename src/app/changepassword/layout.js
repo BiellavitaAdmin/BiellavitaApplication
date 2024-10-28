@@ -6,7 +6,7 @@ export const metadata = {
     "Securely update your BiellaVita account password to ensure continuous, safe access to our exclusive club community.",
   openGraph: {
     type: "website",
-    url: "https://www.biellavita.com/club",
+    url: "https://www.biellavita.com/changepassword",
     title: "Change password | BiellaVita",
     description:
       "Easily change your BiellaVita account password and maintain secure access to your private club membership and benefits.",

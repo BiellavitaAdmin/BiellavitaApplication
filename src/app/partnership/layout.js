@@ -6,7 +6,7 @@ export const metadata = {
     "Explore partnership opportunities with BiellaVita, where we connect with organizations that share our values of excellence, nature, and well-being.",
   openGraph: {
     type: "website",
-    url: "https://www.biellavita.com/club",
+    url: "https://www.biellavita.com/partnership",
     title: "Partnerships | BiellaVita",
     description:
       "Partner with BiellaVita and join us in promoting a lifestyle of wellness, sustainability, and shared values for a positive impact.",

@@ -6,7 +6,7 @@ export const metadata = {
     "Log in to your BiellaVita account to access exclusive membership benefits and stay connected with our vibrant community.",
   openGraph: {
     type: "website",
-    url: "https://www.biellavita.com/club",
+    url: "https://www.biellavita.com/login",
     title: "Login | BiellaVita",
     description:
       "Sign in to BiellaVita and enjoy access to our private club, where excellence, wellness, and shared values come together in a unique experience.",

@@ -6,7 +6,7 @@ export const metadata = {
     "Discover exclusive private events at BiellaVita, designed for individuals who appreciate a lifestyle of excellence, nature, and well-being.",
   openGraph: {
     type: "website",
-    url: "https://www.biellavita.com/club",
+    url: "https://www.biellavita.com/privateevents",
     title: "PrivateEvents | BiellaVita",
     description:
       "Join BiellaVita’s private events, crafted for a community that values exclusivity, wellness, and unique experiences.",
@@ -25,6 +25,6 @@ export const metadata = {
   },
 };
 
-export default function ClubLayout({ children }) {
+export default function PrivateEventsLayout({ children }) {
   return <>{children}</>;
 }

@@ -6,7 +6,7 @@ export const metadata = {
     "Explore BiellaVita’s projects, designed to foster a community centered around excellence, nature, and well-being.",
   openGraph: {
     type: "website",
-    url: "https://www.biellavita.com/club",
+    url: "https://www.biellavita.com/projects",
     title: "Projects | BiellaVita",
     description:
       "Discover BiellaVita's initiatives and projects that contribute to a lifestyle of wellness, sustainability, and shared values.",
@@ -25,6 +25,6 @@ export const metadata = {
   },
 };
 
-export default function ClubLayout({ children }) {
+export default function ProjectsLayout({ children }) {
   return <>{children}</>;
 }
