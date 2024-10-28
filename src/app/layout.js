@@ -82,7 +82,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <title>BiellaVita</title>
+        {/* <title>BiellaVita</title> */}
         <meta
           name="description"
           content="BiellaVita is a community focused on well-being, aesthetics, and spiritual dimensions of life."
