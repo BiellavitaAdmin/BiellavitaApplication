@@ -39,6 +39,8 @@ export default function Club() {
           content="Experience the BiellaVita lifestyle through exclusive membership."
         />
         <meta property="og:image" content="https://i.imgur.com/5sQQ2bY.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta property="og:url" content="https://www.biellavita.com/club" />
       </Head>
       <div className={`hero-section ${isFixed ? "fixed" : "relative"}`}>
