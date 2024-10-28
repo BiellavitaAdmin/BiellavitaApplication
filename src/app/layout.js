@@ -87,10 +87,10 @@ export default function RootLayout({ children }) {
           name="description"
           content="BiellaVita is a community focused on well-being, aesthetics, and spiritual dimensions of life."
         /> */}
-        <meta property="og:image" content="https://i.imgur.com/5sQQ2bY.png" />
+        {/* <meta property="og:image" content="https://i.imgur.com/5sQQ2bY.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:url" content="https://www.biellavita.com" />
+        <meta property="og:url" content="https://www.biellavita.com" /> */}
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/antd/4.16.13/antd.min.css"
