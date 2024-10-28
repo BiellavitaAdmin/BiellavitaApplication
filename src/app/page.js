@@ -1,7 +1,6 @@
 import MainHeading from "./components/pagecomponents/homepage/mainheading";
 import Footer from "./components/sharedcomponents/footer";
 import "./page.css";
-import Head from "next/head";
 
 // Add metadata directly to the page.js
 export const metadata = {
