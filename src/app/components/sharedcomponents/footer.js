@@ -1,6 +1,6 @@
-import "./footer.css";
 import Image from "next/image";
 import { Tooltip } from "antd";
+import "./footer.css";
 
 export default function Footer() {
   return (
