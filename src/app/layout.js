@@ -85,6 +85,11 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/antd/4.16.13/antd.min.css"
         />
+        <link
+          rel="icon"
+          href="https://i.imgur.com/5sQQ2bY.png"
+          type="image/png"
+        />
       </head>
       <body className={playfairDisplay.className}>
         {!isAdminRoute && (
