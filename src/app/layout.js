@@ -55,7 +55,7 @@ export default function RootLayout({ children }) {
   // Redirect to login if accessing restricted pages without being logged in
   const restrictedPages = [
     "/privateevents",
-    "/projects",
+    // "/projects",
     "/partnership",
     "/changepassword",
   ];
@@ -72,7 +72,7 @@ export default function RootLayout({ children }) {
     "/login",
     "/partnership",
     "/membership",
-    // "/projects",
+    "/projects",
     "/privateevents",
     "/changepassword",
   ];
