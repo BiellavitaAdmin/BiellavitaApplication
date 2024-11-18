@@ -72,7 +72,7 @@ export default function RootLayout({ children }) {
     "/login",
     "/partnership",
     "/membership",
-    "/projects",
+    // "/projects",
     "/privateevents",
     "/changepassword",
   ];
