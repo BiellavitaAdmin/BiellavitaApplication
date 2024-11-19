@@ -11,6 +11,9 @@ export async function POST(request) {
     },
   });
 
+  // Log the email recipients
+  console.log("Sending email to:", process.env.RECEIVING_EMAIL.split(","));
+
   const mailOptions = {
     from: email,
     to: process.env.RECEIVING_EMAIL.split(","), // Splits the emails into an array
@@ -19,7 +22,10 @@ export async function POST(request) {
   };
 
   try {
-    await transporter.sendMail(mailOptions);
+    const info = await transporter.sendMail(mailOptions);
+
+    // Log email send confirmation
+    console.log("Email sent successfully:", info);
     return new Response(
       JSON.stringify({ message: "Message sent successfully" }),
       { status: 200 }
