@@ -13,7 +13,7 @@ export async function POST(request) {
 
   const mailOptions = {
     from: email,
-    to: process.env.RECEIVING_EMAIL,
+    to: process.env.RECEIVING_EMAIL.split(","), // Splits the emails into an array
     subject: `New message from ${firstname} ${lastname} please reply at ${email}`,
     text: message,
   };
