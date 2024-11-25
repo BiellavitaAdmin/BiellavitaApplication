@@ -4,13 +4,14 @@ export default function SourceSectionParaSix() {
     <>
       <div className="large-pic-continer-club-page">
         <Image
-          src="/clubpage-third.webp"
+          src="https://i.postimg.cc/bNdVBDW2/IMG-0108.webp"
           alt="My Awesome Image"
           width={100}
           height={835}
           className="club-page-large-image-settings"
         />
       </div>
+      <h2 className="clubpage-heading">Founders</h2>
       <p className="page-content-text">
         In the most unexpected of circumstances, two paths from vastly different
         backgrounds crossed to create a space that celebrates excellence and

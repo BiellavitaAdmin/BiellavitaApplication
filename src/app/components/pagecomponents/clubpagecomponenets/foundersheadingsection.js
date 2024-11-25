@@ -4,14 +4,13 @@ export default function FoundersHeadingSection() {
     <>
       <div className="large-pic-continer-club-page">
         <Image
-          src="/clubpage-tri-image.webp"
+          src="https://i.postimg.cc/X7h1SN61/Group-151.webp"
           alt="My Awesome Image"
           width={100}
           height={835}
           className="club-page-large-image-settings"
         />
       </div>
-      <h2 className="clubpage-heading">Founders</h2>
     </>
   );
 }
