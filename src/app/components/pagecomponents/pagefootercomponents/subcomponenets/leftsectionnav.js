@@ -10,7 +10,7 @@ export default function LeftSectionNav() {
       </li>
       <li className="footer-nav-text">
         <Link href="/visionandmission" className="footer-links">
-          Vission & Mission
+          Vision & Mission
         </Link>
       </li>
       <li className="footer-nav-text">
