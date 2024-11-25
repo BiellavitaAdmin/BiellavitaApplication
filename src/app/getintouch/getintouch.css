@@ -101,6 +101,27 @@
   padding: 0.4rem;
   width: 120px;
   border-radius: 0.7rem;
+  background-color: white; /* Replace with your desired color */
+  color: #505055; /* Text color */
+  border: none; /* Remove default border */
+  font-size: 1rem;
+  cursor: pointer;
+
+  /* Fix for iOS Safari */
+  -webkit-appearance: none; /* Remove default button styling on Safari */
+  -moz-appearance: none; /* Remove styling for Firefox */
+  appearance: none;
+}
+
+.contact-button:hover {
+  background-color: var(--Website-red-color); /* Add hover effect */
+  color: white;
+}
+
+.contact-button:focus,
+.contact-button:active {
+  outline: none; /* Remove focus ring */
+  background-color: var(--Website-red-color); /* Optional focus styling */
 }
 
 .input-error {
