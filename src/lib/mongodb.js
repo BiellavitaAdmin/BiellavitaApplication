@@ -7,6 +7,7 @@ let clientPromise;
 
 if (process.env.NODE_ENV === "development") {
   if (!global._mongoClientPromise) {
+    // console.log("MongoDB URI:", uri);
     client = new MongoClient(uri);
     global._mongoClientPromise = client
       .connect()

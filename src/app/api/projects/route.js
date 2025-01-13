@@ -3,11 +3,20 @@ import { ObjectId } from "mongodb";
 
 export async function GET(request) {
   const client = await clientPromise;
-  const db = client.db();
+  const db = client.db("BiellavitaDB");
 
   try {
     const projects = await db.collection("projects").find({}).toArray();
-    return new Response(JSON.stringify(projects), { status: 200 });
+    // console.log("projects", projects);
+    return new Response(JSON.stringify(projects), {
+      status: 200,
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*", // ✅ Allow requests from all origins (for local testing)
+        "Access-Control-Allow-Methods": "GET,DELETE,PATCH,POST,PUT",
+        "Access-Control-Allow-Headers": "Content-Type, Authorization",
+      },
+    });
   } catch (error) {
     console.error("Error fetching projects:", error);
     return new Response(
@@ -23,7 +32,7 @@ export async function GET(request) {
 export async function POST(request) {
   const projectData = await request.json();
   const client = await clientPromise;
-  const db = client.db();
+  const db = client.db("BiellavitaDB");
 
   try {
     const result = await db.collection("projects").insertOne(projectData);
@@ -44,7 +53,7 @@ export async function POST(request) {
 export async function PUT(request) {
   const { id, ...updateData } = await request.json();
   const client = await clientPromise;
-  const db = client.db();
+  const db = client.db("BiellavitaDB");
 
   try {
     const result = await db
@@ -78,7 +87,7 @@ export async function PUT(request) {
 export async function DELETE(request) {
   const { id } = await request.json();
   const client = await clientPromise;
-  const db = client.db();
+  const db = client.db("BiellavitaDB");
 
   try {
     const result = await db
