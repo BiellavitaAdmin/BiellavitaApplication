@@ -5,7 +5,7 @@ export default function CardTwo() {
       <div className="subscription-card-one">
         <div className="card-banner">
           <Image
-            src="/bear-book.webp"
+            src="https://i.postimg.cc/8zNyCZnq/bear-book.webp"
             alt="User Icon"
             width={28}
             height={28}

@@ -47,7 +47,7 @@ export default function FullScreenMenuHeader({ closeMenu }) {
             <Tooltip title="Logout" placement="bottom" zIndex={20000}>
               <button className="circular-button-menu" onClick={handleLogout}>
                 <Image
-                  src="/logoutred.png" // Change image when logged in
+                  src="https://i.postimg.cc/MHhpDcgQ/logoutred.png" // Change image when logged in
                   alt="Logout Icon"
                   width={28}
                   height={28}
@@ -67,7 +67,7 @@ export default function FullScreenMenuHeader({ closeMenu }) {
                 }}
               >
                 <Image
-                  src="/userred.png" // Change image when not logged in
+                  src="https://i.postimg.cc/m2sDt93v/userred.png" // Change image when not logged in
                   alt="User Icon"
                   width={28}
                   height={28}
@@ -78,7 +78,7 @@ export default function FullScreenMenuHeader({ closeMenu }) {
           <Tooltip title="Close Menu" placement="bottom" zIndex={20000}>
             <button className="circular-button-menu" onClick={closeMenu}>
               <Image
-                src="/closered.png"
+                src="https://i.postimg.cc/dtryfvnY/closered.png"
                 alt="Close Menu"
                 width={28}
                 height={28}

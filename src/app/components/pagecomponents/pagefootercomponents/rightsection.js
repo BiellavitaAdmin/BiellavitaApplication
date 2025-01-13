@@ -5,7 +5,7 @@ export default function RightSection() {
     <div className="pagefooter-right-section">
       <div className="BiellaVita-logo-container">
         <Image
-          src="/Biellavita-red.webp"
+          src="https://i.postimg.cc/90f7Sqxg/Biellavita-red.webp"
           alt="Biellavita_red"
           width={250}
           height={250}

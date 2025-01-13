@@ -16,7 +16,7 @@ export default function SocialMediaContainer() {
               rel="noopener noreferrer"
             >
               <Image
-                src="/linkedinfooter.webp"
+                src="https://i.postimg.cc/0NpDJvMn/linkedinfooter.webp"
                 alt="Biellavita_red"
                 width={50}
                 height={50}
@@ -36,7 +36,7 @@ export default function SocialMediaContainer() {
               rel="noopener noreferrer"
             >
               <Image
-                src="/instagramfooter.png"
+                src="https://i.postimg.cc/k4q8QHWm/instagramfooter.png"
                 alt="Biellavita_red"
                 width={50}
                 height={50}

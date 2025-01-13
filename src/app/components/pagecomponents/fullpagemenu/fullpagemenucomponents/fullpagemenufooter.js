@@ -25,7 +25,7 @@ export default function FullPageMenuFooter() {
           >
             <button className="circular-button-menu">
               <Image
-                src="/linkedinred.png"
+                src="https://i.postimg.cc/wTpKhcGk/instagramred.png"
                 alt="LinkedIn Icon"
                 width={28}
                 height={28}
@@ -42,7 +42,7 @@ export default function FullPageMenuFooter() {
           >
             <button className="circular-button-menu">
               <Image
-                src="/instagramred.png"
+                src="https://i.postimg.cc/1zL7yyxK/linkedinred.png"
                 alt="Instagram Icon"
                 width={28}
                 height={28}

@@ -10,7 +10,7 @@ export default function Vissionpart() {
       </p>
       <div className="motto-container">
         <Image
-          src="/Biellamotto.webp" // The path relative to the "public" folder
+          src="https://i.postimg.cc/C5tggWNT/Biellamotto.webp" // The path relative to the "public" folder
           alt="My Awesome Image"
           width={360} // Width of the image
           height={635} // Height of the image

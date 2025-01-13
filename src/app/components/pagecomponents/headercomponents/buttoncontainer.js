@@ -70,7 +70,7 @@ export default function MainButtonContainer({ onMenuClick, menuOpen }) {
           <Tooltip title="Settings" placement="left" zIndex={20000}>
             <button className="custom-circular-button">
               <Image
-                src="/settingsred.png"
+                src="https://i.postimg.cc/yd8xYCFk/settingsred.png"
                 alt="Settings Icon"
                 width={28}
                 height={28}
@@ -81,14 +81,23 @@ export default function MainButtonContainer({ onMenuClick, menuOpen }) {
       ) : (
         <Tooltip title="Login" placement="bottom" zIndex={20000}>
           <button className="custom-circular-button" onClick={handleLogin}>
-            <Image src="/userred.png" alt="User Icon" width={28} height={28} />
+            <Image
+              src="https://i.postimg.cc/m2sDt93v/userred.png"
+              alt="User Icon"
+              width={28}
+              height={28}
+            />
           </button>
         </Tooltip>
       )}
       <Tooltip title="Menu" placement="bottom" zIndex={20000}>
         <button className="custom-circular-button" onClick={onMenuClick}>
           <img
-            src={menuOpen ? "/closered.png" : "/dotsred.png"}
+            src={
+              menuOpen
+                ? "https://i.postimg.cc/dtryfvnY/closered.png"
+                : "https://i.postimg.cc/gcvcFJ9N/dotsred.png"
+            }
             alt={menuOpen ? "Close menu" : "Open menu"}
             width={28}
             height={28}

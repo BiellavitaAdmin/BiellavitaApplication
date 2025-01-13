@@ -5,7 +5,7 @@ export default function CardOne() {
       <div className="subscription-card-one">
         <div className="card-banner">
           <Image
-            src="/bear-chess.webp"
+            src="https://i.postimg.cc/nc8RyFKV/bear-chess.webp"
             alt="User Icon"
             width={28}
             height={28}

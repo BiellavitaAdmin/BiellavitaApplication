@@ -22,7 +22,7 @@ export default function Footer() {
               className="linkdin-circularbutton"
             >
               <Image
-                src="/instagramred.png"
+                src="https://i.postimg.cc/wTpKhcGk/instagramred.png"
                 alt="Instagram Icon"
                 width={35}
                 height={35}
@@ -41,7 +41,7 @@ export default function Footer() {
               className="linkdin-circularbutton"
             >
               <Image
-                src="/linkedinred.png"
+                src="https://i.postimg.cc/1zL7yyxK/linkedinred.png"
                 alt="LinkedIn Icon"
                 width={35}
                 height={35}
