@@ -12,7 +12,7 @@ export const metadata = {
       "Reach out to BiellaVita and discover how you can be part of a club where excellence and shared values unite for unique experiences.",
     images: [
       {
-        url: "https://i.imgur.com/5sQQ2bY.png",
+        url: "https://i.postimg.cc/90f7Sqxg/Biellavita-red.webp",
         width: 1200,
         height: 630,
         alt: "Biella Vita - A Private Social Club",
