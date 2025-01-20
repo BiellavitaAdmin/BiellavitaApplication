@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+Allow: /club
+Allow: /visionandmission
+Allow: /projects
+Allow: /partnership
+Allow: /membership
+Allow: /getintouch
+
+
+Disallow: /admin
+Disallow: /admin/*
+Disallow: /dashboard
+Disallow: /dashboard/*
+Disallow: /admin/dashboard
+Disallow: /admin/dashboard/*
+Disallow: /protected
+Disallow: /privateevents
+
+Sitemap: https://www.biellavita.com/sitemap.xml

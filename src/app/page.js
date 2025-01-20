@@ -34,6 +34,32 @@ export const metadata = {
 };
 
 export default function Home() {
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "BiellaVita",
+    url: "https://www.biellavita.com",
+    logo: "https://i.postimg.cc/90f7Sqxg/Biellavita-red.webp",
+    description:
+      "BiellaVita is born from the desire to connect like-minded individuals who embrace a lifestyle centered around excellence, reverence for nature, well-being, and a deep appreciation for the artistic, aesthetic, culinary and spiritual dimensions of life.",
+    sameAs: [
+      "https://www.facebook.com/BiellaVita",
+      "https://www.instagram.com/BiellaVita",
+    ],
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "42 Brook Street",
+      addressLocality: "London",
+      addressRegion: "Euorope",
+      postalCode: "W1 5DB",
+      addressCountry: "England",
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+1-800-555-5555",
+      contactType: "Customer Service",
+    },
+  };
   return (
     <>
       {/* <Head>
@@ -61,6 +87,10 @@ export default function Home() {
         <MainHeading />
         <Footer />
       </main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      />
     </>
   );
 }
