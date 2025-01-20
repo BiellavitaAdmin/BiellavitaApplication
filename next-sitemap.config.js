@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: "https://www.Biellavita.com", // Your website's base URL
+  siteUrl: "https://www.biellavita.com", // Your website's base URL
   generateRobotsTxt: true, // Generate robots.txt file
   changefreq: "daily", // How often pages are updated
   priority: 0.7, // Default priority for URLs
