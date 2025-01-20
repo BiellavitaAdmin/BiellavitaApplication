@@ -12,6 +12,9 @@ module.exports = {
     "/dashboard/*",
     "/protected",
     "/privateevents",
+    "/api/*", // Exclude all API routes
+    "/changepassword", // Exclude restricted pages
+    "/login", // Exclude login page
   ], // Exclude restricted/private routes
   robotsTxtOptions: {
     policies: [
@@ -33,6 +36,9 @@ module.exports = {
           "/dashboard/*",
           "/protected",
           "/privateevents",
+          "/api/*", // Exclude all API routes
+          "/changepassword", // Exclude restricted pages
+          "/login", // Exclude login page
         ],
       },
     ],
