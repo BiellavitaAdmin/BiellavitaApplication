@@ -19,18 +19,21 @@ export default function Login() {
     try {
       const response = await axios.post("/api/login", { email, password });
       const token = response.data.token;
-      console.log("token", token);
+
+      // Store the token
       localStorage.setItem("token", token);
       Cookies.set("token", token, { expires: 1 });
-      setShowSuccess(true);
-      setShowError(false);
 
-      setTimeout(() => {
-        setShowSuccess(false);
-        window.location.href = "/projects";
-        // router.reload();
-        // router.push("/projects");
-      }, 2000);
+      // Decode the token to get the role
+      const decodedToken = JSON.parse(atob(token.split(".")[1])); // Decode JWT payload
+      const userRole = decodedToken.role;
+
+      // Redirect based on role
+      if (userRole === "admin") {
+        window.location.href = "/admin/dashboard"; // Redirect admin to the dashboard
+      } else {
+        window.location.href = "/projects"; // Redirect regular users to their page
+      }
     } catch (error) {
       setError("Invalid credentials. Please try again.");
       setShowError(true);
@@ -38,7 +41,7 @@ export default function Login() {
       setTimeout(() => {
         setShowError(false);
       }, 30000);
-      console.log(error);
+      console.error("Login error:", error);
     }
   };
   return (

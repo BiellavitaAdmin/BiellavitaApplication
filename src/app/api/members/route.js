@@ -61,6 +61,7 @@ export async function POST(request) {
     const updatedMemberData = {
       ...memberData,
       password: hashedPassword, // Save hashed password in DB
+      role: "user",
     };
 
     // Insert the new member into the database
