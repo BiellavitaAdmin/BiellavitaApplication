@@ -108,6 +108,10 @@ export default function RootLayout({ children }) {
           href="https://i.postimg.cc/90f7Sqxg/Biellavita-red.webp"
           type="image/png"
         />
+        <meta
+          name="google-site-verification"
+          content="iJgyaSgYOIRODru2tZogWJSY2P-cEkNFXem9wrbgPbQ"
+        />
       </head>
       <body className={playfairDisplay.className}>
         {!isAdminRoute && (
