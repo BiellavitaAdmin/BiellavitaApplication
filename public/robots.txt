@@ -18,7 +18,7 @@ Disallow: /changepassword
 Disallow: /login
 
 # Host
-Host: https://www.Biellavita.com
+Host: https://www.biellavita.com
 
 # Sitemaps
-Sitemap: https://www.Biellavita.com/sitemap.xml
+Sitemap: https://www.biellavita.com/sitemap.xml
