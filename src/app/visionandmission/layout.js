@@ -12,7 +12,7 @@ export const metadata = {
       "Discover BiellaVita's commitment to a lifestyle rooted in wellness, sustainability, and a deep appreciation for aesthetic, culinary, and spiritual experiences. Join a community dedicated to making a positive impact.",
     images: [
       {
-        url: "https://i.imgur.com/5sQQ2bY.png",
+        url: "https://i.postimg.cc/90f7Sqxg/Biellavita-red.webp",
         width: 1200,
         height: 630,
         alt: "Biella Vita - A Private Social Club",
