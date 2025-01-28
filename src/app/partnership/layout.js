@@ -12,7 +12,7 @@ export const metadata = {
       "Partner with BiellaVita and join us in promoting a lifestyle of wellness, sustainability, and shared values for a positive impact.",
     images: [
       {
-        url: "https://i.postimg.cc/90f7Sqxg/Biellavita-red.webp",
+        url: "https://i.imgur.com/5sQQ2bY.png",
         width: 1200,
         height: 630,
         alt: "Biella Vita - A Private Social Club",

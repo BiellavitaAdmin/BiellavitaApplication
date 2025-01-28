@@ -105,8 +105,8 @@ export default function RootLayout({ children }) {
         />
         <link
           rel="icon"
-          href="https://i.postimg.cc/90f7Sqxg/Biellavita-red.webp"
-          type="image/webp"
+          href="https://i.imgur.com/5sQQ2bY.png"
+          type="image/png"
         />
         <meta
           name="google-site-verification"
