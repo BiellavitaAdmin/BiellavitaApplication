@@ -108,6 +108,7 @@ export default function RootLayout({ children }) {
           href="https://i.imgur.com/5sQQ2bY.png"
           type="image/png"
         />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <meta
           name="google-site-verification"
           content="iJgyaSgYOIRODru2tZogWJSY2P-cEkNFXem9wrbgPbQ"
