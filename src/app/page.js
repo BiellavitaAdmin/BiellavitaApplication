@@ -39,7 +39,7 @@ export default function Home() {
     "@type": "Organization",
     name: "BiellaVita",
     url: "https://www.biellavita.com",
-    logo: "https://i.postimg.cc/90f7Sqxg/Biellavita-red.webp",
+    logo: "https://i.imgur.com/5sQQ2bY.png",
     description:
       "BiellaVita is born from the desire to connect like-minded individuals who embrace a lifestyle centered around excellence, reverence for nature, well-being, and a deep appreciation for the artistic, aesthetic, culinary and spiritual dimensions of life.",
     sameAs: [
