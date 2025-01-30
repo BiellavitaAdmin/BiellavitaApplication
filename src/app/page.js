@@ -9,8 +9,8 @@ export const metadata = {
     "BiellaVita is born from the desire to connect like-minded individuals who embrace a lifestyle centered around excellence, reverence for nature, well-being, and a deep appreciation for the artistic, aesthetic, culinary and spiritual dimensions of life.",
   canonical: "https://www.biellavita.com",
   icons: {
-    icon: "https://i.imgur.com/5sQQ2bY.png",
-    apple: "https://i.imgur.com/5sQQ2bY.png",
+    icon: "/favicon.ico",
+    apple: "/favicon.ico",
   },
   openGraph: {
     type: "website",
@@ -20,7 +20,7 @@ export const metadata = {
       "Join BiellaVita, a club for individuals who value excellence, nature, well-being, and the aesthetic and spiritual aspects of life.",
     images: [
       {
-        url: "https://i.imgur.com/5sQQ2bY.png",
+        url: "/favicon.ico",
         width: 1200,
         height: 630,
         alt: "Biella Vita - A Private Social Club",
@@ -39,9 +39,9 @@ export default function Home() {
     "@type": "Organization",
     name: "BiellaVita",
     url: "https://www.biellavita.com",
-    logo: "https://i.imgur.com/5sQQ2bY.png",
+    logo: "https://www.biellavita.com/favicon.ico", // Use your own hosted logo
     description:
-      "BiellaVita is born from the desire to connect like-minded individuals who embrace a lifestyle centered around excellence, reverence for nature, well-being, and a deep appreciation for the artistic, aesthetic, culinary and spiritual dimensions of life.",
+      "BiellaVita is born from the desire to connect like-minded individuals who embrace a lifestyle centered around excellence, reverence for nature, well-being, and a deep appreciation for the artistic, aesthetic, culinary, and spiritual dimensions of life.",
     sameAs: [
       "https://www.facebook.com/BiellaVita",
       "https://www.instagram.com/BiellaVita",
@@ -50,9 +50,9 @@ export default function Home() {
       "@type": "PostalAddress",
       streetAddress: "42 Brook Street",
       addressLocality: "London",
-      addressRegion: "Euorope",
+      addressRegion: "Europe",
       postalCode: "W1 5DB",
-      addressCountry: "England",
+      addressCountry: "GB", // Use ISO 3166-1 Alpha-2 code
     },
     contactPoint: {
       "@type": "ContactPoint",
@@ -60,6 +60,7 @@ export default function Home() {
       contactType: "Customer Service",
     },
   };
+
   return (
     <>
       {/* <Head>
