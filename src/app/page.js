@@ -20,7 +20,7 @@ export const metadata = {
       "Join BiellaVita, a club for individuals who value excellence, nature, well-being, and the aesthetic and spiritual aspects of life.",
     images: [
       {
-        url: "/favicon.ico",
+        url: "https://www.biellavita.com/biella_logo.png",
         width: 1200,
         height: 630,
         alt: "Biella Vita - A Private Social Club",
@@ -39,7 +39,7 @@ export default function Home() {
     "@type": "Organization",
     name: "BiellaVita",
     url: "https://www.biellavita.com",
-    logo: "https://www.biellavita.com/favicon.ico", // Use your own hosted logo
+    logo: "https://www.biellavita.com/biella_logo.png", // Use your own hosted logo
     description:
       "BiellaVita is born from the desire to connect like-minded individuals who embrace a lifestyle centered around excellence, reverence for nature, well-being, and a deep appreciation for the artistic, aesthetic, culinary, and spiritual dimensions of life.",
     sameAs: [
