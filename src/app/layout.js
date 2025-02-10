@@ -105,10 +105,22 @@ export default function RootLayout({ children }) {
         />
         <link
           rel="icon"
-          href="https://i.imgur.com/5sQQ2bY.png"
+          href="/favicon-48x48.png"
+          sizes="48x48"
           type="image/png"
         />
-        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <link
+          rel="icon"
+          href="/favicon-96x96.png"
+          sizes="96x96"
+          type="image/png"
+        />
+        <link
+          rel="icon"
+          href="/favicon-192x192.png"
+          sizes="192x192"
+          type="image/png"
+        />
         <meta
           name="google-site-verification"
           content="iJgyaSgYOIRODru2tZogWJSY2P-cEkNFXem9wrbgPbQ"
