@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  experimental: {
+    appDir: true, // 🔥 Enables App Router under /src/app
+  },
   swcMinify: true, // Ensure SWC is used for JavaScript minification
   compress: true, // Enable response compression (Gzip)
   optimizeFonts: true,
