@@ -283,7 +283,9 @@ export async function POST(request) {
         { status: 400 }
       );
     }
-
+    console.log("User email:", username);
+    console.log("Password entered:", defaultPassword);
+    console.log("Password stored:", user.password);
     const salt = await bcrypt.genSalt(10);
     const hashedNewPassword = await bcrypt.hash(newPassword, salt);
 
