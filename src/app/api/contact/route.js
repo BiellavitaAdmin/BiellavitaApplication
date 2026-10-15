@@ -42,7 +42,7 @@ const buildThankYouEmail = (firstname, message) => {
         <p style="${serif} font-size: 20px;">Your message:</p>
         <p style="font-family: 'Helvetica', sans-serif; color: #333; font-size: 16px; text-align: center; white-space: pre-wrap;">${escapeHtml(message)}</p>
         <br />
-        <p style="${serif} font-size: 25px;">If you have any questions, please feel free to contact us at <span style="font-weight: 600;">help@Biellavita.com</span></p>
+        <p style="${serif} font-size: 25px;">If you have any questions, please feel free to contact us at <span style="font-weight: 600;">https://www.biellavita.com/getintouch</span></p>
       </td>
     </tr>
   </table>
