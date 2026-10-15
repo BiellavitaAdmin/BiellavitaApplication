@@ -15,7 +15,8 @@ export async function POST(request) {
   console.log("Sending email to:", process.env.RECEIVING_EMAIL.split(","));
 
   const mailOptions = {
-    from: email,
+    from: process.env.GMAIL_USER, // Gmail overrides any other sender address
+    replyTo: email,
     to: process.env.RECEIVING_EMAIL.split(","), // Splits the emails into an array
     subject: `New message from ${firstname} ${lastname} please reply at ${email}`,
     text: message,
@@ -26,6 +27,20 @@ export async function POST(request) {
 
     // Log email send confirmation
     console.log("Email sent successfully:", info);
+
+    // A failed acknowledgement must not fail the already-delivered message
+    try {
+      const ack = await transporter.sendMail({
+        from: process.env.GMAIL_USER,
+        to: email,
+        subject: "Thank you for contacting us",
+        text: `Dear ${firstname},\n\nThank you for getting in touch. We have received your message and will reply as soon as possible.\n\nYour message:\n${message}\n\nKind regards,\nBiellavita`,
+      });
+      console.log("Thank-you email result:", ack.accepted, ack.rejected);
+    } catch (ackError) {
+      console.error("Thank-you email failed:", ackError.message);
+    }
+
     return new Response(
       JSON.stringify({ message: "Message sent successfully" }),
       { status: 200 }
